@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Tim John Joseph</title>
+
+  <script>
+function sayHey() {
+alert("Function Hey");
+}
+
+function myFunction(p1, p2) {
+  alert(p1*p2)
+return p1 * p2;
+}
+
+function sayHey(username) {
+alert("Hello " + username + "!");
+}
+</script>
+
+
+</head>
+<body>
+
+  <button onclick="alert('Hello from Javascript');">
+  Hey
+  </button>
+
+  <button onclick="alert(2 + 5);">
+Two Plus Five
+</button>
+
+<button onclick="alert(new Date().toDateString());">
+What is the date?
+</button>
+<button onclick="document.getElementById('image').src = 'pic.png';">
+Show me!
+</button> <br>
+<img id="image">
+
+<button onclick="sayHey()"> Hey </button>
+<button onclick="myFunction(2,3)"> Sum </button>
+
+<button onclick="sayHey(document.getElementById('name').value)">
+Form read
+</button>
+<input type="text" id="name">
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
