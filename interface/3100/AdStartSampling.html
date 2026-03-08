@@ -1,0 +1,458 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdStartSampling</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">AdStartSampling</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="556" valign="top">
+  The AdStartSampling function starts continuous sampling on the board/card.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font> 
+</b> 
+    </p>
+    <font size="3">
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472" valign="top"><font face="Courier New">INT AdStartSampling(</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="72" valign="top"><font size="3" face="Courier New">HANDLE&nbsp;
+</font>
+          </td>
+          <td width="368" valign="top">
+
+<font size="3" face="Courier New">
+ <i>hDeviceHandle</i>,
+</font>
+          </td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="72" valign="top"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="368" valign="top"> <i><font face="Courier New">ulSyncFlag</font></i>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472" valign="top"><font face="Courier New">);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    </blockquote>
+  </font>
+    <blockquote>
+<p><b>Visual Basic&nbsp;</b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">Declare Function AdStartSampling
+          Lib _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="142" valign="top"> <font face="Courier New"> <i>hDeviceHandle</i>  </font></td>
+        <td width="236" valign="top"> <font face="Courier New" size="3">  As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="62" valign="top"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="142" valign="top"><font face="Courier New"><i>ulSyncFlag</i>  &nbsp;</font></td>
+        <td width="236" valign="top"><font face="Courier New" size="3">  As Long
+          _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">) As Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472" valign="top"><font face="Courier New">function AdStartSampling(</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"><i><font face="Courier New">hDeviceHandle</font></i></td>
+        <td width="308" valign="top"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="132" valign="top"><i><font face="Courier New">ulSyncFlag</font></i></td>
+        <td width="308" valign="top"><font face="Courier New">: Cardinal</font></td>
+      </tr>
+      <tr>
+        <td colspan="3" width="472" valign="top"><font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  </blockquote>
+<p><b><big>Parameters</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="41" valign="top"><var><font face="Courier New">hDeviceHandle&nbsp;</font></var></td>
+        <td width="508" valign="top">Specifies the device handle obtained by the
+          <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+      <td valign="top"></td>
+      <td valign="top">&nbsp;&nbsp;&nbsp;
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"><var><font face="Courier New">ulSyncFlag</font></var></td>
+      <td valign="top">Specifies whether the sampling process is performed as an overlapped operation or not.
+      <table border="1" cellspacing="1">
+        <tr align="center">
+          <td valign="top"><b>Flag</b></td>
+          <td valign="top"><b>Value</b></td>
+          <td valign="top"><b>Description</b></td>
+        </tr>
+        <tr valign="top">
+          <td valign="top">FLAG_SYNC</td>
+          <td valign="top" align="center">1</td>
+          <td valign="top"><font SIZE="3">Specifies </font>that the sampling is performed as
+            a non-overlapped operation.</td>
+        </tr>
+        <tr valign="top">
+          <td valign="top">FLAG_ASYNC</td>
+          <td valign="top" align="center">2</td>
+          <td valign="top"><font SIZE="3">Specifies </font>that the sampling is performed as an overlapped operation.</td>
+        </tr>
+      </table>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdStartSampling function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+  <p><b><big>Comments</big></b></p> 
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td width="1096" height="19" colspan="2" valign="top">
+        <ul>
+          <li>
+        &nbsp;Non-Overlapped/Overlapped Operations</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="572" height="20">
+        <small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>
+      </td>
+      <td width="554" height="20" valign="top">
+        <b>
+        &lt;Non-Overlapped Operation (FLAG_SYNC)&gt;</b><br>
+          An application waits until the continuous sampling is successfully completed.
+            <table border="0" width="504" cellspacing="1">
+              <tr>
+              <td width="120">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td width="18"></td>
+              <td width="143"></td>
+              <td width="20"></td>
+              <td width="171"></td>
+              </tr>
+              <tr>
+              <td width="120">User application</td>
+              <td width="18"></td>
+              <td width="143">DLL</td>
+              <td width="20"></td>
+              <td width="171">Driver/board/card</td>
+              </tr>
+              <tr>
+              <td width="171"><table border="1" cellspacing="1" height="129">
+                <tr>
+                  <td height="123"><small>Application<br>
+                  <br>
+                  <br>
+                  <br>
+                  Return to the application</small></td>
+                </tr>
+              </table>
+              </td>
+              <td width="18">-&gt;<br>
+              <br>
+              <br>
+              <br>
+              &lt;- </td>
+              <td width="171"><table border="1" cellspacing="1" height="127">
+                <tr>
+                  <td height="121"><small>AdStartSampling<br>
+                    &nbsp;&nbsp; :<br>
+                    &nbsp;&nbsp; : </small><small>[Running the continuous sampling]<br>
+                    &nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    The process is successfully completed.</small></td>
+                </tr>
+              </table>
+              </td>
+              <td width="20">-&gt;<br>
+              <br>
+              <br>
+              <br>
+              &lt;- </td>
+              <td width="171"><table border="1" cellspacing="1">
+                <tr>
+                  <td><small>Beginning of the continuous sampling<br>
+                    &nbsp;&nbsp; :<br>
+                    &nbsp;&nbsp; :[Running the continuous sampling]<br>
+                    &nbsp;&nbsp; :<br>
+                  End of the continuous sampling</small></td>
+                </tr>
+              </table>
+              </td>
+              </tr>
+              <tr>
+              <td width="120">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td width="18"></td>
+              <td width="143"></td>
+              <td width="20"></td>
+              <td width="171"></td>
+              </tr>
+            </table>
+        <b>
+        &lt;Overlapped Operation (FLAG_ASYNC)&gt;</b><br>
+          Control returns immediately without waiting for the completion of the
+          continuous sampling. Completion of the continuous sampling is notified by the event signaling.
+            <table border="0" width="506" cellspacing="1">
+              <tr>
+              <td width="113">&nbsp;&nbsp; &nbsp;&nbsp;</td>
+              <td width="23"></td>
+              <td width="144"></td>
+              <td width="20"></td>
+              <td width="174"></td>
+              </tr>
+              <tr>
+              <td width="113">User application</td>
+              <td width="23"></td>
+              <td width="144">DLL</td>
+              <td width="20"></td>
+              <td width="174">Driver/board/card</td>
+              </tr>
+              <tr>
+              <td width="160"><table border="1" cellspacing="1" height="126">
+                <tr>
+                  <td height="120"><small>Application<br>
+                  Return to the application<br>
+                  <br>
+                  WaitForSingleObject<br>
+                  (wait for event) </small></td>
+                </tr>
+              </table>
+              </td>
+              <td width="23">-&gt;<br>
+              &lt;-<br>
+              <br>
+              <br>
+              &lt;- </td>
+              <td width="155"><table border="1" cellspacing="1" width="144" height="127">
+                <tr>
+                  <td width="134" height="121"><small>AdStartSamplng&nbsp;<br>
+                    <br>
+                    Return control<br>
+                    <br>
+                  <br>
+                    Signal event.<br>
+                    Invoke the callback routine. </small></td>
+                </tr>
+              </table>
+              </td>
+              <td width="20">-&gt;<br>
+              <br>
+              <br>
+              <br>
+              &lt;- </td>
+              <td width="192"><table border="1" cellspacing="1">
+                <tr>
+                  <td><small>Beginning of the continuous sampling<br>
+                    &nbsp;&nbsp; :<br>
+                    &nbsp;&nbsp; :</small><small> [Running the continuous sampling]<br>
+                    &nbsp;&nbsp; :<br>
+                  End of the continuous sampling</small></td>
+                </tr>
+              </table>
+              </td>
+              </tr>
+            </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="1108" height="20" colspan="2" valign="top">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td width="1108" height="20" colspan="2" valign="top">
+ <ul>
+  <li>
+ The overlapped continuous sampling can be aborted by the <a href="AdStopSampling.html"> AdStopSampling</a> function.</li>
+ </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="1108" height="20" colspan="2" valign="top">
+        <ul>
+          <li>
+        Acquired samples are stored into the buffer of the driver. To get
+        samples, please use the <a href="AdGetSamplingData.html"> AdGetSamplingData</a>
+      function.&nbsp;&nbsp;</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+ 
+<blockquote>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">nRet = AdStartSampling( hDeviceHandle ,
+        FLAG_SYNC);</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New" size="3">
+      nRet = AdStartSampling( hDeviceHandle , _ FLAG_SYNC )</font>
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1" height="36">
+      <tr>
+        <td width="500" height="32" valign="top"><font face="Courier New" size="3">nRet := AdStartSampling( hDeviceHandle , FLAG_SYNC );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+ 
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="545" valign="top">
+Start the continuous sampling on the board/card specified by hDeviceHandle as a
+non-overlapped operation.
+        </td>
+      </tr>
+      <tr>
+        <td width="545" valign="top">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td width="545" valign="top">
+<b>
+Sample Programs for Non-Overlapped/Overlapped Operations</b>
+        </td>
+      </tr>
+      <tr>
+        <td width="545" valign="top">
+<table border="1" width="454" height="108">
+  <tr>
+    <td width="151" align="center" height="28"><b>Programming Language</b></td>
+    <td width="149" align="center" height="28"><b>Non-Overlapped</b></td>
+    <td width="150" align="center" height="28"><b>Overlapped&nbsp;</b></td>
+  </tr>
+  <tr>
+    <td width="151" valign="top" height="23">Visual C++ (C)</td>
+    <td width="149" valign="top" height="23">AdSmpl_C.c (R_SamplingDlgProc)</td>
+    <td width="150" valign="top" height="23">AdSmpl_C.c (E_SamplingDlgProc)</td>
+  </tr>
+  <tr>
+    <td width="151" valign="top" height="19">Visual C++ (C++)</td>
+    <td width="149" valign="top" height="19">RSamplingDlg.cpp</td>
+    <td width="150" valign="top" height="19">ESamplingDlg.cpp</td>
+  </tr>
+  <tr>
+    <td width="151" valign="top" height="19">Visual Basic</td>
+    <td width="149" valign="top" height="19">Form4.frm</td>
+    <td width="150" valign="top" height="19">Form5.frm</td>
+  </tr>
+  <tr>
+    <td width="151" valign="top" height="19">Delphi</td>
+    <td width="149" valign="top" height="19">Unit4.pas</td>
+    <td width="150" valign="top" height="19">Unit5.pas</td>
+  </tr>
+</table>
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,1149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>GPF-3100 External Trigger Function</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META http-equiv=Content-Language content=en-us>
+<META content="Microsoft FrontPage 4.0" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId></HEAD>
+<BODY>
+<P><B><FONT face=Arial size=5>External Trigger Function</FONT></B></P>
+<BLOCKQUOTE>
+  <table border="0" width="555">
+    <tr>
+      <td width="547">The following classification table shows signals for
+        external sampling pacer clock, external trigger, and one-shot sampling.</td>
+    </tr>
+  </table>
+  <TABLE width=557 border=0 height="721">
+    <TBODY>
+    <TR>
+      <TD width=549 height="717">
+        <table border="1" width="572" height="1">
+          <tr>
+            <td valign="middle" width="85" height="111" rowspan="2" align="center"><font size="2"><b>Model</b></font></td>
+            <td valign="middle" width="52" height="111" rowspan="2" align="center"><font size="2"><b><a href="Sampling%20Mode.html">Data
+              Transfer Mode</a></b></font></td>
+            <td valign="middle" width="158" height="60" colspan="2" align="center">
+              <p align="center"><font size="2"><b><a href="AdStartSampling.html">AdStartSampling</a><br>
+              <a href="AdStartFileSampling.html">
+              AdStartFileSampling</a><br>
+              <a href="AdSyncSampling.html">
+              AdSyncSampling</a><br>
+              <a href="AdBmStartFileSampling.html">
+              AdBmStartFileSampling</a></b></font></p>
+            </td>
+            <td valign="middle" width="122" height="60" align="center"><font size="2"><b><a href="AdTriggerSampling.html">AdTriggerSampling</a></b></font></td>
+            <td valign="middle" width="148" height="60" colspan="2" align="center"><font size="2"><b><a href="AdMemTriggerSampling.html">AdMemTriggerSampling</a></b></font></td>
+          </tr>
+          <tr>
+            <td valign="middle" width="74" height="45" align="center"><font size="2"><b>External
+              Sampling Pacer Clock</b></font></td>
+            <td valign="middle" width="82" height="45" align="center"><font size="2"><b>External
+              Trigger</b></font></td>
+            <td valign="middle" width="122" height="45" align="center"><font size="2"><b>External
+              Trigger</b></font></td>
+            <td valign="middle" width="69" height="45" align="center"><font size="2"><b>External
+              Sampling Pacer Clock</b></font></td>
+            <td valign="middle" width="72" height="45" align="center"><font size="2"><b>External
+              Trigger</b></font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI/PAZ-3120</font></td>
+            <td valign="top" width="52" height="19"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="19"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="82" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="19">
+              <p align="center"><font size="2">-</font></p>
+            </td>
+            <td valign="top" width="69" height="15" align="center">
+              <p align="left"><font size="2">EXTRG IN</font></p>
+            </td>
+            <td valign="top" width="72" height="15" align="center">
+              <p align="left"><font size="2">EXINT IN</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI-3126</font></td>
+            <td valign="top" width="52" height="17"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="19"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="15" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="15" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="17"><font size="2">PCI-3133</font></td>
+            <td valign="top" width="52" height="19"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="17"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="17"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="17"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="13" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="13" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI-3135</font></td>
+            <td valign="top" width="52" height="19"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="19"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="15" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="15" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="13" rowspan="2"><font size="2">PCI/PAZ-3153</font></td>
+            <td valign="top" width="52" height="17"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="1">
+              <p align="left"><font size="2">EXTRG IN</font></p>
+            </td>
+            <td valign="middle" width="69" height="15" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="15" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="52" height="11"><font size="2">FIFO</font></td>
+            <td valign="top" width="74" height="11"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="11"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="11">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="11" align="center">
+              <p align="left"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="72" height="11" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="21" rowspan="2"><font size="2">PCI/PAZ-3155</font></td>
+            <td valign="top" width="52" height="15"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="15"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="15"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="15">
+              <p align="left"><font size="2">EXTRG IN</font></p>
+            </td>
+            <td valign="top" width="69" height="15" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="15" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="52" height="11"><font size="2">FIFO</font></td>
+            <td valign="top" width="74" height="11"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="11"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="11">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="11" align="center">
+              <p align="left"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="72" height="11" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="15"><font size="2">PCI/PAZ-3161</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Memory</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="7"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="7">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="7" align="left"><font size="2">EXCLK
+              IN</font></td>
+            <td valign="top" width="72" height="7" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI/PAZ-3163</font></td>
+            <td valign="top" width="52" height="19"><font size="2">Memory</font></td>
+            <td valign="top" width="74" height="19"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="19"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="19">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="15" align="left"><font size="2">EXCLK
+              IN</font></td>
+            <td valign="top" width="72" height="15" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI-3165</font></td>
+            <td valign="top" width="52" height="19"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="19"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="15" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="15" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="17"><font size="2">PCI-3166</font></td>
+            <td valign="top" width="52" height="17"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="17"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="17"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="17"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="13" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="13" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI-3168C</font></td>
+            <td valign="top" width="52" height="19"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="19"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="15" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="15" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="15"><font size="2">PCI-3170A</font></td>
+            <td valign="top" width="52" height="17"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="1" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="1" align="center">
+              <p align="left"><font size="2">EXINT IN</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="15"><font size="2">PCI-3171A</font></td>
+            <td valign="top" width="52" height="19"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="1">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="1" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="1" align="center">
+              <p align="left"><font size="2">EXINT IN</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI-3172A</font></td>
+            <td valign="top" width="52" height="19"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="19">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="19">
+              <p align="center"><font size="2">-</font></p>
+            </td>
+            <td valign="top" width="72" height="19">
+              <p align="left"><font size="2">EXINT IN</font>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI-3173A</font></td>
+            <td valign="top" width="52" height="17"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="19">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="19">
+              <p align="center"><font size="2">-</font></p>
+            </td>
+            <td valign="top" width="72" height="19">
+              <p align="left"><font size="2">EXINT IN</font>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI/PAZ-3174</font></td>
+            <td valign="top" width="52" height="14"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="14"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="14"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="14">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="14" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="14" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI-3175</font></td>
+            <td valign="top" width="52" height="14"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="14"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="14"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="14">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="14" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="14" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI/PAZ-3176</font></td>
+            <td valign="top" width="52" height="14"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="14"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="14"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="14">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="14" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="14" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI/PAZ-3177C</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="14"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="14"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="14">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="14" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="14" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI/PAZ-3178</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="19"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="82" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="19">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="9" align="left"><font size="2">EXTRG
+              IN</font></td>
+            <td valign="top" width="72" height="9" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="19"><font size="2">PCI-3179</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="19"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="19">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="15" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="15" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="13"><font size="2">PCI-3180</font></td>
+            <td valign="top" width="52" height="13"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="13"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="82" height="13"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="13">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="9" align="left"><font size="2">EXTRG
+              IN</font></td>
+            <td valign="top" width="72" height="9" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="13"><font size="2">PCI-320112</font></td>
+            <td valign="top" width="52" height="13"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="13"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="13"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="13">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="9" align="center">
+              <p><font size="2">-</font></td>
+            <td valign="middle" width="72" height="9" align="center">
+              <p><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">PCI-320412</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="69" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="72" height="1" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">PCI-320416</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="69" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="72" height="1" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="23"><font size="2">PCI/PAZ-3521</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="23"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="23"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="23" align="center">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="23" align="left">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="23" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="23"><font size="2">PCI-3522A</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="23"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="23"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="23" align="center">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="23" align="left">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="23" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="23"><font size="2">PCI-3523A</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="23"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="23"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="23" align="center">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="23" align="left">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="23" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">PCI-3525</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="69" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="72" height="1" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">PCI-360112</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="69" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="72" height="1" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">PCI/PAZ-360116</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="69" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="72" height="1" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">PCI-360216</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="69" height="1" align="center">
+              <font size="2">-</font></td>
+            <td valign="middle" width="72" height="1" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="23"><font size="2">CTP/CPZ-3120A</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="23"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="82" height="23"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="23" align="center">
+              <font size="2">-</font></td>
+            <td valign="top" width="69" height="23" align="left">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="72" height="23" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="22"><font size="2">CTP/CPZ-3120B</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="22"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="82" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="22" align="center">
+              <font size="2">-</font></td>
+            <td valign="top" width="69" height="22" align="left"><font size="2">EXTRG
+              IN</font></td>
+            <td valign="top" width="72" height="22" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="21"><font size="2">CTP/CPZ-3120C</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="21"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="82" height="21"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="21" align="center">
+              <font size="2">-</font></td>
+            <td valign="top" width="69" height="21" align="left"><font size="2">EXTRG
+              IN</font></td>
+            <td valign="top" width="72" height="21" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3126</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="24">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3133</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="24">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP-3135</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="1" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="1" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP-3165</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="1" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="1" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP-3168</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="1" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="1" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3170</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="24">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3171</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="24">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3172</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="24">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3173</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="24">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP/CPZ-3174</font></td>
+            <td valign="top" width="52" height="14"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="14"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="14"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="14">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="14" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="14" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3175</font></td>
+            <td valign="top" width="52" height="14"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="14"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="14"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="14">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="14" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="14" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP/CPZ-3177</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="1">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="1" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="1" align="center">
+              <p align="left"><font size="2">EXINT IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP/CPZ-3178</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="1">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="1" align="left"><font size="2">EXTRG
+              IN</font></td>
+            <td valign="top" width="72" height="1" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP/CPZ-3179</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="1">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="1" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="1" align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3180A</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="24" align="center">
+              <font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3180B</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="24" align="center">
+              <font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3180C</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="middle" width="122" height="24" align="center">
+              <font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP/CPZ-3182</font></td>
+            <td valign="top" width="52" height="24"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="24" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP-3183</font></td>
+            <td valign="top" width="52" height="24"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="24" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP-320412</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="24" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP-320416</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="24" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2">CTP/CPZ-3521</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="24">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP-3522</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="1" align="center">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="1" align="left">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="1" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP-3523</font></td>
+            <td valign="top" width="52" height="1"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="1"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="1" align="center">
+              <p align="left"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="1" align="left">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="1" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP-360112</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="24" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="1"><font size="2">CTP-360116</font></td>
+            <td valign="top" width="52" height="1"><font size="2">Bus master</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="24" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="48" rowspan="2"><font size="2">CBI-3133A</font></td>
+            <td valign="top" width="52" height="24"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="24">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="52" height="24"><font size="2">FIFO</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK
+              IN&nbsp;</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXCLK
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="46" rowspan="2"><font size="2">CBI-3133B</font></td>
+            <td valign="top" width="52" height="22"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="22">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="top" width="69" height="22" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="22" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="52" height="24"><font size="2">FIFO</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXCLK
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="48" rowspan="2"><font size="2">CBI-3134A</font></td>
+            <td valign="top" width="52" height="24"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="22">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="22" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="22" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="52" height="24"><font size="2">FIFO</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXCLK
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="48" rowspan="2"><font size="2">CBI-3134B</font></td>
+            <td valign="top" width="52" height="24"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="22">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="22" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="22" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="52" height="24"><font size="2">FIFO</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXCLK
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="18"><font color="#000000">CBI-320110/T<i>x</i></font></td>
+            <td valign="top" width="52" height="18"><font size="2">Memory</font></td>
+            <td valign="top" width="74" height="16"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="16" align="center">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="16" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="48" rowspan="2"><font size="2" color="#000000">CBI-320212/T<i>x</i></font></td>
+            <td valign="top" width="52" height="24"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="24">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="52" height="24"><font size="2">FIFO</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK
+              IN&nbsp;</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXCLK
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="46" rowspan="2"><font size="2" color="#000000">CBI-320312/T<i>x</i></font></td>
+            <td valign="top" width="52" height="22"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="22">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="top" width="69" height="22" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="22" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="52" height="24"><font size="2">FIFO</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXCLK
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2" color="#000000">CBI-320412/T<i>x</i></font></td>
+            <td valign="top" width="52" height="24"><font size="2">Bus Master</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="16" align="center">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="16" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2" color="#000000">CBI-320416/T<i>x</i></font></td>
+            <td valign="top" width="52" height="24"><font size="2">Bus Master</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="16" align="center">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="16" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="24"><font size="2" color="#000000">CBI-360116/T<i>x</i></font></td>
+            <td valign="top" width="52" height="24"><font size="2">Bus Master</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="16" align="center">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="16" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="18"><font size="2">CIZ-320110TL</font></td>
+            <td valign="top" width="52" height="18"><font size="2">Memory</font></td>
+            <td valign="top" width="74" height="16"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="69" height="16" align="center">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="middle" width="72" height="16" align="left">
+              <p align="center"><font size="2">-</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="48" rowspan="2"><font color="#000000" size="2">
+              CIZ-320212TR</font></td>
+            <td valign="top" width="52" height="24"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="24">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="69" height="24" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="52" height="24"><font size="2">FIFO</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK
+              IN&nbsp;</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXCLK
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="85" height="46" rowspan="2"><font color="#000000" size="2">
+              CIZ-320312TR</font></td>
+            <td valign="top" width="52" height="22"><font size="2">I/O</font></td>
+            <td valign="top" width="74" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="82" height="22"><font size="2">EXINT IN</font></td>
+            <td valign="top" width="122" height="22">
+              <font size="2">EXTRG IN</font></td>
+            <td valign="top" width="69" height="22" align="center"><font size="2">-</font></td>
+            <td valign="top" width="72" height="22" align="left"><font size="2">EXINT
+              IN</font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="52" height="24"><font size="2">FIFO</font></td>
+            <td valign="top" width="74" height="24"><font size="2">EXCLK IN</font></td>
+            <td valign="top" width="82" height="24"><font size="2">EXTRG IN</font></td>
+            <td valign="middle" width="122" height="24">
+              <p align="center"><font size="2">-</font></td>
+            <td valign="top" width="69" height="24" align="left"><font size="2">EXCLK
+              IN</font></td>
+            <td valign="top" width="72" height="24" align="left"><font size="2">EXTRG
+              IN</font></td>
+          </tr>
+        </table>
+      </TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<BLOCKQUOTE>
+  <table border="0" width="556">
+    <tr>
+      <td width="555">The following table shows the required conditions for the
+        functions.
+        <table border="1" width="573">
+          <tr>
+            <td valign="top" width="72" bgcolor="#C0C0C0" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td valign="top" colspan="2" width="485" align="center"><font size="2"><b><a href="AdStartSampling.html">AdStartSampling</a><br>
+              <a href="AdStartFileSampling.html">
+              AdStartFileSampling</a><br>
+              <a href="AdSyncSampling.html">
+              AdSyncSampling</a><br>
+              <a href="AdBmStartFileSampling.html">
+              AdBmStartFileSampling</a><br>
+              <a href="AdMemSetSamplingConfig.html">AdMemSetSamplingConfig</a></b></font></td>
+          </tr>
+          <tr>
+            <td valign="middle" width="193" align="center"><font size="2"><b>External
+              Sampling&nbsp;<br>
+              Pacer Clock</b></font></td>
+            <td valign="middle" width="286" align="center"><font size="2"><b>External
+              Trigger</b></font></td>
+          </tr>
+          <tr>
+            <td valign="middle" width="72">
+              <p align="center"><font size="2"><b>Required Conditions</b></font></p>
+            </td>
+            <td valign="top" width="193"><font size="2">ADSMPLREQ.fSmplFreq = 0<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              or<br>
+              ADBMSMPL.fSmplFreq = 0<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              or<br>
+              ADMEMSMPLREQ.fSmplFreq = 0<br>
+              <br>
+              </font></td>
+            <td valign="top" width="286">
+              <p align="left"><font size="2">ADSMPLREQ.ulTrigMode = AD_EXTTRG<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              or<br>
+              ADSMPLREQ.ulTrigMode = AD_EXTTRG_DI<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              or<br>
+              ADBMSMPLREQ.ulStartMode = AD_EXTTRG<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              or<br>
+              ADBMSMPLREQ.ulStartMode = AD_EXTTRG_DI<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              or<br>
+              ADBMSMPLREQ.ulStopMode = AD_EXTTRG<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              or<br>
+              ADBMSMPLREQ.ulStopMode = AD_EXTTRG_DI<font color="#FF00FF"><br>
+              </font>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              or<font color="#000000"><br>
+              ADMEMSMPLREQ.ulStopMode = AD_EXTTRG<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              or<br>
+              ADMEMSMPLREQ.ulStopMode = AD_EXTTRG_DI</font></font></p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="400">
+    <tr>
+      <td valign="top">
+        <font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table border="1" width="548" height="78">
+          <tr>
+            <td valign="top" width="72" bgcolor="#C0C0C0" rowspan="2" align="center" height="36">&nbsp;</td>
+            <td valign="top" width="460" align="center" height="15"><font size="2"><b><a href="AdTriggerSampling.html">AdTriggerSampling</a></b></font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="460" align="center" height="15"><font size="2"><b>External
+              Trigger</b></font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="72" height="30">
+              <p align="center"><font size="2"><b>Required Conditions</b></font></p>
+            </td>
+            <td valign="top" width="460" height="30">
+              <p align="left"><font size="2">ulTriggerMode = AD_EXTTRG or
+              AD_EXTTRG_DI</font></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="400" height="1">
+    <tr>
+      <td height="1" valign="top">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td height="84">
+        <table border="1" width="547">
+          <tr>
+            <td valign="top" width="72" bgcolor="#C0C0C0" rowspan="2" align="center">&nbsp;</td>
+            <td valign="top" width="459" colspan="2" align="center"><font size="2"><b><a href="AdMemTriggerSampling.html">AdMemTriggerSampling</a></b></font></td>
+          </tr>
+          <tr>
+            <td valign="middle" width="167" align="center"><font size="2"><b>External
+              Sampling&nbsp;<br>
+              Pacer Clock</b></font></td>
+            <td valign="middle" width="286" align="center"><font size="2"><b>External
+              Trigger</b></font></td>
+          </tr>
+          <tr>
+            <td valign="top" width="72">
+              <p align="center"><font size="2"><b>Required Conditions</b></font></p>
+            </td>
+            <td valign="top" width="167"><font size="2">fSmplFreq = 0</font></td>
+            <td valign="middle" width="286" align="center">
+              <p align="center">-</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="556">
+    <tr>
+      <td width="548" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="548" valign="top">
+        For the boards that use EXINT IN in both external sampling pacer and
+        external trigger,&nbsp;you cannot use external sampling pacer and external trigger
+        simultaneously.</td>
+    </tr>
+  </table>
+</BLOCKQUOTE>
+  <HR>
+
+<BLOCKQUOTE>
+
+  <p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+  Corporation. All rights reserved.
+  </font></p>
+  <P align=center><FONT 
+  face="Times New Roman" 
+size=3>[<a href="Help.htm">Top</a>]</FONT></P></BLOCKQUOTE></BODY></HTML>

@@ -1,0 +1,505 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdReadAdjustVR</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">AdReadAdjustVR</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1" height="22">
+    <tbody>
+      <tr>
+        <td width="557" valign="top" height="18">
+  The AdReadAdjustVR<b><font size="4"><i> </i></font></b>function loads
+  the electric volume value. When you use the board/card that does not
+  support
+  this function, AD_ERROR_NOT_SUPPORTED is returned.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472"><font face="Courier New">INT
+            AdAReaddjustVR(</font></td>
+        </tr>
+        <tr>
+          <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="102"><font face="Courier New">HANDLE&nbsp;</font></td>
+          <td width="338"> <font face="Courier New"> <i>hDeviceHandle</i>,</font></td>
+        </tr>
+    <font size="3">
+        <tr>
+          <td width="20"></td>
+  </font>
+          <td width="102"><font face="Courier New">ULONG</font></td>
+          <td width="338"><i><font face="Courier New">ulAdjustCh</font></i> </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    </blockquote>
+    <blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">Declare Function
+          AdReadAdjustVR &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+  <font size="3">
+      <tr>
+        <td width="19"></td>
+  </font>
+        <td width="44"><font face="Courier New">ByVal</font></td>
+        <td width="104"><font face="Courier New"><i>hDeviceHandl</i></font></td>
+        <td width="298">
+  <font face="Courier New">
+  As Long, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="19"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="44"><font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="104"><i><font face="Courier New">ulAdjustCh</font></i></td>
+        <td width="298">
+  <font face="Courier New">  As Long _</font>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">) As Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">function
+          AdGetSamplingConfig(</font></td>
+      </tr>
+      <tr>
+        <td width="50" colspan="2"></td>
+        <td width="132"><i><font face="Courier New">hDeviceHandle</font></i></td>
+        <td width="278"><font face="Courier New">: THandle;</font></td>
+      </tr>
+  <font size="3">
+      <tr>
+        <td width="12"><font face="Courier New">&nbsp;</font></td>
+  </font>
+        <td width="32"></td>
+        <td width="132"><i><font face="Courier New">ulAdjustCh</font></i></td>
+        <td width="278">  <font face="Courier New">  : Cardinal</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+  <p><b><big>Parameters</big></b>
+  </p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="41" valign="top"><var><font face="Courier New">hDeviceHandle</font></var></td>
+        <td width="507" valign="top">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top"></td>
+        <td width="507" valign="top">
+        &nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top"><i><font face="Courier New">ulAdjustCh</font></i></td>
+        <td width="507" valign="top">
+        Specifies the channel number to calibrate. Specifies 1 for the multiplexer
+        board/card.
+        For
+        multiplexer boards/cards, specifies 1.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdReadAdjustVR function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Comments</big></b></p>
+
+<blockquote>
+  <table width="550" cellspacing="1" height="276">
+      <tr>
+        <td width="548" valign="top" height="59">
+  <ul>
+    <li>
+      When the Cancel button is clicked after calibration completion in the
+      calibration program, the value in EEPROM is loaded.</li>
+  </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="548" valign="top" height="209">
+  <ul>
+    <li><font size="3">This function is applicable to the
+      following boards/cards.</font>
+      <table cellSpacing="1" cellPadding="2" width="342" border="1" height="1640">
+        <tbody>
+          <tr>
+            <td align="center" width="159" bgColor="#c0c0c0" height="12"><b>Model</b></td>
+            <td width="163" bgColor="#c0c0c0" height="12" align="center">
+              <p align="center"><b>Available or not</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PCI-320112</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PCI-320412</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PCI-320416</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PCI-360116</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PCI-360112</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PCI-360216</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">LPC-320724</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">LPC-321012</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">LPC-321116</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">LPC-321216</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">LPC-321316</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">LPC-321416</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">LPC-361116</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">LPC-361216</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">LPC-361316</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">LPC-361416</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PEX-320724</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PEX-321012</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PEX-321116</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PEX-321216</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PEX-321316</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PEX-321416</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PEX-361116</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PEX-361216</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PEX-361316</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">PEX-361416</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CTP/CPZ-3183</td>
+            <td align="middle" width="163" height="19"><a href="#&#8251;2">*2</a></td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CTP/CPZ-320412</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CTP/CPZ-320416</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CTP/CPZ-360112</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CTP/CPZ-360116</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CTP/CPZ-360810</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-3133A</td>
+            <td align="middle" width="163" height="19"><a href="#&#8251;1">*1</a></td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-3133B</td>
+            <td align="middle" width="163" height="19"><a href="#&#8251;1">*1</a></td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-3134A</td>
+            <td align="middle" width="163" height="19"><a href="#&#8251;1">*1</a></td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-3134B</td>
+            <td align="middle" width="163" height="19"><a href="#&#8251;1">*1</a></td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CSI/CBI-320212</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320212TR</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320212TK</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320212TL</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CSI/CBI-320312</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320312TR</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320312TK</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320312TL</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CSI/CBI-320412</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320412TR</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320412TK</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320412TL</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CSI/CBI-320416</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320416TR</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320416TK</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-320416TL</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CSI/CBI-360112</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-360112TR</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-360112TK</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-360112TL</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CSI/CBI-360116</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-360116TR</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-360116TK</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+          <tr>
+            <td align="middle" width="159" height="19">CBI-360116TL</td>
+            <td align="middle" width="163" height="19">Available</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a name="&#8251;1">*1</a> This function is not available in the product
+      whose revisionID is three or older.<br>
+      &#12288;&#12288;(Refer to &quot;<font face="Times New Roman"><a href="AdCommonGetPciDeviceInfo.html">AdCommonGetPciDeviceInfo</a></font>&quot;
+      to find the revisionID.&#65289;</p>
+      <p><a name="&#8251;2">*2</a> This function is not available in the product
+      whose revisionID is one or older.&nbsp;<br>
+      &#12288;&#12288;&#65288;Refer to &quot;<font face="Times New Roman"><a href="AdCommonGetPciDeviceInfo.html">AdCommonGetPciDeviceInfo</a></font>&quot;
+      to find the revisionID.&#65289;
+    </li>
+  </ul>
+        </td>
+      </tr>
+  </table>
+</blockquote>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td><font face="Courier New">nRet = AdReadAdjustVR( hDeviceHandle, 1 );</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="500"><font face="Courier New">nRet = AdReadAdjustVR(
+          hDeviceHandle, 1 )</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="498"><font face="Courier New">nRet := AdReadAdjustVR(
+          hDeviceHandle, 1 );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="542" valign="top">
+Load the calibration value of channel 1 on the board/card specified by
+hDeviceHandle.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

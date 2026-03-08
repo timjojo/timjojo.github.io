@@ -1,0 +1,395 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdAdjustVR</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdAdjustVR</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td>
+  <font SIZE="3">The AdAdjustVR function controls the digitally controlled
+  potentiometer on the board/card for calibration purpose.</font></td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td colspan="3" width="492" height="21" valign="top"><font face="Courier New">INT AdAdjustVR(</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="97" height="21" valign="top"> <font face="Courier New"> HANDLE&nbsp;</font></td>
+        <td width="373" height="21" valign="top"> <font face="Courier New"> <i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="97" height="21" valign="top"> <font face="Courier New"> ULONG&nbsp;</font></td>
+        <td width="373" height="21" valign="top"> <font face="Courier New"> <em>ulAdjustCh</em>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="97" height="21" valign="top"> <font face="Courier New"> ULONG&nbsp;</font></td>
+        <td width="373" height="21" valign="top"> <font face="Courier New"> <em>ulSingleDiff</em>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="97" height="21" valign="top"> <font face="Courier New"> ULONG&nbsp;</font></td>
+        <td width="373" height="21" valign="top"> <font face="Courier New"> <em>ulSelVolume</em>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="97" height="21" valign="top"> <font face="Courier New"> ULONG&nbsp;</font></td>
+        <td width="373" height="21" valign="top"> <font face="Courier New"> <em>ulControl</em>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="97" height="21" valign="top"> <font face="Courier New"> ULONG&nbsp;</font></td>
+        <td width="373" height="21" valign="top"> <em><font face="Courier New">ulTap</font></em></td>
+      </tr>
+      <tr>
+        <td colspan="3" width="492" height="20" valign="top">
+    <font face="Courier New">
+    );</font>  
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">Visual Basic&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td colspan="4" width="492" height="20" valign="top"><font face="Courier New">Declare Function ADAdjustVR
+          Lib&quot;FbiAd.DLL&quot; (</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="102" height="21" valign="top"> <font face="Courier New"> ByVal&nbsp;</font>
+        </td>
+        <td width="136" height="21" valign="top"> <font face="Courier New"> <i>hDeviceHandle</i> </font>
+        </td>
+        <td width="232" height="21" valign="top"> <font face="Courier New"> As
+          Long, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="102" height="21" valign="top"> <font face="Courier New"> ByVal&nbsp;</font>
+        </td>
+        <td width="136" height="21" valign="top"> <font face="Courier New"> <em>ulAdjustCh</em> &nbsp;</font>
+        </td>
+        <td width="232" height="21" valign="top"> <font face="Courier New"> As
+          Long, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" height="1" valign="top"></td>
+        <td width="102" height="1" valign="top"> <font face="Courier New"> ByVal</font>
+        </td>
+        <td width="136" height="1" valign="top"> <font face="Courier New"> <em>ulSingleDiff</em> </font>
+        </td>
+        <td width="232" height="1" valign="top"> <font face="Courier New"> As
+          Long, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="102" height="21" valign="top"> <font face="Courier New"> ByVal&nbsp;</font>
+        </td>
+        <td width="136" height="21" valign="top"> <font face="Courier New"> <em>ulSelVolume</em> &nbsp;</font>
+        </td>
+        <td width="232" height="21" valign="top"> <font face="Courier New"> As
+          Long, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="102" height="21" valign="top"> <font face="Courier New"> ByVal&nbsp;</font>
+        </td>
+        <td width="136" height="21" valign="top"> <font face="Courier New"> <em>ulControl</em> &nbsp;</font>
+        </td>
+        <td width="232" height="21" valign="top"> <font face="Courier New"> As
+          Long, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="102" height="21" valign="top"> <font face="Courier New"> ByVal&nbsp;</font>  
+        </td>
+        <td width="136" height="21" valign="top"> <font face="Courier New"> <em>ulTap</em> &nbsp;</font>  
+        </td>
+        <td width="232" height="21" valign="top"> <font face="Courier New">As
+          Long _</font>  
+        </td>
+      </tr>
+      <tr>
+        <td width="486" colspan="4" height="20" valign="top">
+    <p ALIGN="JUSTIFY">  
+    <font face="Courier New">  
+    ) As Long</font>  
+    </p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+
+  <p><strong><font face="Times New Roman" size="3">Delphi&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="539" height="140">
+      <tr>
+        <td colspan="3" width="666" height="20" valign="top">
+    <font face="Courier New">
+    function AdAdjustVR(</font></td>
+      </tr>
+      <tr>
+        <td width="26" height="21" valign="top"></td>
+        <td width="118" height="21" valign="top"><i><font face="Courier New">hDeviceHandle</font></i>
+        </td>
+        <td width="528" height="21" valign="top"><font face="Courier New">: THandle;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="26" height="1" valign="top"></td>
+        <td width="118" height="1" valign="top"><font face="Courier New"><em>ulAdjustCh</em>&nbsp;</font>
+        </td>
+        <td width="528" height="1" valign="top"> <font face="Courier New"> : Cardinal;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="26" height="1" valign="top"></td>
+        <td width="118" height="1" valign="top"><font face="Courier New"><em>ulSingleDiff</em>&nbsp;</font>
+        </td>
+        <td width="528" height="1" valign="top"> <font face="Courier New"> : Cardinal;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="26" height="21" valign="top"></td>
+        <td width="118" height="21" valign="top"><em><font face="Courier New">ulSelVolume</font></em>
+        </td>
+        <td width="528" height="21" valign="top"><font face="Courier New">: Cardinal;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="26" height="21" valign="top"></td>
+        <td width="118" height="21" valign="top"><em><font face="Courier New">ulControl</font></em>
+        </td>
+        <td width="528" height="21" valign="top"><font face="Courier New">: Cardinal;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="26" height="21" valign="top"></td>
+        <td width="118" height="21" valign="top"><font face="Courier New"><em>ulTap</em> &nbsp;</font>
+        </td>
+        <td width="528" height="21" valign="top"> <font face="Courier New"> : Cardinal</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="660" colspan="3" height="20" valign="top">
+    <p ALIGN="JUSTIFY">
+    <font face="Courier New">
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font>
+    </p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1" height="174">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td valign="top" width="484" height="21">Specifies the device handle obtained by the
+        <a href="AdOpen.html">AdOpen</a> function.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="19"></td>
+      <td valign="top" width="484" height="19">&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="40"><em><font face="Courier New">ulAdjustCh</font></em></td>
+      <td valign="top" width="484" height="40">Specifies the channel number to adjust.
+        For the board/card whose input channels are multiplexed, please specify 1.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="37"><i><font face="Courier New">ulSingleDiff</font></i></td>
+      <td valign="top" width="484" height="37">Specifies the input configuration.
+        <table border="1" width="300" height="74">
+          <tr><td width="163" align="center" valign="top" height="19"><b>Code</b></td><td width="204" align="center" valign="top" height="19"><b>Description</b></td>
+          <tr><td width="163" valign="top" height="18">AD_INPUT_SINGLE</td><td width="204" valign="top" height="18">Single-ended
+              input</td>
+          <tr><td width="163" valign="top" height="19">AD_INPUT_DIFF</td><td width="204" valign="top" height="19">Differential
+              input</td>
+        </table></td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="24"></td>
+      <td valign="top" width="484" height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="169"><i><font face="Courier New">ulSelVolume</font></i></td>
+      <td valign="top" width="484" height="169">Selects the electronic volume to adjust.
+        <table border="1" width="350">
+          <tr>
+            <td width="163" align="center" valign="top"><b>Code</b></td><td width="204" align="center" valign="top"><b>Description</b></td>
+          </tr>
+          <tr><td width="185" valign="top">AD_ADJUST_BIOFFSET</td><td width="182" valign="top">Bipolar offset</td>
+          <tr><td width="185" valign="top">AD_ADJUST_UNIOFFSET</td><td width="182" valign="top">Unipolar offset</td>
+          <tr><td width="185" valign="top">AD_ADJUST_BIGAIN</td><td width="182" valign="top">Bipolar gain</td>
+          <tr><td width="185" valign="top">AD_ADJUST_UNIGAIN</td><td width="182" valign="top">Unipolar gain</td>
+        </table></td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="22"></td>
+      <td valign="top" width="484" height="22">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="167"><em><font face="Courier New">ulControl</font></em></td>
+      <td valign="top" width="484" height="167">Specifies the operation.
+        <table border="1" width="420">
+          <tr>
+            <td width="163" align="center"><b>Code</b></td><td width="204" align="center"><b>Description</b></td>
+          </tr>
+          <tr><td>AD_ADJUST_UP</td><td>Increases the volume.</td>
+          <tr><td>AD_ADJUST_DOWN</td><td>Decreases the volume.</td>
+          <tr><td valign="top">AD_ADJUST_STORE</td><td>Saves the present value to
+              the non-volatile memory.</td>
+          <tr><td valign="top">AD_ADJUST_STANDBY</td><td>Places the electronic volume device into
+              the standby mode.</td>
+          <tr><td>AD_ADJUST_NOT_STORE</td><td>Not save the value.</td>
+        </table></td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="23"></td>
+      <td valign="top" width="484" height="23">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="40"><i><font face="Courier New">ulTap</font></i></td>
+      <td valign="top" width="484" height="40">Specifies the number of steps to increase or
+        decrease, in the range of 1 through 100.</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480" valign="top">
+  The AdAdjustVR
+  <font SIZE="3"> function returns AD_ERROR_SUCCESS if the
+  process is successfully completed. </font>Otherwise, this function returns another code.
+  Please refer to the <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Comment</font></strong></p>
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td width="544" valign="top">
+  Some board/card don't support this capability. In such case, this function returns
+  AD_ERROR_NOT_SUPPORTED.&nbsp;You don't have to use this API because the adjustments are done by the
+  AdCalib.exe program
+  included in this product.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Examples</font></strong></p>
+
+  <blockquote>
+  <p><font face="Times New Roman" size="3"><strong>C</strong></font></p> 
+  <blockquote>
+    <table border="0" width="457" cellspacing="1">
+      <tr>
+        <td valign="top" width="891">
+    <font face="Courier New">
+    nRet = AdAdjustVR( hDeviceHandle, 1, AD_INPUT_SINGLE, AD_ADJUST_BIOFFSET,
+    AD_ADJUST_DOWN, 1 );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><font face="Times New Roman" size="3"><strong>Visual Basic</strong></font></p> 
+  <blockquote>
+    <table border="0" width="457" cellspacing="1">
+      <tr>
+        <td valign="top" width="891">
+    <font face="Courier New">
+    nRet = AdAdjustVR( hDeviceHandle, 1, _ AD_INPUT_SINGLE, AD_ADJUST_BIOFFSET,
+    _ AD_ADJUST_DOWN, 1 )</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><font face="Times New Roman" size="3"><strong>Delphi</strong></font></p> 
+  <blockquote>
+    <table border="0" width="457" cellspacing="1">
+      <tr>
+        <td valign="top" width="891">
+    <font face="Courier New">
+    nRet := AdAdjustVR( hDeviceHandle, 1, AD_INPUT_SINGLE, AD_ADJUST_BIOFFSET,
+    AD_ADJUST_DOWN, 1 );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td>
+Adjust a bipolar offset on the board/card specified by hDeviceHandle.
+
+      </td>
+    </tr>
+  </table>
+  </blockquote> 
+</blockquote> 
+ 
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

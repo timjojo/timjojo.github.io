@@ -1,0 +1,212 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdSetFilter</title>
+</head>
+
+<body>
+
+<p><b><font size="5" face="Arial">AdSetFilter</font></b></p>                                
+                            
+<p><b><font face="Times New Roman" size="4">Description</font></b></p> 
+ 
+<blockquote>
+  <p ALIGN="JUSTIFY"><font face="Times New Roman">The AdSetFilter function configures the digital filter of    
+  the board/card.<br>   
+  </font>
+  </p>
+</blockquote>
+ 
+<p><b><font face="Times New Roman" size="4">Syntax</font></b></p> 
+ 
+<blockquote> 
+  <p><b><font face="Times New Roman">C</font></b></p> 
+ 
+  <blockquote> 
+    <p><b><font face="Courier New">INT AdSetFilter(<br>                                   
+    </font> <font face="Courier New">HANDLE </font> </b><font face="Courier New"><i>hDeviceHandle</i><b>,      
+    </b><i><br>   
+    </i>                   
+    &nbsp; <b>ULONG </b><i>ulFilter</i><b><br>                                                              
+    );</b></font></p>                      
+  </blockquote>                      
+                      
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>                        
+                      
+  <blockquote>                      
+    <p><b><font face="Courier New">Declare Function AdSetFilter Lib &quot;FbiAd.DLL&quot; 
+    ( _<br>                                                              
+    </font> <font face="Courier New">ByVal </font> </b><font face="Courier New"><i>hDeviceHandle</i><b>  As 
+    Long, _<br>                           
+ </b></font><b>   <font face="Courier New">ByVal </font> </b><font face="Courier New"><i>ulFilter </i><b>As 
+    Long _<br>                                                             
+    ) As Long                                     
+ </b></font></p>                        
+  </blockquote>                       
+                       
+  <p><b><font face="Times New Roman">Delphi</font></b></p>                       
+                       
+  <blockquote>                       
+    <p><b><font face="Courier New">function AdSetFilter(<br>                                                        
+    </font> </b><font face="Courier New"><i>hDeviceHandle </i><b>: THandle;<br>                         
+    </b></font><b> </b><font face="Courier New"><i>ulFilter </i><b> : Cardinal<br>                                
+    ) : DWORD; stdcall; external 'FbiAd.DLL';                                  
+ </b></font></p>       
+  </blockquote>       
+</blockquote>       
+       
+<p> </p>  
+  
+  <font size="4">
+  <p><b><font face="Times New Roman">Parameter</font></b></p>  
+  
+</font>  
+  
+<blockquote>  
+  <table border="0" width="687">  
+    <tr>  
+      <td width="130" valign="top" height="18"><i><font face="Courier New">hDeviceHandle</font></i></td>  
+      <td width="543" height="18"><font face="Times New Roman">Specifies the 
+        device handle obtained by the <a href="AdOpen.html">AdOpen</a> function.</font>
+      </td>  
+    </tr>  
+    <tr>  
+      <td width="130" valign="top" height="21"><i><font face="Courier New">&nbsp;</font><font> </font></i></td>                             
+  <font size="4">
+      <td width="543" height="21">               
+      </td>               
+    </tr>               
+    </font>               
+    <tr>  
+      <td width="130" valign="top" height="80"><i><font face="Courier New">ulFilter&nbsp;</font></i></td>                             
+      <td width="543" height="80"><font face="Times New Roman"><font>Specifies     
+        either one of digital filter code.&nbsp;<br>    
+        </font></font><br>
+        <font face="Times New Roman">The digital filter is specified by the     
+        following code.&nbsp;</font>    
+        <table border="1">
+          <tbody>
+            <tr>
+              <td width="124" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>
+              <td width="128" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>
+              <td width="254" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Descriptiojn</font></b></td>
+            </tr>
+            <tr>
+              <td width="124"><font face="Times New Roman">AD_DF_8</font></td>
+              <td width="128" align="center"><font face="Times New Roman">0</font></td>
+              <td width="254"><font face="Times New Roman">Over sampling rate: 8</font></td>
+            </tr>
+            <tr>
+              <td width="124"><font face="Times New Roman">AD_DF_16</font></td>
+              <td width="128" align="center"><font face="Times New Roman">1</font></td>
+              <td width="254"><font face="Times New Roman">Over sampling rate: 16</font></td>
+            </tr>
+            <tr>
+              <td width="124"><font face="Times New Roman">AD_DF_32</font></td>
+              <td width="128" align="center"><font face="Times New Roman">2</font></td>
+              <td width="254"><font face="Times New Roman">Over sampling rate: 32</font></td>
+            </tr>
+            <tr>
+              <td width="124"><font face="Times New Roman">AD_DF_64</font></td>
+              <td width="128" align="center"><font face="Times New Roman">3</font></td>
+              <td width="254"><font face="Times New Roman">Over sampling rate: 64</font></td>
+            </tr>
+            <tr>
+              <td width="124"><font face="Times New Roman">AD_DF_128</font></td>
+              <td width="128" align="center"><font face="Times New Roman">4</font></td>
+              <td width="254"><font face="Times New Roman">Over sampling rate: 128</font></td>
+            </tr>
+            <tr>
+              <td width="124"><font face="Times New Roman">AD_DF_256</font></td>
+              <td width="128" align="center"><font face="Times New Roman">5</font></td>
+              <td width="254"><font face="Times New Roman">Over sampling rate: 256</font></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>               
+    </tr>               
+  </table>               
+</blockquote>               
+               
+  <font size="4">
+               
+<p> </p>               
+               
+  <p><font face="Times New Roman"><b>Return Value</b></font></p>                 
+               
+</font>               
+               
+<blockquote>               
+  <p><font face="Times New Roman">AdSetFilter function returns AD_ERROR_SUCCESS  
+  if the process is successfully completed.&nbsp;<br>
+ Otherwise, this function returns  
+  another code. Please refer to the <a href="Return%20Values.html">error codes</a>.</font><br> 
+  </p>               
+</blockquote>               
+               
+  <font size="4">
+  <p><font face="Times New Roman"><b>Comments</b></font></p>               
+               
+</font>               
+               
+<blockquote>
+  <p>-<font face="Times New Roman">This function cannot be performed during  
+  sampling.</font><br>
+  -<font face="Times New Roman">Refer to the product manual for more detail  
+  about over sampling rate.</font><br> 
+  -<font face="Times New Roman">This function is applicable only to the    
+  LPC-320724 and PEX-320724.</font></p>                 
+  
+  <font size="4">
+  
+<p> </p>   
+   
+</blockquote>
+  
+<p><font face="Times New Roman"><b>Example</b></font></p>               
+               
+</font>               
+               
+<blockquote>               
+  <p><b><font face="Times New Roman">C</font></b></p>               
+               
+  <blockquote>               
+    <p> 
+    <font face="Courier New"> 
+    nRet = AdSetFilter( hDeviceHandle, AD_DF_256);</font></p>                                 
+  </blockquote>                    
+                    
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>                       
+                    
+  <blockquote>                    
+    <p> 
+    <font face="Courier New"> 
+    nRet = AdSetFilter( hDeviceHandle, AD_DF_256)</font></p>                              
+  </blockquote>                    
+                    
+  <p><b><font face="Times New Roman">Delphi</font></b></p>                    
+                    
+  <blockquote>                    
+    <p><font face="Courier New">nRet := AdSetFilter( hDeviceHandle, AD_DF_256);</font></p>                                
+  </blockquote>                     
+                     
+  <p><font face="Times New Roman">Sets the over sampling rate to 256 on the     
+  board/card specified by hDeviceHandle.&nbsp;</font></p>                       
+</blockquote>                   
+                   
+  <font size="4">
+                   
+<hr>                   
+                   
+</font>                   
+                   
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>  
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

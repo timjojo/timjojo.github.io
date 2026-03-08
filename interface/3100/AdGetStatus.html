@@ -1,0 +1,635 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdGetStatus</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdGetStatus</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The AdGetStatus function retrieves the sampling status on the board/card.</td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td colspan="3" width="472" valign="top"><font face="Courier New" size="3">INT AdGetStatus(</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="72" valign="top"> <font face="Courier New" size="3"> HANDLE&nbsp;</font></td>
+        <td width="366" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="72" valign="top"> <font face="Courier New" size="3"> ULONG&nbsp;</font></td>
+        <td width="366" valign="top"> <font face="Courier New" size="3"> <em>*ulAdSmplStatus</em>,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="72" valign="top"> <font face="Courier New" size="3"> ULONG&nbsp;</font></td>
+        <td width="366" valign="top"> <font face="Courier New" size="3"> <i>*ulAdSmplCount</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="72" valign="top"> <font face="Courier New" size="3"> ULONG&nbsp;</font></td>
+        <td width="366" valign="top"> <i><font face="Courier New" size="3">*ulAdAvailCount</font></i></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top">
+    <font face="Courier New" size="3">
+    );</font>
+        </td>
+        <td width="444" colspan="2" valign="top"></td>
+      </tr>
+    </table>
+  </blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">Visual Basic&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="470" height="140">
+      <tr>
+        <td colspan="4" width="462" valign="top"><font face="Courier New" size="3">Declare Function AdGetStatus
+          Lib &quot;FbiAd.DLL&quot; (</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"> <font face="Courier New" size="3"> ByVal&nbsp;</font></td>
+        <td width="143" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i> </font></td>
+        <td width="225" valign="top"> <font face="Courier New" size="3"> As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="62" valign="top"> <font face="Courier New" size="3"> ByRef</font></td>
+        <td width="143" valign="top"> <font face="Courier New" size="3"> <em>ulAdSmplStatus</em> </font></td>
+        <td width="225" valign="top"> <font face="Courier New" size="3"> As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"> <font face="Courier New" size="3"> ByRef&nbsp;</font></td>
+        <td width="143" valign="top"> <font face="Courier New" size="3"> <i>ulAdSmplCount</i> </font></td>
+        <td width="225" valign="top"> <font face="Courier New" size="3"> As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"> <font face="Courier New" size="3"> ByRef&nbsp;</font>
+        </td>
+        <td width="143" valign="top"> <font face="Courier New" size="3"> <i>ulAdAvailCount</i> </font>
+        </td>
+        <td width="225" valign="top"> <font face="Courier New" size="3"> As Long
+          _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="462" colspan="4" valign="top">
+    <font face="Courier New" size="3">
+    ) As Long</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+
+  <p><strong><font face="Times New Roman" size="3">Delphi&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td colspan="4" width="492" valign="top"><font face="Courier New" size="3">function AdGetStatus(</font></td>
+      </tr>
+      <tr>
+        <td width="17" colspan="2" valign="top"></td>
+        <td width="159" valign="top"><em><font face="Courier New" size="3">hDeviceHandle</font></em></td>
+        <td width="310" valign="top"><font face="Courier New" size="3">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"><font face="Courier New" size="3">&nbsp;</font></td>
+        <td width="13" valign="top"><font face="Courier New" size="3"> var</font></td>
+        <td width="159" valign="top"> <font face="Courier New" size="3"> <em>ulAdSmplStatus</em> </font></td>
+        <td width="310" valign="top"> <font face="Courier New" size="3"> : Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"></td>
+        <td width="13" valign="top"><font face="Courier New" size="3"> var</font></td>
+        <td width="159" valign="top"> <font face="Courier New" size="3"> <i>ulAdSmplCount</i> &nbsp;</font></td>
+        <td width="310" valign="top"> <font face="Courier New" size="3"> : Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"></td>
+        <td width="13" valign="top"><font face="Courier New" size="3"> var</font></td>
+        <td width="159" valign="top"> <font face="Courier New" size="3"> <i>ulAdAvailCount</i> </font>
+        </td>
+        <td width="310" valign="top"> <font face="Courier New" size="3"> : Cardinal</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="486" colspan="4" valign="top">
+    <p ALIGN="JUSTIFY"> 
+    <font face="Courier New" size="3"> 
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font></p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1" height="311">
+    <tr>
+      <td valign="top" nowrap width="71" height="1"><i><font face="Courier New" size="3">hDeviceHandle</font></i></td>
+      <td valign="top" width="484" height="1">Specifies the device handle obtained by the
+        <a href="AdOpen.html">
+        AdOpen</a> function.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">&nbsp;&nbsp;&nbsp;
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="163"><em><font face="Courier New" size="3">ulAdSmplStatus</font></em></td>
+      <td valign="top" width="484" height="163">Points to a variable to receive the sampling status.
+        The variable will contain one of the following codes.
+      <table border="1" width="393">
+        <tr valign="top" align="center">
+          <td width="223"><b>Code</b></td>
+          <td width="154"><b>Description</b></td>
+        </tr>
+        <tr valign="top">
+          <td width="223">AD_STATUS_STOP_SAMPLING</td>
+          <td width="154">The sampling is stopped.</td>
+        </tr>
+        <tr valign="top">
+          <td width="223">AD_STATUS_WAIT_TRIGGER</td>
+          <td width="154">The sampling is waiting for a trigger.</td>
+        </tr>
+        <tr valign="top">
+          <td width="223">AD_STATUS_NOW_SAMPLING</td>
+          <td width="154">The sampling is running. </td>
+        </tr>
+      </table>
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New" size="3">ulAdSmplCount</font></i></td>
+      <td valign="top" width="484" height="21">Points to a variable to receive the
+        count of acquired samples.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">
+        &nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="40"><i><font face="Courier New" size="3">ulAdAvailCount</font></i></td>
+      <td valign="top" width="484" height="40">
+        Points to a variable to receive the number of samples to be sampled.</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="550">
+    <tr>
+      <td valign="top">
+  <p>The AdGetStatus function returns AD_ERROR_SUCCESS if the process is successfully completed. Otherwise, this function returns another code. Please refer to
+  the <a href="Return%20Values.html">error codes</a>. </p>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Comments</font></strong></p>
+<ul>
+  <li><b>Counting Acquired Samples</b>
+  <table border="0" width="550" cellspacing="1" height="1225">
+    <tr>
+      <td height="1350" valign="top">
+  The driver software counts acquired samples after the data is transferred into the
+  buffer. How
+  to count the samples depends on the sampling conditions.
+  <table border="1" width="535" height="1284">
+    <tr>
+      <td valign="middle" align="center" width="107" height="57">
+        <p align="center"><b>Data<br>
+        Transfer<br>
+        &nbsp; Mode</b></td>
+      <td valign="middle" width="101" height="57">
+        <p align="center"><b>Trigger</b></td>
+      <td width="305" height="57">
+        <p align="center"><b>Description</b></td>
+    </tr>
+    <tr>
+      <td valign="top" rowspan="6" width="107" height="402">Programmed I/O</td>
+      <td valign="top" width="101" height="57">No trigger</td>
+      <td width="305" height="57" valign="top">The count starts when the sampling starts.
+        It is incremented by one whenever one sample is acquired.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Start-trigger without delay</td>
+      <td width="305" height="57" valign="top">The count starts after the trigger is asserted.
+        It is incremented by one whenever one sample is acquired.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Start-trigger with pre-trigger delay</td>
+      <td width="305" height="57" valign="top"><font SIZE="3">The count starts
+        when all of the pre-trigger samples are acquired. It is incremented by
+        one when one sample is acquired.</font></td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Start-trigger with post-trigger delay</td>
+      <td width="305" height="57" valign="top">The count starts when all of the post-trigger samples are
+        acquired. It is incremented by one whenever one sample is acquired.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Stop-trigger without delay</td>
+      <td width="305" height="57" valign="top">The count is updated when the
+        trigger is asserted or the sampling is completed. You cannot refer it
+        while the sampling is running.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="87">Stop-trigger with post-trigger delay</td>
+      <td width="305" height="87" valign="top">Until the trigger is asserted, the count of samples is indefinite.
+        When the trigger is asserted, the count of samples is equal to the number of
+        samples minus the number of post-trigger samples. After that, it is incremented by one whenever one
+        sample is acquired.</td>
+    </tr>
+    <tr>
+      <td valign="top" rowspan="6" width="107" height="410">FIFO</td>
+      <td valign="top" width="101" height="38">No trigger</td>
+      <td width="305" height="38" valign="top">After the sampling starts, whenever the count of samples
+        is updated at every half of the FIFO size.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Start-trigger without delay</td>
+      <td width="305" height="57" valign="top"><font SIZE="3">After the sampling
+        starts, whenever the count of samples is updated at every half of the
+        FIFO size, the count is updated.</font></td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="76">Start-trigger with pre-trigger delay</td>
+      <td width="305" height="76" valign="top">When the trigger is asserted, the count of acquired samples becomes the number of pre-trigger
+        samples. After that, whenever samples of half of FIFO size are acquired,
+        the count is updated.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="95">Start-trigger with post-trigger delay</td>
+      <td width="305" height="95" valign="top">Until the trigger is asserted, the count of acquired samples is indefinite.
+        When all of the post-trigger samples are acquired, the count starts.
+        After that, whenever samples of half of the FIFO size are acquired, the
+        count is updated.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Stop-trigger without delay</td>
+      <td width="305" height="57" valign="top">The count is updated when the
+        trigger is asserted or the sampling is completed. You cannot refer it
+        while the sampling is running.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Stop-trigger with post-trigger
+        delay</td>
+      <td width="305" height="57" valign="top">The count is updated when the
+        sampling is completed. The count cannot be read while the sampling is
+        running.</td>
+    </tr>
+    <tr>
+      <td valign="top" rowspan="6" width="107" height="391">Bus master</td>
+      <td valign="top" width="101" height="57">No trigger</td>
+      <td width="305" height="57" valign="top">After the sampling starts, whenever the count of samples
+        is updated at every event notification cycle.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Start-trigger without delay</td>
+      <td width="305" height="57" valign="top">After the trigger is asserted, whenever the count of
+        samples is updated at every event notification cycle.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="76">Start-trigger with pre-trigger delay</td>
+      <td width="305" height="76" valign="top">When the trigger is asserted, the count of acquired samples
+        becomes the number of pre-trigger samples. After that, the
+        count of samples at every event notification cycle is updated.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Start-trigger with post-trigger delay</td>
+      <td width="305" valign="top" height="57">This trigger is not applicable to
+        the bus master transfer
+        mode.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Stop-trigger without delay</td>
+      <td width="305" height="57" valign="top">The count is updated when the
+        trigger is asserted or the sampling is completed. You cannot refer it
+        while the sampling is running.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="101" height="57">Stop-trigger with post-trigger
+        delay</td>
+      <td width="305" height="57" valign="top">The count is updated when the
+        sampling is completed. The count cannot be read while the sampling is
+        running.</td>
+    </tr>
+  </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" height="19" valign="top">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td width="544" height="19" valign="top">
+  &quot;Half of the FIFO Size&quot; depends on the number of channels
+  to sample.
+  <table border="1" width="329" height="426">
+    <tr>
+      <td width="138" align="center" height="20"><b>Number of Channels</b></td>
+        <td width="162" align="center" height="20"><b>Half of the FIFO Size</b></td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">1</td>
+        <td width="162" align="center" height="19">16384</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">2</td>
+        <td width="162" align="center" height="19">8192</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">3</td>
+        <td width="162" align="center" height="19">5461</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">4</td>
+        <td width="162" align="center" height="19">4096</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">5</td>
+        <td width="162" align="center" height="19">3276</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">6</td>
+        <td width="162" align="center" height="19">2730</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">7</td>
+        <td width="162" align="center" height="19">2340</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">8</td>
+        <td width="162" align="center" height="19">2048</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">9</td>
+        <td width="162" align="center" height="19">1820</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">10</td>
+        <td width="162" align="center" height="19">1638</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">11</td>
+        <td width="162" align="center" height="19">1489</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">12</td>
+        <td width="162" align="center" height="19">1365</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">13</td>
+        <td width="162" align="center" height="19">1260</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">14</td>
+        <td width="162" align="center" height="19">1170</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">15</td>
+        <td width="162" align="center" height="19">1092</td>
+    </tr>
+    <tr>
+      <td width="138" align="center" height="19">16</td>
+        <td width="162" align="center" height="19">1024</td>
+    </tr>
+  </table>
+      </td>
+    </tr>
+  </table>
+  </li>
+</ul>
+ 
+<ul>
+  <li><b>Counting Acquired Samples in the Infinite Sampling
+    </b>
+    <table border="0" cellspacing="1" width="550">
+      <tr>
+        <td>The number of sampled data is counted whenever samples are acquired.
+          When the count value becomes greater than the range of the variable, the count
+          rounds to 0
+          and starts again. The number of remaining unsampled data
+          always returns 1. The number of remaining unsampled data has no
+          meaning while
+          infinite sampling is running.</td>
+      </tr>
+    </table>
+  </li>
+</ul>
+ 
+<p><strong><font face="Times New Roman" size="4"> Examples</font></strong></p>
+
+  <blockquote>
+  <p><font face="Times New Roman" size="3"><strong>C</strong></font></p> 
+  <blockquote>
+    <table border="0" width="499" cellspacing="1">
+      <tr>
+        <td width="64">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">ULONG&nbsp;</font></p>
+        </td>
+        <td width="762">
+    <font face="Courier New" size="3">
+    ulAdSmplStatus;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="64">
+    <font face="Courier New" size="3">
+    ULONG&nbsp;</font></td>
+        <td width="762">
+    <font face="Courier New" size="3">
+    ulAdSmplCount;</font></td>
+      </tr>
+      <tr>
+        <td width="64">
+    <font face="Courier New" size="3">
+    ULONG&nbsp;</font></td>
+        <td width="762">
+    <font face="Courier New" size="3">
+    ulAdAvailCount;</font></td>
+      </tr>
+      <tr>
+        <td height="21" colspan="2" width="832">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" width="832">
+    <font face="Courier New" size="3">
+    nRet = AdGetStatus(<b> </b>hDeviceHandle, &amp;ulAdSmplStatus, 
+    &amp;ulAdSmplCount,</font></td>
+      </tr>
+      <tr>
+        <td colspan="2" width="832"><font face="Courier New" size="3">&amp;ulAdAvailCount );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p>
+  <strong><font face="Times New Roman" size="3">Visual Basic
+  </font></strong>
+  </p> 
+  <blockquote>
+    <table border="0" width="496" cellspacing="1">
+      <tr>
+        <td height="21" width="45">
+    <p ALIGN="JUSTIFY"><font face="Courier New">Dim&nbsp;</font></p>
+        </td>
+        <td height="21" width="448">
+ <font face="Courier New">
+ ulAdSmplStatus As Long</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" width="45">
+    <font face="Courier New">
+    Dim&nbsp;</font></td>
+        <td height="19" width="448">
+ <font face="Courier New">
+ ulAdSmplCount As Long</font></td>
+      </tr>
+      <tr>
+        <td height="21" width="45">
+    <font face="Courier New">
+    Dim&nbsp;</font></td>
+        <td height="21" width="448">
+ <font face="Courier New">
+ ulAdAvailCount As Long</font></td>
+      </tr>
+      <tr>
+        <td height="21" colspan="2" width="499">
+        </td>
+      </tr>
+      <tr>
+        <td height="21" colspan="2" width="499">
+    <font face="Courier New">
+    nRet = AdGetStatus( hDeviceHandle, _ ulAdSmplStatus, ulAdSmplCount,</font></td>
+      </tr>
+      <tr>
+        <td height="21" colspan="2" width="499">
+    <font face="Courier New">ulAdAvailCount)</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p> 
+  <strong><font face="Times New Roman" size="3">Delphi
+  </font></strong>
+  </p> 
+  <blockquote>
+    <table border="0" width="498" cellspacing="1">
+      <tr>
+        <td height="21" width="587">
+    <p ALIGN="JUSTIFY"><font face="Courier New">var</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" width="581">
+    <font face="Courier New">
+    &nbsp;&nbsp;&nbsp; ulAdSmplStatus: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td height="19" width="581">
+    <font face="Courier New">
+    &nbsp;&nbsp;&nbsp; ulAdSmplCount: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td height="21" width="581">
+    <font face="Courier New">&nbsp;&nbsp;&nbsp; ulAdAvailCount: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td height="21" width="587">  
+        <font face="Courier New">&nbsp;&nbsp;&nbsp;</font>  
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="587">  
+    <font face="Courier New">  
+    nRet := AdGetStatus( hDeviceHandle, ulAdSmplStatus, ulAdSmplCount,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td height="21" width="587">  
+ <font face="Courier New">  
+ ulAdAvailCount);</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td>
+Retrieve the sampling status on the board/card specified by hDeviceHandle.
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

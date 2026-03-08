@@ -1,0 +1,316 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdSetBoardConfig</title>
+</head>
+
+<body>
+
+<p><b><font size="5" face="Arial">AdSetBoardConfig</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="557">
+  The AdSetBoardConfig function configures event handling of the board/card.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472"><font face="Courier New">INT
+            AdSetBoardConfig(</font></td>
+        </tr>
+        <tr>
+          <td width="30"><font face="Courier New">&nbsp; &nbsp;</font></td>
+          <td width="122"><font face="Courier New">HANDLE</font></td>
+          <td width="308"><font face="Courier New"><i>hDeviceHandle</i>,</font></td>
+        </tr>
+        <tr>
+          <td width="30"></td>
+          <td width="122"><font face="Courier New">HANDLE</font></td>
+          <td width="308"><font size="3" face="Courier New"><i>hEvent</i>,
+</font>
+          </td>
+        </tr>
+        <tr>
+          <td width="30"></td>
+          <td width="122"><font size="3" face="Courier New">LPADCALLBACK
+</font>
+          </td>
+          <td width="308"><b></b><font face="Courier New"><i>lpCallBackProc</i><b></b><font size="3">,
+</font>
+            </font>
+          </td>
+        </tr>
+        <tr>
+          <td width="30"></td>
+          <td width="122"><font face="Courier New">DWORD</font></td>
+          <td width="308"><i><font face="Courier New">dwUser</font></i></td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+  </blockquote>
+    <blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+  <blockquote>
+    <table border="0" width="508" cellspacing="1">
+      <tr>
+        <td colspan="4" width="504"><font face="Courier New">Declare Function AdSetBoardConfig &quot;FbiAd.DLL&quot;
+          ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="52" valign="top"><font face="Courier New">ByVal</font></td>
+        <td width="142"><font face="Courier New"><i>hDeviceHandle</i>  </font></td>
+        <td width="272" valign="top"><font face="Courier New">  As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="52"><font face="Courier New">ByVal</font></td>
+        <td width="142"><font face="Courier New"><i>hEvent</i>  &nbsp;</font></td>
+        <td width="272"><font face="Courier New">  As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="52"><font face="Courier New">ByVal</font></td>
+        <td width="142"><i><font face="Courier New">lpCallBackProc&nbsp;&nbsp;</font></i></td>
+        <td width="272"><font face="Courier New">  As Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="52"><font face="Courier New">ByVal</font></td>
+        <td width="142"><i><font face="Courier New">dwUser</font></i>  </td>
+        <td width="272"><font face="Courier New">As Long _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="504"><font face="Courier New">) As Long&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472"><font face="Courier New">function
+          AdSetBoardConfig(</font></td>
+      </tr>
+      <tr>
+        <td width="24"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="104"><i><font face="Courier New">hDeviceHandle</font></i></td>
+        <td width="336"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="24"></td>
+        <td width="104"><i><font face="Courier New">hEvent</font></i></td>
+        <td width="336"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="24"></td>
+        <td width="104"><i><font face="Courier New">lpCallBackProc</font></i></td>
+        <td width="336"><font face="Courier New">: FARPROC;</font></td>
+      </tr>
+      <tr>
+        <td width="24"></td>
+        <td width="104"><i><font face="Courier New">dwUser</font></i></td>
+        <td width="336"><font face="Courier New">: DWORD</font></td>
+      </tr>
+      <tr>
+        <td colspan="3" width="472"><font face="Courier New">) : DWORD; stdcall; external
+          'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+  <p><b><big>Parameters</big></b>
+</p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1" height="444">
+    <tbody>
+      <tr>
+        <td width="41" height="21"><var><font face="Courier New">hDeviceHandle&nbsp;</font></var></td>
+        <td width="509" height="21">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"></td>
+        <td width="509" height="21">
+        &nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="57"><var><font face="Courier New">hEvent</font></var></td>
+        <td width="509" height="57">
+        Specifies an event to be signaled when a sampling terminates or the specified number of samples
+        were successfully acquired. If you don't use event notification, specify it as follows:</td>
+      </tr>
+      <tr>
+        <td width="41" height="21"></td>
+        <td width="509" height="21">
+          <ul>
+            <li> NULL (C)</li>
+            <li>
+ 0 (Visual Basic)</li>
+            <li>
+ nil (Delphi)</li>
+          </ul>
+          <p>No event notification is available for the default settings.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="509" height="21">
+        &nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="59"><i><font face="Courier New">lpCallBackProc</font></i></td>
+        <td width="509" height="59">
+        Specifies an address of user callback routine to be called when the sampling stops.
+        If you don't use a callback routine, specify it as follows:</td>
+      </tr>
+      <tr>
+        <td width="41" height="78"></td>
+        <td width="509" height="78">
+          <ul>
+            <li> NULL (C)</li>
+            <li>
+ 0 (Visual Basic)</li>
+            <li>
+ nil (Delphi)</li>
+          </ul>
+          <p>No event notification is available for the default settings.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"></td>
+        <td width="509" height="21">
+        &nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="59"><var><font face="Courier New">dwUser</font></var></td>
+        <td width="509" height="59">
+        Specifies a user data to be passed to the user callback routine. If you
+        do not use the user callback routine, please specify 0.&nbsp;The default setting value is 0.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdSetBoardConfig function returns AD_ERROR_SUCCESS if the process is&nbsp;
+          successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Comment</big></b></p> 
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td width="544">
+  The result of this function is updated immediately while a sampling is running.
+  However, this function is applicable only when the <a href="AdStartSampling.html"> AdStartSampling</a> function is performed as an overlapped operation.
+  In Visual Basic Ver.4.0, callback routine is not available.
+  <p>When you use callback routine in Visual Basic, there are restrictions to
+  use. Refer to &quot;<a href="Attention.html">Attentions</a>&quot; for the
+  restrictions.</p>
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+ 
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="452" height="21"><font face="Courier New">hEvent =
+        CreateEvent(0, TRUE, FALSE, NULL);</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">nRet =
+        AdSetBoardConfig( hDeviceHandle, hEvent, CallBackProc, 0 );</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>
+    <blockquote>
+    <table border="0" width="515" cellspacing="1">
+      <tr>
+        <td width="536"><font face="Courier New">nRet = AdSetBoardConfig(
+          hDeviceHandle, hEvent, _ AddressOf CallBackProc, 0 )</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="499"><font face="Courier New">nRet := AdSetBoardConfig(
+          hDeviceHandle, hEvent, Addr(CallBackProc), 0 );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+Configure event handling on the board/card specified by hDeviceHandle.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,638 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 ADMEMSMPLREQ</title>
+</head>
+
+<body>
+
+  <p><font face="Arial"><b><a name="ADMEMSMPLREQ"><font size="4">A</font></a></b><font size="4"><b><a name="ADMEMSMPLREQ">D</a></b></font></font><b><a name="ADMEMSMPLREQ"><font face="Arial" size="4">MEMSMPLREQ Structure</font></a></b></p>                                              
+            
+<blockquote>            
+  <p><font face="Times New Roman"><a>The </a>ADMEMSMPLREQ<font color="#ff00ff" size="4"> </font>structure  
+  contains sampling condition settings. This structure is used by the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdMemSetSamplingConfig.html">AdMemSetSamplingConfig</a>  
+  function.</font></p>                  
+  <p><font face="Times New Roman">- C<br>                                                
+  </font><font face="Courier New">                                               
+  typedef struct {<br>                                                
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulChCount;<br>                                                
+  </font> <font face="Courier New">ADSMPLCHREQ&nbsp; SmplChReq[256]; <br>                                                  
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulSingleDiff;<br>                                               
+  </font> <font face="Courier New">float&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                         
+  fSmplFreq;<br>                       
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulStopMode; <br>                                                
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulPreTrigDelay; <br>                                                
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulPostTrigDelay; <br>                                                
+  </font> <font face="Courier New">ADTRIGCHREQ&nbsp; TrigChReq[2];<br>                      
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulATrgMode; <br>                                              
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulATrgPulse; <br>                                              
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulStopTrigEdge; <br>                                                
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulEClkEdge; <br>                                                
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulFastMode; <br>                                                
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulStatusMode; <br>                                                
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulErrCtrl; <br>                                                
+  } ADMEMSMPLREQ, *PADMEMSMPLREQ<br>                                                
+  </font><font face="Times New Roman">                                             
+  <br>                 
+  - Visual Basic<br>                                                
+  </font><font face="Courier New">                                               
+  Type ADMEMSMPLREQ<br>                                               
+  </font> <font face="Courier New">ulChCount As Long<br>                                                
+  </font> <font face="Courier New">SmplChReq(0 To 255) As ADSMPLCHREQ<br>                                                
+  </font> <font face="Courier New">ulSingleDiff As Long<br>                                                
+  </font> <font face="Courier New">fSmplFreq As Single<br>                                                
+  </font> <font face="Courier New">ulStopMode As Long<br>                                                
+  </font> <font face="Courier New">ulPreTrigDelay As Long<br>                                                
+  </font> <font face="Courier New">ulPostTrigDelay As Long<br>                                                
+  </font> <font face="Courier New">TrigChReq(0 To 1) As ADTRIGCHREQ<br>                     
+  </font> <font face="Courier New">ulATrgMode As Long<br>                                              
+  </font> <font face="Courier New">ulATrgPulse As Long<br>                                                
+  </font> <font face="Courier New">ulStopTrigEdge As Long<br>                                                
+  </font> <font face="Courier New">ulEClkEdge As Long<br>                                                
+  </font> <font face="Courier New">ulFastMode As Long<br>                                                
+  </font> <font face="Courier New">ulStatusMode As Long<br>                                                
+  </font> <font face="Courier New">ulErrCtrl As Long<br>                                                
+  End Type<br>                                                
+  </font><font face="Times New Roman">                                               
+  <br>                 
+  - Delphi<br>                                                
+  </font><font face="Courier New">                                               
+  type<br>                 
+  </font> <font face="Courier New">ADMEMSMPLREQ = record<br>                                                
+  </font> <font face="Courier New">ulChCount: Cardinal; <br>                                                
+  </font> <font face="Courier New">SmplChReq: array[0..255] of ADSMPLCHREQ; <br>                                              
+  </font> <font face="Courier New">ulSingleDiff : Cardinal; <br>                                                
+  </font> <font face="Courier New">fSmplFreq: Single; <br>                                                
+  </font> <font face="Courier New">ulStopMode: Cardinal; <br>                                                
+  </font> <font face="Courier New">ulPreTrigDelay: Cardinal; <br>                                                
+  </font> <font face="Courier New">ulPostTrigDelay: Cardinal; <br>                                                
+  </font> <font face="Courier New">TrigChReq: array[0..1] of ADTRIGCHREQ;<br>                    
+  </font> <font face="Courier New">ulATrgMode : Cardinal; <br>                                              
+  </font> <font face="Courier New">ulATrgPulse : Cardinal;<br>                                               
+  </font> <font face="Courier New">ulStopTrigEdge: Cardinal; <br>                                                
+  </font> <font face="Courier New">ulEClkEdge : Cardinal; <br>                                                
+  </font> <font face="Courier New">ulFastMode : Cardinal;<br>                                                
+  </font> <font face="Courier New">ulStatusMode : Cardinal;<br>                                                
+  </font> <font face="Courier New">ulErrCtrl : Cardinal;<br>                                                  
+  end;</font><font face="Times New Roman"><br>                 
+  <br>                 
+  </font>                 
+  </p>                 
+  <table border="0" width="90%">                 
+    <tr>                 
+      <td width="15%"><font face="Times New Roman"><b><u>Member</u></b></font><hr></td>                 
+      <td width="85%"><b><u><font face="Times New Roman">Description</font></u></b><hr></td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top"><font face="Times New Roman">ulChCount</font></td>                 
+      <td width="85%"><font face="Times New Roman">Specifies the number of channels to sample.<font color="#ff0080"><sup>      
+        </sup></font>It is in the range of 1 through the number of channels that      
+        the board <font size="3">provides</font>.&nbsp;<br>     
+        The default setting value is 1. Specifies the channel numbers in the <a href="#13.6.2 ADSMPLCHREQ Structure">ADSMPLCHREQ</a>      
+        structure.<br>     
+        * For the CTP/CPZ-360810, the number of channels      
+        is fixed to 2-channel.</font></td>                      
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top"> </td>                 
+      <td width="85%"></td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top"><font face="Times New Roman">SmplChReq</font></td>                 
+      <td width="85%"><font face="Times New Roman">Specifies an array of the <a href="#13.6.2 ADSMPLCHREQ Structure">ADSMPLCHREQ</a>  
+        structure <font size="3">containing</font> the sampling conditions for  
+        the channel.</font></td>                  
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top"> </td>                 
+      <td width="85%"></td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top"><font face="Times New Roman">ulSingleDiff</font></td>                 
+      <td width="85%"><font face="Times New Roman">Specifies the input configuration.<br>                  
+        </font>                 
+      <table border="1">                 
+        <tr>                 
+          <td width="147" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code&nbsp;</font></b></td>                 
+          <td width="92" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                 
+          <td width="177" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                 
+        </tr>                 
+        <tr>                 
+          <td width="147"><font face="Times New Roman">AD_INPUT_SINGLE</font></td>                 
+          <td width="92" align="center"><font face="Times New Roman">1</font></td>                 
+          <td width="177"><font face="Times New Roman">Single-ended</font></td>                 
+        </tr>                 
+        <tr>                 
+          <td width="147"><font face="Times New Roman">AD_INPUT_DIFF</font></td>                 
+          <td width="92" align="center"><font face="Times New Roman">2</font></td>                 
+          <td width="177"><font face="Times New Roman">Differential&nbsp;</font></td>                 
+        </tr>                 
+      </table>                 
+        <font face="Times New Roman">                 
+        The default setting is dependent on the board. It is retrieved by      
+        calling the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdMemGetSamplingConfig.html">AdMemGetSamplingConfig</a>      
+        function after the board is opened.</font></td>                      
+    </tr>                 
+    <tr>               
+      <td width="15%" valign="top"> </td>               
+      <td width="85%">         
+      </td>               
+    </tr>               
+    <tr>               
+      <td width="15%" valign="top"><font face="Times New Roman">fSmplFreq</font></td>               
+      <td width="85%"><font face="Times New Roman">Specifies the sampling rate in Hz. You can specify this      
+        from 0.48f to the maximum sampling rate that the board provides. To use      
+        the external clock, please specify 0.0f.<br>     
+        The default setting value is dependent on the device. It is retrieved by      
+        calling the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdMemGetSamplingConfig.html">AdMemGetSamplingConfig&nbsp;</a><font face="Times New Roman" size="3">      
+        </font>function after the device is opened.</font>              
+      </td>               
+    </tr>               
+    <tr>             
+      <td width="15%" valign="top"> </td>             
+      <td width="85%">             
+      </td>             
+    </tr>             
+    <tr>             
+      <td width="15%" valign="top"><font face="Times New Roman">ulStopMode</font></td>             
+      <td width="85%"><font face="Times New Roman">Specifies the stop condition of sampling (stop-trigger).  
+        The terminal for external trigger is dependent on the device. Refer to  
+        &quot;<a href="../Attention.html">Attentions</a>,&quot;  
+        for more details. One or more codes can be specified.</font> 
+        <table border="1" width="653">
+          <tr>
+          <td width="147" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code&nbsp;</font></b></td>                 
+          <td width="104" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                 
+          <td width="380" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                 
+          </tr>
+          <tr>
+          <td width="147"><font face="Times New Roman">AD_EXTTRG</font></td>             
+            <td width="104" align="center"><font face="Times New Roman">2</font></td>
+          <td width="380"><font face="Times New Roman">External trigger</font></td>              
+          </tr>
+          <tr>
+          <td width="147"><font face="Times New Roman">AD_STOP_DI_EQ</font></td>             
+            <td width="104" align="center"><font face="Times New Roman">00100000h</font></td>
+          <td width="380"><font face="Times New Roman">DI pattern matching (<font color="#FF00FF"><a href="#*2">*2</a></font>)</font></td>             
+          </tr>
+          <tr>
+          <td width="147"><font face="Times New Roman">AD_STOP_SOFT</font></td>             
+            <td width="104" align="center"><font face="Times New Roman">00200000h</font></td>
+          <td width="380"><font face="Times New Roman">Soft stop (<a href="#*1"><font color="#0000FF">*1</font></a>)</font></td>             
+          </tr>
+          <tr>
+          <td width="147"><font face="Times New Roman">AD_STOP_P1</font></td>             
+            <td width="104" align="center"><font face="Times New Roman">00000400h</font></td>
+          <td width="380"><font face="Times New Roman">Level 1 low-to-high transition</font></td>              
+          </tr>
+          <tr>
+          <td width="147"><font face="Times New Roman">AD_STOP_M1</font></td>             
+            <td width="104" align="center"><font face="Times New Roman">00000800h</font></td>
+          <td width="380"><font face="Times New Roman">Level 1 high-to-low transition</font></td>              
+          </tr>
+          <tr>
+          <td width="147"><font face="Times New Roman">AD_STOP_D1</font></td>             
+            <td width="104" align="center"><font face="Times New Roman">00001000h</font></td>
+          <td width="380"><font face="Times New Roman">Level 1 high-to-low transition</font></td>              
+          </tr>
+          <tr>
+          <td width="147"><font face="Times New Roman">AD_STOP_P2</font></td>             
+            <td width="104" align="center"><font face="Times New Roman">00002000h</font></td>
+          <td width="380"><font face="Times New Roman">Level 2 low-to-high transition</font></td>              
+          </tr>
+          <tr>
+          <td width="147"><font face="Times New Roman">AD_STOP_M2</font></td>             
+            <td width="104" align="center"><font face="Times New Roman">00004000h</font></td>
+          <td width="380"><font face="Times New Roman">Level 2 high-to-low transition</font></td>              
+          </tr>
+          <tr>
+          <td width="147"><font face="Times New Roman">AD_STOP_D2</font></td>             
+            <td width="104" align="center"><font face="Times New Roman">00008000h</font></td>
+            <td width="380"><font face="Times New Roman">Level 2 low-to-high transition or high-to-low  
+              transition</font></td>
+          </tr>
+        </table>
+      </td>             
+    </tr>             
+    <tr>             
+      <td width="15%" valign="top"> </td>             
+      <td width="85%"></td>             
+    </tr>             
+    <tr>             
+      <td width="15%" valign="top"><font face="Times New Roman">ulPreTrigDelay</font></td>             
+      <td width="85%"><font face="Times New Roman">Specifies the number of pre-trigger samples from 1 through  
+        1073741824. </font> (<font color="#0000FF"><a href="#*3"><font face="Times New Roman">*3</font></a></font>)<br>             
+        <font face="Times New Roman">             
+        When you specify 0, the pre-trigger delay is not used.&nbsp;<br>     
+        The default setting value is 0.</font></td>                  
+    </tr>             
+    <tr>             
+      <td width="15%" valign="top"> </td>             
+      <td width="85%"></td>            
+    </tr>            
+    <tr>             
+      <td width="15%" valign="top"><font face="Times New Roman">ulPostTrigDelay</font></td>             
+      <td width="85%"><font face="Times New Roman">Specifies the number of post-trigger samples from 1  
+        through the amount of your memory every sample. When you specify 0, the  
+        post-trigger delay is not used. The default setting value is 1024.</font></td>             
+    </tr>            
+    <tr>            
+      <td width="15%" valign="top"> </td>            
+      <td width="85%">            
+      </td>            
+    </tr>            
+    <tr>            
+      <td width="15%" valign="top"><font face="Times New Roman">TrigChReq</font></td>            
+      <td width="85%"><font face="Times New Roman">Specifies an array of the <a href="#13.6.5 ADTRIGCHREQ Structure">ADTRIGCHREQ</a>      
+        structure to set the analog trigger conditions.&nbsp;<br>     
+        This member is available when the analog trigger is specified to                  
+        ulStopMode or ulATrgMode of the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdSetOutMode.html">AdSetOutMode</a>      
+        function.</font>     
+        <table border="1" width="381" height="87">
+          <tr>
+          <td width="147" bgcolor="#C0C0C0" height="16" align="center"><b><font face="Times New Roman">&nbsp;&nbsp;      
+            Array Element</font></b></td>                      
+          <td width="108" bgcolor="#C0C0C0" height="16" align="center"><b><font face="Times New Roman">&nbsp;&nbsp;      
+            Description</font></b></td>                 
+          </tr>
+          <tr>
+          <td width="147" height="16"><font face="Times New Roman">TrigChReq[0]</font></td>             
+          <td width="108" height="16"><font face="Times New Roman">Trigger level 1</font></td>              
+          </tr>
+          <tr>
+          <td width="147" height="15"><font face="Times New Roman">TrigChReq[1]</font></td>             
+          <td width="108" height="15"><font face="Times New Roman">Trigger level 2</font></td>              
+          </tr>
+        </table>
+      </td>            
+    </tr>            
+    <tr>
+      <td width="15%" valign="top"><font face="Times New Roman">&nbsp;</font></td>            
+      <td width="85%">           
+      </td>           
+    </tr>
+    <tr>
+      <td width="15%" valign="top"><font face="Times New Roman">ulATrgMode</font></td>            
+      <td width="85%"><font face="Times New Roman">Specifies the pulse output condition by analog trigger  
+        notification. AD_DISABLE cannot be specified with other codes. This  
+        member is applicable to boards that have analog trigger notification  
+        pulse function.</font>             
+      <table border="1" width="623">            
+        <tr>
+          <td width="117" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                 
+          <td width="112" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Value</font></b></td>                 
+          <td width="372" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                 
+        </tr>
+        <tr>            
+          <td width="117"><font face="Times New Roman">AD_DISABLE</font></td>            
+          <td width="112" align="center"><font face="Times New Roman">80000000</font></td>            
+          <td width="372"><font face="Times New Roman">No pulse output (default setting)</font></td>             
+        </tr>            
+        <tr>            
+          <td width="117"><font face="Times New Roman">AD_EDGE_P1</font></td>            
+          <td width="112" align="center"><font face="Times New Roman">0010h</font></td>            
+          <td width="372"><font face="Times New Roman">Level 1 low-to-high transition</font></td>             
+        </tr>            
+        <tr>            
+          <td width="117"><font face="Times New Roman">AD_EDGE_M1</font></td>            
+          <td width="112" align="center"><font face="Times New Roman">0020h</font></td>            
+          <td width="372"><font face="Times New Roman">Level 1 high-to-low transition</font></td>             
+        </tr>            
+        <tr>            
+          <td width="117"><font face="Times New Roman">AD_EDGE_D1</font></td>            
+          <td width="112" align="center"><font face="Times New Roman">0040h</font></td>            
+          <td width="372"><font face="Times New Roman">Level 1 low-to-high transition or high-to-low  
+            transition</font></td>            
+        </tr>            
+        <tr>            
+          <td width="117"><font face="Times New Roman">AD_EDGE_P2</font></td>            
+          <td width="112" align="center"><font face="Times New Roman">0080h</font></td>            
+          <td width="372"><font face="Times New Roman">Level 2 low-to-high transition</font></td>             
+        </tr>            
+        <tr>            
+          <td width="117"><font face="Times New Roman">AD_EDGE_M2</font></td>            
+          <td width="112" align="center"><font face="Times New Roman">0010h</font></td>            
+          <td width="372"><font face="Times New Roman">Level 2 high-to-low transition</font></td>             
+        </tr>            
+        <tr>            
+          <td width="117"><font face="Times New Roman">AD_EDGE_D2</font></td>           
+          <td width="112" align="center"><font face="Times New Roman">0200h</font></td>           
+          <td width="372"><font face="Times New Roman">Level 2 low-to-high transition or high-to-low  
+            transition</font></td>           
+        </tr>           
+      </table>           
+      </td>           
+    </tr>
+    <tr>
+      <td width="15%" valign="top"><font face="Times New Roman">&nbsp;&nbsp;</font></td>           
+      <td width="85%">           
+      </td>           
+    </tr>
+    <tr>
+      <td width="15%" valign="top"><font face="Times New Roman">ulATrgPulse</font></td>           
+      <td width="85%"><font face="Times New Roman">Specifies the pulse polarity of the analog trigger      
+        notification pulse.&nbsp;<br>     
+        This member is applicable to boards that have analog trigger      
+        notification pulse function.</font>                
+      <table border="1" height="86">           
+        <tr>
+          <td width="117" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Code</font></b></td>                 
+          <td width="112" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Value</font></b></td>                 
+          <td width="372" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Description</font></b></td>                 
+        </tr>
+        <tr>           
+          <td width="139" height="16"><font face="Times New Roman">AD_LOW_PULSE</font></td>           
+          <td width="118" align="center" height="16"><font face="Times New Roman">1</font></td>           
+          <td width="232" height="16"><font face="Times New Roman">Low pulse (default setting)</font></td>            
+        </tr>           
+        <tr>           
+          <td width="139" height="16"><font face="Times New Roman">AD_HIGH_PULSE</font></td>           
+          <td width="118" align="center" height="16"><font face="Times New Roman">2</font></td>           
+          <td width="232" height="16"><font face="Times New Roman">High pulse</font></td>            
+        </tr>           
+      </table>           
+      </td>           
+    </tr>
+    <tr>           
+      <td width="15%" valign="top"><font face="Times New Roman">&nbsp;</font></td>           
+      <td width="85%">           
+      </td>           
+    </tr>           
+    <tr>           
+      <td width="15%" valign="top"><font face="Times New Roman">ulStopTrigEdge</font></td>           
+      <td width="85%"><font face="Times New Roman">Specifies the edge polarity of the external trigger. This  
+        member is available when the external trigger is specified to ulStopMode.</font>            
+      <table border="1">           
+        <tr>
+          <td width="117" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Code</font></b></td>                 
+          <td width="112" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Value</font></b></td>                 
+          <td width="372" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Description</font></b></td>                 
+        </tr>
+        <tr>           
+          <td width="139"><font face="Times New Roman">AD_DOWN_EDGE</font></td>           
+          <td width="113" align="center"><font face="Times New Roman">1</font></td>           
+          <td width="246"><font face="Times New Roman">Falling edge (default setting)</font></td>            
+        </tr>           
+        <tr>           
+          <td width="139"><font face="Times New Roman">AD_UP_EDGE</font></td>           
+          <td width="113" align="center"><font face="Times New Roman">2</font></td>           
+          <td width="246"><font face="Times New Roman">Rising edge</font></td>            
+        </tr>           
+      </table>           
+      </td>           
+    </tr>           
+    <tr>           
+      <td width="15%" valign="top"> </td>           
+      <td width="85%">           
+      </td>           
+    </tr>           
+    <tr>           
+      <td width="15%" valign="top"><font face="Times New Roman">ulEClkEdge</font></td>           
+      <td width="85%"><font face="Times New Roman">Specifies the edge polarity of the external clock signal.  
+        This member is available when 0.0f is set to fSmplFreq.</font>            
+      <table border="1">           
+        <tr>
+          <td width="117" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Code</font></b></td>                 
+          <td width="112" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Value</font></b></td>                 
+          <td width="372" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Description</font></b></td>                 
+        </tr>
+        <tr>           
+          <td width="139"><font face="Times New Roman">AD_DOWN_EDGE</font></td>           
+          <td width="111" align="center"><font face="Times New Roman">1</font></td>           
+          <td width="246"><font face="Times New Roman">Falling edge (default setting)</font></td>            
+        </tr>           
+        <tr>           
+          <td width="139"><font face="Times New Roman">AD_UP_EDGE</font></td>           
+          <td width="111" align="center"><font face="Times New Roman">2</font></td>           
+          <td width="246"><font face="Times New Roman">Rising edge</font></td>            
+        </tr>           
+      </table>           
+      </td>           
+    </tr>           
+    <tr>           
+      <td width="15%" valign="top"> </td>           
+      <td width="85%">           
+      </td>           
+    </tr>           
+    <tr>           
+      <td width="15%" valign="top"><font face="Times New Roman">ulFastMode</font></td>           
+      <td width="85%"><font face="Times New Roman">Specifies the operation clock mode. This member is  
+        applicable to double-clocked mode.</font>            
+      <table border="1">           
+        <tr>
+          <td width="117" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Code</font></b></td>                 
+          <td width="112" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Value</font></b></td>                 
+          <td width="372" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Description</font></b></td>                 
+        </tr>
+        <tr>           
+          <td width="142"><font face="Times New Roman">AD_NORMAL_MODE</font></td>           
+          <td width="106" align="center"><font face="Times New Roman">1</font></td>           
+          <td width="249"><font face="Times New Roman">Normal mode (default setting)</font></td>            
+        </tr>           
+        <tr>           
+          <td width="142"><font face="Times New Roman">AD_FAST_MODE</font></td>           
+          <td width="106" align="center"><font face="Times New Roman">2</font></td>           
+          <td width="249"><font face="Times New Roman">Double-clocked mode</font></td>            
+        </tr>           
+      </table>           
+      </td>           
+    </tr>           
+    <tr>           
+      <td width="15%" valign="top"> </td>           
+      <td width="85%">           
+    </tr>           
+    <tr>           
+      <td width="15%" valign="top"><font face="Times New Roman">ulStatusMode</font></td>           
+      <td width="85%"><font face="Times New Roman"><font size="3">Specifies the additional status to the 
+        sampling data. This member is available for boards that support the bus 
+        master sampling status mode. </font></font>(<font color="#FF00FF"><a href="#*5">*5</a></font>)<br>           
+      <table border="1">           
+        <tr>
+          <td width="117" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Code</font></b></td>                 
+          <td width="112" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Value</font></b></td>                 
+          <td width="372" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Description</font></b></td>                 
+        </tr>
+        <tr>           
+          <td width="145"><font face="Times New Roman">AD_NO_STATUS</font></td>           
+          <td width="101" align="center"><font face="Times New Roman">1</font></td>           
+          <td width="293"><font face="Times New Roman">Adds no bus master sampling status (default 
+            setting).</font></td>           
+        </tr>           
+        <tr>           
+          <td width="145"><font face="Times New Roman">AD_ADD_STATUS</font></td>           
+          <td width="101" align="center"><font face="Times New Roman">2</font></td>           
+          <td width="293"><font face="Times New Roman">Adds bus master sampling status.</font></td>            
+        </tr>           
+      </table>           
+    </tr>           
+    <tr>           
+      <td width="15%" valign="top"> </td>           
+      <td width="85%">           
+      </td>           
+    </tr>           
+    <tr>           
+      <td width="15%" valign="top"><font face="Times New Roman">ulErrCtrl</font></td>           
+      <td width="85%"><font face="Times New Roman">Specifies the process when the sampling error occurs.</font>            
+      <table border="1" height="66">           
+        <tr>
+          <td width="117" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Code</font></b></td>                 
+          <td width="112" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Value</font></b></td>                 
+          <td width="372" bgcolor="#C0C0C0" align="center" height="16"><b><font face="Times New Roman">Description</font></b></td>                 
+        </tr>
+        <tr>           
+          <td width="145" height="16"><font face="Times New Roman">AD_FREERUN</font></td>           
+          <td width="103" align="center" height="16"><font face="Times New Roman">1</font></td>           
+          <td width="437" height="16"><font face="Times New Roman">Continues the sampling even if any errors  
+            occur. (default setting)</font></td>            
+        </tr>           
+        <tr>           
+          <td width="145" height="16"><font face="Times New Roman">AD_STOP_ORER</font></td>           
+          <td width="103" align="center" height="16"><font face="Times New Roman">2</font></td>           
+          <td width="437" height="16"><font face="Times New Roman">Stops sampling because of an overrun error 
+            </font> 
+            (<font color="#FF00FF"><a href="#*4">*4</a></font>)</td>           
+        </tr>           
+      </table>           
+      </td>           
+    </tr>           
+  </table>           
+  <p><a name="*1">*<font face="Times New Roman">1</font></a><font face="Times New Roman"> 
+  When soft trigger is specified, </font><a href="../AdStartSampling.html"><font face="Times New Roman">AdStartSampling</font></a> 
+  <font face="Times New Roman"> 
+  cannot process synchronously.&nbsp;<br>               
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A soft trigger is called by <a href="../AdLvStopSampling.html">AdStopSampling</a>     
+  function.</font><a name="*1"><font face="Times New Roman"><br>
+  <br>
+  *</font><font face="Times New Roman">2</font></a><font face="Times New Roman">  The stop trigger occurs when the DI pattern  
+  matching trigger is consistent with the DI pattern condition that configured  
+  by using the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdMemSetDiPattern.html">AdMemSetDiPattern</a>  
+  function.</font><p><font face="Times New Roman"><a name="*2">*3</a>                
+  <font color="#000000">For the pre-trigger delay and post-trigger delay, the 
+  number of samplings is recognized as the number of samplings between 
+  stop-trigger and pre-trigger or post-trigger.</font> The sum of the number of  
+  pre-trigger samples and post-trigger samples must be configured 4194304 or  
+  less. The following setting cannot be configured.<font color="#ff00ff"><br> 
+  </font><br> 
+  </font>   <font face="Times New Roman">ulPreTrigDelay = 0</font>, <font face="Times New Roman">ulPostTrigDelay = 0</font>    
+  <blockquote>
+    <pre>-<font face="Times New Roman">Pre-Trigger with No Post-Trigger Delay
+</font></pre>
+    <pre><font face="Times New Roman"><img border="0" src="../TriggerDelay04.gif" width="458" height="165">
+<font color="#FF0080">
+  </font></font></pre>
+    <pre>-<font face="Times New Roman">No Pre-Trigger with Post-Trigger Delay
+<img border="0" src="../TriggerDelay05.gif" width="635" height="144"></font></pre>
+    <pre> </pre>
+    <pre>-<font face="Times New Roman">Pre-Trigger with Post-Trigger Delay</font></pre>
+    <pre><font face="Times New Roman"><img border="0" src="../TriggerDelay06.gif" width="635" height="144"></font></pre>
+    <pre><font face="Times New Roman">
+</font></pre>
+  </blockquote>
+  <p><font face="Times New Roman"><a name="*3">*4</a>&nbsp;</font> <font face="Times New Roman">The    
+  data at the time of an overrun error occurs cannot be retrieved.&nbsp;</font><p><a name="*5"><font face="Times New Roman">*5</font></a><font face="Times New Roman">                      
+  When configuring the sampling data to add the sampling status information, the     
+  format is as follows.<br>    
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CH1</font>          
+  <blockquote>
+        <table border="1"> 
+          <tr> 
+            <td align="center"><font face="Times New Roman">bit15</font></td> 
+            <td align="center"><font face="Times New Roman">bit14</font></td> 
+            <td align="center"><font face="Times New Roman">bit13</font></td> 
+            <td align="center"><font face="Times New Roman">bit12</font></td> 
+            <td align="center"><font face="Times New Roman">bit11</font></td> 
+            <td align="center"><font face="Times New Roman">bit10</font></td> 
+            <td align="center"><font face="Times New Roman">bit9</font></td> 
+            <td align="center"><font face="Times New Roman">bit8</font></td> 
+            <td align="center"><font face="Times New Roman">bit7</font></td> 
+            <td align="center"><font face="Times New Roman">bit6</font></td> 
+            <td align="center"><font face="Times New Roman">bit5</font></td> 
+            <td align="center"><font face="Times New Roman">bit4</font></td> 
+            <td align="center"><font face="Times New Roman">bit3</font></td> 
+            <td align="center"><font face="Times New Roman">bit2</font></td> 
+            <td align="center"><font face="Times New Roman">bit1</font></td> 
+            <td align="center"><font face="Times New Roman">bit0</font></td> 
+          </tr> 
+          <tr> 
+            <td align="center"><font face="Times New Roman">0</font></td> 
+            <td align="center"><font face="Times New Roman">0</font></td> 
+            <td align="center"><font face="Times New Roman">DI4</font></td> 
+            <td align="center"><font face="Times New Roman">DI3</font></td> 
+            <td align="center"><font face="Times New Roman">DI2</font></td> 
+            <td align="center"><font face="Times New Roman">DI1</font></td> 
+            <td align="center" colspan="10"><font face="Times New Roman">10-bit analog data</font></td>  
+          </tr> 
+        </table> 
+  </blockquote>
+  <p><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CH2</font>          
+  <blockquote>
+        <table border="1"> 
+          <tr> 
+            <td align="center"><font face="Times New Roman">bit15</font></td> 
+            <td align="center"><font face="Times New Roman">bit14</font></td> 
+            <td align="center"><font face="Times New Roman">bit13</font></td> 
+            <td align="center"><font face="Times New Roman">bit12</font></td> 
+            <td align="center"><font face="Times New Roman">bit11</font></td> 
+            <td align="center"><font face="Times New Roman">bit10</font></td> 
+            <td align="center"><font face="Times New Roman">bit9</font></td> 
+            <td align="center"><font face="Times New Roman">bit8</font></td> 
+            <td align="center"><font face="Times New Roman">bit7</font></td> 
+            <td align="center"><font face="Times New Roman">bit6</font></td> 
+            <td align="center"><font face="Times New Roman">bit5</font></td> 
+            <td align="center"><font face="Times New Roman">bit4</font></td> 
+            <td align="center"><font face="Times New Roman">bit3</font></td> 
+            <td align="center"><font face="Times New Roman">bit2</font></td> 
+            <td align="center"><font face="Times New Roman">bit1</font></td> 
+            <td align="center"><font face="Times New Roman">bit0</font></td> 
+          </tr> 
+          <tr> 
+            <td align="center"><font face="Times New Roman">TRG</font></td> 
+            <td align="center"><font face="Times New Roman">Over</font></td> 
+            <td align="center"><font face="Times New Roman">DI8</font></td> 
+            <td align="center"><font face="Times New Roman">DI7</font></td> 
+            <td align="center"><font face="Times New Roman">DI6</font></td> 
+            <td align="center"><font face="Times New Roman">DI5</font></td> 
+            <td align="center" colspan="10"><font face="Times New Roman">10-bit analog data</font></td>  
+          </tr> 
+        </table> 
+    <p> 
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="138" valign="top"><font face="Times New Roman">TRG status</font></td>   
+        <td width="290" valign="top"><font face="Times New Roman">0: Pre-trigger  
+          sample is running.<br> 
+          1: Post-trigger sample is running.</font></td> 
+      </tr>
+      <tr>
+        <td width="138" valign="top"> </td>
+        <td width="290" valign="top"></td>
+      </tr>
+      <tr>
+        <td width="138" valign="top"><font face="Times New Roman">Over status</font></td>   
+        <td width="290" valign="top"><font face="Times New Roman">0: No overrun  
+          error<br>
+          1: Overrun error</font></td> 
+      </tr>
+    </table>
+  <blockquote>   
+    <p><br>          
+    </p>
+  </blockquote>          
+          
+  </blockquote>
+      
+</blockquote>    
+    
+<hr>    
+    
+<p ALIGN="center"><a href="../Help.htm"><font face="Times New Roman">[</font> <font face="Times New Roman">Top</font> <font face="Times New Roman">]</font></a></p>   
+   
+<p align="right"><font face="Times New Roman">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>                      
+
+</body>
+
+</html>

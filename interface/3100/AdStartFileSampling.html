@@ -1,0 +1,412 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdStartFileSampling</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">AdStartFileSampling</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="558" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="556">
+  The AdStartFileSampling function <font SIZE="3">starts continuous </font> sampling
+  <font SIZE="3">and saves the data into a data file simultaneously. </font></td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font> 
+</b> 
+    </p>
+    <font size="3">
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472"><font face="Courier New" size="3">INT AdStartFileSampling(</font></td>
+        </tr>
+        <tr>
+          <td width="20"></td>
+          <td width="82"><font size="3" face="Courier New">HANDLE&nbsp;
+</font>
+          </td>
+          <td width="358">
+
+<font size="3" face="Courier New">
+ <i>hDeviceHandle</i>,</font>
+          </td>
+        </tr>
+        <tr>
+          <td width="20"></td>
+          <td width="82">
+
+<font size="3" face="Courier New">
+    LPCTSTR&nbsp;
+</font>
+          </td>
+          <td width="358"><font size="3" face="Courier New"><i>pszPathName</i>,
+</font>
+          </td>
+        </tr>
+        <tr>
+          <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="82"><font face="Courier New" size="3">ULONG&nbsp;</font></td>
+          <td width="358"><i><font face="Courier New" size="3">ulFileFlag</font></i>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472">
+<font face="Courier New" size="3">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    </blockquote>
+  </font>
+    <blockquote>
+<p><b>Visual Basic&nbsp;</b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">Declare Function AdStartFileSampling
+          Lib&nbsp;_ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="62"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="142" valign="middle"> <font face="Courier New"> <i>hDeviceHandle</i>   </font></td>
+        <td width="236"> <font face="Courier New" size="3">   As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="62"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="142"><font face="Courier New"><i>pszPathName</i>   &nbsp;</font></td>
+        <td width="236"><font face="Courier New" size="3">   As String, _</font></td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="62"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="142"><font face="Courier New"><i>ulFileFlag</i>   &nbsp;</font></td>
+        <td width="236"><font face="Courier New" size="3">   As Long _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">) As
+          Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472"><font face="Courier New">function AdStartFileSampling(</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="132"><i><font face="Courier New">hDeviceHandle</font></i></td>
+        <td width="308"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="132"><font face="Courier New"><i>pszPathName</i> &nbsp;</font></td>
+        <td width="308"> <font face="Courier New"> : Pointer;</font></td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="132"><font face="Courier New"><i>ulFileFlag</i>  &nbsp;</font></td>
+        <td width="308">  <font face="Courier New">  : Cardinal</font></td>
+      </tr>
+      <tr>
+        <td colspan="3" width="472"><font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  </blockquote>
+<p><b><big>Parameters</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="551" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="41"><var><font face="Courier New" size="3">hDeviceHandle&nbsp;</font></var></td>
+        <td width="508">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+      <td valign="top"></td>
+      <td>&nbsp;&nbsp;
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"><var><font face="Courier New" size="3">pszPathName</font></var></td>
+      <td><font SIZE="3">Specifies the data file containing the sampling data.</font>
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"></td>
+      <td>&nbsp;&nbsp;
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"><var><font face="Courier New" size="3">ulFileFlag</font></var></td>
+      <td>Specifies the format of the data file.
+      <table border="1" cellspacing="1" width="351">
+        <tr align="center">
+          <td width="79"><b>Flag</b></td>
+          <td width="39"><b>Value</b></td>
+          <td width="211"><b>Description</b></td>
+        </tr>
+        <tr valign="top">
+          <td width="79">FLAG_BIN</td>
+          <td width="39" align="center">1</td>
+          <td width="211">Binary format</td>
+        </tr>
+        <tr valign="top">
+          <td width="79">FLAG_CSV</td>
+          <td width="39" align="center">2</td>
+          <td width="211">CSV format (physical value)</td>
+        </tr>
+      </table>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdStartFileSampling function returns AD_ERROR_SUCCESS if the process is successfully completed. Otherwise, this function returns an another code. Please refer to
+  <a href="Return%20Values.html"> error codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+  <p><b><big>Comments</big></b></p> 
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td width="942" height="13" valign="top">
+        <ul>
+          <li>
+        This function does not return until the continuous sampling has been completed.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="942" height="13" valign="top">
+        <ul>
+          <li>
+        The sampling conditions specified by the <a href="AdSetSamplingConfig.html"> AdSetSamplingConfig</a>
+  function are used for this sampling.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="942" height="13" valign="top">
+        <ul>
+          <li>
+        The following trigger conditions can be selected.
+        Triggers not listed below are not available.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &gt;&gt; No trigger<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &gt;&gt; Start-trigger without trigger-delays<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &gt;&gt; Start-trigger with post-trigger-delays</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="942" height="13" valign="top">
+        <ul>
+          <li>
+        Data unit depends on the resolution of the board. Please refer
+        to&nbsp;&quot;<a href="Data%20Format.html">Data
+        format</a>.&quot;</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="942" height="13" valign="top">
+        <ul>
+          <li>
+        In this <font SIZE="3">function, the binary and the
+        CSV format are available.</font> For the binary format, please refer to the following table.
+            <table border="1" cellspacing="1" width="378">
+              <tr>
+                <td width="123">
+                  <p align="center"><b>Resolution</b></td>
+                <td width="239">
+                  <p align="center"><b>Valid Bit</b></td>
+              </tr>
+              <tr>
+                <td width="123">8 bits</td>
+                <td width="239">All 8 bits of the 8-bit data</td>
+              </tr>
+              <tr>
+                <td width="123">12 bits</td>
+                <td width="239">Lower 12 bits of the 16-bit data</td>
+              </tr>
+              <tr>
+                <td width="123">16 bits</td>
+                <td width="239">All 16 bits of the 16-bit data</td>
+              </tr>
+              <tr>
+                <td width="123">24 bits</td>
+                <td width="239">Lower 24 bits of the 32-bit data</td>
+              </tr>
+            </table>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="942" height="13" valign="top">
+        <ul>
+          <li>
+        <font SIZE="3">For the CSV format, the data are represented in physical
+        values such as voltage or current. You do not need to consider the
+        resolution of the board. The data are separated from each other by
+        commas.</font>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="942" height="13" valign="top">
+        <ul>
+          <li>
+        If the data are saved in the CSV format, the sampling
+        may not operate at the specified rate because the data conversion from binary to physical value needs
+        more processing time or overhead.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="942" height="13" valign="top">
+        <ul>
+          <li>
+        All of the data in the sampling buffer
+        of the previous acquisition are cleared when the next acquisition starts
+        by
+        using this function.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="942" height="13" valign="top">
+        <ul>
+          <li>
+        If the specified file has already been existed, the file is overwritten.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="451" height="21"><font face="Courier New" size="3">nRet = AdStartFileSampling( hDeviceHandle,
+        &quot;DATA.CSV&quot; , FLAG_CSV );</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="499">
+      <font face="Courier New" size="3">
+      Dim szPathName As String</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499">
+      <font face="Courier New" size="3">
+      pszFname = &quot;DATA.CSV&quot;&amp; Chr(0)</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499">
+      <font face="Courier New" size="3">
+      nRet = AdStartFileSampling( hDeviceHandle, _ szPathFname , FLAG_CSV )</font>
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="500" colspan="2"><font face="Courier New" size="3">var</font></td>
+      </tr>
+      <tr>
+        <td width="17"></td>
+        <td width="483"><font face="Courier New" size="3">szPathName : array[0..15] of Char;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2"><font face="Courier New" size="3">StrCopy(pszPathName,
+          'DATA.CSV');</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2"><font face="Courier New" size="3">nRet := AdStartFileSampling( hDeviceHandle,
+          @szPathName , FLAG_CSV );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="545" valign="top">
+Start continuous sampling on the board specified by hDeviceHandle with simultaneous
+streaming of the data into &quot;DATA.CSV&quot; in the CSV format.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

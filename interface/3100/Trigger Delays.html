@@ -1,0 +1,180 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Trigger Delays</title>
+</head>
+
+<body>
+
+<p><font face="Arial" size="5"><b>7. Trigger Delays</b></font></p>
+
+<blockquote>
+  <table border="0" width="588">
+    <tr>
+      <td valign="top" width="580">Using the trigger delay capability, actual analog input starts or stops after a
+        trigger is asserted. The GPF-3100 has the following delay capabilities.</td>
+    </tr>
+    <tr>
+      <td width="580">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </table>
+  <table border="0" width="586" height="19">
+    <tr>
+      <td height="1" valign="top" width="578">
+        <ul>
+          <li><b><font size="3">Post-Trigger Delay<br>
+            </font></b>An actual start-point or stop-point is
+      delayed by the time according to the number of post-trigger samples.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="584">
+    <tr>
+      <td width="576" valign="top">
+        <ul>
+          <li><b><font size="3">
+        Pre-Trigger Delay<br>
+            </font></b>An actual start-point precedes the trigger
+        point by the time according to the number of pre-trigger samples.&nbsp;</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="494" height="529">
+    <tr>
+      <td width="614" colspan="2" height="40" valign="top">
+        The number of pre-trigger samples and the number of post-trigger samples
+        are specified
+      by&nbsp;the <a href="AdSetSamplingConfig.html">AdSetSamplingConfig</a>  and
+        <a href="AdBmSetSamplingConfig.html">
+        AdBmSetSamplingConfig</a> functions.</td>
+    </tr>
+    <tr>
+      <td width="614" colspan="2" height="21">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td width="614" colspan="2" height="211" valign="top">
+        <b>
+        1. Start-Trigger with Post-Trigger Delay</b>
+        <table border="0" width="519">
+          <tr>
+            <td width="511" valign="top">
+        <img border="0" src="TriggerDelay01.gif" width="458" height="165"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="1" height="21"></td>
+      <td width="861" height="21" valign="top">
+        An actual acquired samples include pre-trigger samples.</td>
+    </tr>
+    <tr>
+      <td width="614" colspan="2" height="21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="614" colspan="2" height="192" valign="top">
+        <b>
+        2. Start-Trigger with Post-Trigger Delay</b>
+        <table border="0" width="561">
+          <tr>
+            <td width="556" valign="top">
+        <img border="0" src="TriggerDelay02.gif" width="554" height="144"><br>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="29" height="1" valign="top"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+      </td>
+      <td width="585" height="1" valign="top"><font size="3">Pre-trigger samples are abandoned. An
+        actual acquired samples don't include the pre-trigger samples.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="614" colspan="2" height="21" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </table>
+  <table border="0" width="600">
+    <tr>
+      <td width="592" colspan="2" valign="top">
+        <b>3. Stop-Trigger with Post-Trigger Delay</b>
+        <table border="0" width="561">
+          <tr>
+            <td width="556" valign="top">
+        <img border="0" src="TriggerDelay03.gif" width="468" height="166"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="36">
+        &nbsp;&nbsp;&nbsp;
+      </td>
+      <td width="556" valign="top">
+        An actual acquired samples include the post-trigger samples.
+      </td>
+    </tr>
+    <tr>
+      <td width="592" colspan="2">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td width="592" colspan="2">
+        The following figures describes the condition when using the CBI/CSI-320110.<font color="#FF00FF">
+        </font>The<font color="#FF00FF"> </font><a href="AdMemSetSamplingConfig.html">AdMemSetSamplingConfig</a>
+        function configures the number of the pre-trigger and post-trigger
+        samples. The pre-trigger and post-trigger delays are only applicable to the stop-trigger. There is no configuration of the number of samplings.&nbsp;The number of samplings is recognized as
+        the number of samplings between stop-trigger and pre-trigger or
+        post-trigger. Therefore, it is unnecessary to specify the number of
+        samplings.
+      </td>
+    </tr>
+    <tr>
+      <td width="592" colspan="2" valign="top">
+        <b>1. Pre-Trigger with No Post-Trigger Delay<br>
+        <img border="0" src="TriggerDelay04.gif" width="458" height="165"></b>
+      </td>
+    </tr>
+    <tr>
+      <td width="592" colspan="2">
+        &nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td width="592" colspan="2" valign="top">
+        <b>2. No Pre-Trigger with Post-Trigger Delay<br>
+        <img border="0" src="TriggerDelay05.gif" width="635" height="144"></b>
+      </td>
+    </tr>
+    <tr>
+      <td width="592" colspan="2">
+        &nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td width="592" colspan="2" valign="top">
+        <b>3. Pre-Trigger with Post-Trigger Delay<br>
+        <img border="0" src="TriggerDelay06.gif" width="635" height="144"></b>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+
+  <hr>
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+Corporation. All rights reserved.</font></p>
+  <p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

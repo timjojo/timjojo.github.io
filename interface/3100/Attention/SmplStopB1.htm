@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 Attention</title>
+</head>
+
+<body>
+
+<p> </p>    
+    
+<blockquote>    
+  <table border="0" width="90%">    
+    <tr>     
+      <td width="100%" valign="top" align="center" colspan="2">
+        <p align="left"><b><font face="Arial" size="4">Sampling  
+        Completion Timing When AD_FREERUN is Applied to the Stop Condition of  
+        Sampling</font><br> 
+        &nbsp;</b>PCI-3174, PCI-3175, PCI-3176,CTP/CPZ-3174, CTP/CPZ-3175, CTP/CPZ-3182</p>
+      </td>     
+    </tr>       
+    <tr>       
+      <td width="3%" valign="top" align="center"></td>       
+      <td width="97%">  <font face="Times New Roman">  After the sampling of the number of data specified by  
+        the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdSetSamplingConfig.html">AdSetSamplingConfig</a>  
+        or <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>  
+        function is completed, the sampling status usually&nbsp; becomes  
+        AD_STATUS_STOP_SAMPLING. For the bus master board, after the sampling of  
+        the number of data specified is completed and the additional sampling  
+        clock pulses had been input, the sampling status becomes  
+        AD_STATUS_STOP_SAMPLING. Please refer to the following equation to  
+        determine the number of the additional sampling clock pulses.<br>        
+        &nbsp;</font>
+        <table height="1" width="548" border="0">
+          <tbody>
+            <tr>
+              <td vAlign="top" width="540" height="1"><font face="Times New Roman">&lt;No sampling status&gt;</font></td> 
+            </tr>
+          </tbody>
+        </table>
+        <table width="547" border="0">
+          <tbody>
+            <tr>
+              <td vAlign="top" width="539">
+                <blockquote>
+                  <ul>
+                    <li><font face="Times New Roman">The number of sampling  
+                      channels is an odd number:&nbsp;<br> 
+                      <i>+x </i>= 256/((the  
+                      number of channels +1) /2)</font> 
+                    <li><font face="Times New Roman">The number of sampling channels is an even number:<br> 
+                      <i>+x </i>= 256/(the  
+                      number of channels /2)</font></li> 
+                  </ul>
+                </blockquote>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table height="1" width="547" border="0">
+          <tbody>
+            <tr>
+              <td vAlign="top" width="533" height="1"><font face="Times New Roman">&lt;With sampling  
+                status&gt;</font></td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="547" border="0">
+          <tbody>
+            <tr>
+              <td vAlign="top" width="539">
+                <blockquote>
+                  <ul>
+                    <li><font face="Times New Roman">The number of sampling channels is an odd number:<br> 
+                      <i>+x </i>= 256/((the  
+                      number of channels +1) /2)</font> 
+                    <li><font face="Times New Roman">The number of sampling channels is an even number:<br> 
+                      <i>+x </i>= 256/((the  
+                      number of channels/2) +1)</font></li> 
+                  </ul>
+                </blockquote>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>  
+    </tr>  
+  </table>     
+</blockquote>     
+     
+<hr>     
+     
+   
+<p align="right"><font face="Times New Roman">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>               
+       
+</body>       
+</html>       

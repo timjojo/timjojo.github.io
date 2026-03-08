@@ -1,0 +1,152 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 CallBackProc</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">CallBackProc</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td>
+  The CallBackProc function is a placeholder for a callback routine. This
+  function is called when the sampling is completed. Supply a pointer to your
+  function for the lpEventProc parameter in the <a href="AdSetBoardConfig.html"> AdSetBoardConfig</a> function.</td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <b>C<br>
+  </b>
+  <blockquote>
+    <table border="0" width="450" cellspacing="1">
+      <tr>
+        <td colspan="3" width="492" height="19" valign="top"><font face="Courier New">void CALLBACK CallBackProc(</font> </td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="68" height="21" valign="top"> 
+ <font face="Courier New"> 
+ DWORD&nbsp;</font></td>
+        <td width="402" height="21" valign="top"> 
+ <font face="Courier New"> 
+ <em>dwUser</em>&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top">
+    <font face="Courier New">
+    );</font>
+        </td>
+        <td width="470" height="21" colspan="2" valign="top"></td>
+      </tr>
+    </table>
+  </blockquote>
+  <b>Visual Basic<br>
+  </b>
+  <blockquote>
+    <table border="0" width="450" cellspacing="1" height="1">
+      <tr>
+        <td colspan="3" width="492" height="20" valign="top"><font face="Courier New">Sub
+          CallBackProc( _</font> </td>
+      </tr>
+      <tr>
+        <td width="16" height="1" valign="top"></td>
+        <td width="66" height="1" valign="top"> <font face="Courier New"> ByVal&nbsp;</font>
+        </td>
+        <td width="404" height="1" valign="top"> <font face="Courier New"> <em>dwUser</em>  As Long
+          _&nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3" height="20" valign="top">
+    <font face="Courier New">
+    )</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <b>Delphi<br>
+  </b>
+  <blockquote>
+    <table border="0" width="450" cellspacing="1">
+      <tr>
+        <td colspan="3" width="492" valign="top">
+    <font face="Courier New">
+    procedure CallBackProc(</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="87" valign="top"><em> <font face="Courier New"> dwUser</font></em> 
+        </td>
+        <td width="383" valign="top"><font face="Courier New">&nbsp;: DWORD&nbsp;&nbsp;&nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3" valign="top">
+    <font face="Courier New">
+    ); stdcall;</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+  <p><strong><font face="Times New Roman" size="4"> Parameter</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><em><font face="Courier New">dwUser</font></em></td>
+      <td valign="top" width="484" height="21">Contains the data passed to dwUser
+        in the <a href="AdSetBoardConfig.html"> AdSetBoardConfig</a> function.</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480" valign="top">
+  This function has no return value.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+</blockquote> 
+ 
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

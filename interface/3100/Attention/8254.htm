@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 Attention</title>
+</head>
+
+<body>
+
+<p> </p>    
+    
+<blockquote>    
+  <table border="0" width="90%">    
+    <tr>     
+      <td width="100%" valign="top" align="center" colspan="2">
+        <p align="left"><font face="Arial" size="4"><b>Sampling  
+        Rate Limitation</b></font></p> 
+      </td>     
+    </tr>     
+    <tr>     
+      <td width="3%" valign="top" align="center"></td>     
+      <td width="97%">
+        <table width="567" border="0">
+          <tbody>
+            <tr>
+              <td vAlign="top" width="559" colSpan="2">The sampling rate is 
+                configurable by the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdSetSamplingConfig.html">AdSetSamplingConfig</a> 
+                function, and the rate is obtained by the following equation:</td>
+            </tr>
+            <tr>
+              <td vAlign="top" width="1"><br>
+                &nbsp;&nbsp;&nbsp;</td>
+              <td vAlign="top" width="780"><img src="Attentions08.gif" border="0" width="192" height="70"></td>
+            </tr>
+            <tr>
+              <td vAlign="top" width="559" colSpan="2">Where,</td>
+            </tr>
+            <tr>
+              <td vAlign="top" width="35">&nbsp;&nbsp;&nbsp;</td>
+              <td vAlign="top" width="524"><i>f</i>: Sampling rate (Hz)<br> 
+                <i>f0</i>: Base clock frequency (Hz), 8MHz<br> 
+                <i>N0</i>: Integer divisor of the counter, 2 through 65535<br> 
+                <i>N1</i>: Integer divisor of the counter, 2 through 65535</td> 
+            </tr>
+            <tr>
+              <td vAlign="top" width="559" colSpan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+              <td vAlign="top" width="559" colSpan="2">The actual sampling rate  
+                has some errors against the specified rate to the&nbsp; <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdSetSamplingConfig.html">AdSetSamplingConfig</a>  
+                function because the ideal combination of integer divisor <i>N0</i>  
+                and <i>N1</i> could not be obtained for the rate.<br> 
+                <img src="Attentions09.gif" border="0" width="465" height="144"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table height="267" width="560" border="0">
+          <tbody>
+            <tr>
+              <td vAlign="top" width="59" height="59">Example)</td>
+              <td vAlign="top" width="487" height="59">When a sampling rate of 
+                300 Hz is specified to the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdSetSamplingConfig.html">AdSetSamplingConfig</a> 
+                function, appropriate integer divisor of <i>N0</i> and <i>N1</i> 
+                are 3 and 8889, respectively. And actual sampling rate becomes 
+                299.99625 Hz.</td>
+            </tr>
+            <tr>
+              <td vAlign="top" width="59" height="200"></td>
+              <td vAlign="top" width="487" height="200"><img src="Attentions10.gif" border="0" width="337" height="198"></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>       
+    </tr>       
+  </table>       
+</blockquote>       
+       
+<p> </p>   
+       
+<hr>       
+       
+     
+<p align="right">&copy; 2000, 2013 Interface Corporation. All rights reserved.</p>               
+       
+</body>       
+</html>       

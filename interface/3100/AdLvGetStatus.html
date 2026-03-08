@@ -1,0 +1,443 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdLvGetStatus</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdLvGetStatus</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td>
+  The AdLvGetStatus function <font SIZE="3">retrieves the sampling status on the
+  board/card.</font></td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td colspan="3" width="472"><font face="Courier New" size="3">INT
+          AdLvGetStatus(</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="62"> <font face="Courier New" size="3"> HANDLE</font></td>
+        <td width="376"> <font face="Courier New" size="3"> <i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="62"> <font face="Courier New" size="3"> ULONG</font></td>
+        <td width="376"> <font face="Courier New" size="3"> <i>ulChNo</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="22"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="62"> <font face="Courier New" size="3"> ULONG</font></td>
+        <td width="376"> <font face="Courier New" size="3"> <i>*ulAdSmplStatus</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="62"> <font face="Courier New" size="3"> ULONG</font></td>
+        <td width="376"> <font face="Courier New" size="3"> <i>*ulAdSmplCount</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="62"> <font face="Courier New" size="3"> ULONG</font></td>
+        <td width="376"> <i><font face="Courier New" size="3">*ulAdAvailCount</font></i></td>
+      </tr>
+      <tr>
+        <td width="22">
+    <font face="Courier New" size="3">
+    );</font>
+        </td>
+        <td width="444" colspan="2"></td>
+      </tr>
+    </table>
+  </blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">Visual Basic&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="479" height="140">
+      <tr>
+        <td colspan="4" width="501" height="20"><font face="Courier New" size="3">Declare Function AdLvGetStatus &quot;FbiAd.DLL&quot;
+          ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20" height="19" valign="top"></td>
+        <td width="62" height="19" valign="top"> <font face="Courier New" size="3"> ByVal</font></td>
+        <td width="152" height="19" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i> </font></td>
+        <td width="255" height="19" valign="top"> <font face="Courier New" size="3"> As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" height="21" valign="top"></td>
+        <td width="62" height="21" valign="top"> <font face="Courier New" size="3"> ByVal</font></td>
+        <td width="152" height="21" valign="top"> <font face="Courier New" size="3"> <i>ulChNo</i> &nbsp;</font></td>
+        <td width="255" height="21" valign="top"> <font face="Courier New" size="3"> As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" height="19" valign="top"></td>
+        <td width="62" height="19" valign="top"> <font face="Courier New" size="3"> ByRef&nbsp;</font></td>
+        <td width="152" height="19" valign="top"> <font face="Courier New" size="3"> <i>ulAdSmplStatus</i> </font></td>
+        <td width="255" height="19" valign="top"> <font face="Courier New" size="3"> As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" height="21" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="62" height="21" valign="top"> <font face="Courier New" size="3"> ByRef&nbsp;</font></td>
+        <td width="152" height="21" valign="top"> <font face="Courier New" size="3"> <i>ulAdSmplCount</i>&nbsp;</font></td>
+        <td width="255" height="21" valign="top"> <font face="Courier New" size="3"> As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" height="21" valign="top"></td>
+        <td width="62" height="21" valign="top"> <font face="Courier New" size="3"> ByRef</font>
+        </td>
+        <td width="152" height="21" valign="top"> <font face="Courier New" size="3"> <i>ulAdAvailCount</i> </font>
+        </td>
+        <td width="255" height="21" valign="top"> <font face="Courier New" size="3"> As
+          Long _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="501" colspan="4" height="20" valign="top">
+    <font face="Courier New" size="3">
+    ) As Long</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+
+  <p><strong><font face="Times New Roman" size="3">Delphi&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="461" height="140">
+      <tr>
+        <td colspan="4" width="483"><font face="Courier New" size="3">function
+          AdLvGetStatus(</font></td>
+      </tr>
+      <tr>
+        <td width="52" colspan="2"></td>
+        <td width="153"><font face="Courier New" size="3"><i>hDeviceHandle</i></font></td>
+        <td width="266"><font face="Courier New" size="3">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="52" colspan="2"></td>
+        <td width="153"> <font face="Courier New" size="3"><i>ulChNo</i></font></td>
+        <td width="266"> <font face="Courier New" size="3"> : Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="13"></td>
+        <td width="33"><font face="Courier New" size="3"><i> var</i></font></td>
+        <td width="153"> <font face="Courier New" size="3"><i>ulAdSmplStatus&nbsp;</i></font></td>
+        <td width="266"> <font face="Courier New" size="3"> : Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="13"></td>
+        <td width="33"><font face="Courier New" size="3"><i> var</i></font></td>
+        <td width="153"> <font face="Courier New" size="3"><i>ulAdSmplCount&nbsp;</i></font>
+        </td>
+        <td width="266"> <font face="Courier New" size="3"> : Cardinal;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="13"></td>
+        <td width="33"><font face="Courier New" size="3"><i> var</i></font></td>
+        <td width="153"> <font face="Courier New" size="3"><i>ulAdAvailCount&nbsp;</i></font>
+        </td>
+        <td width="266"> <font face="Courier New" size="3"> : Cardinal</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="483" colspan="4">
+    <font face="Courier New" size="3">
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1" height="303">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td valign="top" width="484" height="21">Specifies the device handle obtained by the
+        <a href="AdOpen.html">
+        AdOpen</a> function.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">&nbsp;&nbsp;&nbsp;
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="1"><font face="Courier New"><i>ulChNo</i></font></td>
+      <td valign="top" width="484" height="1">Specifies the channel number.
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">&nbsp;&nbsp;&nbsp;&nbsp;
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="163"><em><font face="Courier New">ulAdSmplStatus</font></em></td>
+      <td valign="top" width="484" height="163">Points to a variable to receive the sampling status.
+        The variable will contain one of the following codes.
+      <table border="1" width="395" cellspacing="1">
+        <tr valign="top" align="center">
+          <td width="226"><b>Code</b></td>
+          <td width="110"><b>Value</b></td>
+          <td width="199"><b>Description</b></td>
+        </tr>
+        <tr valign="top">
+          <td width="226" valign="top">AD_STATUS_STOP_SAMPLING</td>
+          <td width="110" valign="top" align="center">1</td>
+          <td width="199" valign="top">The sampling is stopped.</td>
+        </tr>
+        <tr valign="top">
+          <td width="226" valign="top">AD_STATUS_WAIT_TRIGGER</td>
+          <td width="110" valign="top" align="center">2</td>
+          <td width="199" valign="top">The sampling is waiting for a trigger.</td>
+        </tr>
+        <tr valign="top">
+          <td width="226" valign="top">AD_STATUS_NOW_SAMPLING</td>
+          <td width="110" valign="top" align="center">3 </td>
+          <td width="199" valign="top">The sampling is running. </td>
+        </tr>
+      </table>
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">ulAdSmplCount</font></i></td>
+      <td valign="top" width="484" height="21">Points to a variable to receive the
+        count of acquired samples.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">
+        &nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">ulAdAvailCount</font></i></td>
+      <td valign="top" width="484" height="21">
+        Points to a variable to receive the number of samples to be sampled.</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="550">
+    <tr>
+      <td>
+  <p>The AdLvGetStatus function returns AD_ERROR_SUCCESS if the process is
+  successfully completed. Otherwise, this function returns another code. Please refer to
+  the
+  <a href="Return%20Values.html"> error codes</a>. </p>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Comment</font></strong></p>
+<blockquote>
+  <table border="0" width="550">
+    <tr>
+      <td>This function can retrieve the sampling status started by the <a href="AdLvStartSampling.html">
+        AdLvStartSampling</a> function. However, this function cannot retrieve the
+        sampling status started by the <a href="AdStartSampling.html"> AdStartSampling</a> function.</td>
+    </tr>
+  </table>
+</blockquote>
+    <p><strong><font face="Times New Roman" size="4"> Examples&nbsp;&nbsp;&nbsp;&nbsp;</font></strong>
+
+  <blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td width="65">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">ULONG</font></p>
+        </td>
+        <td width="431">
+    <font face="Courier New" size="3">ulAdSmplStatus;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="65">
+    <font face="Courier New" size="3">
+    ULONG&nbsp;</font></td>
+        <td width="431">
+    <font face="Courier New" size="3">ulAdSmplCount;</font></td>
+      </tr>
+      <tr>
+        <td width="65">
+    <font face="Courier New" size="3">
+    ULONG&nbsp;</font></td>
+        <td width="431">
+    <font face="Courier New" size="3">ulAdAvailCount;</font></td>
+      </tr>
+      <tr>
+        <td height="21" colspan="2" width="502">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" width="502">
+    <font face="Courier New" size="3">
+    nRet = AdLvGetStatus( hDeviceHandle, 1, &amp;ulAdSmplStatus,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td colspan="2" width="502">
+    <font face="Courier New" size="3">
+    &amp;ulAdSmplCount,&amp;ulAdAvailCount );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+
+  <p>
+  <strong><font face="Times New Roman" size="3">Visual Basic&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td height="21" width="47">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">Dim&nbsp;</font></p>
+        </td>
+        <td height="21" width="449">
+ <font face="Courier New" size="3">
+ ulAdSmplStatus As Long</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" width="47">
+    <font face="Courier New" size="3">
+    Dim&nbsp;</font></td>
+        <td height="19" width="449">
+ <font face="Courier New" size="3">
+ ulAdSmplCount As Long</font></td>
+      </tr>
+      <tr>
+        <td height="21" width="47">
+    <font face="Courier New" size="3">
+    Dim&nbsp;</font></td>
+        <td height="21" width="449">
+ <font face="Courier New" size="3">
+ ulAdAvailCount As Long</font></td>
+      </tr>
+      <tr>
+        <td height="21" colspan="2" width="502">
+        </td>
+      </tr>
+      <tr>
+        <td height="21" colspan="2" width="502">
+    <font face="Courier New" size="3">
+    nRet = AdLvGetStatus( hDeviceHandle, 1, _ ulAdSmplStatus,&nbsp;_</font></td>
+      </tr>
+      <tr>
+        <td height="21" colspan="2" width="502">
+ <font face="Courier New" size="3">ulAdSmplCount,&nbsp;ulAdAvailCount )</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+
+  <p> 
+  <strong><font face="Times New Roman" size="3">Delphi&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td height="21" width="502" valign="top">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">var</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" width="496" valign="top">
+    <font face="Courier New" size="3">
+    &nbsp;&nbsp;&nbsp; ulAdSmplStatus: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td height="19" width="496" valign="top">
+    <font face="Courier New" size="3">
+    &nbsp;&nbsp;&nbsp; ulAdSmplCount: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td height="21" width="496" valign="top">
+    <font face="Courier New" size="3">
+    &nbsp;&nbsp;&nbsp; ulAdAvailCount: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td height="21" width="502" valign="top">  
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="502" valign="top">  
+    <font face="Courier New" size="3">  
+    nRet := AdLvGetStatus( hDeviceHandle, 1, ulAdSmplStatus, &nbsp;</font></td>
+      </tr>
+      <tr>
+        <td height="21" width="502" valign="top">  
+ <font face="Courier New" size="3">ulAdSmplCount, ulAdAvailCount );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td>
+Retrieve the sampling status on the board/card specified by hDeviceHandle.
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

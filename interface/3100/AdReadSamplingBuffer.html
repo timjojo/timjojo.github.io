@@ -1,0 +1,745 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdReadSamplingBuffer</title>
+</head>
+
+<body>
+
+<p><b><font size="5" face="Arial">AdReadSamplingBuffer</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="558" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="556" valign="top">
+  The AdReadSamplingBuffer function <font SIZE="3">reads sampling data contained
+  in the sampling buffer. </font></td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font> 
+</b> 
+    </p>
+<blockquote>
+    <font size="3">
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472" valign="top"><font face="Courier New">INT
+            AdReadSamplingBuffer(</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="62" valign="top"><font face="Courier New">HANDLE</font></td>
+          <td width="378" valign="top"> <font face="Courier New"> <i>hDeviceHandle</i>,</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="62" valign="top"><font face="Courier New"> LONG&nbsp;</font></td>
+          <td width="378" valign="top"><font face="Courier New"><i>lOffset</i>,</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="62" valign="top"><font face="Courier New"> ULONG&nbsp;</font></td>
+          <td width="378" valign="top"><font face="Courier New"><i>*ulSmplNum</i><b>,</b></font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="62" valign="top"><font face="Courier New"> PVOID&nbsp;</font></td>
+          <td width="378" valign="top"><i><font face="Courier New">pSmplData</font></i>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472" valign="top">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+  </blockquote>
+    </blockquote>
+  </font>
+    <blockquote>
+<p><b>Visual Basic&nbsp;</b></p>
+<blockquote>
+  <font size="3">
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New" size="3">Declare Function AdReadSamplingBuffer
+          Lib _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="62" valign="top"><font face="Courier New" size="3">ByVal&nbsp;</font></td>
+        <td width="140" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i>   </font></td>
+        <td width="220" valign="top"> <font face="Courier New" size="3">   As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="62" valign="top">
+  <font face="Courier New" size="3"> ByVal&nbsp;</font>
+        </td>
+        <td width="140" valign="top"><font face="Courier New" size="3"><i>lOffset</i>&nbsp;</font>
+        </td>
+        <td width="220" valign="top"> <font face="Courier New" size="3">   As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="62" valign="top"><font face="Courier New" size="3">ByRef&nbsp;</font></td>
+        <td width="140" valign="top"><font face="Courier New" size="3"><i>ulSmplNum</i>&nbsp;</font>
+        </td>
+        <td width="220" valign="top"> <font face="Courier New" size="3">   As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="62" valign="top"><font face="Courier New" size="3">ByRef&nbsp;</font></td>
+        <td width="140" valign="top"><font face="Courier New" size="3"><i>pSmplData</i>&nbsp;</font>
+        </td>
+        <td width="220" valign="top"><font face="Courier New" size="3">   As Any
+          _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New" size="3">) As
+          Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+<blockquote>
+  <font size="3">
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New" size="3">function
+          AdReadSamplingBuffer(</font></td>
+      </tr>
+      <tr>
+        <td width="20" colspan="2" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="147" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i></font></td>
+        <td width="328" valign="top"><font face="Courier New" size="3">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="20" colspan="2" valign="top"></td>
+        <td width="147" valign="top"><i><font face="Courier New" size="3">lOffset</font></i>
+        </td>
+        <td width="328" valign="top">  <font face="Courier New" size="3">  : Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="10" valign="top"><font face="Courier New" size="3">var  </font></td>
+        <td width="147" valign="top"><font face="Courier New" size="3"><i>ulSmplNum</i>&nbsp;</font>
+        </td>
+        <td width="328" valign="top">  <font face="Courier New" size="3">  : Pointer;</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="10" valign="top"></td>
+        <td width="147" valign="top"><font face="Courier New" size="3"><i>pSmplData</i>&nbsp;</font>
+        </td>
+        <td width="328" valign="top">  <font face="Courier New" size="3">  : Cardinal</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New" size="3">
+  ) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  </blockquote>
+<p><b><big>Parameters</big></b>
+  </p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td valign="top"><var><font face="Courier New">hDeviceHandle&nbsp;</font></var></td>
+        <td valign="top">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+        <td valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td valign="top">&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top"><var><font face="Courier New">lOffset</font></var></td>
+        <td valign="top">Specifies the index of the sampling buffer to start reading the
+          sampling data. This index is specified per number of sample. When -1
+          is specified, this function reads the latest data of ulSmplNum.</td>
+      </tr>
+      <tr>
+        <td valign="top"></td>
+        <td valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top"><i><font face="Courier New">ulSmplNum</font></i></td>
+        <td valign="top"><font SIZE="3">Points to a variable to receive the number of
+          samples. Before calling this function, specify the number of samples
+          to be received. After the function returned, it receives the number of
+          samples actually stored into the buffer pointed by pSmplData.</font></td>
+      </tr>
+      <tr>
+        <td valign="top"></td>
+        <td valign="top">
+        &nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top"><i><font face="Courier New">pSmplData</font></i></td>
+        <td valign="top">
+        <font SIZE="3">Points to a buffer to receive samples.</font>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1" height="57">
+      <tr>
+        <td width="548" valign="top" height="53">
+  The AdReadSamplingBuffer function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+  <p><b><big>Comments</big></b></p> 
+  <table border="0" width="499" cellspacing="1">
+    <tr>
+        <td width="631" valign="top">
+  <ul>
+    <li>
+  This function can retrieve the data from specified address in the sampling
+  buffer. The retrieved data cannot be cleared from the sampling buffer.</li>
+  </ul>
+        </td>
+    </tr>
+    <tr>
+        <td width="631" valign="top">
+  <ul>
+    <li>
+  <font SIZE="3">This function can retrieve the sampling data in the sampling
+  buffer even if the <a href="AdGetSamplingData.html"> AdGetSamplingData</a> function is in progress. This function
+  has no effect to the <a href="AdGetSamplingData.html"> AdGetSamplingData</a> function.</font>
+    </li>
+  </ul>
+        </td>
+    </tr>
+    <tr>
+        <td width="631" valign="top">
+  <ul>
+    <li>
+  <font SIZE="3">The following figures illustrate a layout of the sampling
+  buffer where the sampling buffer has <i>N</i> locations.<br>
+  &lt;Sampling Buffer&gt;</font>
+      <font SIZE="3">
+  <table border="1" cellspacing="1" width="495">
+    <tr>
+      <td width="140"><font SIZE="3">
+        <p>Sampling data number</font></td>
+      <td width="87" align="center">1</td>
+      <td width="88" align="center">2</td>
+      <td width="88" align="center" valign="middle">. . .</td>
+      <td width="88" align="center"><i><font SIZE="3">N</font></i></td>
+    </tr>
+    <tr>
+      <td width="140"><font SIZE="3">Index</font></td>
+      <td width="87" align="center">0</td>
+      <td width="88" align="center">1</td>
+      <td width="88" align="center" valign="middle">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="88" align="center"><i><font SIZE="3">N</font></i><font SIZE="3">-1</font></td>
+    </tr>
+  </table>
+  </font>
+    </li>
+  </ul>
+        </td>
+    </tr>
+    <tr>
+      <td width="627" valign="top">
+  <ul>
+    <li>
+  <font SIZE="3">If the index of 0 and the number of samples of 100 are
+  specified, this function returns samples located at index 0 through 99 hatched
+  in the following figure.</font>
+  <font SIZE="3">
+  <table border="1" cellspacing="1" width="497">
+    <tr>
+      <td width="144"><font SIZE="3">
+        <p>Sampling data number</font></td>
+      <td width="55" align="center">1</td>
+      <td width="56" align="center">2</td>
+      <td width="53" align="center" valign="middle">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="64" align="center" valign="middle"><font SIZE="3">
+        <p ALIGN="CENTER">100</font></td>
+      <td width="57" align="center">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="61" align="center"><i><font SIZE="3">
+        <p ALIGN="CENTER">N</font></i><font SIZE="3"><sup>*1</sup></font></td>
+    </tr>
+    <tr>
+      <td width="144"><font SIZE="3">Index</font></td>
+      <td width="55" align="center">0</td>
+      <td width="56" align="center">1</td>
+      <td width="53" align="center" valign="middle">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="64" align="center" valign="middle"><font SIZE="3">
+        <p ALIGN="CENTER">99</font></td>
+      <td width="57" align="center">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="61" align="center"><i><font SIZE="3">
+        <p ALIGN="CENTER">N</font></i><font SIZE="3">-1</font></td>
+    </tr>
+  </table>
+      </font>
+      <p>
+  <font SIZE="3">Note: <sup>*1</sup> <i>N</i> &ge; 100</li>
+    </ul>
+  </font>
+      </td>
+    </tr>
+    <tr>
+      <td width="627" valign="top">
+  <ul>
+    <li>
+  <font SIZE="3">If the index of 100 and the number of samples of 100 are
+  specified, this function returns samples located at index 100 through 199
+  hatched in the following figure.</font>
+  <font SIZE="3">
+  <table border="1" cellspacing="1" width="497">
+    <tr>
+      <td width="153"><font SIZE="3">
+        <p>Sampling data number</font></td>
+      <td width="42" align="center">1</td>
+      <td width="37" align="center">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="47" align="center">100</td>
+      <td width="44" align="center" valign="middle">101</td>
+      <td width="38" align="center" valign="middle">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="45" align="center" valign="middle"><font SIZE="3">
+        <p ALIGN="CENTER">200</font></td>
+      <td width="44" align="center">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="44" align="center"><i><font SIZE="3">
+        <p ALIGN="CENTER">N</font></i><sup><font SIZE="3">*</font>2</sup></td>
+    </tr>
+    <tr>
+      <td width="153"><font SIZE="3">Index</font></td>
+      <td width="42" align="center">0</td>
+      <td width="37" align="center">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="47" align="center">99</td>
+      <td width="44" align="center" valign="middle">100</td>
+      <td width="38" align="center" valign="middle">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="45" align="center" valign="middle"><font SIZE="3">
+        <p ALIGN="CENTER">199</font></td>
+      <td width="44" align="center">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="44" align="center"><i><font SIZE="3">
+        <p ALIGN="CENTER">N</font></i><font SIZE="3">-1</font></td>
+    </tr>
+  </table>
+      </font>
+      <p>
+  <font SIZE="3">Note: <sup>*2</sup> <i>N</i> &ge; 200</li>
+    </ul>
+  </font>
+      </td>
+    </tr>
+    <tr>
+      <td width="627" valign="top">
+  <ul>
+    <li>
+  <font SIZE="3">If the index of -1 and the number of samples of 100 are
+  specified, the current maximum data number is 350, this function returns the
+  samples located at index 250 through 349 hatched in the following figure.</font>
+  <font SIZE="3">
+  <table border="1" cellspacing="1" width="92%">
+    <tr>
+      <td width="29%"><font SIZE="3">
+        <p>Sampling data number</font></td>
+      <td width="8%" align="center">1</td>
+      <td width="9%" align="center">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="9%" align="center">250</td>
+      <td width="9%" align="center" valign="middle">251</td>
+      <td width="9%" align="center" valign="middle">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="9%" align="center" valign="middle">
+        <p ALIGN="CENTER">350</td>
+      <td width="9%" align="center">
+        <p ALIGN="CENTER">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="9%" align="center"><i><font SIZE="3">
+        <p ALIGN="CENTER">N</font></i><sup><font SIZE="3">*</font>3</sup></td>
+    </tr>
+    <tr>
+      <td width="29%"><font SIZE="3">Index</font></td>
+      <td width="8%" align="center">0</td>
+      <td width="9%" align="center">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="9%" align="center">249</td>
+      <td width="9%" align="center" valign="middle">250</td>
+      <td width="9%" align="center" valign="middle">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="9%" align="center" valign="middle">
+        <p ALIGN="CENTER">349</td>
+      <td width="9%" align="center">
+        <p ALIGN="CENTER">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="9%" align="center"><i><font SIZE="3">
+        <p ALIGN="CENTER">N</font></i><font SIZE="3">-1</font></td>
+    </tr>
+  </table>
+      </font>
+      <p>
+  <font SIZE="3">Note: <sup>*3</sup> <i>N</i>  &ge; 350</li>
+    </ul>
+  </font>
+      </td>
+    </tr>
+    <tr>
+      <td width="627" valign="top">
+  <ul>
+    <li>
+  <font SIZE="3">The sampling buffer behaves as a ring buffer when an infinite
+  sampling is running. If the number of samples becomes greater than <i>N</i>,
+  the index returns to 0 and then old data are overwritten by new data like as
+  following figure.
+  <table border="1" cellspacing="1" width="92%">
+    <tr>
+      <td width="31%" valign="top"><font SIZE="3">
+        <p>Sampling data number</font></td>
+      <td width="17%" align="center"><i><font SIZE="3">
+        <p ALIGN="CENTER">N</font></i><font SIZE="3">+1<br>
+        <strike>
+        1</strike></font></td>
+      <td width="17%" align="center">2</td>
+      <td width="17%" align="center" valign="middle">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="18%" align="center"><i><font SIZE="3">N</font></i></td>
+    </tr>
+    <tr>
+      <td width="31%"><font SIZE="3">Index</font></td>
+      <td width="17%" align="center">0</td>
+      <td width="17%" align="center">1</td>
+      <td width="17%" align="center" valign="middle">
+      <font SIZE="3">
+  . . .
+  </font>
+      </td>
+      <td width="18%" align="center"><i><font SIZE="3">N</font></i><font SIZE="3">-1</font></td>
+    </tr>
+  </table>
+      </li>
+    </ul>
+  </font>
+      </td>
+    </tr>
+    <tr>
+      <td width="627" valign="top">
+  <ul>
+    <li>
+  Data unit depends on the resolution of the board/card. Please refer to &quot;<a href="Data%20Format.html">8.
+  Data Format</a>&quot; and the following table.
+      <table border="1" cellspacing="1" width="493">
+        <tr>
+          <td rowspan="2" width="83">
+            <p align="center"><b>Resolution</b></td>
+          <td rowspan="2" width="117">
+            <p align="center"><b>Data Unit (byte)</b></td>
+          <td colspan="3" width="271">
+            <p align="center"><b>Language</b></td>
+        </tr>
+        <tr>
+          <td width="95">
+            <p align="center"><b>C</b></td>
+          <td width="95">
+            <p align="center"><b>Visual Basic</b></td>
+          <td width="96">
+            <p align="center"><b>Delphi</b></td>
+        </tr>
+        <tr>
+          <td width="83">8 bits</td>
+          <td width="117">
+            <p align="center">1</td>
+          <td width="95">BYTE</td>
+          <td width="95">Byte</td>
+          <td width="96">Byte</td>
+        </tr>
+        <tr>
+          <td width="83">12 bits</td>
+          <td width="117">
+            <p align="center">2</td>
+          <td width="95">WORD</td>
+          <td width="95">Integer</td>
+          <td width="96">Word</td>
+        </tr>
+        <tr>
+          <td width="83">16 bits</td>
+          <td width="117">
+            <p align="center">2</td>
+          <td width="95">WORD</td>
+          <td width="95">Integer</td>
+          <td width="96">Word</td>
+        </tr>
+        <tr>
+          <td width="83">24 bits</td>
+          <td width="117">
+            <p align="center">4</td>
+          <td width="95">DWORD</td>
+          <td width="95">Long</td>
+          <td width="96">Dword</td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+      </td>
+    </tr>
+  </table>
+ 
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">PVOID
+        pSmplData;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">
+  HANDLE hHeap;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">
+  ULONG ulSmplNum;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">
+  ULONG ulSmplChCount;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">
+  ulSmplNum = 256;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"> 
+    <font face="Courier New" size="3">
+  ulSmplChCount = 3;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">
+  hHeap = GetProcessHeap();</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top">  
+    <font face="Courier New" size="3">
+  pSmplData = HeapAlloc( hHeap, HEAP_ZERO_MEMORY, ulSmplNum * ulSmplChCount *
+    sizeof( WORD ) );</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">
+  nRet = AdReadSamplingBuffer( hDeviceHandle, 100, &amp;ulSmplNum, pSmplData);</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New" size="3">Dim SmplData(2,255) As Integer</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New" size="3">
+  Dim ulSmplNum As Long</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+        <font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New" size="3">
+  ulSmplNum = 256</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+        <font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New" size="3">
+  nRet = AdReadSamplingBuffer( hDeviceHandle, _ 100, ulSmplNum, SmplData(0,0) )</font>
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="500" colspan="2" valign="top"><font face="Courier New" size="3">var</font></td>
+      </tr>
+      <tr>
+        <td width="30" valign="top"></td>
+        <td width="470" valign="top"><font face="Courier New" size="3">pSmplData: Pointer;</font></td>
+      </tr>
+      <tr>
+        <td width="30" valign="top"></td>
+        <td width="470" valign="top"><font face="Courier New" size="3">ulSmplNum: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="30" valign="top"></td>
+        <td width="470" valign="top"><font face="Courier New" size="3">ulSmplChCount:
+          Cardianl;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top">
+    <font face="Courier New" size="3">
+  ulSmplNum := 256;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top"><font face="Courier New" size="3">
+  ulSmplChCount := 3;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top">  
+    <font face="Courier New" size="3">
+  pSmplData := AllocMem(ulSmplNum * ulSmplChCount * SizeOf(Word));</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top">  
+    <font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top"><font face="Courier New" size="3">
+  nRet := AdReadSamplingBuffer( hDeviceHandle, 100, ulSmplNum, pSmplData );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="545" valign="top">
+Retrieve 101 to 256 samples <font SIZE="3">contained in the sampling buffer </font>on
+the 12-bit or 16-bit resolution board/card specified by hDeviceHandle. The
+ulSmplNum parameter contains the number of samples that are actually acquired
+after the sampling is completed.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

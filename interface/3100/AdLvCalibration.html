@@ -1,0 +1,428 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdLvCalibration</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">AdLvCalibration</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="557" valign="top">
+  The AdLvCalibration function runs automatic calibration of the board/card.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <font size="3">
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="507" valign="top"><font face="Courier New">INT
+            AdLvCalibration(</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="72" valign="top"><font face="Courier New">HANDLE&nbsp;</font></td>
+          <td width="403" valign="top"> <font face="Courier New"> <i>hDeviceHandle</i>,</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="72" valign="top"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="403" valign="top"><font face="Courier New"><i>ulChNo</i><b>,</b> </font> </td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="72" valign="top"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="403" valign="top"><i> <font face="Courier New"> ulCalibration</font></i> </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="507" valign="top">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    </blockquote>
+  </font>
+    <blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New" size="3">Declare Function AdLvCalibration Lib
+          _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="62" valign="top"><font face="Courier New" size="3">ByVal&nbsp;</font></td>
+        <td width="134" valign="top"><font face="Courier New" size="3"><i>hDeviceHandle</i>  </font></td>
+        <td width="279" valign="top"><font face="Courier New" size="3">  As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"><font size="3" face="Courier New">ByVal&nbsp;
+  </font>
+        </td>
+        <td width="134" valign="top"><font face="Courier New" size="3"><i> ulChNo</i> </font></td>
+        <td width="279" valign="top"><font face="Courier New" size="3"> As Long,
+          _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"><font size="3" face="Courier New">ByVal&nbsp;
+  </font>
+        </td>
+        <td width="134" valign="top"><font face="Courier New" size="3"><i>ulCalibration </i></font></td>
+        <td width="279" valign="top"><font face="Courier New" size="3">As Long _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New" size="3">) As Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472" valign="top"><font face="Courier New">function
+          AdLvCalibration(</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="152" valign="top"><font face="Courier New"><i>hDeviceHandle</i><font size="3">:&nbsp;
+  </font>
+          </font>
+        </td>
+        <td width="286" valign="top"><font face="Courier New">THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New"><i>ulChNo</i>:&nbsp;</font></td>
+        <td width="286" valign="top">  <font face="Courier New">  DWORD;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New"><i>ulCalibration</i>:</font></td>
+        <td width="286" valign="top">  <font face="Courier New">  DWORD</font></td>
+      </tr>
+      <tr>
+        <td colspan="3" width="472" valign="top">   
+    <font face="Courier New">   
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  </blockquote>
+  <p><b><big>Parameters</big></b>
+  </p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="41" valign="top"><var><font face="Courier New">hDeviceHandle</font></var></td>
+        <td width="507" valign="top">Specifies the device handle obtained by the
+          <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="507" valign="top">
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top"><i><font face="Courier New">ulChNo</font></i></td>
+        <td width="507" valign="top">
+        <font SIZE="3">Specifies an analog input channel. Only one channel can
+        be specified.</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="507" valign="top">
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top"><i><font face="Courier New">ulCalibration</font></i></td>
+        <td width="507" valign="top">
+        Specifies a calibration method.
+        <table border="1" cellspacing="1" width="406">
+          <tr>
+            <td width="207" valign="top">
+              <p align="center"><b>Code</b></td>
+            <td width="183" valign="top">
+              <p align="center"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="207" valign="top">AD_SELF_CALIBRATION</td>
+            <td width="183" valign="top">Self-calibration of the AD converter</td>
+          </tr>
+          <tr>
+            <td width="207" valign="top">AD_ZEROSCALE_CALIBRATION</td>
+            <td width="183" valign="top">Zero voltage calibration<br>
+              (system calibration)</td>
+          </tr>
+          <tr>
+            <td width="207" valign="top">AD_FULLSCALE_CALIBRATION</td>
+            <td width="183" valign="top">Full-scale voltage calibration&nbsp;<br>
+              (system calibration)</td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  <p align="left">
+  The AdLvCalibration function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.</p>
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Comments</big></b></p>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+        <ul>
+          <li>
+        <font SIZE="3">The board/card has to be calibrated by using this function,
+        when you change the range or the sampling rate by using the <a href="AdLvSetSamplingConfig.html">
+        AdLvSetSamplingConfig</a> function.</font>
+          </li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="548" valign="top">
+        <ul>
+          <li>
+        If you calibrate a channel with the system calibration methods, first,
+        calibrate the channel at the zero voltage, and then calibrate it at the
+        full-scale voltage.</li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="548" valign="top">
+        <ul>
+          <li>
+        <font SIZE="3">Make sure that the correct voltage is applied to the
+        channel according to the calibration method before calling this
+        function.</font>
+          </li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="548" valign="top">
+        <ul>
+          <li>
+        If you change the range and the sampling rate by using the <a href="AdSetSamplingConfig.html">AdSetSamplingConfig</a>
+        function, the self-calibration is executed in the <a href="AdSetSamplingConfig.html">AdSetSamplingConfig</a>
+        function.</li>
+        </ul>
+        </td>
+      </tr>
+  </table>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" cellspacing="1" width="480">
+    <tr>
+      <td width="452" height="21" valign="top"> 
+      <font face="Courier New"> 
+      &lt;Self-calibration&gt;</font> 
+      </td>
+    </tr>
+    <tr>
+      <td width="452" height="21" valign="top">  
+    <font face="Courier New">  
+    nRet = AdLvCalibration( hDeviceHandle, 1, AD_SELF_CALIBRATION );</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21" valign="top">  
+      </td>
+    </tr>
+    <tr>
+      <td width="452" height="21" valign="top">  
+        <font face="Courier New">  
+        &lt;Zero voltage calibration (system calibration)&gt;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21" valign="top">  
+    <font face="Courier New">  
+    nRet = AdLvCalibration( hDeviceHandle, 1, AD_ZEROSCALE_CALIBRATION);</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21" valign="top">  
+      <font face="Courier New">  
+      &nbsp;&nbsp;&nbsp;</font>  
+      </td>
+    </tr>
+    <tr>
+      <td width="452" height="21" valign="top">  
+        <font face="Courier New">  
+        &lt;Full-scale voltage calibration (system calibration)&gt;</font>  
+      </td>
+    </tr>
+    <tr>
+      <td width="452" height="21" valign="top">  
+    <font face="Courier New">  
+    nRet = AdLvCalibration( hDeviceHandle, 1, AD_FULLSCALE_CALIBRATION);</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="500" valign="top">  
+        <font face="Courier New">  
+        &lt;Self-calibration&gt;</font>  
+        </td>
+      </tr>
+      <tr>
+        <td width="500" valign="top">  
+    <font face="Courier New">  
+    nRet = AdLvCalibration( hDeviceHandle, 1, _ AD_SELF_CALIBRATION )</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top">  
+        <font face="Courier New">  
+        &nbsp;&nbsp;&nbsp;</font>  
+        </td>
+      </tr>
+      <tr>
+        <td width="500" valign="top">  
+        <font face="Courier New">  
+        &lt;Zero voltage calibration (system calibration)&gt;</font>  
+        </td>
+      </tr>
+      <tr>
+        <td width="500" valign="top">  
+    <font face="Courier New">  
+    nRet = AdLvCalibration( hDeviceHandle, 1, _ AD_ZEROSCALE_CALIBRATION)</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top">  
+        <font face="Courier New">  
+        &nbsp;&nbsp;&nbsp;</font>  
+        </td>
+      </tr>
+      <tr>
+        <td width="500" valign="top">  
+        <font face="Courier New">  
+        &lt;Full-scale voltage calibration (system _ calibration)&gt;</font>  
+        </td>
+      </tr>
+      <tr>
+        <td width="500" valign="top">  
+    <font face="Courier New">  
+    nRet = AdLvCalibration( hDeviceHandle, 1, _ AD_FULLSCALE_CALIBRATION)</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="498" valign="top"><font face="Courier New">&lt;Self-calibration&gt;</font></td>
+      </tr>
+      <tr>
+        <td width="498" valign="top"> 
+    <font face="Courier New"> 
+    nRet := AdLvCalibration( hDeviceHandle, 1, AD_SELF_CALIBRATION );</font></td>
+      </tr>
+      <tr>
+        <td width="498" valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="498" valign="top">  
+        <font face="Courier New">  
+        &lt;Zero voltage calibration (system calibration)&gt;</font></td>
+      </tr>
+      <tr>
+        <td width="498" valign="top"><font face="Courier New">nRet := AdLvCalibration( hDeviceHandle, 1,
+          AD_ZEROSCALE_CALIBRATION);</font></td>
+      </tr>
+      <tr>
+        <td width="498" valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="498" valign="top">  
+        <font face="Courier New">  
+        &lt;Full-scale voltage calibration (system calibration)&gt;</font></td>
+      </tr>
+      <tr>
+        <td width="498" valign="top">  
+    <font face="Courier New">  
+    nRet := AdLvCalibration( hDeviceHandle, 1, AD_FULLSCALE_CALIBRATION);</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="544" cellspacing="1">
+      <tr>
+        <td width="542" valign="top">
+        Calibrate channel 1 of the board/card specified by hDeviceHandle.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

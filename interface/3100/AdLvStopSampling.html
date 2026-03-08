@@ -1,0 +1,249 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdLvStopSampling</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdLvStopSampling</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td>
+  <font SIZE="3">The AdLvStopSampling function stops continuous sampling
+  performed as an overlapped operation.</font></td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <b>C
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472"><font face="Courier New" size="3">INT AdLvStopSampling(</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="62"> <font face="Courier New" size="3"> HANDLE</font></td>
+        <td width="376"> <font face="Courier New" size="3"> <i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="22"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="62"> <font face="Courier New" size="3"> ULONG</font></td>
+        <td width="376"> <i> <font face="Courier New" size="3"> ulChNo</font></i></td>
+      </tr>
+      <tr>
+        <td width="22">
+    <font face="Courier New" size="3">
+    );</font>
+        </td>
+        <td width="444" colspan="2"></td>
+      </tr>
+    </table>
+  </blockquote>
+  <b>Visual Basic<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New" size="3">Declare Function AdLvStopSampling Lib
+          &quot;FbiAd.DLL&quot; (_</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="52"> <font face="Courier New" size="3"> ByVal</font>
+        </td>
+        <td width="142"> <font face="Courier New" size="3"> <i> hDeviceHandle</i> </font>
+        </td>
+        <td width="246"> <font face="Courier New" size="3"> As Long,_</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="52"> <font face="Courier New" size="3"> ByVal</font>
+        </td>
+        <td width="142"> <font face="Courier New" size="3"> <i> ulChNo</i> &nbsp;</font>
+        </td>
+        <td width="246"> <font face="Courier New" size="3"> As Long_</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4">
+    <p ALIGN="JUSTIFY"> 
+    <font face="Courier New" size="3"> 
+    ) As Long</font></p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <b>Delphi<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="2" width="472">
+    <font face="Courier New" size="3">
+    function AdLvStopSampling(</font></td>
+      </tr>
+      <tr>
+        <td width="132"><i><font face="Courier New" size="3">hDeviceHandle</font></i></td>
+        <td width="334"><font face="Courier New" size="3">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="132"><i><font face="Courier New" size="3">ulChNo</font></i></td>
+        <td width="334"> <font face="Courier New" size="3"> : DWORD</font></td>
+      </tr>
+      <tr>
+        <td width="472" colspan="2">
+    <font face="Courier New" size="3">
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+  <p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td valign="top" width="484" height="21">Specifies the device handle obtained by the
+        <a href="AdOpen.html">
+        AdOpen</a> function.</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><font face="Courier New">&nbsp;&nbsp;</font></td>
+      <td valign="top" width="484" height="21"></td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">ulChNo</font></i></td>
+      <td valign="top" width="484" height="21">Specifies the channel <font SIZE="3">number
+        to be stopped the sampling.</font></td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480">
+  The AdLvStopSampling function returns AD_ERROR_SUCCESS if the process is
+  successfully completed. Otherwise, this function returns an another code. Please refer to
+  <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Comments</font></strong></p>
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td width="544">
+  <font SIZE="3">If the event notification and the callback routine are set by
+  using the <a href="AdLvSetSamplingConfig.html">AdLvSetSamplingConfig</a> function, after this function is called, the
+  event is signaled and the callback function is executed.</font></td>
+    </tr>
+    <tr>
+      <td width="544">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="544">
+  This function cannot stop the sampling started by the <a href="AdStartSampling.html"> AdStartSampling</a>
+  function.&nbsp;</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Examples</font></strong></p>
+
+  <blockquote>
+  <b>C&nbsp;
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td>
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">nRet = AdLvStopSampling( hDeviceHandle, 1 );</font></p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <strong><font face="Times New Roman" size="3">Visual Basic<br>
+  </font></strong>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td>
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">nRet = AdLvStopSampling( hDeviceHandle, 1 )</font></p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <strong><font face="Times New Roman" size="3">Delphi<br>
+  </font></strong>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td>
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">nRet := AdLvStopSampling( hDeviceHandle, 1 );</font></p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td>
+Stop the samplings on the board/card specified by hDeviceHandle
+immediately.
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

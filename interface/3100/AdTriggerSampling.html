@@ -1,0 +1,668 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdTriggerSampling</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">AdTriggerSampling</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+  <blockquote>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="556" valign="top">
+  The AdTriggerSampling function samples a single channel on the board/card
+  at each trigger
+  asserted on the EXTRG IN pin. This function is applicable only to boards/cards whose analog input channels are multiplexed
+  into an AD converter and whose data transfer mode is the programmed I/O mode.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font> 
+</b> 
+    </p>
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+    <font size="3">
+          <td colspan="3" width="472" valign="top"><font face="Courier New" size="3">INT AdTriggerSampling(</font></td>
+  </font>
+        </tr>
+        <tr>
+    <font size="3">
+          <td width="32" valign="top"></td>
+          <td width="62" valign="top"><font size="3" face="Courier New">HANDLE
+</font>
+          </td>
+          <td width="366" valign="top">
+
+<font size="3" face="Courier New"><i>hDeviceHandle</i>,
+</font>
+          </td>
+  </font>
+        </tr>
+        <tr>
+    <font size="3">
+          <td width="32" valign="top"></td>
+          <td width="62" valign="top">
+
+<font size="3" face="Courier New">ULONG
+</font>
+          </td>
+          <td width="366" valign="top"><font size="3" face="Courier New"><i>ulChNo</i>,&nbsp;
+</font>
+          </td>
+  </font>
+        </tr>
+        <tr>
+          <td width="32" valign="top"></td>
+    <font size="3">
+          <td width="62" valign="top"><font size="3" face="Courier New">ULONG&nbsp;
+</font>
+    </td>
+          <td width="366" valign="top">
+
+<font size="3" face="Courier New">
+ <i>ulRange</i>,&nbsp;
+</font>
+          </td>
+  </font>
+        </tr>
+        <tr>
+          <td width="32" valign="top"></td>
+          <td width="62" valign="top"><font size="3" face="Courier New">ULONG
+</font>
+          </td>
+          <td width="366" valign="top"><font size="3" face="Courier New"><i>ulSingleDiff</i>,&nbsp;
+</font>
+          </td>
+        </tr>
+        <tr>
+          <td width="32" valign="top"></td>
+          <td width="62" valign="top"><font size="3" face="Courier New">ULONG
+</font>
+          </td>
+          <td width="366" valign="top"><font size="3" face="Courier New"><i>ulTriggerMode</i>,
+</font>
+          </td>
+        </tr>
+        <tr>
+          <td width="32" valign="top"></td>
+          <td width="62" valign="top"><font size="3" face="Courier New">ULONG
+</font>
+          </td>
+          <td width="366" valign="top"><font size="3" face="Courier New"><i>ulTrigEdge</i>,
+</font>
+          </td>
+        </tr>
+        <tr>
+    <font size="3">
+          <td width="32" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;</font></td>
+          <td width="62" valign="top"><font size="3" face="Courier New">ULONG
+</font>
+    </td>
+          <td width="366" valign="top"><i><font face="Courier New" size="3">ulSmplNum</font></i>
+          </td>
+  </font>
+        </tr>
+        <tr>
+    <font size="3">
+          <td colspan="3" width="472" valign="top">
+<font face="Courier New" size="3">
+);</font></td>
+  </font>
+        </tr>
+      </table>
+    </blockquote>
+<p><b>Visual Basic&nbsp;</b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New" size="3">Declare
+          Function AdTriggerSampling Lib _ &quot;FbiAd.DLL&quot; ( _</font> </td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="64" valign="top"><font face="Courier New" size="3">ByVal&nbsp;</font> 
+        </td>
+        <td width="146" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i>  </font> 
+        </td>
+        <td width="240" valign="top"> <font face="Courier New" size="3">  As
+          Long, _</font> 
+        </td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="64" valign="top"> <font face="Courier New" size="3"> ByVal</font> 
+        </td>
+        <td width="146" valign="top"> <font face="Courier New" size="3"> <i>ulChNo</i>  &nbsp;</font> 
+        </td>
+        <td width="240" valign="top"> <font face="Courier New" size="3">  As
+          Long, _&nbsp;</font> 
+        </td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="64" valign="top"> <font face="Courier New" size="3"> ByVal&nbsp;</font> 
+        </td>
+        <td width="146" valign="top"> <font face="Courier New" size="3"> <i>ulRange</i>  &nbsp;</font> 
+        </td>
+        <td width="240" valign="top"> <font face="Courier New" size="3">  As
+          Long, _</font> 
+        </td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="64" valign="top"><font face="Courier New" size="3">ByVal&nbsp;</font> 
+        </td>
+        <td width="146" valign="top"> <font face="Courier New" size="3"> <i>ulSingleDiff</i>  </font> 
+        </td>
+        <td width="240" valign="top"> <font face="Courier New" size="3">  As
+          Long, _</font> 
+        </td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="64" valign="top"><font face="Courier New" size="3">ByVal&nbsp;</font> 
+        </td>
+        <td width="146" valign="top"> <font face="Courier New" size="3"> <i>ulTriggerMode</i>  </font> 
+        </td>
+        <td width="240" valign="top"> <font face="Courier New" size="3">  As
+          Long, _</font> 
+        </td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="64" valign="top"><font face="Courier New" size="3">ByVal&nbsp;</font> 
+        </td>
+        <td width="146" valign="top"> <font face="Courier New" size="3"> <i>ulTrigEdge</i>  &nbsp;</font> 
+        </td>
+        <td width="240" valign="top"> <font face="Courier New" size="3">  As
+          Long, _</font> 
+        </td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="64" valign="top"><font face="Courier New" size="3">ByVal&nbsp;</font>
+        </td>
+        <td width="146" valign="top"> <font face="Courier New" size="3"> <i>ulSmplNum</i>  &nbsp;</font>
+        </td>
+        <td width="240" valign="top"> <font face="Courier New" size="3">  As
+          Long _</font>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New" size="3">) As
+          Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472" valign="top"><font face="Courier New" size="3">function AdTriggerSampling(</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" valign="top">
+        <font face="Courier New" size="3">&nbsp;&nbsp;</font>
+        </td>
+        <td width="140" valign="top"><font face="Courier New" size="3"><i>hDeviceHandle</i>  </font>
+        </td>
+        <td width="300" valign="top">  <font face="Courier New" size="3">  : THandle;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" valign="top">
+        </td>
+        <td width="140" valign="top"><i><font face="Courier New" size="3">ulChNo</font></i>  
+        </td>
+        <td width="300" valign="top"><font face="Courier New" size="3">: Integer;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" valign="top">
+        </td>
+        <td width="140" valign="top"><i><font face="Courier New" size="3">ulRange</font></i>  
+        </td>
+        <td width="300" valign="top"><font face="Courier New" size="3">: Integer;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" valign="top">
+        </td>
+        <td width="140" valign="top"><font face="Courier New" size="3"><i>ulSingleDiff</i>  </font>
+        </td>
+        <td width="300" valign="top">  <font face="Courier New" size="3">  : Integer;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" valign="top">
+        </td>
+        <td width="140" valign="top"><i><font face="Courier New" size="3">ulTriggerMode&nbsp;</font></i>  
+        </td>
+        <td width="300" valign="top"><font face="Courier New" size="3">: Integer;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" valign="top">
+        </td>
+        <td width="140" valign="top"><i><font face="Courier New" size="3">ulTrigEdge</font></i>  
+        </td>
+        <td width="300" valign="top"><font face="Courier New" size="3">: Integer;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" valign="top">
+        </td>
+        <td width="140" valign="top"><i><font face="Courier New" size="3">ulSmplNum</font></i>  
+        </td>
+        <td width="300" valign="top"><font face="Courier New" size="3">: Integer</font>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" width="472" valign="top"><font face="Courier New" size="3">) : DWORD; stdcall; external 'FbiAd.DLL';</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+<p><b><big>Parameters</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="41" valign="top"><var><font face="Courier New" size="3">hDeviceHandle</font></var></td>
+        <td width="508" valign="top">Specifies the device handle obtained by the
+          <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+      <td valign="top"></td>
+      <td valign="top">&nbsp;&nbsp;&nbsp;
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"><var><font face="Courier New" size="3">ulChNo</font></var></td>
+      <td valign="top">Specifies an analog input channel. Only one channel can be specified.
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"></td>
+      <td valign="top">&nbsp;&nbsp;&nbsp;
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"><var><font face="Courier New" size="3">ulRange</font></var></td>
+      <td valign="top">Specifies the analog input range.
+      <table border="1" width="441" height="323">
+        <tr valign="top">
+          <td width="89" align="center" height="19"><b>Code</b></td>
+          <td width="84" align="center" height="19"><b>Value</b></td>
+          <td width="538" align="center" height="19"><b>Description</b></td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="19">AD_0_1V</td>
+          <td width="84" height="19">0x00000001</td>
+          <td width="538" height="19">Voltage range: unipolar 0 V to +1 V</td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="19">AD_0_2P5V</td>
+          <td width="84" height="19">0x00000002</td>
+          <td width="538" height="19">Voltage range: unipolar 0 V to +2.5 V</td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="19">AD_0_5V</td>
+          <td width="84" height="19">0x00000004</td>
+          <td width="538" height="19">Voltage range: unipolar 0 V to +5 V</td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="19">AD_0_10V</td>
+          <td width="84" height="19">0x00000008</td>
+          <td width="538" height="19">Voltage range: unipolar 0 V to +10 V</td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="19">AD_1_5V</td>
+          <td width="84" height="19">0x00000010</td>
+          <td width="538" height="19">Voltage range: unipolar +1 V to +5 V</td>
+        </tr>
+        <tr>
+          <td width="89" height="19">AD_0_2V</td>
+          <td width="84" height="19">0x00000020</td>
+          <td width="538" height="19">Voltage range: unipolar +1 V to +2 V</td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="17">AD_0_20mA</td>
+          <td width="84" height="17">0x00001000</td>
+          <td width="538" height="17">Current range: unipolar 0 mA to +20 mA</td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="19">AD_4_20mA</td>
+          <td width="84" height="19">0x00002000</td>
+          <td width="538" height="19">Current range: unipolar +4 mA to&nbsp;<br>
+ +20 mA</td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="19">AD_1V</td>
+          <td width="84" height="19">0x00010000</td>
+          <td width="538" height="19">Voltage range: bipolar +/-1 V</td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="19">AD_2P5V</td>
+          <td width="84" height="19">0x00020000</td>
+          <td width="538" height="19">Voltage range: bipolar +/-2.5 V</td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="19">AD_5V</td>
+          <td width="84" height="19">0x00040000</td>
+          <td width="538" height="19">Voltage range: bipolar +/-5 V</td>
+        </tr>
+        <tr valign="top">
+          <td width="89" height="19">AD_10V</td>
+          <td width="84" height="19">0x00080000</td>
+          <td width="538" height="19">Voltage range: bipolar +/-10 V</td>
+        </tr>
+      </table>
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"></td>
+      <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"><var><font face="Courier New" size="3">ulSingleDiff</font></var></td>
+      <td valign="top">Specifies the input configuration by using the following codes.
+      <table border="1" width="339" height="74">
+        <tr valign="top">
+          <td width="133" align="center" height="18"><b>Code</b></td>
+          <td width="148" align="center" height="18"><b>Value</b></td>
+          <td width="176" align="center" height="18"><b>Description</b></td>
+        </tr>
+        <tr valign="top">
+          <td width="133" height="19" valign="top">AD_INPUT_SINGLE</td>
+          <td width="148" height="19" valign="top" align="center">1</td>
+          <td width="176" height="19" valign="top">Single-ended</td>
+        </tr>
+        <tr valign="top">
+          <td width="133" height="19" valign="top">AD_INPUT_DIFF</td>
+          <td width="148" height="19" valign="top" align="center">2</td>
+          <td width="176" height="19" valign="top">Differential</td>
+        </tr>
+      </table>
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"></td>
+      <td valign="top">&nbsp;&nbsp;
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"><var><font face="Courier New" size="3">ulTriggerMode</font></var></td>
+      <td valign="top">Specifies the trigger condition by using the following codes.
+      <table width="439" border="1">
+        <tr valign="top">
+          <td width="142" align="center"><b>Code</b></td>
+          <td width="51" align="center"><b>Value</b></td>
+          <td width="515" align="center"><b>Description</b></td>
+        </tr>
+        <tr valign="top">
+          <td width="142" valign="top">AD_EXTTRG</td>
+          <td width="51" valign="top" align="center">2</td>
+          <td width="515" valign="top">External trigger (EXTRG IN)</td>
+        </tr>
+        <tr valign="top">
+          <td width="142" valign="top">AD_EXTTRG_DI</td>
+          <td width="51" valign="top" align="center">3</td>
+          <td width="515" valign="top">External trigger with a mask using digital input pin
+            IN1 (EXTRG IN, IN1). While a signal on the IN1 pin is high-level, an assertion of the external trigger on the
+          EXTRG IN pin is ignored.</td>
+        </tr>
+      </table>
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"></td>
+      <td valign="top">&nbsp;&nbsp;&nbsp;
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"><var><font face="Courier New" size="3">ulTrigEdge</font></var></td>
+      <td valign="top">Specifies a polarity of the external trigger by using the following codes.
+      <table border="1" width="311">
+        <tr>
+          <td width="143" align="center"><b>Code</b></td>
+          <td width="154" align="center"><b>Value</b></td>
+          <td width="154" align="center"><b>Description</b></td>
+        </tr>
+        <tr>
+          <td width="143" valign="top">AD_DOWN_EDGE</td>
+          <td width="154" valign="top" align="center">1</td>
+          <td width="154" valign="top">Falling edge</td>
+        </tr>
+        <tr>
+          <td width="143" valign="top">AD_UP_EDGE</td>
+          <td width="154" valign="top" align="center">2</td>
+          <td width="154" valign="top">Rising edge</td>
+        </tr>
+      </table>
+      </td>
+      </tr>
+      <tr>
+      <td valign="top"></td>
+      <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+      <td valign="top"><var><font face="Courier New" size="3">ulSmplNum</font></var></td>
+      <td valign="top">Specifies the number of samples to be acquired in the range of 1
+        through 1G.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdTriggerSampling function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+  <p><b><big>Comments</big></b></p> 
+  <table border="0" width="592" cellspacing="1" height="409">
+    <tr>
+      <td width="576" valign="top" height="78">
+  <ul>
+    <li>
+  <font SIZE="3">This function is applicable to the following boards/cards.<br>
+  PCI-3126, PCI-3133, PCI-3135, PCI-3153, PCI-3155,&nbsp; PCI-3165, PCI-3166,
+  PCI-3168C, PCI-3170A, PCI-3171A, PCI-3172A, PCI-3173A, PCI-3177C, PCI-3521,
+  PCI-3522A, PCI-3523A<br>
+  CTP/CPZ-3126, CTP/CPZ-3133, CTP/CPZ-3135, CTP/CPZ-3165, CTP/CPZ-3167, CTP/CPZ-3168,
+  CTP/CPZ-3170, CTP/CPZ-3171, CTP/CPZ-3172, CTP/CPZ-3173, CTP/CPZ-3177, CTP/CPZ-3521,
+  CTP/CPZ-3522, CTP/CPZ-3523<br>
+  CBI-3133A, CBI-3133B, CBI-3134A, CBI-3134B
+  </font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="980" height="40" valign="top">
+  <ul>
+    <li>
+  <font SIZE="3">To configure the sampling condition of the board/card, use the <a href="AdSetSamplingConfig.html">
+  AdSetSamplingConfig</a> function.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="980" height="40" valign="top">
+  <ul>
+    <li>
+  This function is always performed as an overlapped operation.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="980" height="40" valign="top">
+  <ul>
+    <li>
+  This function can handle only one channel at a time.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="980" height="78" valign="top">
+  <ul>
+    <li>
+  Event notification and callback routine capability are available when the
+      sampling is completed. To configure the event notification and the callback routine, use the
+  <a href="AdSetBoardConfig.html">
+  AdSetBoardConfig</a> function.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="980" height="40" valign="top">
+  <ul>
+    <li>
+  To abort the running sampling, use the <a href="AdStopSampling.html"> AdStopSampling</a>
+      function.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="980" height="40" valign="top">
+  <ul>
+    <li>
+  To retrieve the data from the buffer, use the <a href="AdGetSamplingData.html"> AdGetSamplingData</a>
+      function.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="980" height="40" valign="top">
+  <ul>
+    <li>
+  Use <a href="AdStartSampling.html">AdStartSampling</a> function in the
+  external clock for the boards/cards that do not correspond to this
+  function.&nbsp;</li>
+  </ul>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<blockquote>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">nRet = AdTriggerSampling( hDeviceHandle, 1,
+        AD_5V, AD_INPUT_SINGLE, AD_EXTTRG, AD_DOWN_EDGE, 1024);</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New" size="3">
+      nRet = AdTriggerSampling( hDeviceHandle, 1, _ AD_5V, AD_INPUT_SINGLE,
+      AD_EXTTRG, _ AD_DOWN_EDGE, 1024 )</font>
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="500" valign="top"><font face="Courier New" size="3">nRet = AdTriggerSampling ( hDeviceHandle, 1, AD_5V,
+          AD_INPUT_SINGLE, AD_EXTTRG, AD_DOWN_EDGE, 1024 );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="545" valign="top">
+Acquire 1024 data from the board/card specified by hDeviceHandle under the following
+conditions.
+<table border="1" width="363">
+  <tr>
+          <td width="150" align="center"><b>Parameter</b></td>
+          <td width="199" align="center"><b>Setting</b></td>
+  </tr>
+  <tr>
+          <td width="150" valign="top">Channel number</td>
+          <td width="199" valign="top"> 1</td>
+  </tr>
+  <tr>
+          <td width="150" valign="top">Input range</td>
+          <td width="199" valign="top"> +/-5 V</td>
+  </tr>
+  <tr>
+          <td width="150" valign="top">Input configuration</td>
+          <td width="199" valign="top"> Single-ended</td>
+  </tr>
+  <tr>
+          <td width="150" valign="top">Trigger conditions</td>
+          <td width="199" valign="top"> External trigger, falling edge</td>
+  </tr>
+</table>
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

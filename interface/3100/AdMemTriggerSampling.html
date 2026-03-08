@@ -1,0 +1,758 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdMemTriggerSampling</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdMemTriggerSampling</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The AdMemTriggerSampling function <font SIZE="3">acquires the specified number
+  of samples at each external trigger assertion. Sampling can be continued to
+  reach the specified number.</font></td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <b>C&nbsp;<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472" valign="top"><font face="Courier New" size="3">INT
+          AdMemTriggerSampling(</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> HANDLE&nbsp;</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font size="3" face="Courier New">ULONG</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"><i>ulChCount</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> PADSMPLCHREQ&nbsp;</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"> <i>lpSmplChReq</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> ULONG&nbsp;</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"> <i>ulSmplNum</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> ULONG&nbsp;</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"> <i>ulRepeatCount</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> ULONG&nbsp;</font></td>
+        <td width="317" valign="top"> 
+          <font face="Courier New" size="3"> 
+          <i>ulTrigEdge</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> float&nbsp;</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"> <i>fSmplFreq</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> ULONG&nbsp;</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"> <i>ulEClkEdge</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> ULONG&nbsp;</font></td>
+        <td width="317" valign="top"> <i><font face="Courier New" size="3">ulFastMode</font></i>
+        </td>
+      </tr>
+      <tr>
+        <td width="472" colspan="3" valign="top">
+    <font face="Courier New" size="3">
+    );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <b>Visual Basic<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">Declare Function AdMemTriggerSampling
+          Lib _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal</font></td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>hDeviceHandle</i> </font></td>
+        <td width="246" valign="top"> <font face="Courier New"> As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal&nbsp;&nbsp;</font></td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>ulChCount</i></font></td>
+        <td width="246" valign="top"> <font face="Courier New"> As Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"><font face="Courier New">&nbsp;</font></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByRef</font></td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>lpSmplChReq </i></font></td>
+        <td width="246" valign="top"> <font face="Courier New"> As ADSMPLCHREQ,
+          _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal</font></td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>ulSmplNum</i> </font></td>
+        <td width="246" valign="top"> <font face="Courier New"> As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal</font></td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>ulRepeatCount&nbsp; </i></font></td>
+        <td width="246" valign="top"> <font face="Courier New"> As Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal</font></td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>ulTrigEdge</i>
+          &nbsp;</font></td>
+        <td width="246" valign="top"> 
+          <font face="Courier New"> 
+          As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal</font></td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>fSmplFreq</i> </font></td>
+        <td width="246" valign="top"> <font face="Courier New"> As Single, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal</font></td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>ulEClkEdge</i> &nbsp;</font></td>
+        <td width="246" valign="top"> <font face="Courier New"> As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal</font>
+        </td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>ulFastMode</i> &nbsp;</font>
+        </td>
+        <td width="246" valign="top"> <font face="Courier New"> As Long _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4" valign="top">
+    <font face="Courier New">
+    ) As Long</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <b>Delphi<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">function
+          AdMemTriggerSampling(</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><font face="Courier New"><i>hDeviceHandle</i> &nbsp;</font></td>
+        <td width="276" valign="top"> <font face="Courier New"> : Integer;</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><i><font face="Courier New">ulChCount</font></i> </td>
+        <td width="276" valign="top"><font face="Courier New">: Integer;</font></td>
+      </tr>
+      <tr>
+        <td width="7" valign="top"></td>
+        <td width="7" valign="top"><font face="Courier New">var</font></td>
+        <td width="170" valign="top"><font face="Courier New"><i> lpSmplChReq&nbsp;&nbsp; </i></font></td>
+        <td width="276" valign="top"><font face="Courier New">:
+          Integer;</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><font face="Courier New"><i>ulSmplNum</i> &nbsp;</font></td>
+        <td width="276" valign="top"> <font face="Courier New"> : Integer;</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><font face="Courier New"><i>ulRepeatCount</i> &nbsp;</font></td>
+        <td width="276" valign="top"> <font face="Courier New"> : Integer;</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><font face="Courier New"><i>ulTrigEdge</i> &nbsp;</font></td>
+        <td width="276" valign="top"> <font face="Courier New"> : Integer;</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><i><font face="Courier New">fSmplFreq</font></i> </td>
+        <td width="276" valign="top"><font face="Courier New">: Single;</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><font face="Courier New"><i>ulEClkEdge</i> &nbsp;</font></td>
+        <td width="276" valign="top"><font face="Courier New">: Integer;</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><i><font face="Courier New">ulFastMode</font></i> 
+        </td>
+        <td width="276" valign="top"> <font face="Courier New"> : Integer</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4" valign="top">
+    <font face="Courier New">
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="546" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="130"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td width="411" valign="top">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"></td>
+      <td width="411" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"><i><font face="Courier New">ulChCount</font></i></td>
+      <td width="411" valign="top">Specifies the number of channels
+        where data are sampled. The channel number is specified in the nChNo member of the
+        <a href="Structures.html#13.6.2 ADSMPLCHREQ Structure">ADSMPLCHREQ</a> structure.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"></td>
+      <td width="411" valign="top">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"><i><font face="Courier New">lpSmplChReq</font></i></td>
+      <td width="411" valign="top">Points to an array of the <a href="Structures.html#13.6.2 ADSMPLCHREQ Structure">ADSMPLCHREQ</a>
+        structure. Please specify
+        consecutive channels from 1.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"></td>
+      <td width="411" valign="top">
+        &nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"><i><font face="Courier New">ulSmplNum</font></i></td>
+      <td width="411" valign="top">
+        Specifies the number of data per channel per trigger.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"></td>
+      <td width="411" valign="top">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"><i><font face="Courier New">ulRepeatCount</font></i></td>
+      <td width="411" valign="top">Specifies the number of<font SIZE="3"> iteration that the following
+        condition to be satisfied.</font><br>
+      1 &lt;= (the number of samples for one sampling sequence) * (the number of repetition) &lt;=
+        (maximum memory locations per channel).</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130" height="1"></td>
+      <td width="411" valign="top">&nbsp;&nbsp;&nbsp;
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130" height="1"><i><font face="Courier New">ulTrigEdge</font></i></td>
+      <td width="411" valign="top">Specifies the polarity of the external trigger by using the following
+        codes.
+        <table border="1" width="300" cellspacing="1">
+          <tr><td width="128" align="center">
+              <p align="center"><b><font face="Times New Roman">Code</font></b></td><td width="143" align="center"><b><font face="Times New Roman">Description</font></b></td>
+          <tr><td width="128">AD_DOWN_EDGE</td><td width="143">Falling edge</td>
+          <tr><td width="128">AD_UP_EDGE</td><td width="143">Rising edge</td>
+        </table>
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130" height="1"></td>
+      <td valign="top" width="411">&nbsp;&nbsp;&nbsp;
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130" height="1"><i><font face="Courier New">fSmplFreq</font></i></td>
+      <td valign="top" width="411">Specifies the sampling rate.
+        <table border="0" width="390" cellspacing="1">
+          <tr>
+            <td width="382" valign="top">20000000 Hz (Only applicable to the
+              PCI-3161)</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">16000000 Hz (Only applicable to the&nbsp;PCI-3161)</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">10000000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">8000000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">5000000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">4000000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">2500000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">2000000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">1250000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">1000000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">625000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">500000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">312500 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">250000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">156250 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">125000 Hz</td>
+          </tr>
+          <tr>
+            <td width="382" valign="top">78125 Hz</td>
+          </tr>
+          <tr>
+            <td valign="top" width="382">62500 Hz </td>
+          </tr>
+          <tr>
+            <td valign="top" width="382">0.0 Hz (an external clock signal is used for a
+              sampling pacer.) </td>
+          </tr>
+        </table>
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130" height="1"></td>
+      <td valign="top" width="411" height="1">&nbsp;&nbsp;&nbsp;
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130" height="1"><i><font face="Courier New">ulEClkEdge</font></i></td>
+      <td valign="top" width="411" height="1">Specifies the trigger edge of the external clock
+        signal by using the following codes.
+        <table border="1" width="397" cellspacing="1" height="70">
+          <tr><td align="center" width="166" height="14"><b>Code</b></td><td align="center" width="170" height="14"><b>Value</b></td>
+            <td align="center" width="228" height="14"><b>Description</b></td>
+          <tr><td width="166" height="19">AD_DOWN_EDGE</td><td width="170" height="19" align="center">1</td>
+            <td width="228" height="19">Falling edge</td>
+          <tr><td width="166" height="19">AD_UP_EDGE</td><td width="170" height="19" align="center">2</td>
+            <td width="228" height="19">Rising edge</td>
+        </table>
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130" height="1"></td>
+      <td valign="top" width="411" height="1">&nbsp;&nbsp;&nbsp;
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130" height="1"><i><font face="Courier New">ulFastMode</font></i></td>
+      <td valign="top" width="411" height="1">Specifies a clock mode by using
+        the following codes. Double-clocked mode is applicable only to the boards of
+        memory transfer mode.&nbsp;
+        <table border="1" width="397" cellspacing="1">
+          <tr>
+            <td align="center" width="154"><b>Code</b></td><td align="center" width="180"><b>Value</b></td>
+            <td align="center" width="227"><b>Description</b></td>
+          </tr>
+          <tr><td width="154" valign="top">AD_NORMAL_MODE</td><td width="180" align="center">1</td>
+            <td width="227">Normal mode
+              (default setting)</td>
+          <tr><td width="154">AD_FAST_MODE</td><td width="180" align="center">2</td>
+            <td width="227">Double-clocked mode</td>
+        </table>
+      </td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td width="480">
+  The AdMemTriggerSampling function returns AD_ERROR_SUCCESS if the process is
+  successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Comments</font></strong></p>
+  <table border="0" width="417" cellspacing="1" height="1051">
+    <tr>
+      <td width="596" valign="top" height="59">
+      <ul>
+        <li><font SIZE="3">The bus master transfer mode boards can operate as same as
+  above boards by using the </font><a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>
+  and <a href="AdStartSampling.html"> AdStartSampling</a> <font SIZE="3">functions.</font>
+        </li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top" height="40">
+  <ul>
+    <li>
+  This function always performs as an overlapped operation.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top" height="78">
+  <ul>
+    <li>
+  <font SIZE="3">The event notification and the callback capability are
+  available. To configure the event notification and the callback routine,
+  please use the <a href="AdSetBoardConfig.html"> AdSetBoardConfig</a> function.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top" height="40">
+  <ul>
+    <li>
+  <font SIZE="3">To abort the running sampling, use the <a href="AdStopSampling.html"> AdStopSampling</a> function.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top" height="40">
+  <ul>
+    <li>
+  <font SIZE="3">To retrieve the data from the buffer, use the <a href="AdGetSamplingData.html"> AdGetSamplingData</a>
+  function.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top" height="59">
+  <ul>
+    <li>
+  Use the <a href="AdSetSamplingConfig.html"> AdSetSamplingConfig</a> function to configure the sampling conditions that
+  are not provided by this function.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top" height="239">
+  <ul>
+    <li>
+  <font SIZE="3">When the double-clocked mode is used, the following parameters
+  change as described below.</font>
+      <table border="1" width="511" cellspacing="1">
+        <tr>
+          <td valign="top" align="center" width="96"><b>Parameter</b></td>
+          <td align="center" width="399"><b>Description</b></td>
+        </tr>
+        <tr>
+          <td valign="top" width="96"><var><font face="Courier New"><i>ulChCount</i></font></var></td>
+          <td width="399" valign="top">Available channels decrease to a half of channels
+            that the board supports.</td>
+        </tr>
+        <tr>
+          <td valign="top" width="96"><var><font face="Courier New"><i>ulSmplNum</i></font></var></td>
+          <td width="399" valign="top">The number of samples must be a multiple of 2048 up to two times memory
+            locations per channel. The number is in the range of 2048 through 1048576
+            for the PCI<font SIZE="3">-</font>3161 and PCI-3163.</td>
+        </tr>
+        <tr>
+          <td valign="top" width="96"><var><font face="Courier New"><i>fSmplFreq</i></font></var></td>
+          <td width="399" valign="top"><font SIZE="3">Actual sampling rate is two times
+            specified value. Specify 500000 Hz, the sampling rate is 1000000
+            Hz.</font></td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top" height="363">
+  <ul>
+    <li>
+  The following figure illustrates behavior of the sampling with this function.<br>
+  <br>
+      <img border="0" src="MemTrig.gif" width="500" height="304">
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top" height="97">
+  <ul>
+    <li>
+  <font SIZE="3">When an external trigger is asserted on the EXTRG IN pin, the
+  board starts sampling. When specified number of samples are acquired, the
+  board stop sampling. A wait state of 3 &micro;s is required between the
+  completion of the sampling and next assertion of the trigger.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+  </table>
+ 
+  <table border="0" width="557" cellspacing="1">
+    <tr>
+      <td width="736" valign="top">
+  <ul>
+    <li>
+  Refer to the &quot;<a href="Structure/MemTriggerSampling.htm">List of
+  Capabilities for Each model</a>&quot; for the model and available functions.
+    </li>
+  </ul>
+      </td>
+    </tr>
+  </table>
+ 
+<p><b><big>Target Products</big></b></p>
+<blockquote>
+  <table height="25" cellSpacing="1" width="550">
+    <tbody>
+      <tr>
+        <td vAlign="top" width="550" height="21">Refer to <a href="Structure/MemTriggerSampling.htm">Corresponding
+          Identifiers for Each Model</a>&quot;.&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Examples</font></strong></p>
+
+  <blockquote>
+  <b>C&nbsp;<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td valign="top">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">ADSMPLCHREQ</font><font size="3">&#12288;</font><font face="Courier New" size="3">SmplChReq[2];</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"><font face="Courier New" size="3">SmplChReq[0].ulChNo = 1;</font></td>
+      </tr>
+      <tr>
+        <td valign="top">
+    <font face="Courier New" size="3">
+    SmplChReq[0].ulRange = AD_5V;</font></td>
+      </tr>
+      <tr>
+        <td valign="top">
+    <font face="Courier New" size="3">
+    SmplChReq[1].ulChNo = 2;</font></td>
+      </tr>
+      <tr>
+        <td valign="top">
+    <font face="Courier New" size="3">
+    SmplChReq[1].ulRange = AD_5V;</font></td>
+      </tr>
+      <tr>
+        <td valign="top">
+    <p><font face="Courier New" size="3">nRet = AdMemTriggerSampling( hDeviceHandle, 2, 
+    SmplChReq, 1024, 5, AD_DOWN_EDGE, 625000, AD_DOWN_EDGE, AD_NORMAL_MODE );</font></p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <strong><font face="Times New Roman" size="3">Visual Basic<br>
+  </font></strong>
+  <blockquote>
+    <table border="0" width="501" cellspacing="1">
+      <tr>
+        <td height="21" valign="top" width="493">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">Dim SmplChReq(1) As ADSMPLCHREQ</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" valign="top" width="493"><font face="Courier New" size="3">SmplChReq(0).ulChNo = 1</font></td>
+      </tr>
+      <tr>
+        <td height="21" valign="top" width="493">
+    <font face="Courier New" size="3">
+    SmplChReq(0).ulRange = AD_5V</font></td>
+      </tr>
+      <tr>
+        <td height="21" valign="top" width="493">
+    <font face="Courier New" size="3">
+    SmplChReq(1).ulChNo = 2</font></td>
+      </tr>
+      <tr>
+        <td height="21" valign="top" width="493">
+    <font face="Courier New" size="3">
+    SmplChReq(1).ulRange = AD_5V</font></td>
+      </tr>
+      <tr>
+        <td valign="top" width="493">
+    <p><font face="Courier New" size="3">nRet = AdMemTriggerSampling( hDeviceHandle, 2,
+    _ SmplChReq(0), 1024, 5, AD_DOWN_EDGE, 625000, _ AD_DOWN_EDGE, AD_NORMAL_MODE&nbsp;</font></p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <strong><font face="Times New Roman" size="3">Delphi<br>
+  </font></strong>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1" height="204">
+      <tr>
+        <td height="20" colspan="2" width="542" valign="top">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">var</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="20" colspan="2" width="542" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;
+          SmplChReq: array[0..3] of ADSMPLCHREQ;</font></td>
+      </tr>
+      <tr>
+        <td height="20" colspan="2" width="542" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;
+          SmplChReq[0].ulChNo := 1;</font></td>
+      </tr>
+      <tr>
+        <td height="20" colspan="2" width="542" valign="top">  
+    <font face="Courier New" size="3">&nbsp;&nbsp; SmplChReq[0].ulRange := AD_5V;</font></td>
+      </tr>
+      <tr>
+        <td height="20" colspan="2" width="542" valign="top">  
+    <font face="Courier New" size="3">&nbsp;&nbsp; SmplChReq[1].ulChNo := 2;</font></td>
+      </tr>
+      <tr>
+        <td height="20" colspan="2" width="542" valign="top">  
+    <font face="Courier New" size="3">&nbsp;&nbsp; SmplChReq[1].ulRange := AD_5V;</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top" height="56">
+        </td>
+        <td width="504" valign="top" height="56">
+    <font face="Courier New" size="3">nRet = AdMemTriggerSampling (
+    hDeviceHandle, 2, SmplChReq, 1024, 5, AD_DOWN_EDGE, 625000, AD_DOWN_EDGE, AD_NORMAL_MODE );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top">
+Acquire samples from the board specified by hDeviceHandle under the following
+conditions.
+<table border="1" width="363">
+  <tr>
+          <td width="150" align="center"><b>Parameter</b></td>
+          <td width="199" align="center"><b>Setting</b></td>
+  </tr>
+  <tr>
+          <td width="150" valign="top">Channel number</td>
+          <td width="199" valign="top"> 1 and 2</td>
+  </tr>
+  <tr>
+          <td width="150" valign="top">Input range</td>
+          <td width="199" valign="top">bipolar +/-5 V</td>
+  </tr>
+  <tr>
+          <td width="150" valign="top">Number of samples</td>
+          <td width="199" valign="top"> 1024</td>
+  </tr>
+  <tr>
+          <td width="150" valign="top">Repetition times</td>
+          <td width="199" valign="top"> 5</td>
+  </tr>
+  <tr>
+          <td width="150" valign="top">Trigger</td>
+          <td width="199" valign="top"> EXTRG IN, falling edge</td>
+  </tr>
+  <tr>
+          <td width="150" valign="top">Sampling rate</td>
+          <td width="199" valign="top">  625 kHz</td>
+  </tr>
+</table>
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

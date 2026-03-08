@@ -1,0 +1,2557 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Examples</title>
+</head>
+
+<body>
+
+<p ALIGN="JUSTIFY"><b><font face="Arial" size="5">11.6 Examples</font></b></p>
+
+<blockquote>
+  <p><b><font face="Arial" size="4"><a name="13.8.1 C">11.6.1 C</a></font></b></p>
+  <p><font face="Times New Roman" size="3">&lt;Programming for C&gt;</font></p>
+  <table border="0" width="558" cellspacing="1" height="631">
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">//========================================================</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">//&nbsp;Sample program for the
+        Interface analog input&nbsp;<br>
+        // boards/cards</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">//&nbsp;</font><font face="Courier New"><font size="3">under
+        </font>Windows 7/Server 2008/Vista/XP/Server 2003/<br>//
+        2000/NT/Me/98/95</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">//&nbsp;&nbsp;
+        Console application</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;&nbsp;
+        (Run the program on the MS-DOS prompt or &nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">//&nbsp;&nbsp;&nbsp;
+        command prompt.)</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;&nbsp;&nbsp;Copyright 2000,
+        2011 Interface Corporation.&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;&nbsp;&nbsp;All rights reserved.</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;Description</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;&nbsp;&nbsp;How
+        to input analog data.</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">
+  //========================================================</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">
+  #include &lt;windows.h&gt;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">
+  #include &lt;stdio.h&gt;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">
+  #include &lt;FbiAd.h&gt;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">
+  void main(void)&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="21"><font face="Courier New" size="3">{</font></td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="115" height="21"><font face="Courier New" size="3">HANDLE&nbsp;&nbsp;&nbsp;</font></td>
+      <td width="140" height="21"><code><font size="3" face="Courier New">hDeviceHandle;</font></code></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">// Device handle</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="115" valign="top" height="21"><font face="Courier New" size="3">WORD&nbsp;&nbsp;&nbsp;</font></td>
+      <td width="140" valign="top" height="21"><font face="Courier New" size="3">wSmplData[512][2];</font></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">//
+        Sampling data&nbsp;(for
+        12 and 16-bit board/card)</font></code></td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="254" colspan="2" height="21"></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">// BYTE data (for 8-bit
+        board/card)</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="254" colspan="2" height="21"></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">// DWORD data (for 24-bit
+        board/card)</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="115" height="21"><font face="Courier New" size="3">ADSMPLREQ</font></td>
+      <td width="140" height="21"><font face="Courier New" size="3">SmplConfig;</font></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">//
+        Sampling
+        conditions</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="115" height="21"><font face="Courier New" size="3">ULONG</font></td>
+      <td width="140" height="21"><font face="Courier New" size="3">ulSmplNum;</font></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">//
+        Number of samples</font>
+</code>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="598">
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">//
+        Initialize the FBIAD1.</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">hDeviceHandle
+        = AdOpen(&quot;FBIAD1&quot;);</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">if (hDeviceHandle ==
+        INVALID_HANDLE_VALUE) {</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="21"></td>
+      <td width="544"><code><font face="Courier New" size="3">printf(&quot;FBIAD1
+        is not available.\n&quot;);</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="21"></td>
+      <td width="544"><code><font face="Courier New" size="3">exit(0);</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="21"><code><font face="Courier New" size="3">}</font>
+</code>
+      </td>
+      <td width="544"></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">//
+        Retrieve the sampling conditions.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2">
+<code><font face="Courier New" size="3">AdGetSamplingConfig(hDeviceHandle,
+&amp;SmplConfig);</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">//
+        Set 512 to the number of samples.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">//
+        Sampling channels are channel 1 and
+        channel 2.</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">SmplConfig.ulSmplNum
+        = 512;</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New" size="3">SmplConfig.ulChCount
+        = 2;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New" size="3">SmplConfig.SmplChReq[0].ulChNo
+        = 1;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New" size="3">SmplConfig.SmplChReq[1].ulChNo
+        = 2;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New" size="3">AdSetSamplingConfig(hDeviceHandle,
+        &amp;SmplConfig);</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">//
+        Start the sampling as a non-overlapped operation.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New" size="3">AdStartSampling(hDeviceHandle,
+        FLAG_SYNC);</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">//
+        Retrieve the sampling data.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New" size="3">ulSmplNum
+        = 512;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New" size="3">AdGetSamplingData(hDeviceHandle,
+        &amp;wSmplData[0][0], &amp;ulSmplNum);</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">//
+        Clean up and exit.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">AdClose(hDeviceHandle);</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"><font face="Courier New" size="3">}</font></td>
+      <td width="565" colspan="2"></td>
+    </tr>
+  </table>
+  <p align="left">&nbsp;</p>
+  <table border="0" width="558" cellspacing="1" height="631">
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">//========================================================</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">//&nbsp;Sample program for the
+        Interface analog input&nbsp;<br>
+        // boards/cards</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">//&nbsp;</font><font face="Courier New"><font size="3">under
+        </font>Windows 7/Server 2008/Vista/XP/Server 2003/&nbsp;<br>
+        // 2000/NT/Me/98/95</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">//&nbsp;&nbsp;
+        Console application</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;&nbsp;
+        (Run the program on the MS-DOS prompt or &nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">//&nbsp;&nbsp;&nbsp;
+        command prompt.)</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;&nbsp;&nbsp;Copyright 2000,
+        2011 Interface Corporation.&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;&nbsp;&nbsp;All rights reserved.</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;Description</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New"><font size="3">//&nbsp;The
+        infinite sampling is performed asynchronously. // An event is occurred by </font>a multiple of
+        1024<font size="3"> and&nbsp;<br>
+        // retrieve the data.</font></font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;&nbsp;And
+        save
+        the retrieved data to the file.</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font size="3" face="Courier New">//&nbsp;&nbsp;Therefore,
+        stop
+        the sampling when writing 10 times //&nbsp; to the file.</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">
+  //========================================================</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">
+  #include &lt;windows.h&gt;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">
+  #include &lt;stdio.h&gt;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">
+  #include &lt;FbiAd.h&gt;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="20"><font face="Courier New" size="3">
+  void main(void)&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="4" height="21"><font face="Courier New" size="3">{</font></td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="115" height="21"><font face="Courier New">int</font></td>
+      <td width="140" height="21"><font face="Courier New">nRet;</font></td>
+      <td width="273" height="21" valign="top">
+      </td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="115" height="21"><font face="Courier New" size="3">HANDLE&nbsp;&nbsp;&nbsp;</font></td>
+      <td width="140" height="21"><code><font size="3" face="Courier New">hDeviceHandle;</font></code></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">// Device handle</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="115" valign="top" height="21"><font face="Courier New" size="3">WORD&nbsp;&nbsp;&nbsp;</font></td>
+      <td width="140" valign="top" height="21"><font face="Courier New">wSmplData[1024][2];</font></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">//
+        Sampling data&nbsp;(for
+        12 and 16-bit board/card)</font></code></td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="254" colspan="2" height="21"></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">// BYTE data (for 8-bit
+        board/card)</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="254" colspan="2" height="21"></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">// DWORD data (for 24-bit
+        board/card)</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="115" height="21"><font face="Courier New" size="3">ADSMPLREQ</font></td>
+      <td width="140" height="21"><font face="Courier New" size="3">SmplConfig;</font></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">//
+        Sampling
+        conditions</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="20" height="21"></td>
+      <td width="115" height="21"><font face="Courier New" size="3">ULONG</font></td>
+      <td width="140" height="21"><font face="Courier New" size="3">ulSmplNum;</font></td>
+      <td width="273" height="21" valign="top"><code><font face="Courier New" size="3">//
+        Number of samples</font>
+</code>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="588" cellspacing="1" height="57">
+    <tr>
+      <td width="20" height="21" valign="top"></td>
+      <td width="107" height="21" valign="top"><font face="Courier New">HANDLE</font></td>
+      <td width="194" height="21" valign="top"><font face="Courier New">hEvent;</font></td>
+      <td width="257" height="21" valign="top"><code><font face="Courier New" size="3">//
+        Event handle</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td width="20" height="1" valign="top"></td>
+      <td width="107" height="1" valign="top"><font face="Courier New">FILE</font></td>
+      <td width="194" height="1" valign="top"><font face="Courier New">*fp;</font></td>
+      <td width="257" height="1" valign="top"><code><font face="Courier New" size="3">//
+        File handle</font></code>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="598">
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">//
+        Initialize the FBIAD1.</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">hDeviceHandle
+        = AdOpen(&quot;FBIAD1&quot;);</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><code><font face="Courier New" size="3">if (hDeviceHandle ==
+        INVALID_HANDLE_VALUE) {</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="21"></td>
+      <td width="544"><code><font face="Courier New" size="3">printf(&quot;FBIAD1
+        is not available.\n&quot;);</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="21"></td>
+      <td width="544"><code><font face="Courier New" size="3">exit(0);</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="21"><code><font face="Courier New" size="3">}</font>
+</code>
+      </td>
+      <td width="544"></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">// Open the file.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2">
+<font face="Courier New">if ((fp = fopen(&quot;data.dat&quot;, &quot;w+b&quot;))
+== NULL){</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp; printf(&quot;Failed
+        to open the file.\n&quot;);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp; exit(0);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">}</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">hEvent =
+        CreateEvent(0, TRUE, FALSE, NULL);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">nRet =
+        AdSetBoardConfig(hDeviceHandle, hEvent, NULL, 0);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">if(nRet !=
+        AD_ERROR_SUCCESS){</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        printf(&quot;Error AdSetBoardConfig : %08x\n&quot;, nRet);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp; exit(0);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">}</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">// Retrieve the
+        sampling conditions.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">nRet =
+        AdGetSamplingConfig(hDeviceHandle, &amp;SmplConfig);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">if(nRet !=
+        AD_ERROR_SUCCESS){</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        printf(&quot;Error AdGetSamplingConfig : %08x\n&quot;, nRet);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp; exit(0);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">}</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">//
+        Set 2048 to the number of samples.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">//
+        Set 1024 to the number of events.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">//
+        Set infinite sampling <font size="3" face="Courier New">to
+        trigger mode.</font></font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">// Channel 1 and channel
+        2 is set to the<br>
+        // sampling channel.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">SmplConfig.ulSmplNum
+        = 2048;</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">SmplConfig.ulSmplEventNum
+        = 1024;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">SmplConfig.ulTrigMode
+        = AD_ETERNITY;</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">SmplConfig.ulChCount
+        = 2;</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">SmplConfig.SmplChReq[0].ulChNo
+        = 1;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">SmplConfig.SmplChReq[0].ulRange
+        = AD_5V;</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">SmplConfig.SmplChReq[1].ulChNo
+        = 2;</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">SmplConfig.SmplChReq[1].ulRange
+        = AD_5V;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">AdSetSamplingConfig(hDeviceHandle,
+        &amp;SmplConfig);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">if(nRet !=
+        AD_ERROR_SUCCESS){</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        printf(&quot;Error AdSetSamplingConfig : %08x\n&quot;, nRet);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp; exit(0);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">}</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">// </font><font face="Courier New">Start
+        the sampling </font><font face="Courier New" size="3">as an overlapped
+        operation.</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">AdStartSampling(hDeviceHandle,
+        FLAG_ASYNC);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">if(nRet !=
+        AD_ERROR_SUCCESS){</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        printf(&quot;Error AdStartSampling : %08x\n&quot;, nRet);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp; exit(0);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">}</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">for (count = 0; count
+        &lt; 10; count++) {</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        WaitForSingleObject(hEvent, 5000);</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">// Retrieve the
+        sampling data.</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">ulSmplNum = 1024;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">AdGetSamplingData(hDeviceHandle,
+        &amp;wSmplData[0][0], &amp;ulSmplNum);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">if(nRet !=
+        AD_ERROR_SUCCESS){</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        printf(&quot;Error AdGetSamplingData : %08x\n&quot;, nRet);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp; exit(0);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">}</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">for ( i = 0; i &lt;
+        1024; i++ ) {</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp; fprintf( fp,
+        &quot;%04d: %04Xh, %04Xh\n&quot;, i+1, wSmplData[i][0], wSmplData[i][1];);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">}</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">ResetEvent(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="19"><font face="Courier New">}</font></td>
+      <td width="565" colspan="2"></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">// </font><font face="Courier New">Stop
+        the sampling.</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">AdStopSampling(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">if(nRet !=
+        AD_ERROR_SUCCESS){</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        printf(&quot;Error AdStopSampling : %08x\n&quot;, nRet);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">exit(0);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">}</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">ResetEvent(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">CloseHandle(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">// </font><font face="Courier New">Close
+        the file.</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">fclose(fp);</font></td>
+    </tr>
+    <tr>
+      <td width="584" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">// <font face="Courier New" size="3">Clean
+        up and exit.</font></font></td>
+    </tr>
+    <tr>
+      <td width="19"></td>
+      <td width="565" colspan="2"><font face="Courier New">AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="19"><font face="Courier New">}</font></td>
+      <td width="565" colspan="2"></td>
+    </tr>
+  </table>
+  <p align="left"><b><font face="Arial" size="3"><a name="13.8.2 Visual Basic">11.6.2 Visual Basic</a></font></b></p>
+  <p align="left"><font face="Times New Roman" size="3">
+  &lt;Programming for Visual
+  Basic&gt;</font></p>
+  <table border="0" width="595" cellspacing="1">
+    <tr>
+      <td width="587" colspan="2"><font face="Courier New" size="3">'=========================================================</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">' Sample
+        program for the
+        Interface analog input board/card ' </font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">'&nbsp;under
+        </font><font face="Courier New">Windows 7/Server 2008/Vista/XP/Server
+        2003/ </font><font size="3" face="Courier New">'&nbsp;</font><font face="Courier New">2000/NT/Me/98/95</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  '</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright 2000, 2013 Interface Corporation.</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All rights reserved.</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  '</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  ' Description</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How
+        to input analog data.</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  '=========================================================</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2" valign="top"><font size="3" face="Courier New">'
+        Variable definition</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim hDeviceHandle As
+        Long</font></td>
+      <td width="161" valign="top"><font size="3" face="Courier New">' Device
+        handle</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim wSmplData(0 to
+        1,0 to 511) As Integer&nbsp;</font></td>
+      <td width="161" valign="top">
+<font size="3" face="Courier New">' Sampling
+data</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim SmplConfig As
+        ADSMPLREQ</font></td>
+      <td width="161" valign="top"><font size="3" face="Courier New">' Sampling conditions</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim nRet As Integer</font></td>
+      <td width="161" valign="top"><font size="3" face="Courier New">' Return
+        values</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim szDeviceName As
+        String * 16</font></td>
+      <td width="161" valign="top"><font size="3" face="Courier New">' Device name</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim ulSmplNum As
+        Long</font></td>
+      <td width="161" valign="top">
+<font size="3" face="Courier New">' Number of samples</font></td>
+    </tr>
+    <tr>
+      <td width="581" colspan="2" valign="top"><font size="3" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+  </table>
+  <table border="0" width="547" cellspacing="1">
+    <tr>
+      <td colspan="2" width="539">
+<code><font face="Courier New" size="3">' Initialize the FBIAD1.</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">szDeviceName
+        = &quot;FBIAD1&quot; &amp; Chr(0)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">hDeviceHandle
+        = AdOpen(szDeviceName)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">if
+        hDeviceHandle = -1 Then</font></td>
+    </tr>
+    <tr>
+      <td width="26"></td>
+      <td width="513"><font face="Courier New" size="3">nRet = MsgBox(&quot;FBIAD1
+        is not available.&quot;, VbOKOnly + vbCritical, &quot;FBIAD1&quot;)</font></td>
+    </tr>
+    <tr>
+      <td width="26"></td>
+      <td width="513"><font face="Courier New" size="3">Unload Me</font></td>
+    </tr>
+    <tr>
+      <td width="539" colspan="2"><font face="Courier New" size="3">End If</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><code><font face="Courier New" size="3">'
+        Retrieve the sampling conditions.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">nRet =
+        AdGetSamplingConfig(hDeviceHandle, SmplConfig)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><code><font face="Courier New" size="3">'
+        Set 512 to the number of samples.</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><code><font face="Courier New" size="3">'
+        Sampling channels are channel 1 and
+        channel 2.</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">SmplConfig.ulSmplNum
+        = 512</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">SmplConfig.ulChCount
+        = 2</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">SmplConfig.SmplChReq(0).ulChNo
+        = 1</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">SmplConfig.SmplChReq(1).ulChNo
+        = 2</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">nRet =
+        AdSetSamplingConfig(hDeviceHandle, SmplConfig)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">&nbsp; </font><font size="3">&#12288;&#12288;&#12288;&#12288;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><code><font face="Courier New" size="3">'
+        Start the sampling as a non-overlapped operation.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">nRet =
+        AdStartSampling(hDeviceHandle, FLAG_SYNC)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font size="3">&#12288;&#12288;&#12288;&#12288;&#12288;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><code><font face="Courier New" size="3">'
+        Retrieve the sampling data.</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">ulSmplNum
+        = 512</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">nRet =
+        AdGetSamplingData(hDeviceHandle, wSmplData(0,0), ulSmplNum)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font size="3">&#12288;&#12288;&#12288;&#12288;&#12288;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><code><font face="Courier New" size="3">'
+        Clean up and exit.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="539"><font face="Courier New" size="3">nRet =
+        AdClose(hDeviceHandle)</font></td>
+    </tr>
+  </table>
+  <p align="left">
+  &nbsp;</p>
+  <table border="0" width="595" cellspacing="1">
+    <tr>
+      <td width="587" colspan="2"><font face="Courier New" size="3">'=========================================================</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">' Sample
+        program for the
+        Interface analog input board/card</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">'&nbsp;under
+        Windows 7/Server 2008/Vista/XP/Server 2003/ '&nbsp;2000/NT/Me/98/95</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  '</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright 2000, 2011 Interface Corporation.</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All rights reserved.</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  '</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  ' Description</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="2" height="20"><font size="3" face="Courier New">
+  ' &nbsp;</font><font size="3" face="Courier New">The infinite</font><font face="Courier New">
+        sampling</font><font size="3"> </font><font face="Courier New" size="3">is
+        performed asynchronously</font><font face="Courier New"><font size="3">.
+        An event is occurred by </font>a multiple of 1024<font size="3"> and
+        retrieve the data.</font></font>
+      </td>
+    </tr>
+    <tr>
+      <td width="553" colspan="2" height="20"><font face="Courier New"><font size="3">
+  ' &nbsp;</font>And save the retrieved data to the file.</font></td>
+    </tr>
+    <tr>
+      <td width="553" colspan="2" height="20"><font size="3" face="Courier New">
+  '&nbsp;&nbsp;Therefore, stop the sampling when writing 10 times '&nbsp; to the file.</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2"><font size="3" face="Courier New">
+  '=========================================================</font></td>
+    </tr>
+    <tr>
+      <td width="587" colspan="2" valign="top"><font size="3" face="Courier New">'
+        Variable definition</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim hDeviceHandle As
+        Long</font></td>
+      <td width="161" valign="top"><font size="3" face="Courier New">' Device
+        handle</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top">Dim wSmplData(0 to 1,0 to 1023) As Integer</td>
+      <td width="161" valign="top">
+<font size="3" face="Courier New">' Sampling
+data</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim SmplConfig As
+        ADSMPLREQ</font></td>
+      <td width="161" valign="top"><font size="3" face="Courier New">' Sampling conditions</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim nRet As Integer</font></td>
+      <td width="161" valign="top"><font size="3" face="Courier New">' Return
+        values</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim szDeviceName As
+        String * 16</font></td>
+      <td width="161" valign="top"><font size="3" face="Courier New">' Device name</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font size="3" face="Courier New">Dim ulSmplNum As
+        Long</font></td>
+      <td width="161" valign="top">
+<font size="3" face="Courier New">' Number of samples</font></td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font face="Courier New">Dim hEvent As Long</font></td>
+      <td width="161" valign="top">
+<font size="3" face="Courier New">' Event handle</font></td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font face="Courier New">Dim FormatData As
+        String</font></td>
+      <td width="161" valign="top">
+<font size="3" face="Courier New">' Data format</font></td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font face="Courier New">Dim i As Integer</font></td>
+      <td width="161" valign="top">
+      </td>
+    </tr>
+    <tr>
+      <td width="420" valign="top"><font face="Courier New">Dim count As Integer</font></td>
+      <td width="161" valign="top">
+      </td>
+    </tr>
+    <tr>
+      <td width="581" colspan="2" valign="top"><font size="3" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+  </table>
+  <table border="0" width="591" cellspacing="1" height="1947">
+    <tr>
+      <td colspan="2" width="583" height="20">
+<code><font face="Courier New" size="3">' Initialize the FBIAD1.</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="20"><font face="Courier New" size="3">szDeviceName
+        = &quot;FBIAD1&quot; &amp; Chr(0)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="20"><font face="Courier New" size="3">hDeviceHandle
+        = AdOpen(szDeviceName)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="20"><font face="Courier New" size="3">if
+        hDeviceHandle = -1 Then</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="38"></td>
+      <td width="557" height="38"><font face="Courier New" size="3">nRet =
+        MsgBox(&quot;FBIAD1
+        is not available.&quot;, VbOKOnly + vbCritical, &quot;FBIAD1&quot;)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Unload Me</font></td>
+    </tr>
+    <tr>
+      <td width="583" colspan="2" height="20"><font face="Courier New">End If</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">' Register and configure the event.
+        </font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">hEvent =
+        CreateEvent(0, True, False, 0)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">nRet =
+        AdSetBoardConfig(ghDeviceHandle, hEvent, 0, 0)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">If nRet
+        &lt;&gt; AD_ERROR_SUCCESS Then</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Call
+        DsplyErrMessage(nRet)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        CloseHandle(hEvent)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        AdClose(hDeviceHandle)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Unload Me</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">End If</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">' </font><font face="Courier New">Retrieve
+        the sampling conditions.</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">nRet =
+        AdGetSamplingConfig(hDeviceHandle, SmplConfig)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">If nRet
+        &lt;&gt; AD_ERROR_SUCCESS Then</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Call
+        DsplyErrMessage(nRet)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        CloseHandle(hEvent)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        AdClose(hDeviceHandle)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Unload Me</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">End If</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="18">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">' Set 2048 to the number of samples.
+        </font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">'
+        Set 1024 to the number of events.</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">' Set <font size="3">infinite
+        sampling to trigger mode.</font></font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">' Channel
+        1 and channel 2 is set to the sampling channel.</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">SmplConfig.ulSmplNum
+        = 2048</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">SmplConfig.ulSmplEventNum
+        = 1024</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">SmplConfig.ulTrigMode
+        = AD_ETERNITY ' <font size="3">infinite sampling</font></font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">SmplConfig.ulChCount
+        = 2</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">SmplConfig.SmplChReq(0).ulChNo
+        = 1</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">SmplConfig.SmplChReq(0).ulRange
+        = AD_5V</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">SmplConfig.SmplChReq(1).ulChNo
+        = 2</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="18">SmplConfig.SmplChReq(1).ulRange =
+        AD_5V</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">nRet =
+        AdSetSamplingConfig(hDeviceHandle, SmplConfig)</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">If nRet
+        &lt;&gt; AD_ERROR_SUCCESS Then</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Call
+        DsplyErrMessage(nRet)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        CloseHandle(hEvent)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        AdClose(hDeviceHandle)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Unload Me</font></td>
+    </tr>
+    <tr>
+      <td width="583" colspan="2" height="21"><font face="Courier New">End If</font></td>
+    </tr>
+    <tr>
+      <td width="583" colspan="2" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">' </font><font face="Courier New">Open
+        a file.</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">Open
+        &quot;data.dat&quot; For Random As #1</font></td>
+    </tr>
+    <tr>
+      <td width="583" colspan="2" height="21"><font face="Courier New">Beep</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">' Start
+        the sampling </font><font face="Courier New" size="3">as an overlapped
+        operation.</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">nRet =
+        AdStartSampling(hDeviceHandle, FLAG_ASYNC)</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">If nRet
+        &lt;&gt; AD_ERROR_SUCCESS Then</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Call
+        DsplyErrMessage(nRet)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        CloseHandle(hEvent)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        AdClose(hDeviceHandle)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Unload Me</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">End If</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="18">For count = 0 To 9</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;
+        nRet = WaitForSingleObject(hEvent, 5000)</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="20"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">'
+        Retrieve the sampling data.</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">ulSmplNum
+        = 1024</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">nRet =
+        AdGetSamplingData(hDeviceHandle, wSmplData(0,0), ulSmplNum)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">If nRet
+        &lt;&gt; AD_ERROR_SUCCESS Then</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="6"></td>
+      <td width="557" height="6"><font face="Courier New">Call
+        DsplyErrMessage(nRet)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        CloseHandle(hEvent)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        AdClose(hDeviceHandle)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Unload Me</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">End If</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">For i = 0
+        To 1023</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;
+        FormatData$ = Hex(wSmplData(0, i)) &amp; &quot;h, &quot; &amp;
+        Hex(wSmplData(1, i)) &amp; &quot;h&quot;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;
+        Put #1, (count * 1024 + i + 1), (Format$(i + 1, &quot;0000&quot;) &amp;
+        &quot;: &quot; &amp; FormatData$)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">Next i</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;
+        nRet = ResetEvent(hEvent)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">Next
+        count</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="18">&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">nRet =
+        ResetEvent(hEvent)</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">nRet =
+        CloseHandle(hEvent)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">nRet =
+        AdStopSampling(ghDeviceHandle)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">If nRet
+        &lt;&gt; AD_ERROR_SUCCESS Then</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Call
+        DsplyErrMessage(nRet)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        CloseHandle(hEvent)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">nRet =
+        AdClose(hDeviceHandle)</font></td>
+    </tr>
+    <tr>
+      <td width="26" height="21"></td>
+      <td width="557" height="21"><font face="Courier New">Unload Me</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">End If</font>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">Close #1</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New" size="3">'
+        Clean up and exit.</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="583" height="21"><font face="Courier New">nRet =
+        AdClose(hDeviceHandle)</font>
+      </td>
+    </tr>
+  </table>
+  <p align="left">
+  <b><font face="Arial" size="3"><a name="13.8.3 Delphi">11.6.3 Delphi</a></font></b></p>
+  <p align="left"><font face="Times New Roman" size="3">
+  &lt;Programming for Delphi&gt;</font></p>
+  <table border="0" width="570" cellspacing="1">
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New" size="3">//======================================================</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New" size="3">//&nbsp;&nbsp;Sample program for the
+        Interface analog input&nbsp;<br>
+        //&nbsp; boards/cards&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New"><font size="3">//&nbsp;&nbsp;under
+        </font>Windows 7/Server 2008/Vista/XP/Server 2003/&nbsp;<br>
+        // 2000/NT/Me/98/95</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font size="3" face="Courier New">//</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New" size="3">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright 2000,
+        2011 Interface Corporation. </font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New" size="3">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All rights reserved. </font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New" size="3">// </font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New" size="3">//&nbsp; Description </font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New" size="3">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How
+        to input analog data.</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New" size="3">
+  //=======================================================</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New" size="3">var</font></td>
+    </tr>
+    <tr>
+      <td width="422" valign="top"><font face="Courier New" size="3">hDeviceHandle:
+        THandle;</font></td>
+      <td width="228" valign="top">
+<code><font face="Courier New" size="3">// Device handle</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top"><font face="Courier New" size="3">dwSmplData:
+        array[0..511, 0..1] of WORD;&nbsp;</font></td>
+      <td width="228" valign="top">
+<code><font face="Courier New" size="3">// Sampling
+data</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top"><font face="Courier New" size="3">SmplConfig:
+        ADSMPLREQ;&nbsp;</font></td>
+      <td width="228" valign="top">
+<code><font face="Courier New" size="3">// Sampling
+conditions</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top"><font face="Courier New" size="3">i: Integer;</font></td>
+      <td width="228" valign="top"><code><font face="Courier New" size="3">// Repetition
+        counter</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top"><font face="Courier New" size="3">szDeviceName:
+        array[0..15] of Char;&nbsp;</font></td>
+      <td width="228" valign="top">
+<code><font face="Courier New" size="3">// Return values</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top"><font face="Courier New" size="3">ulSmplNum:
+        Cardinal;&nbsp;&nbsp;</font></td>
+      <td width="228" valign="top"><code><font face="Courier New" size="3">//
+        Number
+        of samples</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+  </table>
+  <table border="0" width="568" cellspacing="1">
+    <tr>
+      <td colspan="3" width="560"><code><font face="Courier New" size="3">begin</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><code><font face="Courier New" size="3">//
+        Initialize the FBIAD1.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">StrCopy(szDeviceName,
+        'FBIAD1');</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">hDeviceHandle
+        := AdOpen(@szDeviceName[0]);</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">if
+        hDeviceHandle = INVALID_HANDLE_VALUE then begin</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="10"></td>
+      <td width="529"><font face="Courier New" size="3">MessageDlg(&quot;FBIAD1
+        is not available<code>.</code>', mtInformation, [mbOK], 0);&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="10"></td>
+      <td width="529"><code><font face="Courier New" size="3">Close;&nbsp;&nbsp;&nbsp;
+        // Form is closed.;</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">end;</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><code><font face="Courier New" size="3">//
+        Retrieve the sampling conditions.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">AdGetSamplingConfig(hDeviceHandle,
+        SmplConfig);</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><code><font face="Courier New" size="3">//
+        Set 512 to the size of sampling buffer.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><code><font face="Courier New" size="3">//
+        Sampling channels are channel 1 and
+        channel 2.</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">SmplConfig.ulSmplNum
+        := 512;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">SmplConfig.ulChCount
+        := 2;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">SmplConfig.SmplChReq[0].ulChNo
+        := 1;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">SmplConfig.SmplChReq[1].ulChNo
+        := 2;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">AdSetSamplingConfig(hDeviceHandle,
+        SmplConfig);</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><code><font face="Courier New" size="3">//
+        Start the sampling as a non-overlapped operation.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">AdStartSampling(hDeviceHandle,
+        FLAG_SYNC);</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><code><font face="Courier New" size="3">//
+        Retrieve the sampling data.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">ulSmplNum
+        := 512;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">AdGetSamplingData(hDeviceHandle,
+        @dwSmplData[0,0], ulSmplNum);</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><code><font face="Courier New" size="3">//
+        Clean up and exit.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15"></td>
+      <td width="539" colspan="2"><font face="Courier New" size="3">AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3"><font face="Courier New" size="3">end;</font></td>
+    </tr>
+  </table>
+  <p align="left">&nbsp;</p>
+  <table border="0" width="570" cellspacing="1" height="640">
+    <tr>
+      <td width="650" colspan="2" height="20"><font face="Courier New" size="3">//======================================================</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font face="Courier New" size="3">//&nbsp;&nbsp;Sample program for the
+        Interface analog input&nbsp;<br>
+        //&nbsp; boards/cards&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font size="3" face="Courier New">//&nbsp;&nbsp;&nbsp;under
+        Windows 7/Server 2008/Vista/XP/Server 2003/&nbsp;<br>
+        //&nbsp;&nbsp; 2000/NT/Me/98/95&nbsp;
+        </font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font size="3" face="Courier New">//</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font face="Courier New" size="3">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright 2000,
+        2011 Interface Corporation. </font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font face="Courier New" size="3">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All rights reserved. </font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font face="Courier New" size="3">// </font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font face="Courier New" size="3">//&nbsp; Description </font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="28"><font size="3" face="Courier New">//&nbsp;The
+        infinite<font face="Courier New"> sampling</font><font size="3"> </font>is
+        performed asynchronously<font face="Courier New"><font size="3">.&nbsp;<br>
+        // An
+        event is occurred by </font>a multiple of 1024<font size="3"> and&nbsp;<br>
+        // retrieve the data.</font></font></font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="19"><font face="Courier New" size="3">//&nbsp;&nbsp;&nbsp;And
+        save the retrieved data to the file.</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font face="Courier New" size="3">//&nbsp;&nbsp;&nbsp;Therefore,
+        stop the sampling when writing 10 times //&nbsp;&nbsp; to the file.</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font face="Courier New" size="3">
+  //=======================================================</font></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="21"></td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font face="Courier New" size="3">var</font></td>
+    </tr>
+    <tr>
+      <td width="422" valign="top" height="20"><font face="Courier New" size="3">hDeviceHandle:
+        THandle;</font></td>
+      <td width="228" valign="top" height="20">
+<code><font face="Courier New" size="3">// Device handle</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top" height="38"><font face="Courier New">dwSmplData:
+        array[0..1024, 0..1] of WORD;</font></td>
+      <td width="228" valign="top" height="38">
+<code><font face="Courier New" size="3">// Sampling
+data</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top" height="38"><font face="Courier New" size="3">SmplConfig:
+        ADSMPLREQ;&nbsp;</font></td>
+      <td width="228" valign="top" height="38">
+<code><font face="Courier New" size="3">// Sampling
+conditions</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top" height="20"><font face="Courier New">szDeviceName:
+        array[0..15] of Char;</font></td>
+      <td width="228" valign="top" height="20"><code><font face="Courier New" size="3">//
+        Device name</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top" height="38"><font face="Courier New">ulSmplNum: Cardinal;<font face="Courier New" size="3">&nbsp;</font></font></td>
+      <td width="228" valign="top" height="38">
+<code><font face="Courier New" size="3">// Number of samples</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top" height="20"><font face="Courier New">hEvent: DWORD;</font></td>
+      <td width="228" valign="top" height="20"><code><font face="Courier New" size="3">//
+        Event handle</font></code>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top" height="20"><font face="Courier New">F: textFile;</font></td>
+      <td width="228" valign="top" height="20"><font face="Courier New">// file handle</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top" height="21"><font face="Courier New">i: Word;</font></td>
+      <td width="228" valign="top" height="21">
+      </td>
+    </tr>
+    <tr>
+      <td width="422" valign="top" height="21"><font face="Courier New">count: Word;</font></td>
+      <td width="228" valign="top" height="21">
+      </td>
+    </tr>
+    <tr>
+      <td width="650" colspan="2" height="20"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+  </table>
+  <table border="0" width="568" cellspacing="1" height="905">
+    <tr>
+      <td colspan="3" width="560" height="20"><code><font face="Courier New" size="3">begin</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><code><font face="Courier New" size="3">//
+        Initialize the FBIAD1.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New" size="3">StrCopy(szDeviceName,
+        'FBIAD1');</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New" size="3">hDeviceHandle
+        := AdOpen(@szDeviceName[0]);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New" size="3">if
+        hDeviceHandle = INVALID_HANDLE_VALUE then begin</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="38"></td>
+      <td width="10" height="38"></td>
+      <td width="529" height="38"><font face="Courier New" size="3">MessageDlg(&quot;FBIAD1
+        is not available<code>.</code>', mtInformation, [mbOK], 0);&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="10" height="21"></td>
+      <td width="529" height="21"><code><font face="Courier New" size="3">Close;&nbsp;&nbsp;&nbsp;
+        // Form is closed.;</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New" size="3">end;</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3" height="20"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><code><font face="Courier New" size="3">//
+        Configures event handling of the board/card.</font>
+</code>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">hEvent :=
+        CreateEvent(nil,TRUE,FALSE,nil);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">nRet :=
+        AdSetBoardConfig(ghDeviceHandle, hEvent, nil,0);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">if nRet
+        &lt;&gt; 0 then begin</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        MessageDlg('Error code: ' + IntToHex(nRet,8) + 'h', mtError, [mbOk],
+        0);&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        Close;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">end;</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3" height="20"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">// </font><font face="Courier New" size="3">Retrieve
+        the sampling conditions.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">nRet =
+        AdGetSamplingConfig(hDeviceHandle, SmplConfig);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">if nRet
+        &lt;&gt; 0 then begin</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="13"></td>
+      <td width="539" colspan="2" height="13"><font face="Courier New">&nbsp;
+        MessageDlg('Error code: ' + IntToHex(nRet,8) + 'h', mtError, [mbOk], 0);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        Close;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">end;</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">//
+        Set 2048 to the number of samples.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">//
+        Set 1024 to the number of events.</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">// Set <font face="Courier New" size="3">infinite
+        sampling</font><font size="3"> </font><font face="Courier New" size="3">to
+        trigger mode.</font></font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">//
+        Channel 1 and channel 2 is set to the sampling channel.</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">SmplConfig.ulSmplNum
+        := 2048;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">SmplConfig.ulSmplEventNum
+        := 1024;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">SmplConfig.ulTrigMode
+        := AD_ETERNITY;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">SmplConfig.ulChCount
+        := 2;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">SmplConfig.SmplChReq[0].ulChNo
+        := 1;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">SmplConfig.SmplChReq[0].ulRange
+        := AD_5V;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">SmplConfig.SmplChReq[1].ulChNo
+        := 2;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">SmplConfig.SmplChReq[1].ulRange
+        := AD_5V;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">nRet =
+        AdSetSamplingConfig(hDeviceHandle, SmplConfig);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">if nRet
+        &lt;&gt; 0 then begin</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        MessageDlg('Error code: ' + IntToHex(nRet,8) + 'h', mtError, [mbOk], 0);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        Close;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">end;</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">AssignFile(F,
+        'data.dat');</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">Rewrite(F);</font></td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">// Start
+        the sampling </font><font face="Courier New" size="3">as an overlapped
+        operation.</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">nRet =
+        AdStartSampling(hDeviceHandle, FLAG_ASYNC);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">if nRet
+        &lt;&gt; 0 then begin</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        MessageDlg('Error code: ' + IntToHex(nRet,8) + 'h', mtError, [mbOk], 0);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        Close;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">end;</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">for count
+        := 0 to 10 do begin</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        WaitForSingleObject(hEvent, 5000);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">//
+        Retrieve the sampling data.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">ulSmplNum
+        := 1024;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">nRet =
+        AdGetSamplingData(hDeviceHandle, @dwSmplData[0,0], ulSmplNum);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">if nRet
+        &lt;&gt; 0 then begin</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        MessageDlg('Error code: ' + IntToHex(nRet,8) + 'h', mtError, [mbOk], 0);</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        Close;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">end;</font></td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">for i :=
+        0 to 1023 do begin</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">Writeln(F,
+        Format('%.4d', [i + 1]) + ': ' + IntToHex(PWordArray(dwSmplData[i,0])) +
+        'h, ' + IntToHex(PWordArray(dwSmplData[i,1]))) + 'h');&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">end;</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">ResetEvent(hEvent);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">end;</font></td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">ResetEvent(hEvent);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">// Stop
+        the sampling.</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">nRet =
+        AdStopSampling(hDeviceHandle);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">if nRet
+        &lt;&gt; 0 then begin</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        CloseHandle(hEvent);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        MessageDlg('Error code: ' + IntToHex(nRet,8) + 'h', mtError, [mbOk], 0);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        AdClose(hDeviceHandle);</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">&nbsp;
+        Close;</font></td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">end;</font></td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">closeFile(F);</font></td>
+    </tr>
+    <tr>
+      <td width="554" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">// Clean
+        up and exit.</font></td>
+    </tr>
+    <tr>
+      <td width="15" height="21"></td>
+      <td width="539" colspan="2" height="21"><font face="Courier New">AdClose(hDeviceHandle);</font></td>
+    </tr>
+    <tr>
+      <td width="554" colspan="3" height="20"><font face="Courier New">end;</font></td>
+    </tr>
+  </table>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

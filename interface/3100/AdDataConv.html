@@ -1,0 +1,562 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdDataConv</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdDataConv</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The AdDataConv function converts the form of the analog data. Averaging and
+  interpolation can be done with the conversion. You can supply the user-defined
+  function to perform user specific conversion. A user-defined function is not available
+  in Visual Basic 4.0.</td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td colspan="3" width="492" height="20" valign="top"><font face="Courier New">INT
+          AdDataConv(</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">UINT&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <font face="Courier New"><i>uSrcFormCode</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">PVOID&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <font face="Courier New"><i>pSrcData</i>,</font><b></b></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">UINT&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <font face="Courier New"><i>uSrcSmplDataNum</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">PADSMPLREQ&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <font face="Courier New"><i>pSrcSmplReq</i>,</font><b></b></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">UINT&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <font face="Courier New"><i>uDestFormCode</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">PVOID&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <font face="Courier New"><i>pDestData</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">PUINT&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <font face="Courier New"><i>puDestSmplDataNum</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">PADSMPLREQ&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <font face="Courier New"><i>pDestSmplReq</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">UINT&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <font face="Courier New"><i>uEffect</i>,</font><b></b></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">UINT&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <font face="Courier New"><i>uCount</i>,</font><b></b></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="115" height="21" valign="top"> <font face="Courier New">LPCONVPROC&nbsp;</font></td>
+        <td width="355" height="21" valign="top"> <i><font face="Courier New">lpfnConv</font></i></td>
+      </tr>
+      <tr>
+        <td width="16" height="1" valign="top">
+    <font face="Courier New">
+    );</font>
+        </td>
+        <td width="470" height="1" colspan="2" valign="top"></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="502">
+      <tr>
+        <td colspan="4" width="522" height="21" valign="top"><font face="Courier New">Declare
+          Function AdDataConv Lib &quot;FbiAdDC.DLL&quot; ( _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="28" height="21" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>uSrcFormCode</i>&nbsp;</font>  </td>
+        <td width="425" height="21" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="28" height="20" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>pSrcData</i>&nbsp;</font></td>
+        <td width="355" height="20" valign="top"> <font face="Courier New">As
+          Any, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="28" height="20" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>uSrcSmplDataNum</i>&nbsp;</font></td>
+        <td width="355" height="20" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="28" height="20" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>pSrcSmplReq</i>&nbsp;</font></td>
+        <td width="355" height="20" valign="top"> <font face="Courier New">As
+          ADSMPLREQ, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="28" height="20" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>uDestFormCode</i>&nbsp;</font></td>
+        <td width="355" height="20" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="28" height="20" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>pDestData</i>&nbsp;</font></td>
+        <td width="355" height="20" valign="top"> <font face="Courier New">As
+          Any, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="28" height="20" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>puDestSmplDataNum</i>&nbsp;</font></td>
+        <td width="355" height="20" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="28" height="20" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>pDestSmplReq</i>&nbsp;</font></td>
+        <td width="355" height="20" valign="top"> <font face="Courier New">As
+          ADSMPLREQ, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="28" height="20" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>uEffect</i>&nbsp;</font></td>
+        <td width="355" height="20" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="28" height="20" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>uCount</i>&nbsp;</font></td>
+        <td width="355" height="20" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="28" height="20" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>lpfnConv</i>&nbsp;</font></td>
+        <td width="355" height="20" valign="top"> <font face="Courier New">As
+          Long _</font></td>
+      </tr>
+      <tr>
+        <td width="516" colspan="4" height="21" valign="top">
+    <font face="Courier New">) As Long</font></td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="452">
+      <tr>
+        <td colspan="3" width="492" valign="top"><font face="Courier New">function
+          AdDataConv(</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"></td>
+        <td width="106" valign="top"><i><font face="Courier New">uSrcFormCode</font></i></td>
+        <td width="366" valign="top"><font face="Courier New">: UINT;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"></td>
+        <td width="106" valign="top"><i><font face="Courier New">pSrcData</font></i></td>
+        <td width="366" valign="top"><font face="Courier New">: Pointer;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"></td>
+        <td width="106" valign="top"><i><font face="Courier New">uSrcSmplDataNum</font></i><b></b></td>
+        <td width="366" valign="top"><font face="Courier New">: DWORD;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"><font face="Courier New">var</font></td>
+        <td width="106" valign="top"><i><font face="Courier New">pSrcSmplReq</font></i></td>
+        <td width="366" valign="top"><font face="Courier New">: ADSMPLREQ;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"></td>
+        <td width="106" valign="top"><i><font face="Courier New">uDestFormCode</font></i></td>
+        <td width="366" valign="top"><font face="Courier New">: UINT;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"></td>
+        <td width="106" valign="top"><i><font face="Courier New">pDestData</font></i><b></b></td>
+        <td width="366" valign="top"><font face="Courier New">: Pointer;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"><font face="Courier New">var</font></td>
+        <td width="106" valign="top"><font face="Courier New"><i>puDestSmplDataNum</i>&nbsp;</font></td>
+        <td width="366" valign="top"><font face="Courier New">: DWORD;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"><font face="Courier New">var</font></td>
+        <td width="106" valign="top"><i><font face="Courier New">pDestSmplReq</font></i></td>
+        <td width="366" valign="top"><font face="Courier New">: ADSMPLREQ;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"></td>
+        <td width="106" valign="top"><i><font face="Courier New">uEffect</font></i></td>
+        <td width="366" valign="top"><font face="Courier New">: UINT;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"></td>
+        <td width="106" valign="top"><i><font face="Courier New">uCount</font></i></td>
+        <td width="366" valign="top"> <font face="Courier New">: UINT;</font></td>
+      </tr>
+      <tr>
+        <td width="18" valign="top"></td>
+        <td width="106" valign="top"><i><font face="Courier New">lpfnConv</font></i></td>
+        <td width="366" valign="top"> <font face="Courier New">: Pointer</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3" valign="top">
+    <font face="Courier New">) : DWORD; stdcall; external 'FbiAdDC.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+</blockquote>
+
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="479" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="75" height="21"><em><font face="Courier New">uSrcFormCode</font></em></td>
+      <td valign="top" width="490">Specifies an original form of data stored in
+        the buffer pointed by pSrcData.
+        <table border="1" width="384">
+          <tr align="center" valign="top"><td valign="top" width="156"><b>Code</b></td><td valign="top" width="55"><b>Value</b></td>
+            <td valign="top" width="369"><b>Data Form</b></td>
+          <tr valign="top"><td valign="top" width="156">AD_DATA_PHYSICAL</td><td valign="top" width="55" align="center">1</td>
+            <td valign="top" width="369">Physical value<br>
+              (voltage
+              [V] or current [mA])</td>
+          <tr valign="top"><td valign="top" width="156">AD_DATA_BIN8</td><td valign="top" width="55" align="center">2</td>
+            <td valign="top" width="369">8-bit binary</td>
+          <tr>
+            <td valign="top" width="156">AD_DATA_BIN10</td><td valign="top" width="55" align="center">3</td>
+            <td valign="top" width="369">10-bit binary</td>
+          </tr>
+          <tr valign="top"><td valign="top" width="156">AD_DATA_BIN12</td><td valign="top" width="55" align="center">4</td>
+            <td valign="top" width="369">12-bit binary</td>
+          <tr valign="top"><td valign="top" width="156">AD_DATA_BIN16</td><td valign="top" width="55" align="center">5</td>
+            <td valign="top" width="369">16-bit binary</td>
+          <tr valign="top"><td valign="top" width="156">AD_DATA_BIN24</td><td valign="top" width="55" align="center">6</td>
+            <td valign="top" width="369">24-bit binary</td>
+        </table>
+      </td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75" height="21"></td>
+      <td valign="top" width="490">
+      The binary data mean that the data can be directly input from or output to the board
+        (digital code).</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="21" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="75" height="21"><em><font face="Courier New">pSrcData</font></em></td>
+      <td valign="top" width="490">Points to a buffer containing the source data
+        to be converted.</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="565" height="21" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="75" height="21"><em><font face="Courier New">uSrcSmplDataNum</font></em></td>
+      <td valign="top" width="490">Specifies the number of the source data.</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="565" height="21" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="75" height="21"><em><font face="Courier New">pSrcSmplReq</font></em></td>
+      <td valign="top" width="490">Points to the <a href="Structures.html#13.6.1 ADSMPLREQ Structure"> ADSMPLREQ</a>
+        structure
+        containing the sampling conditions of the source data.</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="565" height="21" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75" height="21"><em><font face="Courier New">uDestFormCode</font></em></td>
+      <td valign="top" width="490">Specifies the source data form.
+        <table border="1" width="384">
+          <tr align="center" valign="top"><td valign="top" width="156"><b>Code</b></td><td valign="top" width="212"><b>Data Form</b></td>
+          <tr valign="top"><td valign="top" width="156">AD_DATA_PHYSICAL</td><td valign="top" width="212">Physical
+              value<br>
+              (voltage [V] or current [mA])</td>
+          <tr valign="top"><td valign="top" width="156">AD_DATA_BIN8</td><td valign="top" width="212">8-bit
+              binary</td>
+          <tr>
+            <td valign="top" width="156">AD_DATA_BIN10</td><td valign="top" width="212">10-bit
+              binary</td>
+          </tr>
+          <tr valign="top"><td valign="top" width="156">AD_DATA_BIN12</td><td valign="top" width="212">12-bit
+              binary</td>
+          <tr valign="top"><td valign="top" width="156">AD_DATA_BIN16</td><td valign="top" width="212">16-bit
+              binary</td>
+          <tr valign="top"><td valign="top" width="156">AD_DATA_BIN24</td><td valign="top" width="212">24-bit
+              binary</td>
+        </table>
+      </td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"></td>
+      <td valign="top" width="490">The binary data mean that the data can be
+        directly input from or output to the board (digital code).</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"></td>
+      <td valign="top" width="490">&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"><em><font face="Courier New">pDestData</font></em></td>
+      <td valign="top" width="490">Points to a buffer to receive the converted
+        data.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"></td>
+      <td valign="top" width="490">&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"><em><font face="Courier New">puDestSmplDataNum</font></em></td>
+      <td valign="top" width="490">Points to a variable to receive the number of
+        converted data.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"></td>
+      <td valign="top" width="490">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"><em><font face="Courier New">pDestSmplReq</font></em></td>
+      <td valign="top" width="490">Points to the <a href="Structures.html#13.6.1 ADSMPLREQ Structure"> ADSMPLREQ</a>
+        structure
+        to
+        receive the sampling conditions of converted data.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"></td>
+      <td valign="top" width="490">&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"><em><font face="Courier New">uEffect</font></em></td>
+      <td valign="top" width="490">Specifies the additional data processing.
+        <table border="1" width="386" height="112">
+          <tr valign="top"><td align="center" width="164" height="1">
+              <b>Code</b>
+            </td><td width="206" height="1">
+              <p align="center"><b>Description</b></td>
+          <tr valign="top"><td align="center" width="164" height="19" valign="top">
+              <p align="center">0</p>
+            </td><td width="206" height="19">No averaging and no interpolation</td>
+          <tr valign="top"><td width="164" height="38" valign="top">AD_CONV_SMOOTH</td><td width="206" height="38">Converts the data with
+              interpolation.</td>
+          <tr valign="top"><td width="164" height="38" valign="top">AD_CONV_AVERAGE1</td><td width="206" height="38">Converts the data with
+              the simple averaging.</td>
+          <tr valign="top"><td width="164" height="38" valign="top">AD_CONV_AVERAGE2</td><td width="206" height="38">Converts the data with
+              the shifted averaging.</td>
+        </table></td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      <td valign="top" width="490">&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"><em><font face="Courier New">uCount</font></em></td>
+      <td valign="top" width="490">Specifies the number of original data to average or
+        interpolate. If
+        uEffect is set to 0, uCount is ignored.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"></td>
+      <td valign="top" width="490">&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="75"><em><font face="Courier New">lpfnConv</font></em></td>
+      <td valign="top" width="490">Points to a user-supplied function to achieve arbitrary data processing.
+        If you don't  use this capability, specify NULL to lpfnConv.</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480" valign="top">
+  The AdDataConv
+  <font SIZE="3"> function returns AD_ERROR_SUCCESS if the
+  process is successfully completed. </font>Otherwise, this function returns another code.
+  Please refer to the <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Comment</font></strong></p>
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td width="544" valign="top">
+  If averaging or interpolation is applied to the data processing, the sampling conditions of the converted data are changed 
+  from the original depending on the additional processing conditions.
+  <p>The data size of Physical
+              value is the float type in C, and single type in Visual Basic and
+  Delphi.&nbsp;</p>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Examples</font></strong></p>
+
+<blockquote>
+  <p><font face="Times New Roman" size="3"><strong>C</strong></font></p> 
+  <blockquote>
+    <table border="0" width="169" cellspacing="1">
+      <tr>
+        <td valign="top" width="603">
+    <font face="Courier New">nRet = AdDataConv(AD_DATA_BIN12,pSrcBuffer,<br>
+    uSrcSmplDataNum,pSrcSmplReq,AD_DATA_BIN16,<br>
+    pDestBuffer,puDestSmplDataNum,pDestSmplReq,<br>
+    0, 0, NULL);</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <p><font face="Times New Roman" size="3"><strong>Visual Basic</strong></font></p> 
+  <blockquote>
+    <table border="0" width="455" cellspacing="1">
+      <tr>
+        <td valign="top" width="897">
+    <font face="Courier New" size="3">nRet = AdDataConv(AD_DATA_BIN12, _<br>
+    SrcBuffer,SrcSmplDataNum,SrcSmplReq, _<br>
+    AD_DATA_BIN16,DestBuffer,DestSmplDataNum, _<br>
+    DestSmplReq,0, 0, 0)
+  </font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><font face="Times New Roman" size="3"><strong>Delphi</strong></font></p> 
+  <blockquote>
+    <table border="0" width="218" cellspacing="1">
+      <tr>
+        <td valign="top" width="652">
+    <font face="Courier New">nRet := AdDataConv( AD_DATA_BIN12,SrcBuffer,<br>
+    uSrcSmplDataNum,SrcSmplReq,AD_DATA_BIN16,<br>
+    DestBuffer,DestSmplDataNum,DestSmplReq,0,<br>
+    0, NIL);</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td>
+The conversion is done under the following conditions:
+<table border="0" width="100%" height="1">
+  <tr>
+    <td width="100%" height="1">
+      <ul>
+        <li>Source data format: 12-bit binary</li>
+        <li>Sampling conditions for the source data: Specified by the SrcSmplReq structure.</li>
+        <li>Converted data format: 16-bit binary</li>
+        <li>Sampling conditions for converted data: Stored to the DestSmplReq structure.</li>
+        <li>Additional data processing: None</li>
+        <li>User function: None</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

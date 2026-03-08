@@ -1,0 +1,237 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdAllocateSamplingBuffer</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">AdAllocateSamplingBuffer</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="557">
+  <font size="3">
+  The AdAllocateSamplingBuffer<font face="Arial"><b> </b></font>function
+  allocates a sampling buffer.</font></td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+<blockquote>
+    <font size="3">
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472"><font face="Courier New">INT
+            AdAllocateSamplingBuffer(</font></td>
+        </tr>
+        <tr>
+          <td width="8">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td width="72"><font face="Courier New">HANDLE&nbsp;</font></td>
+          <td width="380"> <font face="Courier New"> <i>hDeviceHandle</i></font></td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472">
+<font face="Courier New">);</font></td>
+        </tr>
+      </table>
+  </blockquote>
+    </blockquote>
+  </font>
+    <blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="507" cellspacing="1">
+      <tr>
+        <td colspan="4" width="499"><font face="Courier New">Declare Function
+          AdAllocateSamplingBuffer Lib _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="62"><font face="Courier New" size="3">ByVal&nbsp;</font></td>
+        <td width="134"><font face="Courier New" size="3"><i>hDeviceHandle</i>  </font></td>
+        <td width="271"><font face="Courier New" size="3">  As Long</font><font face="Courier New">
+          _</font>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" width="499"><font face="Courier New" size="3">) As Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472"><font face="Courier New">function
+          AdAllocateSamplingBuffer(</font></td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="132"><i><font face="Courier New" size="3">hDeviceHandle</font></i></td>
+        <td width="308"><font face="Courier New" size="3">: THandle</font></td>
+      </tr>
+      <tr>
+        <td colspan="3" width="472">   
+    <font face="Courier New" size="3">   
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  </blockquote>
+<p><b><big>Parameter</big></b>
+  </p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="41" height="21"><var><font face="Courier New">hDeviceHandle</font></var></td>
+        <td width="507" height="21">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdAllocateSamplingBuffer function returns AD_ERROR_SUCCESS if the process is
+  successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Comments</big></b></p>
+
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  <ul>
+    <li>
+  This function is not available while the sampling is running.</li>
+  </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="548" valign="top">
+  <ul>
+    <li>
+  The size of sampling buffer to be allocated is based on the sampling conditions. If the sampling buffer has already been
+  allocated, it will be reallocated.</li>
+  </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="548" valign="top">
+  <ul>
+    <li>
+  If the sampling buffer was not allocated by using this function, the <a href="AdStartSampling.html"> AdStartSampling</a>
+  function allocates new sampling buffer when it was called. If the sampling buffer has been allocated
+  by using this function, the <a href="AdStartSampling.html"> AdStartSampling</a>
+  function does not allocate new
+  one.</li>
+  </ul>
+        </td>
+      </tr>
+  </table>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="452" height="21"> 
+    <font face="Courier New">nRet = AdAllocateSamplingBuffer( hDeviceHandle );</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21">  
+    <font face="Courier New">nRet = AdStartSampling( hDeviceHandle,&nbsp;
+    FLAG_ASYNC );</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>
+<blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="452" height="21">  
+    <font face="Courier New">nRet = AdAllocateSamplingBuffer( _ hDeviceHandle )</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21">  
+    <font face="Courier New">nRet = AdStartSampling( hDeviceHandle, _ FLAG_ASYNC )</font></td>
+    </tr>
+  </table>
+</blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td><font face="Courier New">nRet := AdAllocateSamplingBuffer(
+          hDeviceHandle );</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">nRet = AdStartSampling(
+          hDeviceHandle, FLAG_ASYNC );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="542" valign="top">
+Start continuous sampling after allocating the sampling buffer of the board specified by hDeviceHandle.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

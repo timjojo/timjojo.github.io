@@ -1,0 +1,79 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 Attention</title>
+</head>
+
+<body>
+
+<blockquote>    
+  <table border="0" width="90%">    
+    <tr>  
+      <td width="3%" valign="top" align="center"><a name="vbcallback">-</a></td>  
+      <td width="97%"><b>Analog-to-Digital Input Data (PCI-3153)</b></td>     
+    </tr>     
+    <tr>     
+      <td width="3%" valign="top" align="center"></td>     
+      <td width="97%"><font face="Times New Roman">When you use the PCI-3513  
+        with FIFO mode in the GPC-3100, version 1.41-26 or older versions, the  
+        information of input and FIFO status are added as the table below.&nbsp;</font> 
+        <p><font face="Times New Roman">However, the later version does not add  
+        the information. Use the <a href="../AdFifoGetSamplingData.html">AdFifoGetSamplingData</a>  
+        function</font> <font face="Times New Roman">to get information of input  
+        and FIFO status.</font><br>           
+        </p>
+        <p><font face="Times New Roman">Analog Data</font></p> 
+        <p>-<font face="Times New Roman">PCI-3153</font></p> 
+        <table border="1"> 
+          <tr> 
+            <td align="center"><font face="Times New Roman">bit15</font></td> 
+            <td align="center"><font face="Times New Roman">bit14</font></td> 
+            <td align="center"><font face="Times New Roman">bit13</font></td> 
+            <td align="center"><font face="Times New Roman">bit12</font></td> 
+            <td align="center"><font face="Times New Roman">bit11</font></td> 
+            <td align="center"><font face="Times New Roman">bit10</font></td> 
+            <td align="center"><font face="Times New Roman">bit9</font></td> 
+            <td align="center"><font face="Times New Roman">bit8</font></td> 
+            <td align="center"><font face="Times New Roman">bit7</font></td> 
+            <td align="center"><font face="Times New Roman">bit6</font></td> 
+            <td align="center"><font face="Times New Roman">bit5</font></td> 
+            <td align="center"><font face="Times New Roman">bit4</font></td> 
+            <td align="center"><font face="Times New Roman">bit3</font></td> 
+            <td align="center"><font face="Times New Roman">bit2</font></td> 
+            <td align="center"><font face="Times New Roman">bit1</font></td> 
+            <td align="center"><font face="Times New Roman">bit0</font></td> 
+          </tr> 
+          <tr> 
+            <td align="center"><font face="Times New Roman">FE</font></td> 
+            <td align="center"><font face="Times New Roman">IN2</font></td> 
+            <td align="center"><font face="Times New Roman">IN1</font></td> 
+            <td align="center"><font face="Times New Roman">0</font></td> 
+            <td align="center" colspan="12"><font face="Times New Roman">12-bit 
+              analog data</font></td> 
+          </tr> 
+        </table> 
+        <p><font face="Times New Roman">FE</font>:<font face="Times New Roman">FIFO 
+        status</font></p> 
+        <blockquote> 
+          <p><font face="Times New Roman">When the bit is 1, the FIFO is empty. 
+          When the bit is 0, the FIFO is not empty.&nbsp;</font><br>
+          <font face="Times New Roman">When FIFO is empty, the 12-bit</font> <font face="Times New Roman">analog 
+          data is 0.&nbsp;</font></p> 
+        </blockquote> 
+        <p><font face="Times New Roman">IN1, IN2</font>:<font face="Times New Roman">input 
+        IN1, IN2</font>      
+      </td>      
+    </tr>      
+  </table>      
+</blockquote>      
+      
+<hr>      
+      
+    
+<p align="right"><font face="Times New Roman">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>                  
+         
+</body>         
+</html>         

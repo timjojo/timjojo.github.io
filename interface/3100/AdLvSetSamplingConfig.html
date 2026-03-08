@@ -1,0 +1,658 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdLvSetSamplingConfig</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">AdLvSetSamplingConfig</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="557">
+  The AdLvSetSamplingConfig function configures sampling conditions of the <font color="#000000">board/card.&nbsp;</font>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <font size="3">
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="507"><font face="Courier New">INT
+            AdLvSetSamplingConfig(</font></td>
+        </tr>
+        <tr>
+          <td width="29"></td>
+          <td width="132"><font face="Courier New">HANDLE&nbsp;</font></td>
+          <td width="334"> <font face="Courier New"> <i>hDeviceHandle</i>,</font></td>
+        </tr>
+        <tr>
+          <td width="29"></td>
+          <td width="132">
+
+<font face="Courier New">
+
+ULONG&nbsp;</font>
+          </td>
+          <td width="334"><font face="Courier New"><i>ulChNo</i><b>, </b>
+            </font>
+          </td>
+        </tr>
+        <tr>
+          <td width="29"></td>
+          <td width="132">
+
+<font face="Courier New">
+
+ULONG&nbsp;</font>
+          </td>
+          <td width="334"><font face="Courier New"><i>ulSmplNum</i><b>, </b>
+            </font>
+          </td>
+        </tr>
+        <tr>
+          <td width="29"></td>
+          <td width="132">
+
+<font face="Courier New">
+
+float</font>
+          </td>
+          <td width="334"><font face="Courier New"><i>fSmplFreq</i><b>, </b>
+            </font>
+          </td>
+        </tr>
+        <tr>
+          <td width="29"></td>
+          <td width="132">
+
+<font face="Courier New">
+
+ULONG</font>
+          </td>
+          <td width="334"><font face="Courier New"><i>ulRange</i><b>, </b>
+            </font>
+          </td>
+        </tr>
+        <tr>
+          <td width="29"></td>
+          <td width="132">
+
+<font face="Courier New">
+
+HANDLE</font>
+          </td>
+          <td width="334"><font face="Courier New"><i>hEvent</i><b>, </b>
+            </font>
+          </td>
+        </tr>
+        <tr>
+          <td width="29"></td>
+          <td width="132">
+
+<font face="Courier New">
+
+LPADCALLBACK&nbsp;</font>
+          </td>
+          <td width="334"><font face="Courier New"><i>lpCallBackProc</i><b>, </b>
+            </font>
+          </td>
+        </tr>
+        <tr>
+          <td width="29"></td>
+          <td width="132">
+
+<font face="Courier New">
+
+DWORD&nbsp;</font>
+          </td>
+          <td width="334"><i> <font face="Courier New"> dwUser</font></i>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="507">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    </blockquote>
+  </font>
+    <blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1" height="267">
+      <tr>
+        <td colspan="4" width="507" height="38"><font face="Courier New">Declare Function AdLvSetSamplingConfig
+          _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20" height="21"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="62" height="21">
+  <font size="3">
+  <font size="3" face="Courier New">
+  B</font></font><font size="3" face="Courier New">yVal&nbsp;
+  </font>
+        </td>
+        <td width="150" height="21"> <font face="Courier New"> <i> hDeviceHandle</i> &nbsp;</font></td>
+        <td width="257" height="21"> 
+  <font size="3" face="Courier New">
+ As Long, _
+  </font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" height="21"></td>
+        <td width="62" height="21">
+  <font size="3" face="Courier New">
+  ByVal&nbsp;
+  </font>
+        </td>
+        <td width="150" height="21"> <font face="Courier New"> <i> ulChNo</i> &nbsp;</font></td>
+        <td width="257" height="21"> 
+  <font size="3" face="Courier New">
+ As Long, _
+  </font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" height="21"></td>
+        <td width="62" height="21">
+  <font size="3" face="Courier New">
+  ByVal&nbsp;
+  </font>
+        </td>
+        <td width="150" height="21"> <font face="Courier New"> <i> ulSmplNum</i> &nbsp;</font></td>
+        <td width="257" height="21"> 
+  <font size="3" face="Courier New">
+ As Long, _&nbsp;
+  </font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" height="22"></td>
+        <td width="62" height="22">
+  <font size="3" face="Courier New">
+  ByVal&nbsp;
+  </font>
+        </td>
+        <td width="150" height="22"> <font face="Courier New"> <i> fSmplFreq</i> &nbsp;</font></td>
+        <td width="257" height="22"> 
+  <font size="3" face="Courier New">
+ As Single, _
+  </font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" height="21"></td>
+        <td width="62" height="21">
+  <font size="3" face="Courier New">
+  ByVal&nbsp;
+  </font>
+        </td>
+        <td width="150" height="21"> <i> <font face="Courier New"> ulRange</font></i> </td>
+        <td width="257" height="21"> 
+  <font size="3" face="Courier New">
+  As Long, _
+  </font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" height="21"></td>
+        <td width="62" height="21"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="150" height="21"> <font face="Courier New"> <i> hEvent</i> &nbsp;</font></td>
+        <td width="257" height="21"> 
+  <font size="3" face="Courier New">
+ As Long, _
+  </font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" height="21"></td>
+        <td width="62" height="21"><font size="3" face="Courier New">ByVal&nbsp;
+  </font>
+        </td>
+        <td width="150" height="21"><i><font face="Courier New">lpCallBackProc&nbsp;</font></i></td>
+        <td width="257" height="21">
+  <font size="3" face="Courier New">
+  <i></i> As Long, _
+  </font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20" height="21"></td>
+        <td width="62" height="21"><font size="3" face="Courier New">ByVal&nbsp;
+  </font>
+        </td>
+        <td width="150" height="21"><font face="Courier New"><i> dwUser</i> &nbsp;</font></td>
+        <td width="257" height="21">
+  <font size="3" face="Courier New">
+ As Long _
+  </font>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" width="507" height="20"><font face="Courier New">) As Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472"><font face="Courier New">function AdLvSetSamplingConfig(</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="162"><font face="Courier New"><i>hDeviceHandle</i><b>:&nbsp;</b></font></td>
+        <td width="278"><font face="Courier New">THandle;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="162"><font face="Courier New"><i>ulChNo</i><b>:&nbsp;</b></font></td>
+        <td width="278"><font face="Courier New">DWORD;</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="162"><font face="Courier New"><i>ulSmplNum</i><b>:&nbsp;</b></font></td>
+        <td width="278"><font face="Courier New">DWORD;</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="162"><font face="Courier New"><i>fSmplFreq</i><b>:</b></font></td>
+        <td width="278"><font face="Courier New">Single;</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="162"><font face="Courier New"><i>ulRange</i><b>:&nbsp;</b></font></td>
+        <td width="278"><font face="Courier New">DWORD;</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="162"><font face="Courier New"><i>hEvent</i><b>:&nbsp;</b></font></td>
+        <td width="278"><font face="Courier New">THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="162"><font face="Courier New"><i>lpCallBackProc</i><b>:&nbsp;</b></font></td>
+        <td width="278"><font face="Courier New">FARPROC;</font></td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="162"><font face="Courier New"><i>dwUser</i><b>:&nbsp; 
+    </b></font></td>
+        <td width="278"> <font face="Courier New"> DWORD</font></td>
+      </tr>
+      <tr>
+        <td colspan="3" width="472"><font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  </blockquote>
+  <p><b><big>Parameters</big></b>
+<font size="3">
+<br>
+</font></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="585" cellspacing="1" height="992">
+    <tbody>
+      <tr>
+        <td width="137" valign="top" height="21"><var><font face="Courier New">hDeviceHandle</font></var></td>
+        <td width="476" height="21">
+          <p align="left">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</p>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="476" height="21">
+        &nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="21"><i><font face="Courier New">ulChNo</font></i></td>
+        <td width="476" height="21">
+        Specifies an analog input channel. Only one channel can be specified.
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="476" height="21">
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="21"><i><font face="Courier New">ulSamplNum</font></i></td>
+        <td width="476" height="21">
+        Specifies the number of samples to be acquired.
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="476" height="21">
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="59"><i><font face="Courier New">fSmplFreq</font></i></td>
+        <td width="476" height="59">
+        <font SIZE="3">Specifies the sampling rate. The following sampling rates
+        are available:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50 Hz, 60 Hz, 250
+        Hz, and 500 Hz.</font>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="476" height="21">
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="382"><i><font face="Courier New">ulRange</font></i></td>
+        <td width="476" height="382">
+        Specifies the analog input range.
+        <table border="1" cellspacing="1" width="435">
+          <tr>
+            <td width="125">
+              <p align="center"><b>Code</b></td>
+            <td width="99">
+              <b>Value</b></td>
+            <td width="467">
+              <p align="center"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="125">AD_1P25V</td>
+            <td width="99">0x00800000</td>
+            <td width="467">Voltage range: bipolar +/-1.25 V</td>
+          </tr>
+          <tr>
+            <td width="125">AD_0P125V</td>
+            <td width="99">0x00400000</td>
+            <td width="467">Voltage range: bipolar +/-0.125 V</td>
+          </tr>
+          <tr>
+            <td width="125">AD_0P156V</td>
+            <td width="99">0x02000000</td>
+            <td width="467">Voltage range: bipolar +/-0.156 V</td>
+          </tr>
+          <tr>
+            <td width="125">AD_0P625V</td>
+            <td width="99">0x01000000</td>
+            <td width="467">Voltage range: bipolar +/-0.625 V</td>
+          </tr>
+          <tr>
+            <td width="125">AD_1P25V_AC</td>
+            <td width="99">0x04000000</td>
+            <td width="467">Voltage range: bipolar +/-1.25 V<br>
+              (with AC coupling)</td>
+          </tr>
+          <tr>
+            <td width="125">AD_0P156V_AC</td>
+            <td width="99">0x10000000</td>
+            <td width="467">Voltage range: bipolar +/-0.156 V<br>
+              (with AC coupling)</td>
+          </tr>
+          <tr>
+            <td width="125">AD_0P625V_AC</td>
+            <td width="99">0x08000000</td>
+            <td width="467">Voltage range: bipolar +/-0.625 V<br>
+              (with AC coupling)</td>
+          </tr>
+          <tr>
+            <td width="125">AD_0_1P25V</td>
+            <td width="99">0x08000000</td>
+            <td width="467">Voltage range: unipolar 0 V to +1.25 V</td>
+          </tr>
+          <tr>
+            <td width="125">AD_0_0P125V</td>
+            <td width="99">0x00000080</td>
+            <td width="467">Voltage range: unipolar 0 V to +0.125 V</td>
+          </tr>
+          <tr>
+            <td width="125">AD_0_0P156V</td>
+            <td width="99">0x00000200</td>
+            <td width="467">Voltage range: unipolar 0 V to +0.156 V</td>
+          </tr>
+          <tr>
+            <td width="125">AD_0_0P625V</td>
+            <td width="99">0x00000100</td>
+            <td width="467">Voltage range: unipolar 0 V to +0.625 V</td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="476" height="21">
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="162"><i><font face="Courier New">hEvent</font></i></td>
+        <td width="476" height="162">
+        Specifies an event to be signaled when a sampling terminates or the
+        specified number of samples are successfully acquired. If you don't use event notification, specify it as follows:
+        <table border="0" cellspacing="1" width="407">
+          <tr>
+            <td width="391">
+              <ul>
+                <li>NULL (C)</li>
+                <li>0 (Visual Basic)</li>
+                <li>nil (Delphi)</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="129"><font size="3"><font face="Courier New"><i>lpCallBackProc</i></font>
+  </font>
+        </td>
+        <td width="476" height="129">
+        Specifies an address of user callback routine to be called when the
+        sampling stops. If you do not use a callback routine, specify it as follows:
+        <ul>
+                <li>NULL (C)</li>
+                <li>0 (Visual Basic)</li>
+                <li>nil (Delphi)</li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="137" height="40"><var><font face="Courier New">dwUser</font></var></td>
+        <td width="476" height="40">
+        Specifies a user data to be passed to the user callback routine. If you
+        do not use the user callback routine, please specify 0.&nbsp;
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdLvSetSamplingConfig function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+  <p><b><big>Comments</big></b></p> 
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td width="544">
+      <ul>
+        <li>
+      This function is not available while the sampling is running.</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544">
+      <ul>
+        <li>
+      The sampling conditions configured by this function are applied to the sampling
+      by using the <a href="AdLvStartSampling.html"> AdLvStartSampling</a> function.</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544">
+      <ul>
+        <li>
+      If you change sampling conditions of channel by the <a href="AdSetSamplingConfig.html">
+      AdSetSamplingConfig</a> function after configuring the same channel by this function, the range and sampling rate are changed.</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544">
+      <ul>
+        <li>
+  The following boards/cards are applicable
+          to use this function.
+  <table border="1" cellspacing="1" width="57%">
+    <tr>
+      <td width="29%" align="center"><b>Model</b></td>
+      <td width="71%" align="center"><b>AC Coupling Capability</b></td>
+    </tr>
+    <tr>
+      <td width="29%">PCI-3179</td>
+      <td width="71%" align="center">-</td>
+    </tr>
+    <tr>
+      <td width="29%">CTP/CPZ-3179</td>
+      <td width="71%" align="center">Available</td>
+    </tr>
+  </table>
+        </li>
+      </ul>
+      </td>
+    </tr>
+  </table>
+ 
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="452" height="21"><font face="Courier New">hEvent =
+        CreateEvent(0, TRUE, FALSE, NULL);</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21">  
+    <font face="Courier New">nRet = AdLvSetSamplingConfig( hDeviceHandle, 1,
+    1000, 50.0, AD_1P25V, hEvent, CallBackProc, 0);</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>
+    <blockquote>
+    <table border="0" width="502" cellspacing="1">
+      <tr>
+        <td width="522"><font face="Courier New">nRet = AdLvSetSamplingConfig(
+          hDeviceHandle, 1, _ 1000, 50.0, AD_1P25V, hEvent, CallBackProc, 0 )</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="498"><font face="Courier New">nRet := AdLvSetSamplingConfig(
+          hDeviceHandle, 1, 1000, 50.0, AD_1P25V, hEvent, CallBackProc, 0 );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="544" cellspacing="1" height="34">
+      <tr>
+        <td width="542" valign="top" height="30">
+Configure sampling conditions of the board/card specified by hDeviceHandle as
+follows:
+<table border="1" cellspacing="1" width="92%" height="200">
+  <tr>
+    <td width="50%" align="center" height="19"><b><font SIZE="3">Parameter</font></b></td>
+    <td width="50%" align="center" height="19"><b><font SIZE="3">Setting</font></b></td>
+  </tr>
+  <tr>
+    <td width="50%" height="19"><font size="3">Channel number&nbsp;</font></td>
+    <td width="50%" height="19"><font SIZE="3">1</font></td>
+  </tr>
+  <tr>
+    <td width="50%" height="19">Number of samples</td>
+    <td width="50%" height="19"> 1000</td>
+  </tr>
+  <tr>
+    <td width="50%" height="19">Sampling rate</td>
+    <td width="50%" height="19"> 50 Hz</td>
+  </tr>
+  <tr>
+    <td width="50%" height="19">Range</td>
+    <td width="50%" height="19"> +/-1.25 V</td>
+  </tr>
+  <tr>
+    <td width="50%" height="19">Event notification</td>
+    <td width="50%" height="19"> Used</td>
+  </tr>
+  <tr>
+    <td width="50%" height="19">Callback routine</td>
+    <td width="50%" height="19"> Used</td>
+  </tr>
+  <tr>
+    <td width="50%" height="19">Parameter for callback routine</td>
+    <td width="50%" height="19">0</td>
+  </tr>
+</table>
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+  <p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+  Corporation. All rights reserved.</font></p>
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

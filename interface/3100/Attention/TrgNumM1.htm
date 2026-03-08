@@ -1,0 +1,246 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 Attention</title>
+</head>
+
+<body>
+
+<blockquote>    
+  <table border="0" width="90%">    
+    <tr>     
+      <td width="100%" valign="top" align="center" colspan="2">
+        <p align="left"><b><font size="4" face="Arial">Number 
+        of Samples When the Trigger Delay Capability is Used</font></b></p>
+      </td>     
+    </tr>     
+    <tr>     
+      <td width="3%" valign="top" align="center"></td>     
+      <td width="97%">
+        <table>
+          <tr>
+            <td vAlign="top" width="523" colSpan="2" height="133">
+              <ul>
+                <li><font face="Times New Roman">For start-trigger without delay<br> 
+                  <img src="Attentions01.gif" border="0" width="419" height="97"></font></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="59"></td>
+            <td vAlign="top" width="482" height="59"><font face="Times New Roman"><font color="#ff0000"><i>N</i>sample</font>:  
+              the number of samples</font> 
+              <p><font face="Times New Roman">The number of samples is specified as follows.</font></p> 
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="40"></td>
+            <td vAlign="top" width="482" height="40">
+              <blockquote>
+                <p><font face="Times New Roman">1 &lt;=&nbsp; <font color="#ff0000"><i>N</i>sample</font>  
+                &lt;=&nbsp; 524288</font></p> 
+              </blockquote>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="523" colSpan="2" height="1"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="523" colSpan="2" height="193">
+              <ul>
+                <li><font face="Times New Roman">For start-trigger with pre-trigger delay<br> 
+                  <img src="Attentions02.gif" border="0" width="419" height="167"></font></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="97"></td>
+            <td vAlign="top" width="482" height="97"><font face="Times New Roman"><font color="#ff0000"><i>N</i>sample</font>:  
+              the number of samples<br> 
+              <font color="#0000ff" size="3"><i>N</i>pre</font><font size="3">: 
+              the number of pre-trigger samples</font><font color="#0000ff" size="3"><br>
+              </font><font size="3"><i>N</i>post: the number of post-trigger 
+              samples<br>
+              </font><font color="#0000ff" size="3"><br>
+              </font><font size="3">Each number of samples is specified as 
+              follows.</font></font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="136"></td>
+            <td vAlign="top" width="482" height="136">
+              <blockquote>
+                <p><font face="Times New Roman"><font color="#ff0000" size="3"><i>N</i>sample </font><font size="3">=</font><font color="#ff0000" size="3"> 
+                </font><font color="#0000ff" size="3"><i>N</i>pre </font><font size="3">+</font><font color="#0000ff" size="3"> 
+                </font><font size="3"><i>N</i>post<br>
+                2 </font>&lt;=&nbsp;<font size="3"> <font color="#ff0000" size="3"><i>N</i>sample</font> 
+                </font>&lt;=&nbsp; <font size="3">524288<br> 
+                1 </font>&lt;=&nbsp;<font size="3"> <i>N</i>post </font>&lt;=&nbsp;<font size="3"> 
+                262144<br>
+                1 </font>&lt;=&nbsp;<font size="3"> </font><font color="#0000ff" size="3"><i>N</i>pre 
+                </font>&lt;=&nbsp;<font color="#0000ff" size="3"> </font><font size="3">(524288  
+                - 1024 * <i>n</i>)</font></font></p> 
+              </blockquote>
+              <p><font face="Times New Roman"><font size="3">A number of <i>n</i> is the minimum value to be 
+              satisfied with the condition of&nbsp;<br>
+              <i>N</i>post </font>&lt;=&nbsp;<font size="3"> (1024 * <i>n</i>).</font></font></p> 
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="523" colSpan="2" height="1"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="523" colSpan="2" height="139">
+              <ul>
+                <li><font face="Times New Roman">For start-trigger with post-trigger delay<br> 
+                  <img src="Attentions03.gif" border="0" width="413" height="98"></font></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="78"></td>
+            <td vAlign="top" width="482" height="78"><font face="Times New Roman"><font color="#ff0000"><i>N</i>sample</font>:  
+              the number of samples<br> 
+              <font color="#0000ff" size="3"><i>N</i>post</font><font size="3">: 
+              the number of post-trigger samples<br>
+              <br>
+              Each number of samples is specified as follows.</font></font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="59"></td>
+            <td vAlign="top" width="482" height="59">
+              <blockquote>
+                <p><font face="Times New Roman"><font size="3">1 </font>&lt;=&nbsp;<font size="3"> </font><font color="#0000ff" size="3"><i>N</i>post</font><font size="3"> 
+                </font>&lt;=&nbsp; <font size="3">524287<br> 
+                1 </font>&lt;=&nbsp;<font size="3"> </font><font color="#ff0000" size="3"><i>N</i>sample</font><font size="3"> 
+                </font>&lt;= <font size="3">(524288 - </font><font color="#0000ff" size="3"><i>N</i>post</font><font size="3">)</font></font></p> 
+              </blockquote>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="523" colSpan="2" height="1"><font size="3" face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="523" colSpan="2" height="154">
+              <ul>
+                <li><font size="3"><font face="Times New Roman">For stop-trigger without delay<br> 
+                  </font>
+                  </font><font face="Times New Roman"><img src="Attentions04.gif" border="0" width="406" height="118"></font></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="59"></td>
+            <td vAlign="top" width="482" height="59"><font face="Times New Roman"><font color="#ff0000"><i>N</i>sample</font>:  
+              the number of samples<br> 
+              <br>
+              The number of samples is specified as follows.</font></td> 
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="40"></td>
+            <td vAlign="top" width="482" height="40">
+              <blockquote>
+                <p><font face="Times New Roman">1 &lt;=&nbsp;<i> </i><font color="#ff0000"><i>N</i>sample</font>  
+                &lt;= 524288</font></p> 
+              </blockquote>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="523" colSpan="2" height="1"><font size="3" face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="523" colSpan="2" height="189">
+              <ul>
+                <li><font size="3"><font face="Times New Roman">For stop-trigger with post-trigger delay<br> 
+                  </font>
+                  </font><font face="Times New Roman"><img src="Attentions05.gif" border="0" width="406" height="165"></font></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="97"></td>
+            <td vAlign="top" width="482" height="97"><font face="Times New Roman"><font color="#ff0000"><i>N</i>sample</font>:  
+              the number of samples<br> 
+              <font size="3"><i>N</i>pre: the number of pre-trigger samples<br>
+              <font color="#0000ff"><i>N</i>post</font>: the number of 
+              post-trigger samples<br>
+              <br>
+              Each number of samples is specified as follows.</font></font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="135"></td>
+            <td vAlign="top" width="482" height="135">
+              <blockquote>
+                <p><font face="Times New Roman"><font size="3"><font color="#ff0000"><i>N</i>sample</font> = <i>N</i>pre 
+                + <font color="#0000ff"><i>N</i>post<br>
+                </font>2 </font>&lt;=&nbsp;<font size="3"> </font><font color="#ff0000" size="3"><i>N</i>sample</font><font size="3"> 
+                </font>&lt;=&nbsp;<font size="3"> 524288<br>
+                1 </font>&lt;=&nbsp;<font size="3"> </font><font color="#0000ff" size="3"><i>N</i>post</font><font size="3"> 
+                </font>&lt;=&nbsp; <font size="3">262144<br> 
+                1 </font>&lt;=&nbsp;<font size="3"> <i>N</i>pre </font>&lt;=&nbsp;<font color="#0000ff" size="3"> 
+                </font><font size="3">(524288 - 1024 * <i>n</i>)</font></font></p> 
+              </blockquote>
+              <p><font face="Times New Roman"><font size="3">A number of <i>n</i> is the minimum value to be  
+              satisfied with the condition of&nbsp;<font color="#0000ff"><i>N</i>post</font>  
+              </font>&lt;=&nbsp;<font size="3"> (1024 * <i>n</i>).</font></font></p> 
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="523" colSpan="2" height="1"><font size="3" face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" colSpan="2" height="342">
+              <ul>
+                <li><font size="3"><font face="Times New Roman">For start/stop-trigger without delay<br> 
+                  The sampling will be completed when the specified number of  
+                  samples is retrieved before a stop-trigger is asserted.<br> 
+                  <img src="Attentions06.gif" border="0" width="542" height="93"><br>
+                  <br>
+                  The sampling will be completed when a stop-trigger is asserted  
+                  even if the specified number of samples is not retrieved.<br> 
+                  </font>
+                  </font><font face="Times New Roman"><img src="Attentions07.gif" border="0" width="364" height="125"></font></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="59"></td>
+            <td vAlign="top" width="482" height="59"><font face="Times New Roman"><font color="#ff0000"><i>N</i>sample</font>:  
+              the number of samples<br> 
+              <br>
+              The number of samples is specified as follows.</font></td> 
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="40"></td>
+            <td vAlign="top" width="482" height="40">
+              <blockquote>
+                <p><font face="Times New Roman">1 &lt;= <font color="#ff0000"><i>N</i>sample</font> &lt;=  
+                524288</font></p>
+              </blockquote>
+            </td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="35" height="19"><font face="Times New Roman">Note:</font></td>
+            <td vAlign="top" height="19"><font face="Times New Roman"><font size="3">The delay cannot be 
+              specified in start/stop-trigger. The start/stop-trigger are 
+              applicable to the PCI-3161[12]C02 or later or PCI-3163[13]C04 or 
+              later. </font>(<a href="../VerAndChno.htm">Hardware 
+              Version and Change Number</a></font>)</td>
+          </tr>
+        </table>
+      </td>      
+    </tr>      
+  </table>      
+</blockquote>      
+      
+<p> </p>  
+      
+<hr>      
+      
+    
+<p align="right"><font face="Times New Roman">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>                 
+       
+</body>       
+</html>       

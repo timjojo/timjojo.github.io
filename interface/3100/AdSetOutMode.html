@@ -1,0 +1,341 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdSetOutMode</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdSetOutMode</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The AdSetOutMode function controls the external output signals.&nbsp;
+      </td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" height="21" valign="top"><font face="Courier New">INT
+          AdSetOutMode(</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">HANDLE&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <b></b><font face="Courier New"><i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">ULONG&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <font face="Courier New"><i>ulExTrgMode,</i></font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">ULONG&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <i><font face="Courier New">ulExClkMode</font></i></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top">
+    <font face="Courier New">
+    );</font>
+        </td>
+        <td width="470" height="21" colspan="2" valign="top"></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="4" width="492" height="21" valign="top"><font face="Courier New">Declare
+          Function AdSetOutMode Lib _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="22" height="21" valign="top"> <font face="Courier New"> ByVal&nbsp;</font></td>
+        <td width="1" height="21" valign="top"> <i><font face="Courier New">hDeviceHandle</font></i>  </td>
+        <td width="539" height="21" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="22" height="20" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="212" height="21" valign="top"> <font face="Courier New"><i>ulExTrgMode</i></font></td>
+        <td width="469" height="20" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="22" height="20" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="212" height="21" valign="top"> <i><font face="Courier New">ulExClkMode</font></i></td>
+        <td width="469" height="20" valign="top"> <font face="Courier New">  As
+          Long _</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="4" height="21" valign="top">
+    <font face="Courier New">
+    ) As Long</font></td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" valign="top"><font face="Courier New">function
+          AdSetOutMode(</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="17" valign="top"><i><font face="Courier New">hDeviceHandle</font></i><b></b></td>
+        <td width="453" valign="top"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="269" height="21" valign="top"> <font face="Courier New"><i>ulExTrgMode</i></font></td>
+        <td width="453" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="269" height="21" valign="top"> <i><font face="Courier New">ulExClkMode</font></i></td>
+        <td width="453" valign="top"> <font face="Courier New"> :&nbsp;Cardinal</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3" valign="top">
+    <font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+</blockquote>
+
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+<blockquote>
+  <table border="0" width="359" cellspacing="1" height="1">
+    <tr>
+      <td valign="top" nowrap width="71" height="1"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td valign="top" width="449" height="1">Specifies the device
+        handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="520" height="21" colspan="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="1"><font face="Courier New"><i>ulExTrgMode</i></font></td>
+      <td valign="top" width="449" height="1">Specifies
+        one of the external trigger output conditions by using the following
+        codes.
+        <table border="1" width="100%">
+          <tr>
+            <td width="32%" align="center"><b>Code</b></td>
+            <td width="30%" align="center"><b>Value&nbsp;</b></td>
+            <td width="106%" align="center"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="32%" valign="top">AD_DISABLE</td>
+            <td width="30%" align="center">0x80000000</td>
+            <td width="106%">No external trigger output<br>
+              (default setting value)</td>
+          </tr>
+          <tr>
+            <td width="32%">AD_TRIG_MODE</td>
+            <td width="30%" align="center">2</td>
+            <td width="106%">Trigger timing</td>
+          </tr>
+          <tr>
+            <td width="32%">AD_BUSY_MODE</td>
+            <td width="30%" align="center">3</td>
+            <td width="106%">Sampling status</td>
+          </tr>
+          <tr>
+            <td width="32%">AD_POST_MODE</td>
+            <td width="30%" align="center">4</td>
+            <td width="106%">Post trigger timing</td>
+          </tr>
+          <tr>
+            <td width="32%">AD_SMP1_MODE</td>
+            <td width="30%" align="center">6</td>
+            <td width="106%">Sampling status 1 output</td>
+          </tr>
+          <tr>
+            <td width="32%">AD_SMP2_MODE</td>
+            <td width="30%" align="center">7</td>
+            <td width="106%">Sampling status 2 output</td>
+          </tr>
+        </table>
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="520" height="1" colspan="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="1"><i><font face="Courier New">ulExClkMode</font></i></td>
+      <td valign="top" width="449" height="1">Points to a variable to
+        receive the external clock output condition. The external clock output
+        is specified by the following codes.
+        <table border="1" width="100%">
+          <tr>
+            <td width="31%" align="center"><b>Code</b></td>
+            <td width="30%" align="center"><b>Value</b></td>
+            <td width="108%" align="center"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="31%" valign="top">AD_DISABLE</td>
+            <td width="30%" align="center">0x80000000</td>
+            <td width="108%">The external clock output is disabled.</td>
+          </tr>
+          <tr>
+            <td width="31%" valign="top">AD_ENABLE</td>
+            <td width="30%" align="center">5</td>
+            <td width="108%">The external clock output is enabled.</td>
+          </tr>
+        </table>
+      </td> 
+    </tr> 
+  </table> 
+</blockquote>
+</blockquote>
+
+<blockquote> 
+ 
+ <p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="537" cellspacing="1">
+    <tr>
+      <td width="529" valign="top">
+  <font SIZE="3">The </font><font color="#000000">AdSetOutMode</font><font color="#FF00FF">
+  </font>
+  <font SIZE="3"> function returns AD_ERROR_SUCCESS if the
+  process is successfully completed. </font>Otherwise, this function returns another code.
+  Please refer to the <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+ <p><strong><font face="Times New Roman" size="4">Comments</font></strong></p> 
+ 
+  <table border="0" width="593" cellspacing="1" height="19">
+    <tr>
+      <td width="585" valign="top" height="1">
+  <blockquote>
+    This function is not available while the sampling is running.<Br>
+    <br>
+    Refer to <a href="Structure/SetOutMode.htm">"List of Capability"</a> for supported functions. 
+  
+   
+  </blockquote>
+      </td>
+    </tr>
+  </table>
+ 
+</blockquote> 
+ 
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Examples</font></strong></p>
+
+  <blockquote>
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td>nRet = AdSetOutMode( hDeviceHandle, AD_TRIG_MODE,&nbsp; AD_ENABLE );</td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td>nRet = AdSetOutMode( hDeviceHandle, AD_TRIG_MODE,&nbsp; _ AD_ENABLE&nbsp;
+          )</td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td>nRet := AdSetOutMode( hDeviceHandle, AD_TRIG_MODE,&nbsp; AD_ENABLE
+          );</td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+</blockquote>
+
+<blockquote> 
+  <blockquote> 
+  <table border="0" width="518" cellspacing="1">
+    <tr>
+      <td valign="top" width="510">
+Configure the external output signal as followings on the board/card specified by
+hDeviceHandle.
+<table border="1" cellspacing="1" width="57%">
+  <tr>
+    <td width="50%">External trigger output</td>
+    <td width="50%">Trigger timing</td>
+  </tr>
+  <tr>
+    <td width="50%">External clock output</td>
+    <td width="50%">Enable</td>
+  </tr>
+</table>
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

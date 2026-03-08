@@ -1,0 +1,710 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdInputAD</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdInputAD</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td>
+  The AdInputAD function performs one-shot sampling.<br>
+  The AdInputAD function uses only the analog-to-digital input function, which
+  differs from the normal continuous sampling input by <a href="AdStartSampling.html">AdStartSampling</a>
+  function.</td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td colspan="3" width="472"><font face="Courier New" size="3">INT AdInputAD(</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="132"> <font face="Courier New" size="3"> HANDLE&nbsp;</font></td>
+        <td width="306"> <font face="Courier New" size="3"> <i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="22"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="132"> <font face="Courier New" size="3"> ULONG&nbsp;</font></td>
+        <td width="306"> <font face="Courier New" size="3"> <em>ulCh</em>,</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="132"> <font face="Courier New" size="3"> ULONG&nbsp;</font></td>
+        <td width="306"> <font face="Courier New" size="3"> <em>ulSingleDiff</em>,</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="132"> <font face="Courier New" size="3"> PADSMPLCHREQ&nbsp;</font></td>
+        <td width="306"> <font face="Courier New" size="3"> <em>lpAdSmplChReq</em>,</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="132"> <font face="Courier New" size="3"> LPVOID&nbsp;</font></td>
+        <td width="306"> <em><font face="Courier New" size="3">lpData</font></em></td>
+      </tr>
+      <tr>
+        <td width="22">
+    <font face="Courier New" size="3">
+    );</font> 
+        </td>
+        <td width="444" colspan="2"></td>
+      </tr>
+    </table>
+  </blockquote>
+
+  <p>
+  <b>Visual Basic</b><strong><font face="Times New Roman" size="3">&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="140">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New" size="3">Declare Function AdInputAD &quot;FbiAd.DLL&quot;
+          ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="62"> <font face="Courier New" size="3"> ByVal&nbsp;</font>
+        </td>
+        <td width="135"> <font face="Courier New" size="3"> <i>hDeviceHandle</i> </font>
+        </td>
+        <td width="243"> <font face="Courier New" size="3"> As Long, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="62"> <font face="Courier New" size="3"> ByVal&nbsp;</font>
+        </td>
+        <td width="135"> <font face="Courier New" size="3"> <em>ulCh</em> &nbsp;</font>
+        </td>
+        <td width="243"> <font face="Courier New" size="3"> As Long, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="62"> <font face="Courier New" size="3"> ByVal&nbsp;</font>
+        </td>
+        <td width="135"> <font face="Courier New" size="3"> <em>ulSingleDiff</em> </font>
+        </td>
+        <td width="243"> <font face="Courier New" size="3"> As Long, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="62"> <font face="Courier New" size="3"> ByRef&nbsp;</font>
+        </td>
+        <td width="135"> <font face="Courier New" size="3"> <em>lpAdSmplChReq</em> </font>
+        </td>
+        <td width="243"> <font face="Courier New" size="3"> As ADSMPLCHREQ, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="62"> <font face="Courier New" size="3"> ByRef&nbsp;</font> 
+        </td>
+        <td width="135"> <font face="Courier New" size="3"> <em>lpData</em>  &nbsp;</font> 
+        </td>
+        <td width="243"> <font face="Courier New" size="3">  As Any _</font> 
+        </td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4">
+    <p ALIGN="JUSTIFY"> 
+    <font face="Courier New" size="3"> 
+    ) As Long</font> 
+    </p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+
+  <p> 
+  <b>Delphi</b><strong><font face="Times New Roman" size="3">&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450" height="1">
+      <tr>
+        <td colspan="4" width="472" height="20">
+    <font face="Courier New">
+    function AdInputAD(</font></td>
+      </tr>
+      <tr>
+        <td width="47" colspan="2" height="21"></td>
+        <td width="140" height="21"><em><font face="Courier New">hDeviceHandle</font></em>
+        </td>
+        <td width="273" height="21"><font face="Courier New">: THandle;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="47" colspan="2" height="21"></td>
+        <td width="140" height="21"><font face="Courier New"><em>ulCh</em> &nbsp;</font>
+        </td>
+        <td width="273" height="21"> <font face="Courier New"> : Cardinal;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="47" colspan="2" height="21"></td>
+        <td width="140" height="21"><font face="Courier New"><em>ulSingleDiff</em></font>
+        </td>
+        <td width="273" height="21"> <font face="Courier New"> : Cardinal;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="9" height="1"></td>
+        <td width="32" height="1"><font face="Courier New">var</font></td>
+        <td width="140" height="1"><font face="Courier New"> <em>lpAdSmplChReq</em> 
+          </font> 
+        </td>
+        <td width="273" height="1"><font face="Courier New">: ADSMPLCHREQ;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="47" colspan="2" height="1"></td>
+        <td width="140" height="1"><font face="Courier New"><em>lpData</em> &nbsp;</font>
+        </td>
+        <td width="273" height="1"> <font face="Courier New"> : Pointer</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4" height="1">
+    <p ALIGN="JUSTIFY"> 
+    <font face="Courier New"> 
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font></p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="115" height="21"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td valign="top" width="423">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="115" height="21"></td>
+      <td valign="top" width="423">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="115" height="21"><em><font face="Courier New">ulCh</font></em></td>
+      <td valign="top" width="423"><font SIZE="3">Specifies the number of
+        channels to acquire samples. The settable range is 1 through the number
+        of channels that the boards/cards provide.</font></td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="115" height="21"></td>
+      <td valign="top" width="423">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="115" height="21"><em><font face="Courier New">ulSingleDiff</font></em></td>
+      <td valign="top" width="423">Specifies an input configuration by using the
+        following codes.
+        <table border="1" width="300">
+          <tr>
+            <td align="center" width="143"><b>Code</b></td>
+            <td align="center" width="143"><b>Description</b> </td>
+          </tr>
+          <tr valign="top">
+            <td width="143">AD_INPUT_SINGLE</td>
+            <td width="143">Single-ended </td>
+          </tr>
+          <tr valign="top">
+            <td width="143">AD_INPUT_DIFF</td>
+            <td width="143">Differential</td>
+          </tr>
+        </table></td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="115" height="21"></td>
+      <td valign="top" width="423">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="115" height="21"><em><font face="Courier New">lpAdSmplChReq</font></em></td>
+      <td valign="top" width="423">Points to an array of the <a href="Structures.html#13.6.2 ADSMPLCHREQ Structure"> ADSMPLCHREQ</a>
+        structure
+        containing sampling conditions.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="115" height="21"></td>
+      <td valign="top" width="423">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="115" height="21"><em><font face="Courier New">lpData</font></em></td>
+      <td valign="top" width="423">Points to a variable to receive samples and
+        stores the analog-to-digital input data.&nbsp;</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td>
+  The AdInputAD function returns AD_ERROR_SUCCESS if the process is successfully
+  completed. Otherwise, this function returns another code. Please refer to the
+  <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Comments</font></strong></p>
+<blockquote>
+  <table border="0" cellspacing="1" width="551">
+    <tr>
+      <td width="543">
+        <ul>
+          <li><font SIZE="3">The ulCh parameter contains the number of
+        channels to sample. For example, if you want to sample channel 1,
+        channel 3, channel 5, and channel 7, specify 4 to ulCh.</font></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="543">
+        <ul>
+          <li><font size="3">This function stores the channel number to input to
+            ulChNo of the <a href="Structure/Structure4.htm">ADSMPLCHREQ</a>
+            function.</font></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="543">
+        <ul>
+          <li><font SIZE="3">This function is not available while the
+        continuous sampling is running.</font></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="543">
+        <ul>
+          <li><font SIZE="3">When multiple channels are specified in the following boards/cards, 
+          the scan clock differs from when the channel is fixed.
+           Change the setting of scan clock by the <a href="AdSetSamplingConfig.html">AdBmSetSamplingConfig</a> 
+           function and change the AD conversion timing. <br>
+            <font color="#ff0000">PCI-321516<br>
+            LPC-321116, LPC-321216, LPC-361116, LPC-361216<br>
+            PEX-321116, PEX-321216, PEX-361116, PEX-361216<br>
+            CSI/CBI-320412, CBI-320412TR, CBI-320412TK, CBI-320412TL,
+            CSI/CBI-320416, CBI-320416TR, CBI-320416TK, CBI-320416TL,&nbsp;<br>
+            CSI/CBI-360112, CBI-360112TR, CBI-360112TK, CBI-360112TL,
+            CSI/CBI-360116, CBI-360116TR, CBI-360116TK, CBI-360116TL</font></font></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="543">
+        <ul>
+          <li><font color="#000000">For the bus master boards/cards (except
+            for the PCI/CPZ-3525), the
+            timing of AD conversion depends on the sampling frequency configured
+            by the <a href="AdSetSamplingConfig.html"> AdSetSamplingConfig</a> function.</font><font color="#000000">
+            The time required for the function is the time configured by the scan clock times the number of channel.</font></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="543">
+        <ul>
+          <li>Data unit depends on the resolution of the board/card. Please
+      refer to&nbsp;&quot;<a href="Data%20Format.html">Data format</a>,&quot; and the following table.
+      <table border="1" width="501" height="125">
+        <tr>
+          <td width="80" height="19" align="center" rowspan="2"><b>Resolution</b></td>
+          <td width="574" height="19" align="center" rowspan="2"><b>Data Unit (byte)</b></td>
+          <td width="1207" height="10" align="center" colspan="3"><b>Language</b></td>
+        </tr>
+        <tr>
+          <td width="100" height="9" align="center"><b>C</b></td>
+          <td width="100" height="9" align="center"><b>Visual Basic</b></td>
+          <td width="101" height="9" align="center"><b>Delphi</b></td>
+        </tr>
+        <tr>
+          <td width="80" height="19" valign="top">8 bits</td>
+          <td width="574" height="19" align="center" valign="top">1</td>
+          <td width="100" height="19" valign="top">BYTE</td>
+          <td width="100" height="19" valign="top">Byte</td>
+          <td width="101" height="19" valign="top">Byte</td>
+        </tr>
+        <tr>
+          <td width="80" height="19" valign="top">12 bits</td>
+          <td width="574" height="19" align="center" valign="top">2</td>
+          <td width="100" height="19" valign="top">WORD</td>
+          <td width="100" height="19" valign="top">Integer</td>
+          <td width="101" height="19" valign="top">Word</td>
+        </tr>
+        <tr>
+          <td width="80" height="19" valign="top">16 bits</td>
+          <td width="574" height="19" align="center" valign="top">2</td>
+          <td width="100" height="19" valign="top">WORD</td>
+          <td width="100" height="19" valign="top">Integer</td>
+          <td width="101" height="19" valign="top">Word</td>
+        </tr>
+        <tr>
+          <td width="80" height="19" valign="top">24 bits</td>
+          <td width="574" height="19" align="center" valign="top">4</td>
+          <td width="100" height="19" valign="top">DWORD</td>
+          <td width="100" height="19" valign="top">Long</td>
+          <td width="101" height="19" valign="top">Dword</td>
+        </tr>
+      </table>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Examples</font></strong></p>
+
+  <blockquote>
+  <p><font face="Times New Roman" size="3"><strong>C</strong></font></p> 
+  <blockquote>
+    <table border="0" width="482" cellspacing="1">
+      <tr>
+        <td height="21" width="474">
+    <font face="Courier New" size="3">
+    WORD pData[4];</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+    <font face="Courier New" size="3">
+    ADSMPLCHREQ SmplChReq[4];</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+    <font face="Courier New" size="3">
+    SmplChReq[0].ulChNo = 1;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+    <font face="Courier New" size="3">
+    SmplChReq[0].ulRange = AD_5V;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+    <font face="Courier New" size="3">
+    SmplChReq[1].ulChNo = 3;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+    <font face="Courier New" size="3">
+    SmplChReq[1].ulRange = AD_5V;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="22" width="474">
+    <font face="Courier New" size="3">
+    SmplChReq[2].ulChNo = 5;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+    <font face="Courier New" size="3">
+    SmplChReq[2].ulRange = AD_5V;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+    <font face="Courier New" size="3">
+    SmplChReq[3].ulChNo = 7;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+    <font face="Courier New" size="3">
+    SmplChReq[3].ulRange = AD_5V;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="474">
+    nRet = AdInputAD( hDeviceHandle, 4, AD_INPUT_SINGLE, &amp;SmplChReq[0],
+    pData );
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p>
+  <strong><font face="Times New Roman" size="3">Visual Basic
+  </font></strong>
+  </p>
+  <blockquote>
+    <table border="0" width="482" cellspacing="1" height="172">
+      <tr>
+        <td height="20">
+    <font face="Courier New" size="3">
+    Dim Data(3) As Integer</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+    <font face="Courier New" size="3">
+    Dim SmplChReq(3) As ADSMPLCHREQ</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+    <font face="Courier New" size="3">
+    SmplChReq(0).ulChNo = 1</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+    <font face="Courier New" size="3">
+    SmplChReq(0).ulRange = AD_5V</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+    <font face="Courier New" size="3">
+    SmplChReq(1).ulChNo = 3</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+    <font face="Courier New" size="3">
+    SmplChReq(1).ulRange = AD_5V</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+    <font face="Courier New" size="3">
+    SmplChReq(2).ulChNo = 5</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+    <font face="Courier New" size="3">
+    SmplChReq(2).ulRange = AD_5V</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+    <font face="Courier New" size="3">
+    SmplChReq(3).ulChNo = 7</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="20">
+    <font face="Courier New" size="3">
+    SmplChReq(3).ulRange = AD_5V</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+        </td>
+      </tr>
+      <tr>
+        <td height="1">
+    nRet = AdInputAD( hDeviceHandle, 4, AD_INPUT_SINGLE, SmplChReq(0), Data(0) )
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p> 
+  <strong><font face="Times New Roman" size="3">Delphi
+  </font></strong>
+  </p>
+  <blockquote>
+    <table border="0" width="482" cellspacing="1">
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    var</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    &nbsp;&nbsp;&nbsp; SmplChReq: array[0..3] of ADSMPLCHREQ;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    &nbsp;&nbsp;&nbsp; pData: Pointer;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    pData := AllocMem(SizeOf(Word) * 4 );
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    SmplChReq[0].ulChNo := 1;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    SmplChReq[0].ulRange := AD_5V;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    SmplChReq[1].ulChNo := 3;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    SmplChReq[1].ulRange := AD_5V;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    SmplChReq[2].ulChNo := 5;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    SmplChReq[2].ulRange := AD_5V;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    SmplChReq[3].ulChNo := 7;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    <font face="Courier New" size="3">
+    SmplChReq[3].ulRange := AD_5V;</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+        </td>
+      </tr>
+      <tr>
+        <td height="21">
+    nRet := AdInputAD( hDeviceHandle, 4, AD_INPUT_SINGLE, SmplChReq[0], pData );
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top">
+Acquire data from channel 1, channel 3, channel 5, and channel 7 on the board/card
+specified by
+hDeviceHandle.
+          Please refer to the sample programs listed below.
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+<b>Sample Programs for Software Paced Sampling&nbsp;</b>
+
+      <table border="1" width="382" height="124">
+        <tr>
+          <td height="19" width="164" align="center"><b>Programming Language</b></td>
+          <td height="19" width="202" align="center"><b>File</b></td>
+        </tr>
+        <tr>
+          <td height="19" width="164" valign="top">Visual C++ (C)</td>
+          <td height="19" width="202" valign="top">AdSmpl_C.c (SamplingDlgProc)</td>
+        </tr>
+        <tr>
+          <td height="18" width="164" valign="top">Visual C++ (C++)</td>
+          <td height="18" width="202" valign="top">SamplingDlg.cpp</td>
+        </tr>
+        <tr>
+          <td height="19" width="164" valign="top">Visual Basic</td>
+          <td height="19" width="202" valign="top">Form3.frm</td>
+        </tr>
+        <tr>
+          <td height="19" width="164" valign="top">Delphi</td>
+          <td height="19" width="202" valign="top">Unit3.pas</td>
+        </tr>
+      </table>
+
+      </td>
+    </tr>
+  </table>
+  </blockquote> 
+</blockquote> 
+ 
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Interpolation</title>
+</head>
+
+<body>
+
+<p><font face="Arial" size="5"><b>10. Interpolation</b></font></p>
+
+<blockquote>
+  <blockquote>
+  <table border="0" width="550" height="19">
+    <tr>
+      <td height="15" valign="top">
+  The GPF-3100 provides the interpolation capability to reduce quantization error by the analog-to-digital conversion.
+  This product adopts the linear
+  interpolation. This product adopts the linear interpolation. When an
+  interpolation parameter <i>n</i> is given, new data of (<i>n</i>-1) points are
+  generated between two data sampled from a source waveform. Where we assume
+  that the sampled source waveform described by a series of data <i>x</i><sub><i>k</i></sub> (<i>k</i> = 1, 2, . . . ,
+  <i>N</i>), (<i>N</i> is the number of data that consist of the source
+  waveform sampled), new points of data <i>x</i><sub><i>k</i>, 0 </sub> (= <i>x</i><sub><i>k</i></sub>),
+  <i>x</i><sub><i>k</i>, 1</sub> <i>x</i><sub><i>k</i>, 2</sub>, . . , <i>x</i><sub><i>k</i>,
+  <i>
+  j</i></sub>,
+  . . . , <i>x</i><sub><i>k</i>, <i> n</i></sub> (= <i>x</i><sub><i>k</i>+1</sub>) between
+  <i>x</i><sub><i>k</i></sub> and <i>x</i><sub><i>k</i>+1</sub> are calculated as follows:
+      </td>
+    </tr>
+    <tr>
+      <td height="15" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td height="15" valign="top">
+  <blockquote>
+  <i>x</i><sub><i>k</i>, <i> j</i> </sub>= <i>x</i><sub><i>k</i></sub>+ (<i>x</i><sub><i>k</i>+1</sub>-<i>x</i><sub><i>k</i></sub>) *
+  (<i>j</i> /
+  <i> n</i>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where <i>j</i> = 0, 1,
+  . . . , <i>n</i>.
+  </blockquote>
+      </td>
+    </tr>
+    <tr>
+      <td height="15" valign="top">
+  As a result, the sampling rate of the new waveform results in <i>n</i>-times that of
+  the source waveform. The new waveform consists of (<i>Nn</i> - <i> n</i> + 1)
+  points of data. When you use the <a href="AdDataConv.html">AdDataConv</a> function,
+      specify AD_CONV_SMOOTH and <i> n</i> for uEffect and uCount, respectively.
+      </td>
+    </tr>
+    <tr>
+      <td height="15" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td height="15" valign="top">
+      <img border="0" src="Interporation1.gif" width="435" height="235">
+      </td>
+    </tr>
+    <tr>
+      <td height="15" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td height="15" valign="top">
+      <img border="0" src="interpolation2.gif" width="435" height="235">
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+  <hr>
+
+  <p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+  Corporation. All rights reserved.
+  </font></p>
+  <p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

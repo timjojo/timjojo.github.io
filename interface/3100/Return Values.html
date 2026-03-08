@@ -1,0 +1,210 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Return Values</title>
+</head>
+
+<body>
+
+<b><font face="Arial" size="4">11.5 Return Values</font><font face="Arial" size="5"><br>
+</font><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></b><font size="3">
+
+</font>
+
+<table BORDER="1" width="676" cellspacing="1" height="1237">
+  <tr>
+    <td valign="top" width="297" height="19"><p ALIGN="CENTER"><strong><font face="Times New Roman" size="3">Error
+      Code</font></strong></td>
+    <td valign="top" width="157" height="19">
+    <font size="3">
+    <p ALIGN="CENTER"><strong><font face="Times New Roman">Description</font></strong>
+</font>
+    </td>
+    <td valign="top" width="200" height="19">
+    <font size="3">
+    <p ALIGN="CENTER"><strong><font face="Times New Roman">Comment/Solution</font></strong>
+</font>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="45"><font size="2">AD_ERROR_SUCCESS</font></td>
+    <td valign="top" width="157" height="45"><font face="Times New Roman" size="2">The process
+      was successfully
+      completed.</font></td>
+    <td align="center" width="200" height="45">
+      <p align="center"><font size="2">&nbsp;&nbsp;<font face="Times New Roman">-</font></font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="75"><font size="2">AD_ERROR_NOT_DEVICE</font></td>
+    <td valign="top" width="157" height="75"><font face="Times New Roman" size="2">The specified driver cannot be called.</font></td>
+    <td valign="top" width="200" height="75"><font face="Times New Roman" size="2">The specified device is not found.
+      Make sure that the board/card and the device driver correctly installed in your
+      computer.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_NOT_OPEN</font></td>
+    <td valign="top" width="157" height="30"><font size="2"><font face="Times New Roman">The specified driver</font>
+    <font face="Times New Roman">cannot be opened.</font></font></td>
+    <td valign="top" width="200" height="30"><font face="Times New Roman" size="2">Errors occurred while the system opens the device.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_INVALID_HANDLE</font></td>
+    <td valign="top" width="157" height="30"><font size="2">The device handle is invalid.</font></td>
+    <td valign="top" width="200" height="30"><font size="2">Use the device handle obtained by the
+      <a href="AdOpen.html"> AdOpen</a> function.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="75"><font size="2">AD_ERROR_ALREADY_OPEN</font></td>
+    <td valign="top" width="157" height="75"><font face="Times New Roman" size="2">The
+      specified device cannot be opened because it has already been opened by another process.</font></td>
+    <td valign="top" width="200" height="75"><font size="2">The device used by another process cannot be accessed.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="45"><font size="2">AD_ERROR_NOT_SUPPORTED</font></td>
+    <td valign="top" width="157" height="45"><font size="2" face="Times New Roman">The
+        specified capability is not supported.</font></td>
+    <td valign="top" width="200" height="45"><font size="2">The specified
+      capability cannot be used.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="75"><font size="2">AD_ERROR_NOW_SAMPLING</font></td>
+    <td valign="top" width="157" height="75"><font size="2">The sampling is running now.</font></td>
+    <td valign="top" width="200" height="75"><font size="2">The specified sampling has
+      already been called.
+      The specified function is not available while the sampling is running.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="45"><font size="2">AD_ERROR_STOP_SAMPLING</font></td>
+    <td valign="top" width="157" height="45"><font size="2">The sampling is stopped.</font></td>
+    <td valign="top" width="200" height="45"><font size="2">The specified sampling is not available while the
+      sampling has been
+    stopped.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="15"><font size="2">AD_ERROR_START_SAMPLING</font></td>
+    <td valign="top" width="157" height="15"><font size="2">The sampling is failed.</font></td>
+    <td align="center" width="200" height="15"><font size="2">-</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="45"><font size="2">AD_ERROR_SAMPLING_TIMEOUT</font></td>
+    <td valign="top" width="157" height="45"><font size="2">The time-out interval elapsed while the sampling is running.</font></td>
+    <td align="center" width="200" height="45"><font size="2">-</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_SAMPLING_FREQ</font></td>
+    <td valign="top" width="157" height="30"><font size="2">The
+      sampling frequency is invalid.</font></td>
+    <td align="center" width="200" height="30">
+      <p align="left"><font size="2">Specify correct sampling
+      frequency.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_INVALID_PARAMETER</font></td>
+    <td valign="top" width="157" height="30"><font size="2">Invalid parameters are specified.</font></td>
+    <td valign="top" width="200" height="30"><font size="2">Specify correct values.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_ILLEGAL_PARAMETER</font></td>
+    <td valign="top" width="157" height="30"><font size="2">The sampling setting is invalid.</font></td>
+    <td valign="top" width="200" height="30"><font size="2">Invalid sampling conditions are specified.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="90"><font size="2">AD_ERROR_NULL_POINTER</font></td>
+    <td valign="top" width="157" height="90"><font size="2">A NULL pointer is specified.</font></td>
+    <td valign="top" width="200" height="90"><font size="2">A NULL pointer is specified for
+      the source data in the
+      data
+    conversion function. The pointer to the buffer that receives the converted data is NULL.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="45"><font size="2">AD_ERROR_GET_DATA</font></td>
+    <td valign="top" width="157" height="45"><font size="2">The sampling data
+      could not be obtained.</font></td>
+    <td valign="top" width="200" height="45"><font size="2">
+    Sampling buffer is cleared. The sampling buffer is empty. So no data is returned.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="60"><font size="2">AD</font><font size="2">_</font><font size="2">ERROR</font><font size="2">_</font><font size="2">USED</font><font size="2">_</font><font size="2">DA</font></td>
+    <td valign="top" width="157" height="60"><font size="2">The DA driver is
+      using the specified function now.</font></td>
+    <td valign="top" width="200" height="60"><font size="2">Release the
+      functional configuration that the DA driver is using. Then, call the
+      function again.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="27"><font size="2">AD_ERROR_FILE_OPEN</font></td>
+    <td valign="top" width="157" height="27"><font size="2">Failed to open the
+      file.</font></td>
+    <td valign="top" width="200" height="27"><font size="2">The specified file
+      does not exist.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_FILE_CLOSE</font></td>
+    <td valign="top" width="157" height="30"><font size="2">Failed to close the
+      file.</font></td>
+    <td valign="top" width="200" height="30"><font size="2">Errors occurred while the file is accessed.</font> </td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_FILE_READ</font></td>
+    <td valign="top" width="157" height="30"><font size="2">Failed to read the
+      file.</font></td>
+    <td valign="top" width="200" height="30"><font size="2">Errors occurred while the file is accessed.&nbsp;</font> </td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_FILE_WRITE</font></td>
+    <td valign="top" width="157" height="30"><font size="2">Failed to write the
+      file.</font></td>
+    <td valign="top" width="200" height="30"><font size="2">Errors occurred while the file is accessed.</font> </td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_INVALID_DATA_FORMAT</font></td>
+    <td valign="top" width="157" height="30"><font size="2">The specified data
+      format is invalid.</font></td>
+    <td valign="top" width="200" height="30"><font size="2">Use valid data format.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="45"><font size="2">AD_ERROR_INVALID_AVERAGE_OR_SMOOTHING</font></td>
+    <td valign="top" width="157" height="45"><font size="2">The specified
+      averaging or interpolations are invalid.</font></td>
+    <td valign="top" width="200" height="45"><font size="2">The number of
+      averaging or interpolations is invalid.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="45"><font size="2">AD_ERROR_INVALID_SOURCE_DATA</font></td>
+    <td valign="top" width="157" height="45"><font size="2">Data specified as source is invalid.</font></td>
+    <td valign="top" width="200" height="45"><font size="2">Make sure that specified address of
+      the source data is
+      correct.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_NOT_ALLOCATE_MEMORY</font></td>
+    <td valign="top" width="157" height="30"><font size="2">Not enough memory.</font></td>
+    <td valign="top" width="200" height="30"><font size="2">Not enough memory is
+      available</font><font size="3"> </font><font size="2">to process.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="30"><font size="2">AD_ERROR_NOT_LOAD_DLL</font></td>
+    <td valign="top" width="157" height="30"><font size="2">Failed to load DLL.</font></td>
+    <td valign="top" width="200" height="30"><font size="2">Failed to load DLL. The DLL
+      was not&nbsp; found.</font></td>
+  </tr>
+  <tr>
+    <td valign="top" width="297" height="45"><font size="2">AD_ERROR_CALL_DLL</font></td>
+    <td valign="top" width="157" height="45"><font size="2">Failed to call DLL.</font></td>
+    <td valign="top" width="200" height="45"><font size="2">This function attempts to
+      control the capability that does not support in the DLL.</font></td>
+  </tr>
+</table>
+
+<hr>
+<p align="right"><font size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>
+<p align="center">[<a href="Help.htm">Top</a>]</p>
+
+</body>
+
+</html>

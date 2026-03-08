@@ -1,0 +1,236 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Averaging</title>
+</head>
+
+<body>
+
+<p><font face="Arial" size="5"><b>9. Averaging</b></font></p>
+
+<blockquote>
+  <table border="0" width="600">
+    <tr>
+      <td valign="top">Analog data can be averaged by using the <a href="AdDataConv.html">AdDataConv</a>
+  function. The following methods are supported:
+        <table border="0" width="400">
+          <tr>
+            <td valign="top">
+              <ul>
+                <li><b>Simple averaging</b></li>
+                <li><b>Shifted averaging</b></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+  <table border="0" width="600">
+    <tr>
+      <td valign="top">
+        <ul>
+          <li><b>Simple Averaging</b>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+<blockquote>
+  <table border="0" width="550" height="33">
+    <tr>
+      <td height="24" valign="top">
+      <font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &lt;------------------------------------- <i>N</i> ------------------------------------&gt;</font>
+      </td>
+    </tr>
+    <tr>
+      <td height="29" valign="top">
+      <font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &lt;--------------- <i>n</i> --------------&gt;</font>
+      </td>
+    </tr>
+    <tr>
+      <td height="24" valign="top">
+      <blockquote>
+        <table border="1" width="550">
+          <tr>
+            <td width="65" align="center">Raw Data</td>
+            <td width="65" align="center">Data</td>
+            <td width="65" align="center">Data</td>
+            <td width="65">
+              <p align="center">Data</td>
+            <td width="65" rowspan="4">
+              <p align="center">. . .</td>
+            <td width="65" align="center">Data</td>
+            <td width="65" align="center">Data</td>
+            <td width="65" align="center">Data</td>
+          </tr>
+          <tr>
+            <td width="65" rowspan="2">
+              <p align="center">|<br>
+              \/</td>
+            <td width="195" colspan="3" bgcolor="#FFFF00">&nbsp;</td>
+            <td width="195" colspan="3" bgcolor="#00FF00">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="195" colspan="3">
+              <p align="center">|<br>
+              \/</td>
+            <td width="195" colspan="3">
+              <p align="center">|<br>
+              \/</td>
+          </tr>
+          <tr>
+            <td width="65">Averaged Data</td>
+            <td width="195" colspan="3" bgcolor="#FFFF00">
+              <p align="center">Data</td>
+            <td width="195" colspan="3" bgcolor="#00FF00">
+              <p align="center">Data</td>
+          </tr>
+        </table>
+      </blockquote>
+      </td>
+    </tr>
+  </table>
+  <blockquote>
+  <table border="0" width="372">
+    <tr>
+      <td width="603" valign="top">After averaging <i> n</i> raw data by this method, the effective
+        sampling rate and the number of effective data averaged are reduced
+        to 1/<i>n</i> of their originals.&nbsp;Assume that the number of raw data is <i>N</i>, the number
+        of effective data will be <i>N</i>/<i>n</i> after the averaging. When <i> N</i> is not
+        divisible by <i>n</i>, the remainder is used for averaging. When you use the <a href="AdDataConv.html"> AdDataConv</a> function, specify AD_CONV_AVERAGE1 for uEffect and <i> n</i>
+        for uCount, respectively.</td>
+    </tr>
+    <tr>
+      <td width="603" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="603" valign="top">For the numerical formulas, please refer to the  
+      followings.</td>
+    </tr>
+    <tr>
+      <td width="603" valign="top"><img border="0" src="Average1.gif" width="587" height="211"></td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+  <table border="0" width="600">
+    <tr>
+      <td valign="top">
+        <ul>
+          <li><b>Simple Averaging</b>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+<blockquote>
+  <table border="0" width="378" height="1">
+    <tr>
+      <td height="24" width="604" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &lt;------------------------------- <i> N</i> 
+      -------------------------------&gt;</font>
+      </td>
+    </tr>
+    <tr>
+      <td height="24" width="604" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &lt;-</font>------<font face="Times New Roman">------- <i> n</i> ----------------&gt;</font>
+      </td>
+    </tr>
+    <tr>
+      <td height="24" width="604" valign="top">
+      <blockquote>
+  <table border="1" width="550" height="55">
+    <tr>
+          <td width="142" align="center">Raw Data</td>
+          <td width="71" align="center">Data</td>
+          <td width="71" align="center">Data</td>
+          <td width="71" align="center">Data</td>
+          <td width="72" align="center">Data</td>
+          <td width="65" align="center">Data</td>
+          <td width="56" align="center">Data</td>
+    </tr>
+    <tr>
+          <td width="142" align="center" rowspan="5" valign="middle">|<br>
+          \/</td>
+          <td width="225" align="center" bgcolor="#FFFF00" colspan="3">&nbsp;</td>
+          <td width="205" align="center" colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+          <td width="71" align="center" rowspan="4">|<br>
+          \/</td>
+          <td width="226" align="center" bgcolor="#00FF00" colspan="3">&nbsp;</td>
+          <td width="127" align="center" colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+          <td width="71" align="center" rowspan="3">|<br>
+          \/</td>
+          <td width="220" align="center" bgcolor="#00FFFF" colspan="3">&nbsp;</td>
+          <td width="56" align="center">&nbsp;</td>
+    </tr>
+    <tr>
+          <td width="71" align="center" rowspan="2">|<br>
+          \/</td>
+          <td width="205" align="center" bgcolor="#FF00FF" colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+          <td width="72" align="center">|<br>
+          \/</td>
+          <td width="127" align="center" colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+          <td width="142" align="center">Averaged Data</td>
+          <td width="71" align="center" bgcolor="#FFFF00">Data</td>
+          <td width="71" align="center" bgcolor="#00FF00">Data</td>
+          <td width="71" align="center" bgcolor="#00FFFF">Data</td>
+          <td width="72" align="center" bgcolor="#FF00FF">Data</td>
+          <td width="127" align="center" colspan="2">&nbsp;</td>
+    </tr>
+  </table>
+      </blockquote>
+      </td>
+    </tr>
+  </table>
+  <blockquote>
+  <table border="0" width="438" height="184">
+    <tr>
+      <td height="1" valign="top" width="587">Assume that the number of raw data is <i>N</i>. After averaging <i> n</i> raw data,
+        the number of effective data averaged is (<i>N </i>- <i>n </i>+ 1). The
+        sampling rate is not changed. When you use the <a href="AdDataConv.html"> AdDataConv</a> 
+        function, specify AD_CONV_AVERAGE2 for uEffect and
+        <i>n</i> for uCount, respectively.</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="587">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="587">For the numerical formulas, please refer to the 
+      followings.</td>
+    </tr>
+    <tr>
+      <td height="216" valign="top" width="587"><img border="0" src="Average2.gif" width="575" height="209"></td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+  <hr>
+
+  <p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+  Corporation. All rights reserved.
+  </font></p>
+  <p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdReadFile</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdReadFile</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The AdReadFile function reads the sampling data from a file. The binary and
+  CSV formats are supported.</td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p>
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" height="21" valign="top"><font face="Courier New">INT
+          AdReadFile(</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"><font face="Courier New">LPCTSTR&nbsp;</font></td>
+        <td width="356" height="21" valign="top"><font face="Courier New"><i>pszPathName</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"><font face="Courier New">PVOID&nbsp;</font></td>
+        <td width="356" height="21" valign="top"><font face="Courier New"><i>pSmplData</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"><font face="Courier New">ULONG&nbsp;</font></td>
+        <td width="356" height="21" valign="top"><i><font face="Courier New">ulFormCode</font></i></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"><font face="Courier New">);</font></td>
+        <td width="470" height="21" colspan="2" valign="top"></td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+
+  <b>Visual Basic<br>
+  </b>
+  <blockquote>
+    <table border="0" width="450" cellspacing="1">
+      <tr>
+        <td colspan="4" width="492" height="21" valign="top"><font face="Courier New">Declare
+          Function AdReadFile Lib _ &quot;FbiAdDC.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="54" height="21" valign="top"> <font face="Courier New">ByVal&nbsp;</font>
+        </td>
+        <td width="98" height="21" valign="top"> <i><font face="Courier New">pszPathName</font></i>
+        </td>
+        <td width="318" height="21" valign="top"> <font face="Courier New">As
+          String, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="54" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font>
+        </td>
+        <td width="98" height="21" valign="top"> <i><font face="Courier New">pSmplData</font></i>
+        </td>
+        <td width="318" height="21" valign="top"> <font face="Courier New">As
+          Any, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="54" height="21" valign="top"> <font face="Courier New">ByVal&nbsp;</font>
+        </td>
+        <td width="98" height="21" valign="top"> <i><font face="Courier New">ulFormCode</font></i>
+        </td>
+        <td width="318" height="21" valign="top"> <font face="Courier New">As
+          Long _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="486" colspan="4" height="21" valign="top">
+    <font face="Courier New">
+    ) As Long</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <b>Delphi<br>
+  </b>
+  <blockquote>
+    <table border="0" width="450" cellspacing="1">
+      <tr>
+        <td colspan="3" width="492">
+    <font face="Courier New">function AdReadFile(</font></td>
+      </tr>
+      <tr>
+        <td width="16"></td>
+        <td width="104"><i><font face="Courier New">pszPathName</font></i> 
+        </td>
+        <td width="366"> <font face="Courier New"> : Pointer;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16"></td>
+        <td width="104"><i><font face="Courier New">pSmplData</font></i>
+        </td>
+        <td width="366"><font face="Courier New">: Pointer;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16"></td>
+        <td width="104"><i><font face="Courier New">ulFormCode</font></i>
+        </td>
+        <td width="366"> <font face="Courier New"> : Cardinal</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3">
+    <p ALIGN="JUSTIFY">
+    <font face="Courier New">) : DWORD; stdcall; external 'FbiAdDC.DLL';</font>
+    </p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><em><font face="Courier New">pszPathName</font></em></td>
+      <td valign="top" width="484" height="21">Specifies the path to the data file which the sampling data is stored.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="555" height="21" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><em><font face="Courier New">pSmplData</font></em></td>
+      <td valign="top" width="484" height="21">Points to the buffer to store the sampling data from the file.
+        The caller software previously should allocate the buffer enough to
+        store the every data from the file.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484">
+        <table border="1" width="100%" height="75">
+          <tr>
+            <td width="44%" align="center" valign="top" height="19"><b>Data Form</b></td>
+            <td width="56%" align="center" valign="top" height="19"><b>Buffer Size</b></td>
+          </tr>
+          <tr>
+            <td width="44%" valign="top" height="19">Physical values</td>
+            <td width="56%" valign="top" height="19">The number of data * 16 bits<br>
+              (the physical value data is treated as float format. )</td>
+          </tr>
+          <tr>
+            <td width="44%" valign="top" height="19">Binary (8 bits through 24 bits)</td>
+            <td width="56%" valign="top" height="19">File size to be read</td>
+          </tr>
+        </table>
+      </td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="555" height="21" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><em><font face="Courier New">ulFormCode</font></em></td>
+      <td valign="top" width="484">Specifies the sampling data format.&nbsp;&nbsp;
+        <table border="1" width="450">
+          <tr><td valign="top" align="center" width="160"><b>Code</b></td><td align="center" width="274" valign="top"><b>Description</b></td>
+          <tr><td valign="top" width="160">AD_DATA_PHYSICAL</td><td width="274" valign="top">Physical value (voltage
+              [V] or current [mA] ) in the CSV format.</td>
+          <tr><td width="160" valign="top">AD_DATA_BIN8</td><td width="274" valign="top">8-bit
+              binary (file: binary format)</td>
+          <tr><td width="160" valign="top">AD_DATA_BIN12</td><td width="274" valign="top">12-bit
+              binary (file: binary format)</td>
+          <tr><td width="160" valign="top">AD_DATA_BIN16</td><td width="274" valign="top">16-bit
+              binary (file: binary format)</td>
+          <tr><td width="160" valign="top">AD_DATA_BIN24</td><td width="274" valign="top">24-bit
+              binary (file: binary format)</td>
+        </table></td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480" valign="top">
+  The AdReadFile function returns AD_ERROR_SUCCESS if the process is
+  successfully completed. Otherwise, this function returns another code.
+  Please refer to the <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Comment</font></strong></p>
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td width="544" valign="top">
+  The data format is not changed after reading from the file. Commas are removed
+  while reading from the CSV format file.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Examples</font></strong></p>
+
+  <blockquote>
+  <p><font face="Times New Roman" size="3"><strong>C</strong></font></p> 
+  <blockquote>
+    <table border="0" width="447" cellspacing="1">
+      <tr>
+        <td valign="top" width="439">
+    <font face="Courier New">char *pszPathName = &quot;DATA.CSV&quot;;</font>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="439">
+    <font face="Courier New">nRet = AdReadFile( pszPathName, pSmplData,
+    AD_DATA_PHYSICAL );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><font face="Times New Roman" size="3"><strong>Visual Basic</strong></font></p> 
+  <blockquote>
+    <table border="0" width="464" cellspacing="1">
+      <tr>
+        <td valign="top" width="456">
+    <font face="Courier New">Dim pszPathName As String</font>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="456">
+    <font face="Courier New">pszPathName = &quot;DATA.CSV&quot; &amp; Chr(0)</font>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="456">
+    <font face="Courier New">nRet = AdReadFile( pszPathName, pSmplData, _ AD_DATA_PHYSICAL )</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p> 
+  <strong><font face="Times New Roman" size="3">Delphi
+  </font></strong>
+  </p> 
+  <blockquote>
+    <table border="0" width="447" cellspacing="1">
+      <tr>
+        <td valign="top">
+    <font face="Courier New">
+    var</font>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+    <font face="Courier New">&nbsp;&nbsp; pszPathName: array[0..15] of Char;</font>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+        <font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+    <font face="Courier New">StrCopy(pszPathName, 'DATA.CSV');</font>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+    <font face="Courier New">nRet := AdReadFile( pszPathName, pSmplData, AD_DATA_PHYSICAL );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+Read samples from the DATA CSV file in CSV data format into the pSmplData
+array.
+
+      </td>
+    </tr>
+  </table>
+  </blockquote> 
+</blockquote> 
+ 
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

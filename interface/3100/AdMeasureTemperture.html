@@ -1,0 +1,286 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdMeasureTemprature</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdMeasureTemperature </font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td>
+  The AdMeasureTemperature <font SIZE="3">function reads temperature of the I/O
+  connector on the board/card. This function is applicable to the PCI-3179 and CTP/CPZ-3179.</font></td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><font face="Times New Roman" size="3"><strong>C</strong></font></p> 
+  <blockquote>
+    <table border="0" width="478" cellspacing="1">
+      <tr>
+        <td colspan="3" width="781"><font face="Courier New" size="3">INT AdMeasureTemperature(</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="62"> <font face="Courier New" size="3"> HANDLE</font></td>
+        <td width="685"> <font face="Courier New" size="3"> <i>hDeviceHandle</i>,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="62"> <font face="Courier New" size="3"> float</font></td>
+        <td width="685"> <font face="Courier New" size="3"> *<i>fTemperature</i>&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="22">
+    <font face="Courier New" size="3">
+    );</font>
+        </td>
+        <td width="753" colspan="2"></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p>
+  <b>Visual Basic
+  </b>
+  </p> 
+  <blockquote>
+    <table border="0" width="478" cellspacing="1">
+      <tr>
+        <td colspan="4" width="492" height="21"><font face="Courier New" size="3">Declare Function AdMeasureTemperature Lib
+          _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="21" height="21"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="69" height="21"> <font face="Courier New" size="3"> ByVal</font></td>
+        <td width="140" height="21"> <font face="Courier New" size="3"> <i> hDeviceHandle</i> </font></td>
+        <td width="256" height="21"> <font face="Courier New" size="3"> As Long,
+          _</font></td>
+      </tr>
+      <tr>
+        <td width="21" height="21"></td>
+        <td width="69" height="21"> <font face="Courier New" size="3"> ByRef&nbsp;</font></td>
+        <td width="140" height="21" valign="top"> <font face="Courier New" size="3"> <i>Temperature</i> </font></td>
+        <td width="256" height="21"> <font face="Courier New" size="3"> As
+          Single _</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="4" height="21">
+    <font face="Courier New" size="3">
+    ) As Long</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p> 
+  <b>Delphi
+  </b>
+  </p> 
+  <blockquote>
+    <table border="0" width="478" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">function AdMeasureTemperature(</font></td>
+      </tr>
+      <tr>
+        <td width="50" colspan="2"></td>
+        <td width="132"><i><font face="Courier New">hDeviceHandle</font></i></td>
+        <td width="278"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="12"></td>
+        <td width="32"><font face="Courier New"> var</font></td>
+        <td width="132"> <font face="Courier New"> <i> fTemperature</i></font></td>
+        <td width="278"> <font face="Courier New"> : </font> <font face="Courier New" size="3"> Single</font></td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4">
+    <font face="Courier New">
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New" size="3">hDeviceHandle</font></i></td>
+      <td valign="top" width="484" height="21" colspan="2">Specifies the device handle obtained by the
+        <a href="AdOpen.html">
+        AdOpen</a> function.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="1"></td>
+      <td valign="top" width="484" height="1" colspan="2">&nbsp;&nbsp;&nbsp;
+      </td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="1"><font face="Courier New" size="3"><i> fTemperature</i><b>&nbsp; </b></font></td>
+      <td valign="top" width="484" height="1" colspan="2">Points to a variable to receive the
+        measured temperature.</td> 
+    </tr>
+    <tr> 
+      <td valign="top" nowrap width="71" height="1"></td>
+      <td valign="top" width="44" height="1">Note:</td> 
+      <td valign="top" width="440" height="1">Centigrade temperature is
+        retrieved as the measured temperature.</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="550">
+    <tr>
+      <td>
+  <p>The AdMeasureTemprature function returns AD_ERROR_SUCCESS if the process is
+  successfully completed. Otherwise, this function returns another code. Please refer to
+  the <a href="Return%20Values.html"> error codes</a>. </p>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Comment</font></strong></p>
+<blockquote>
+  <table border="0" width="546">
+    <tr>
+      <td width="538">This function can measure temperature at every 0.25 &deg;C
+        (32.45 &deg;F). The temperature
+        range is 0 &deg;C to 50 &deg;C (32 &deg;F to 122 &deg;F).</td>
+    </tr>
+  </table>
+</blockquote>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+  <p><font face="Times New Roman" size="3"><strong>C</strong></font></p> 
+  <blockquote>
+    <table border="0" width="428" cellspacing="1" height="90">
+      <tr>
+        <td width="755" height="21">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">float</font> <font face="Courier New" size="3">fTemperature;</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="20" width="761">
+        <font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="761" height="37">
+    <font face="Courier New" size="3">
+    nRet = AdMeasureTemperature( hDeviceHadle, &amp;fTemperature );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+<p>
+  <strong><font face="Times New Roman" size="3">Visual Basic
+  </font></strong>
+</p>
+  <blockquote>
+    <table border="0" width="459" cellspacing="1">
+      <tr>
+        <td height="21" width="533">
+        <font face="Courier New" size="3">
+        Dim fTemperature As Single</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="533">
+    <font face="Courier New" size="3">
+    &nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td height="21" width="533">
+    <p><font face="Courier New" size="3">nRet = AdMeasureTemperature(
+    hDeviceHadle, _ fTemperature )</font></p>   
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p> 
+  <strong><font face="Times New Roman" size="3">Delphi
+  </font></strong>
+  </p>
+  <blockquote>
+    <table border="0" width="428" cellspacing="1">
+      <tr>
+        <td height="21" width="502">
+    <p><font face="Courier New" size="3">var</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" width="496">
+    <font face="Courier New" size="3">&nbsp;&nbsp; fTemperature: Single;</font></td>
+      </tr>
+      <tr>
+        <td height="21" width="502">  
+        <font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;</font>  
+        </td>
+      </tr>
+      <tr>
+        <td height="21" width="502">  
+    <font face="Courier New" size="3">  
+    nRet := AdMeasureTemperature( hDeviceHadle, fTemperature );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td>
+<font SIZE="3">Read temperature of the I/O connector </font>on the board/card
+specified by
+hDeviceHandle.
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,1017 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdCommonGetPciDeviceInfo</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdCommonGetPciDeviceInfo</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The AdCommonGetPciDeviceInfo function retrieves the configuration registers and
+  the board ID (RSW1).&nbsp;
+      </td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong><b>&nbsp;&nbsp;</b></p> 
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" height="21" valign="top"><font face="Courier New">INT
+          AdCommonGetPciDeviceInfo(</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="4" height="21" valign="top"> <font face="Courier New">HANDLE&nbsp;</font>  </td>
+        <td width="444" height="21" valign="top"> <font face="Courier New"><i>hDeviceHandle</i>,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwDeviceID</i>,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwVendorID</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwClassCode</i>,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwRevisionID</i>,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwBaseAddress0</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwBaseAddress1</i>,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwBaseAddress2</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwBaseAddress3</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwBaseAddress4</i>,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwBaseAddress5</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwSubsystemID</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwSubsystemVendorID</i>,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <font face="Courier New"><i>*dwInterruptLine</i>,&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="74" height="20" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="374" height="20" valign="top"> <i><font face="Courier New">*dwBoardID</font></i></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3" height="21" valign="top">
+    <font face="Courier New">);</font></td>
+      </tr>
+    </table>
+  </blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="475">
+      <tr>
+        <td colspan="4" width="499" height="21" valign="top"><font face="Courier New">Declare
+          Function AdCommonGetPciDeviceInfo Lib &quot;FbiAd.DLL&quot; (</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>hDeviceHandle</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwDeviceID</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwVendorID</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwClassCode</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwRevisionID</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwBaseAddress0</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwBaseAddress1</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwBaseAddress2</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwBaseAddress3</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwBaseAddress4</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwBaseAddress5</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwSubsystemID</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="21" valign="top"></td>
+        <td width="24" height="21" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <font face="Courier New"><i>dwSubsystemVendorID</i>&nbsp;</font>  </td>
+        <td width="402" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="24" height="20" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>dwInterruptLine</i>&nbsp;</font></td>
+        <td width="332" height="20" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" height="20" valign="top"></td>
+        <td width="24" height="20" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <font face="Courier New"><i>dwBoardID</i>&nbsp;</font></td>
+        <td width="332" height="20" valign="top"> <font face="Courier New">As
+          Long _</font></td>
+      </tr>
+      <tr>
+        <td width="493" colspan="4" height="21" valign="top">
+    <font face="Courier New">
+    ) As Long</font></td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="450" height="417">
+      <tr>
+        <td colspan="3" width="492" valign="top" height="21"><font face="Courier New">function
+          AdCommonGetPciDeviceInfo(</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">hDeviceHandle&nbsp;</font></i><b></b></td>
+        <td width="271" valign="top" height="21"><font face="Courier New">:
+          THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwDeviceID</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"><font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwVendorID</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"><font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwClassCode</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"><font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwRevisionID</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"><font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwBaseAddress0</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"><font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwBaseAddress1</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"><font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="14"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="14"><i><font face="Courier New">dwBaseAddress2</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="14"><font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwBaseAddress3</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"> <font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwBaseAddress4</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"> <font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwBaseAddress5</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"> <font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwSubsystemID</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"> <font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwSubsystemVendorID</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"> <font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwInterruptLine</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"> <font face="Courier New">:
+          Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"><font face="Courier New"><i>var</i></font></td>
+        <td width="199" valign="top" height="21"><i><font face="Courier New">dwBoardID</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="271" valign="top" height="21"> <font face="Courier New">:
+          Cardinal</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3" valign="top" height="20">
+    <font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+</blockquote>
+
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="478" cellspacing="1" height="1">
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td valign="top" width="369" height="1">Specifies the device
+        handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><font face="Courier New"><i>dwDeviceID</i>&nbsp;</font></td>
+      <td valign="top" width="406" height="1">Points to a variable to receive
+        the device ID. Use
+        dwSubsystemID to distinguish PCI boards from CompactPCI
+        boards, and vice versa.&nbsp;</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="190" height="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td valign="top" width="406" height="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"></td>
+      <td valign="top" width="406" height="1">Example)</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"></td>
+      <td valign="top" width="406" height="1">3133 (0C3Dh in hexadecimal) is for
+        the PCI-3133 and CTP-3133</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><font face="Courier New"><i>dwVendorID</i><b>&nbsp;</b></font></td>
+      <td valign="top" width="369" height="1">Points to a variable the vendor ID.
+        The vendor ID of Interface Corporation is 1147h.</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwClassCode</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the class code of the device.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwRevisionID</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the revision ID.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwBaseAddress0</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the base address register 0.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwBaseAddress1</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the base address register 1.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwBaseAddress2</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the base address register 2.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwBaseAddress3</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the base address register 3.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwBaseAddress4</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the base address register 4.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwBaseAddress5</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive the
+        base address register 5.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwSubsystemID</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the subsystem ID of the board. Bit8 through bit11 in this member identify a type of the
+        product.
+        <table border="1" width="331">
+          <tr>
+            <td width="124" rowspan="4">
+              <p align="left"><b>Bit8 through Bit11</b></td>
+            <td width="46" align="center"><b>Value</b></td>
+            <td width="139" align="center"><b>Type</b></td>
+          </tr>
+          <tr>
+            <td width="46" align="center">0h</td>
+            <td width="139">PCI board</td>
+          </tr>
+          <tr>
+            <td width="46" align="center">1h</td>
+            <td width="139">CompactPCI board</td>
+          </tr>
+          <tr>
+            <td width="46" align="center">2h</td>
+            <td width="139">CardBus card</td>
+          </tr>
+        </table>
+      </td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwSubsystemVendorID</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the subsystem vendor ID of the board.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1"><i><font face="Courier New">dwInterruptLine</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the interrupt line of the board.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="565" height="1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="190" height="1">
+        <p align="left"><i><font face="Courier New">dwBoardID</font></i></td>
+      <td valign="top" width="369" height="1">Points to a variable to receive
+        the board ID of the board.</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+
+<blockquote> 
+ <p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480" valign="top">
+  <font SIZE="3">The AdCommonGetPciDeviceInfo function returns AD_ERROR_SUCCESS if the
+  process is successfully completed. </font>Otherwise, this function returns another code.
+  Please refer to the <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+</blockquote> 
+ 
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Examples</font></strong></p>
+
+  <blockquote>
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwDeviceID;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwVendorID;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwClassCode;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwRevisionID;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwBaseAddress0;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwBaseAddress1;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwBaseAddress2;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwBaseAddress3;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwBaseAddress4;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwBaseAddress5;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwSubsystemID;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwSubsystemVendorID;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwInterruptLine;</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"><font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="446" valign="top"><font face="Courier New">dwBoardID;</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top" colspan="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top" colspan="2"><font face="Courier New">nRet =
+          AdCommonGetPciDeviceInfo(</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">hDeviceHandle,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwDeviceID,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwVendorID,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwClassCode,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwRevisionID,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwBaseAddress0,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwBaseAddress1,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwBaseAddress2,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwBaseAddress3,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwBaseAddress4,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwBaseAddress5,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwSubsystemID,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwSubsystemVendorID,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwInterruptLine,</font></td>
+      </tr>
+      <tr>
+        <td width="54" valign="top"></td>
+        <td width="446" valign="top"><font face="Courier New">&amp;dwBoardID</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top" colspan="2">
+          <pre><font face="Courier New">);</font></pre>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">hDeviceHandle&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwDeviceID&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwVendorID&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwClassCode&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwRevisionID&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwBaseAddress0&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwBaseAddress1&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwBaseAddress2&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwBaseAddress3&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwBaseAddress4&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwBaseAddress5&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwSubsystemID&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwSubsystemVendorID&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwInterruptLine&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"><font face="Courier New">Dim&nbsp;</font></td>
+        <td width="166" valign="top"><font face="Courier New">dwBoardID&nbsp;</font></td>
+        <td width="302" valign="top"><font face="Courier New">As Long</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top" colspan="3"></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top" colspan="3"><font face="Courier New">nRet =
+          AdCommonGetPciDeviceInfo(&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">hDeviceHandle,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwDeviceID,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwVendorID,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwClassCode,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwRevisionID,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwBaseAddress0,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwBaseAddress1,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwBaseAddress2,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwBaseAddress3,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwBaseAddress4,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwBaseAddress5,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwSubsystemID,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwSubsystemVendorID,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwInterruptLine,</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top"></td>
+        <td width="468" valign="top" colspan="2"><font face="Courier New">dwBoardID</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top" colspan="3">
+          <pre><font face="Courier New">)</font></pre>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="22" valign="top"><font face="Courier New">var</font></td>
+        <td width="152" valign="top"></td>
+        <td width="326" valign="top"></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwDeviceID&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwVendorID&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwClassCode&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwRevisionID&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwBaseAddress0&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwBaseAddress1&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwBaseAddress2&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwBaseAddress3&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwBaseAddress4&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwBaseAddress5&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwSubsystemID&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwSubsystemVendorID&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwInterruptLine&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="152" valign="top"><font face="Courier New">dwBoardID&nbsp;</font></td>
+        <td width="326" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top" colspan="3"><font face="Courier New">nRet
+          := AdCommonGetPciDeviceInfo(</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">hDeviceHandle,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwDeviceID,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwVendorID,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwClassCode,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwRevisionID,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwBaseAddress0,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwBaseAddress1,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwBaseAddress2,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwBaseAddress3,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwBaseAddress4,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwBaseAddress5,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwSubsystemID,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwSubsystemVendorID,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwInterruptLine,</font></td>
+      </tr>
+      <tr>
+        <td width="22" valign="top"></td>
+        <td width="478" valign="top" colspan="2"><font face="Courier New">dwBoardID</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top" colspan="3">
+          <pre><font face="Courier New">);</font></pre>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+</blockquote>
+
+<blockquote> 
+  <blockquote> 
+  <table border="0" width="517" cellspacing="1">
+    <tr>
+      <td valign="top" width="509">
+Retrieve the configuration registers and board ID (RSW1) of the board specified by
+hDeviceHandle.
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

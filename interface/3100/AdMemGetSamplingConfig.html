@@ -1,0 +1,269 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdMemGetSamplingConfig</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdMemGetSamplingConfig</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The AdMemGetSamplingConfig function retrieves the configured sampling
+  conditions.&nbsp;
+  <font color="#FF00FF">
+ </font></td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <b>C&nbsp;<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472" valign="top"><font face="Courier New" size="3">INT
+          AdMemGetSamplingConfig(</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> HANDLE&nbsp;</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font face="Courier New">PADMEMSMPLREQ</font></td>
+        <td width="317" valign="top"> <i><font face="Courier New">pAdMemSmplConfig</font></i></td>
+      </tr>
+      <tr>
+        <td width="472" colspan="3" valign="top">
+    <font face="Courier New" size="3">
+    );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <b>Visual Basic<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">Declare Function
+          </font><font face="Courier New" size="3">AdMemGetSamplingConfig Lib</font><font face="Courier New"><font size="3">
+          _ </font>&quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal</font></td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>hDeviceHandle</i> </font></td>
+        <td width="246" valign="top"> <font face="Courier New"> As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByRef</font></td>
+        <td width="149" valign="top"> <i><font face="Courier New">pAdMemSmplConfig</font></i></td>
+        <td width="246" valign="top"> <font face="Courier New"> As ADMEMSMPLREQ
+          _</font></td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4" valign="top">
+    <font face="Courier New">
+    ) As Long</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <b>Delphi<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">function
+          </font><font face="Courier New" size="3">AdMemGetSamplingConfig</font><font face="Courier New">(</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><font face="Courier New"><i>hDeviceHandle</i> &nbsp;</font></td>
+        <td width="276" valign="top"> <font face="Courier New"> : THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="7" valign="top"></td>
+        <td width="7" valign="top"><font face="Courier New">var</font></td>
+        <td width="170" valign="top"><i><font face="Courier New">pAdMemSmplConfig</font></i></td>
+        <td width="276" valign="top"><font face="Courier New">: ADMEMSMPLREQ</font></td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4" valign="top">
+    <font face="Courier New">
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="546" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="130"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td width="411" valign="top">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"></td>
+      <td width="411" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"><i><font face="Courier New">pAdMemSmplConfig</font></i></td>
+      <td width="411" valign="top">Points to the <a href="Structure/Structure5.htm">ADMEMSMPLREQ</a>
+        structure to store the current setting sampling condition.</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="541" cellspacing="1">
+    <tr>
+      <td width="471">
+  The AdMemGetSamplingConfig function returns AD_ERROR_SUCCESS if the process is
+  successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Comment</font></strong></p>
+<blockquote>
+  <table border="0" width="541" cellspacing="1">
+    <tr>
+      <td width="617" valign="top">
+      When executing this function as soon as the device is opened, you can retrieve the default setting value of the
+      <a href="Structure/Structure5.htm">ADMEMSMPLREQ</a>
+      structure.&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td width="617" valign="top">
+      </td>
+    </tr>
+    <tr>
+      <td width="617" valign="top">
+      This function is applicable to the CSI/CBI-320110, CBI-320110TK,
+      CBI-320110TL, CTP/CPZ-360810, LPC-320910 and PEX-320910.
+      </td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Examples</font></strong></p>
+
+  <blockquote>
+  <b>C&nbsp;<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td valign="top">
+    <font face="Courier New">ADBMSMPLREQ AdBmSmplConfig;</font>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"><font face="Courier New">nRet = AdBmGetSamplingConfig(
+          hDeviceHandle, &amp;AdBmSmplConfig );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <strong><font face="Times New Roman" size="3">Visual Basic<br>
+  </font></strong>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1" height="63">
+      <tr>
+        <td height="21" valign="top">
+    <p><font face="Courier New">Dim AdBmSmplConfig As ADBMSMPLREQ</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="1" valign="top"><font face="Courier New">nRet =
+          AdBmGetSamplingConfig( hDeviceHandle, _ AdBmSmplConfig )&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <strong><font face="Times New Roman" size="3">Delphi<br>
+  </font></strong>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td height="21" colspan="2" width="542" valign="top">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">var</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" colspan="2" width="542" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;
+          AdBmSmplConfig: ADBMSMPLREQ;</font></td>
+      </tr>
+      <tr>
+        <td width="32" valign="top">
+        </td>
+        <td width="504" valign="top">
+    <font face="Courier New" size="3">nRet := AdBmGetSamplingConfig(
+    hDeviceHandle, AdBmSmplConfig );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top">
+<font size="3">Retrieve the sampling conditions on the board/card specified by hDeviceHandle.</font>
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

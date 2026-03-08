@@ -1,0 +1,198 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 Attention</title>
+</head>
+
+<body>
+
+<blockquote>    
+  <table border="0" width="90%">    
+    <tr>
+      <td width="100%" valign="top" align="center" colspan="2">
+        <p align="left"><font face="Arial" size="4"><b>Sampling  
+        Condition Considerations for Bus Master Transfer Mode</b></font></p> 
+      </td>
+    </tr>     
+    <tr>     
+      <td width="3%" valign="top" align="center"></td>     
+      <td width="97%">
+        <table height="80" width="561" border="0">
+          <tbody>
+            <tr>
+              <td vAlign="top" width="553" height="78"><font face="Times New Roman">You can configure   
+                sampling conditions of the board by using the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdSetSamplingConfig.html">AdSetSamplingConfig</a>   
+                or <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>   
+                function. The <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>   
+                function is provided to configure the bus master transfer mode   
+                specific sampling conditions. The conditions are overwritten   
+                with these functions. When you use the <a href="../AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>   
+                function, the sampling is FIFO mode.&nbsp;<br>  
+                The following table shows the correspondence of the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/Structures.html#13.6.1 ADSMPLREQ Structure">ADSMPLREQ</a>   
+                structure to the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/Structures.html#13.6.3 ADBMSMPLREQ Structure">ADBMSMPLREQ</a>   
+                structure.</font></td>  
+            </tr>
+          </tbody>
+        </table>
+        <table height="24" width="558" border="0">
+          <tbody>
+            <tr>
+              <td vAlign="top" width="36"><font face="Times New Roman">Note:</font></td>
+              <td vAlign="top" width="508"><font face="Times New Roman">The ulTrigPoint and ulTrigMode  
+                depends on the setting value of the trigger mode. To change the  
+                setting, you need to change both ulTrigPoint and ulTrigMode.</font></td> 
+            </tr>
+          </tbody>
+        </table>
+              
+      <blockquote>     
+        <table border="0">     
+          <tr>     
+            <td width="45%"><a href="../Structure/Structure3.htm"><b><font face="Times New Roman">ADSMPLREQ</font></b></a><font face="Times New Roman"><b> 
+              Structure</b></font></td>     
+            <td width="5%" align="center">  </td>     
+            <td width="50%"><font face="Times New Roman"><a href="../Structure/Structure2.htm"><b>ADBMSMPLREQ</b></a><b> 
+              Structure</b></font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulChCount</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulChCount</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">SmplChReq</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">SmplChReq</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulSamplingMode</font></td>     
+            <td width="5%" align="center">  <font face="Times New Roman">  >></font>  </td>     
+            <td width="50%"><font face="Times New Roman">AD_FIFO_SAMPLING</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulSingleDiff</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulSingleDiff</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulSmplNum</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulSmplNum</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulSmplEventNum</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulSmplEventNum</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"> (<font face="Times New Roman">1</font>) </td>     
+            <td width="5%" align="center">  <font face="Times New Roman">  >></font>  </td>     
+            <td width="50%"><font face="Times New Roman">ulSmplRepeat</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"> (<font face="Times New Roman">AD_APPEND</font>) </td>     
+            <td width="5%" align="center">  <font face="Times New Roman">  >></font>  </td>     
+            <td width="50%"><font face="Times New Roman">ulBufferMode</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">fSmplFreq</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">fSmplFreq</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"> (<font face="Times New Roman">0</font>) </td>     
+            <td width="5%" align="center">  <font face="Times New Roman">  >></font>  </td>     
+            <td width="50%"><font face="Times New Roman">fScanFreq</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulTrigPoint</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulStartMode, ulStopMode</font></td>      
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulTrigMode</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulStartMode, ulStopMode, ulATrgMode</font></td>      
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">lTrigDelay</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulPreTrigDelay, ulPostTrigDelay</font></td>      
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulTrigCh</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">TrigChReq[0].ulChNo, TrigChReq[1].ulChNo</font></td>      
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">fTrigLevel1</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">TrigChReq[0].fTrigLevel</font></td>     
+          </tr>     
+           <tr>     
+            <td width="45%"><font face="Times New Roman">(0.2 % of the range)</font></td>      
+            <td width="5%" align="center">  <font face="Times New Roman">  >></font>  </td>     
+            <td width="50%"><font face="Times New Roman">TrigChReq[0].fHysteresis</font></td>     
+          </tr>     
+           <tr>     
+            <td width="45%"> <font face="Times New Roman"> fTrigLevel2</font> </td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">TrigChReq[1].fTrigLevel</font></td>     
+          </tr>     
+           <tr>     
+            <td width="45%"><font face="Times New Roman">(0.2 % of the range)</font></td>      
+            <td width="5%" align="center">  <font face="Times New Roman">  >></font>  </td>     
+            <td width="50%"><font face="Times New Roman">TrigChReq[1].fHysteresis</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulEClkEdge</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulEClkEdge</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulATrgPulse</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulATrgPulse</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulTrigEdge</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulStartTrigEdge, ulStopTrigEdge</font></td>      
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulTrigDI</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulTrigDI</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%"><font face="Times New Roman">ulFastMode</font></td>     
+            <td width="5%" align="center"> <font face="Times New Roman"> >></font> </td>     
+            <td width="50%"><font face="Times New Roman">ulFastMode</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%">(<font face="Times New Roman">AD_NO_STATUS</font>)</td>     
+            <td width="5%" align="center">  <font face="Times New Roman">  >></font>  </td>     
+            <td width="50%"><font face="Times New Roman">ulStatusMode</font></td>     
+          </tr>     
+          <tr>     
+            <td width="45%">(<font face="Times New Roman">AD_FREERUN</font>)</td>     
+            <td width="5%" align="center">  <font face="Times New Roman">  >></font>  </td>     
+            <td width="50%"><font face="Times New Roman">ulErrCtrl</font></td>     
+          </tr>     
+        </table>     
+      </blockquote>     
+      </td>
+    </tr>
+  </table>     
+</blockquote>     
+     
+<hr>     
+     
+   
+<p align="right"><font face="Times New Roman">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>                 
+        
+</body>        
+</html>        

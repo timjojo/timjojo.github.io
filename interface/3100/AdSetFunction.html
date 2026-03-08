@@ -1,0 +1,583 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdSetFunction</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">13.5.40 AdSetFunction</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The AdSetFunction function configures the functional configuration of the CN3 and CN4
+  connectors. This function is applicable only to the PCI-3525 and CTP/CPZ-3525.
+  <p>The AdSetFunction function configures the functional configuration of the
+  connector on the CTP/CPZ-360810 and&nbsp; LPC/PEX-320724.</p>
+      </td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" height="21" valign="top"><font face="Courier New">INT
+          AdSetFunction(</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">HANDLE&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <b></b><font face="Courier New"><i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">ULONG&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <b></b><font face="Courier New"><i>ulChNo</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">ULONG&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <b></b><i><font face="Courier New">ulFunction</font></i><b></b></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top">
+    <font face="Courier New">
+    );</font>
+        </td>
+        <td width="470" height="21" colspan="2" valign="top"></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="4" width="492" height="21" valign="top"><font face="Courier New">Declare
+          Function AdSetFunction Lib _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="22" height="21" valign="top"> <font face="Courier New"> ByVal&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <i><font face="Courier New">hDeviceHandle</font></i>  </td>
+        <td width="395" height="21" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="22" height="20" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <b></b><font face="Courier New"><i>ulChNo</i>&nbsp;</font></td>
+        <td width="325" height="20" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="22" height="20" valign="top"> <font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <b></b><font face="Courier New"><i>ulFunction</i>&nbsp;</font></td>
+        <td width="325" height="20" valign="top"> <font face="Courier New">  As
+          Long _</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="4" height="21" valign="top">
+    <font face="Courier New">
+    ) As Long</font></td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" valign="top"><font face="Courier New">function
+          AdSetFunction(</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="104" valign="top"><i><font face="Courier New">hDeviceHandle</font></i><b></b></td>
+        <td width="366" valign="top"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="104" valign="top"><i><font face="Courier New">ulChNo</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="366" valign="top"><font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="104" valign="top"><i><font face="Courier New">ulFunction</font></i><font face="Courier New">&nbsp;</font></td>
+        <td width="366" valign="top"> <font face="Courier New"> :&nbsp;Cardinal</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3" valign="top">
+    <font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+</blockquote>
+
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+<blockquote>
+  <table border="0" width="359" cellspacing="1" height="1">
+    <tr>
+      <td valign="top" nowrap width="73" height="1"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td valign="top" width="447" height="1">Specifies the device
+        handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="520" height="21" colspan="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="73" height="1"><i><font face="Courier New">ulChNo</font></i></td>
+      <td valign="top" width="447" height="1">Specifies the connector number to
+        configure the function.&nbsp;<br>
+ Specify 3 or 4 for the PCI-3525 and CPZ-3525.</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="520" height="1" colspan="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">CTP/CPZ-360810</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+        <table border="1" width="90%">
+          <tr>
+            <td width="50%" align="center"><b>Code</b></td>
+            <td width="27%" align="center"><b>Value</b></td>
+            <td width="73%" align="center"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_EX_DIO1</td>
+            <td width="27%" valign="top" align="center">1</td>
+            <td width="73%" valign="top">CN4</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_EX_DIO2</td>
+            <td width="27%" valign="top" align="center">2</td>
+            <td width="73%" valign="top">CN5</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_EX_DIO3</td>
+            <td width="27%" valign="top" align="center">3</td>
+            <td width="73%" valign="top">CN6 10pin</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_EX_DIO4</td>
+            <td width="27%" valign="top" align="center">4</td>
+            <td width="73%" valign="top">CN6 11pin</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_EX_DIO5</td>
+            <td width="27%" valign="top" align="center">5</td>
+            <td width="73%" valign="top">CN6 12pin</td>
+          </tr>
+        </table>
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1"></td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">LPC/PEX-320724</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+        <table border="1" width="90%">
+          <tr>
+            <td width="50%" align="center"><b>Code</b></td>
+            <td width="27%" align="center"><b>Value</b></td>
+            <td width="73%" align="center"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_EX_DIO1</td>
+            <td width="27%" valign="top" align="center">1</td>
+            <td width="73%" valign="top">CN3</td>
+          </tr>
+        </table>
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1"></td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"><i><font face="Courier New">ulFunction</font></i></td>
+      <td valign="top" width="447" height="1"><font size="3">Specifies the
+        function of the connector specified by ulChNo.</font></td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+        The functions are specified with the following codes.&nbsp;
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+        PCI-3525 and CPZ-3525
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+        <table border="1" width="100%">
+          <tr>
+            <td width="50%" align="center"><b>Code</b></td>
+            <td width="17%" align="center"><b>Value</b></td>
+            <td width="83%" align="center"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_FREE</td>
+            <td width="17%" valign="top" align="center">0</td>
+            <td width="83%" valign="top">The connector is not used.</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXTRG_IN</td>
+            <td width="17%" valign="top" align="center">1</td>
+            <td width="83%" valign="top">External trigger input</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXTRG_OUT</td>
+            <td width="17%" valign="top" align="center">2</td>
+            <td width="83%" valign="top">External trigger output</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXCLK_IN</td>
+            <td width="17%" valign="top" align="center">3</td>
+            <td width="83%" valign="top">External clock input</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXCLK_OUT</td>
+            <td width="17%" valign="top" align="center">4</td>
+            <td width="83%" valign="top">External clock output</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXINT_IN</td>
+            <td width="17%" valign="top" align="center">5</td>
+            <td width="83%" valign="top">External interrupt input</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_ATRG_OUT</td>
+            <td width="17%" valign="top" align="center">6</td>
+            <td width="83%" valign="top">Analog trigger output</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_DI</td>
+            <td width="17%" valign="top" align="center">7</td>
+            <td width="83%" valign="top">Digital input</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_DO</td>
+            <td width="17%" valign="top" align="center">8</td>
+            <td width="83%" valign="top">Digital output</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_OPEN</td>
+            <td width="17%" valign="top" align="center">10</td>
+            <td width="83%" valign="top">Open status&nbsp;<br>
+              (Only applicable to CN4)</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXSMP1_OUT</td>
+            <td width="17%" valign="top" align="center">12</td>
+            <td width="83%" valign="top">External sampling status 1 output</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXSMP2_OUT</td>
+            <td width="17%" valign="top" align="center">13</td>
+            <td width="83%" valign="top">External sampling status 2 output</td>
+          </tr>
+        </table>
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+        CTP/CPZ-360810
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+        <table border="1" width="100%">
+          <tr>
+            <td width="50%" align="center"><b>Code</b></td>
+            <td width="17%" align="center"><b>Value</b></td>
+            <td width="83%" align="center"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_FREE</td>
+            <td width="17%" valign="top" align="center">0</td>
+            <td width="83%" valign="top">The connector is not used.</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXTRG_IN</td>
+            <td width="17%" valign="top" align="center">1</td>
+            <td width="83%" valign="top">External trigger input</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXTRG_OUT</td>
+            <td width="17%" valign="top" align="center">2</td>
+            <td width="83%" valign="top">External trigger output</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXCLK_IN</td>
+            <td width="17%" valign="top" align="center">3</td>
+            <td width="83%" valign="top">External clock input</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXCLK_OUT</td>
+            <td width="17%" valign="top" align="center">4</td>
+            <td width="83%" valign="top">External clock output</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXINT_IN</td>
+            <td width="17%" valign="top" align="center">5</td>
+            <td width="83%" valign="top">External interrupt input</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_ATRG_OUT</td>
+            <td width="17%" valign="top" align="center">6</td>
+            <td width="83%" valign="top">Analog trigger output</td>
+          </tr>
+        </table>
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+        LPC/PEX-320724
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+        <table border="1" width="100%">
+          <tr>
+            <td width="50%" align="center"><b>Code</b></td>
+            <td width="17%" align="center"><b>Value</b></td>
+            <td width="83%" align="center"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_FREE</td>
+            <td width="17%" valign="top" align="center">0</td>
+            <td width="83%" valign="top">The connector is not used.</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXTRG_IN</td>
+            <td width="17%" valign="top" align="center">1</td>
+            <td width="83%" valign="top">External trigger input</td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">AD_CN_EXCLK_IN</td>
+            <td width="17%" valign="top" align="center">3</td>
+            <td width="83%" valign="top">External clock input</td>
+          </tr>
+        </table>
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="73" height="1"></td>
+      <td valign="top" width="447" height="1">
+      </td> 
+    </tr>
+  </table> 
+  <table border="0" width="560" cellspacing="1">
+    <tr>
+      <td width="88" valign="top">
+      </td>
+      <td width="464" valign="top">
+      </td>
+    </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<blockquote> 
+ 
+ <p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480" valign="top">
+  <font SIZE="3">The AdSetFunction function returns AD_ERROR_SUCCESS if the
+  process is successfully completed. </font>Otherwise, this function returns another code.
+  Please refer to the <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+ <p><strong><font face="Times New Roman" size="4">Comment</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="540" cellspacing="1">
+    <tr>
+      <td width="532" valign="top">
+  PCI-3525, CTP/CPZ-3525
+  <ul>
+    <li>The following table shows the conditions of digital I/O.
+      <table border="1">
+        <tr>
+          <td width="20%" align="center" height="19"><b>Connector</b></td>
+          <td width="28%" align="center" height="19"><b>Code</b></td>
+          <td width="52%" align="center" height="19"><b>Description</b></td>
+        </tr>
+        <tr>
+          <td width="20%" rowspan="2" align="center" valign="middle" height="27">3</td>
+          <td width="28%" height="2">AD_CN_DI</td>
+          <td width="52%" height="2">Makes CN3 to be IN1.</td>
+        </tr>
+        <tr>
+          <td width="28%" height="19">AD_CN_DO</td>
+          <td width="52%" height="19">Makes CN3 to be OUT1.</td>
+        </tr>
+        <tr>
+          <td width="20%" align="center" rowspan="2" height="44" valign="middle">4</td>
+          <td width="28%" height="19">AD_CN_DI</td>
+          <td width="52%" height="19">Makes CN4 to be IN2.</td>
+        </tr>
+        <tr>
+          <td width="28%" height="19">AD_CN_DO</td>
+          <td width="52%" height="19">Makes CN4 to be OUT2.</td>
+        </tr>
+      </table>
+    </li>
+    <li>The same function cannot be specified to both CN3 and CN4.</li>
+    <li>AD_CN_FREE is specified at the default setting on CN3.</li>
+    <li>AD_CN_OPEN is specified at the default setting on CN4.</li>
+    <li>
+      While the digital-to-analog output is performed at the digital-to-analog
+      output partition, do not configure the CN4 setting.</li>
+    <li>
+      The external sampling status 1 output outputs the status from start
+      trigger generation to stop trigger detection.</li>
+  </ul>
+  <p>CTP/CPZ-360810 and LPC/PEX-320724</p>
+  <ul>
+    <li>AD_CN_FREE is specified at the default setting.</li>
+  </ul>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+ 
+</blockquote> 
+ 
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Examples</font></strong></p>
+
+  <blockquote>
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td><font face="Courier New">nRet = AdSetFunction( hDeviceHandle, 3,
+          AD_CN_EXTRG_IN );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td><font face="Courier New">nRet = AdSetFunction( hDeviceHandle, 3, _ AD_CN_EXTRG_IN )</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td><font face="Courier New">nRet := AdSetFunction( hDeviceHandle, 3,
+          AD_CN_EXTRG_IN );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+</blockquote>
+
+<blockquote> 
+  <blockquote> 
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+Configure the&nbsp; functional configuration of the CN3 connector to an external trigger input on the
+board specified by hDeviceHandle.
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+  Corporation. All rights reserved.
+</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

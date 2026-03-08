@@ -1,0 +1,1678 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Utilities</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">12. Utilities</font></b></p>
+ 
+<blockquote>
+      
+  <table border="0" width="550" height="44">     
+    <tr>     
+      <td valign="top" width="538" height="40"><font size="3">For optional
+        products (terminal block, cable, and so on), please refer to the user's
+        manual.</font> 
+      </td>   
+    </tr>   
+  </table>   
+   
+</blockquote>
+ 
+<p><b><font face="Arial" size="4"><a name="14.1 Diagnostic Program">12.1 Diagnostic Program</a></font> </b></p>  
+  
+<blockquote>
+      
+  <table border="0" width="550" height="44">     
+    <tr>
+      <td valign="top" width="538" height="40"><font SIZE="3">This program can determine if
+        a malfunction is located in the software or in the hardware. If the
+        problem is located in the software, this program can diagnose the
+        problem in detail.</font> 
+      </td>   
+    </tr>
+  </table>   
+   
+</blockquote>
+ 
+<p><b><font face="Arial" size="3"><a name="14.1.1 Required Items for the Diagnostic Program">12.1.1 Required Items for the Diagnostic
+Program</a></font></b></p>  
+  
+<blockquote>
+  
+  <table border="0" width="580">  
+    <tr>  
+      <td valign="top" width="575"> 
+        <ul> 
+          <li><font face="Times New Roman">Interface analog input board&nbsp;</font></li> 
+          <li><font face="Times New Roman">Interface analog input board diagnostic program</font></li> 
+          <li><font SIZE="3">Terminal block which is appropriate for the board</font></li> 
+          <li><font face="Times New Roman">Reference power supply<br>
+            <font SIZE="3">Use a power supply with an accuracy of at least 5
+            significant digits.</font></font></li> 
+          <li><font face="Times New Roman">Cables<br>
+            <font SIZE="3">Use a shielded cable of length less than or equal to
+            50 cm (19.69 in.).</font></font></li> 
+        </ul> 
+      </td> 
+    </tr> 
+  </table> 
+ 
+</blockquote>
+ 
+<p><b><font face="Arial" size="3"><a name="14.1.2 Starting the Diagnostic Program">12.1.2 Starting the Diagnostic Program</a></font></b></p>
+<blockquote>
+  <table border="0" width="578">
+    <tr>
+      <td valign="top" width="22">1.</td>
+      <td width="542" valign="top">Click the <b>Start</b> button, point to <b>Programs</b>,
+        point to<b> Interface GPF-3100</b>, and then click <b>Diagnostic Program</b>.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">2.</td>
+      <td width="542" valign="top">The <b>Interface Analog Input Board Diagnostic Program</b>
+        main window will appear.<br>
+        <img border="0" src="Utilit2.gif" width="556" height="382"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">3.</td>
+      <td width="542" valign="top">Click<b> <font face="Times New Roman">Open
+        New Device </font></b>on the <b>Device</b>  menu. Then the list of available analog input boards
+        will be displayed on
+        the screen. Select a device that you want to diagnose. Then, click <b>OK</b>.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">4.&nbsp;&nbsp;</td>
+      <td width="542" valign="top">The
+        board type, I/O address, and IRQ will be displayed on the main window.&nbsp;<br>
+        The following table shows available menu items and commands.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22"></td>
+      <td width="542" valign="top">
+              <table border="1" width="531">
+                <tr vAlign="top" align="middle">
+                  <td width="95" align="center"><b><font face="Times New Roman">Menu</font></b></td>
+                  <td width="143" align="center"><b><font face="Times New Roman">Command</font></b></td>
+                  <td width="271" align="center"><b><font face="Times New Roman">Description</font></b></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="95" rowspan="3" valign="top"><font face="Times New Roman">Device</font></td>
+                  <td width="143" valign="top"><font face="Times New Roman">Open New Device</font></td>
+            <td width="271" valign="top">Selects the device to diagnose.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="143" valign="top">Save</td>
+            <td width="271" valign="top">Saves the results of the diagnosis.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="143" valign="top">
+                    <font face="Times New Roman">Exit</font></td>
+                  <td width="271" align="center" valign="top">
+                    <p align="left">Closes the program.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="95" valign="top" rowspan="2"><font face="Times New Roman">Diagnose</font></td>
+                  <td width="143" valign="top">
+                    <p align="left"><font face="Times New Roman">Hardware </font> Resource</td>
+                  <td width="271" valign="top">
+                    <p align="left">Checks the PCI configuration.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="143" valign="top">
+                    AD Conversion</td>
+                  <td width="271" valign="top">
+                    <p align="left">Measures the accuracy of the analog to
+                    digital conversion.
+                  </td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="95" valign="top"><font face="Times New Roman">Help</font></td>
+                  <td width="143" valign="top">
+                    <p align="left"><font face="Times New Roman">Version
+                    Information</font></td>
+                  <td width="271" valign="top">
+                    <p align="left">Displays the version information.</p>
+                  </td>
+                </tr>
+              </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="22"></td>
+      <td width="542" valign="top">
+              Note:&nbsp;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF0000"> - This program cannot
+              open multiple devices simultaneously.<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - To use multiple devices of the
+              same type simultaneously, set the different RSW1<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; values to every
+              device.&nbsp;&nbsp;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - This program is not available in
+              the CSI/CBI-320110, CBI-320110TK,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CBI-320110TL, LPC-320910, PEX-320910, and CTP/CPZ-360810</font>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="3"><a name="14.1.3 Checking the PCI Configuration">12.1.3 Checking the PCI Configuration</a></font></b></p>
+  
+<blockquote>
+  <table border="0" width="552">
+    <tr>
+      <td valign="top" width="19">1.</td>
+      <td width="519" valign="top">To check the PCI configuration registers, click <b>Hardware
+        Resource </b>on the<b>
+        Diagnose </b> menu.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="19">2.</td>
+      <td width="519" valign="top">The input/output access and interrupt circuit will be
+        tested. Then, the result will be displayed in the <b>Results of AD Hardware
+        Resources Diagnosis </b>group <b> </b>box.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="19">3.</td>
+      <td width="519" valign="top">Save <b>NG</b> results as a file, and forward them to
+        us by e-mail.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="19"></td>
+      <td width="519" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="19"><font color="#FF0000">*</font></td>
+      <td width="519" valign="top"><font color="#FF0000">Items diagnosed by this
+        program are differs depending on the device.</font></td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="3"><a name="14.1.4 Checking the AD Conversion">12.1.4 Checking the AD Conversion</a></font></b></p>
+  
+<blockquote>
+  <table border="0" width="620" height="1">
+    <tr>
+      <td valign="top" width="1" height="40">1.</td>
+      <td width="751" height="40" colspan="3" valign="top">To measure the accuracy of the analog to
+        digital conversion, click <b>AD conversion </b>on the <b> Diagnose </b>menu.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="1" height="21">2.</td>
+      <td width="751" height="21" colspan="3" valign="top">The <b>Diagnostic Parameter Configuration </b>dialog box
+        will appear.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="1" height="371"></td>
+      <td width="751" height="371" colspan="3" valign="top"><img border="0" src="Utilit1.gif" width="355" height="372"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="1" height="38">3.&nbsp;&nbsp;</td>
+      <td width="751" height="38" valign="top" colspan="3">Provide all parameters in the <b>Diagnostic
+        Parameter Configuration</b> dialog box, and then click the <b>Start
+        Diagnosis</b> button.<br>
+        The following table shows the diagnosis parameters.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="1" height="337"></td>
+      <td width="751" height="337" colspan="3">
+        <table border="1" width="568">
+          <tr align="center" valign="top">
+            <td colspan="2" width="190"><b>Parameter</b></td>
+            <td width="412"><b>Description</b></td>
+          </tr>
+          <tr valign="top">
+            <td colspan="2" width="190" valign="top">Channel to diagnose</td>
+            <td width="412" valign="top">Select the channel number to diagnose.</td>
+          </tr>
+          <tr valign="top">
+            <td colspan="2" width="190" valign="top">Input configuration</td>
+            <td width="412" valign="top">Select the input configuration to
+              configuration.</td>
+          </tr>
+          <tr valign="top">
+            <td colspan="2" width="190" valign="top">Range</td>
+            <td width="412" valign="top">Select the range.</td>
+          </tr>
+          <tr valign="top">
+            <td colspan="2" width="190" valign="top">Input Source</td>
+            <td width="412" valign="top">Select the input source used to apply voltage to the channel.</td>
+          </tr>
+          <tr valign="top">
+            <td rowspan="5" width="17" valign="top">&nbsp;&nbsp;</td>
+            <td width="167" valign="top">External reference power supply</td>
+            <td width="412" valign="top">Specifies an external reference
+              power supply will be connected to the channel. Enter the voltage
+              in the text box.<sup><font color="#FF0080"><a href="#*1">*1</a></font>&nbsp;</sup></td>
+          </tr>
+          <tr valign="top">
+            <td width="167" valign="top">GND 0 V</td>
+            <td width="412" valign="top">Applies 0 V to the channel.<font color="#FF0080"><sup><a href="#*2">*2</a>&nbsp;</sup></font></td>
+          </tr>
+          <tr valign="top">
+            <td width="167" valign="top">Reference voltage +5V</td>
+            <td width="412" valign="top">Applies on-board REF(+5V) to the channel.<font color="#FF0080"><sup><a href="#*2">*2</a>&nbsp;</sup></font></td>
+          </tr>
+          <tr valign="top">
+            <td width="167" valign="top">Reference voltage -5V</td>
+            <td width="412" valign="top">Applies on-board REF(-5V) to the
+              channel.<font color="#FF0080"><sup><a href="#*2">*2</a></sup></font></td>
+          </tr>
+          <tr valign="top">
+            <td width="167" valign="top">On-board DA converter output +/-10 V</td>
+            <td width="412" valign="top">Applies on-board DA converter output voltage to the channel. Enter the voltage in the
+            text box.<font color="#FF0080"><sup><a href="#*2">*2</a></sup></font></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="19"></td>
+      <td valign="top">Notes:</td>
+      <td valign="top" colspan="2"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="1" height="19"></td>
+      <td valign="top">
+      </td>
+      <td valign="top">
+        <sup><font color="#FF0080"><a name="*1">*1</a></font></sup>
+      </td>
+      <td valign="top">
+        You need to provide a power supply. Connect it
+        to the channel properly.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="1" height="19"></td>
+      <td valign="top">
+      </td>
+      <td valign="top">
+        <font color="#FF0080"><sup><a name="*2">*2</a></sup></font>
+      </td>
+      <td valign="top">
+        You don not need to provide external power
+        supplies or connections because the board supplies these voltages and
+        the connections are completed internally. These parameters are inactive
+        if the board does not support them.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="1" height="19">4.&nbsp;</td>
+      <td width="751" height="19" colspan="3" valign="top">
+        The results of the diagnosis will appear in the <b>Results of
+        AD Conversion Diagnosis</b>  group box.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="1" height="19">5.&nbsp;&nbsp;</td>
+      <td width="751" height="19" colspan="3" valign="top">
+        If the AD conversion
+        results is outside of the expected range, confirm that all cables are
+        connected correctly.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="1" height="19">6.</td>
+      <td width="751" height="19" colspan="3" valign="top">
+        If the problem continues to
+        persist even after you check that all cables are correctly connected, and
+        then click <b>Save</b> on the <b>Device</b> menu. Please send the
+        diagnostic result to us by e-mail.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="613" height="19" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top" width="613" height="19" colspan="4">Note: The diagnostic
+        results in the above figure are examples.</td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="4"><a name="14.2 Calibration Program">12.2 Calibration
+Program</a></font></b></p>
+  
+<blockquote>
+      
+  <table border="0" width="550">     
+    <tr>
+      <td valign="top" width="575"><font face="Times New Roman">We ship the
+        board after being fully calibrated at 25 </font> 
+ &deg;<font face="Times New Roman">C (77 </font> 
+ &deg;<font face="Times New Roman">F).</font> 
+        <ul> 
+          <li><font face="Times New Roman">Ambient temperature changes</font></li> 
+          <li><font face="Times New Roman">Input configuration changes</font></li> 
+          <li><font face="Times New Roman">To optimize measurement accuracy</font></li> 
+        </ul> 
+        <p><font face="Times New Roman">If the channel wasn't successfully
+        calibrated, correct conversion data cannot be obtained at the next
+        acquisition.&nbsp; </font> 
+      </td> 
+    </tr>
+  </table>   
+   
+</blockquote>
+ 
+<p><b><font face="Arial" size="3"><a name="14.2.1 Required Items for the Calibration Program">12.2.1 Required Items for the
+Calibration Program</a></font></b></p>  
+  
+<blockquote>
+  
+  <table border="0" width="547">  
+    <tr>  
+      <td valign="top" width="542"> 
+        <ul> 
+          <li><font face="Times New Roman">Interface analog input board&nbsp;</font></li> 
+          <li><font face="Times New Roman">Interface analog input board
+            calibration program</font></li> 
+          <li><font face="Times New Roman">Terminal block which is appropriate for
+            the board</font></li> 
+          <li><font face="Times New Roman">Reference power supply<br>
+            Use a power supply with an accuracy of at least five significant
+            digits.</font></li> 
+          <li><font face="Times New Roman">Cables<br>
+            Use a shielded cable of length less than or equal to 50 cm. (19.69
+            in.)</font></li> 
+        </ul> 
+      </td> 
+    </tr> 
+  </table> 
+ 
+</blockquote>
+ 
+<p><b><font face="Arial" size="3"><a name="14.2.2 Starting the Calibration Program">12.2.2 Starting the
+Calibration Program</a></font></b></p>
+<blockquote>
+  <table border="0" width="553" height="578">
+    <tr>
+      <td valign="top" width="511" colspan="2" height="8">This calibration program is
+        unnecessary for the following products.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="511" colspan="2" height="21">
+        <blockquote>
+          <font color="#FF0000">
+          PCI-3120, PCI-3170A, PCI-3171A, PCI-3172A, PCI-3173A, PCI-3180, PCI-3522A, PCI-3523A, 
+          LPC-320910, PEX-320910, CTP/CPZ-3120A, CTP/CPZ-3120B, CTP/CPZ-3120C, CTP/CPZ-3170, CTP/CPZ-3171, 
+          CTP/CPZ-3172, CTP/CPZ-3173, CTP/CPZ-3180A, CTP/CPZ-3180B, CTP/CPZ-3180C, CTP/CPZ-3522, CTP/CPZ-3523, 
+          CSI/CBI-320110, CBI-320110TK, CBI-320110TL</font>
+        </blockquote>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="21" height="40">1.&nbsp;&nbsp;</td>
+      <td width="525" height="40" valign="top">Click the <b>Start </b>button, point to <b>Programs</b>,
+        point to <b>Interface GPF-3100</b>, and then click <b>Calibration Program</b>.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="21" height="21">&nbsp;&nbsp;&nbsp;</td>
+      <td width="525" height="21" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="21" height="21">2.</td>
+      <td width="525" height="21" valign="top">The <b>Interface Analog Input Board
+        Calibration Program </b>main window will appear.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="21" height="303"></td>
+      <td width="525" height="303" valign="top"><img border="0" src="Utilit3.gif" width="520" height="318"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="21" height="47"></td>
+      <td width="525" height="47" valign="top">The following table shows available menu items and commands.
+              <table border="1" width="522">
+                <tr vAlign="top" align="middle">
+                  <td width="89" align="center"><b><font face="Times New Roman">Menu</font></b></td>
+                  <td width="144" align="center"><b><font face="Times New Roman">Command</font></b></td>
+                  <td width="267" align="center"><b><font face="Times New Roman">Description</font></b></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="89" rowspan="2" valign="top"><font face="Times New Roman">Device</font></td>
+                  <td width="144" valign="top"><font face="Times New Roman">Open New Device</font></td>
+                  <td width="267" valign="top"><font face="Times New Roman">Opens the device to
+                    be calibrated.</font></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="144" valign="top">Close the Device</td>
+                  <td width="267" valign="top"><font face="Times New Roman">Closes the device.</font></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="89" valign="top"><font face="Times New Roman">Help</font></td>
+                  <td width="144" valign="top">
+                    <p align="left"><font face="Times New Roman">Version
+                    Information</font></td>
+                  <td width="267" align="center" valign="top">
+                    <p align="left">Displays the version information.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="89" valign="top"><font face="Times New Roman">Exit</font></td>
+                  <td width="144" valign="top">
+                    <p align="center"><font face="Times New Roman">-</font></td>
+                  <td width="267" align="center" valign="top">
+                    <p align="left">Closes the program.</p>
+                  </td>
+                </tr>
+              </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="21" height="38">3.</td>
+      <td width="525" height="38" valign="top">Click <b>Open New Device </b>on the <b>Device </b>menu. Then the list
+        of available analog input boards will be displayed on the screen. Select a
+        device that you want to calibrate.&nbsp;This program can open only one device at a time.</td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="3"><a name="14.2.3 Calibrating the Device">12.2.3
+Calibrating the Device</a></font></b></p>
+  
+<blockquote>
+  <table border="0" width="578">
+    <tr>
+      <td valign="top" width="18">1.&nbsp;&nbsp;</td>
+      <td width="545" colspan="2" valign="top">Provide parameters&nbsp; shown in the
+        following table in the <b>Interface Analog Input Board
+        Calibration Program </b>main window.
+        <table border="1" width="521">
+          <tr valign="top" align="center">
+            <td width="140"><b>Parameter</b></td>
+            <td width="365"><b>Description</b></td>
+          </tr>
+          <tr valign="top">
+            <td width="140" valign="top">Input Configuration</td>
+            <td width="365" valign="top">Select the input configuration.</td>
+          </tr>
+          <tr valign="top">
+            <td width="140" valign="top">Channel</td>
+            <td width="365" valign="top">Select the channel.</td>
+          </tr>
+          <tr valign="top">
+            <td width="140" valign="top">Range</td>
+            <td width="365" valign="top">Select the range.</td>
+          </tr>
+          <tr valign="top">
+            <td width="140" valign="top"> Method</td>
+            <td width="365" valign="top">Toggle between manual and automatic operation.</td>
+          </tr>
+          <tr valign="top">
+            <td width="140" valign="top">Calibration Item</td>
+            <td width="365" valign="top">Select the parameter to calibrate.</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="18">&nbsp;&nbsp;&nbsp;</td>
+      <td width="545" colspan="2" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="18">2.&nbsp;&nbsp;</td>
+      <td width="545" colspan="2" valign="top">Follow the instructions shown in the <b>Reference
+        Voltage Setting </b>group box. After starting calibration, a
+        dialog box containing a color-coded calibration indicator will be
+        displayed on the screen. For manual calibration, use up and down arrows adjacent
+        to colored indicator to calibrate the parameter. After the calibration is
+        successfully completed, click <b>OK</b> to write the new settings to the
+        board. If you want to abort the calibration, click <b>Cancel</b> to
+        prevent the new settings from being written to the board. However, the
+        new settings will be retained in memory, and will remain valid until the
+        computer is turned off.</td>
+    </tr>
+    <tr>
+      <td width="18">&nbsp;&nbsp;&nbsp;</td>
+      <td width="545" colspan="2" valign="top"></td>
+    </tr>
+    <tr>
+      <td width="18">3.</td>
+      <td width="545" colspan="2" valign="top">The basic flow of calibration is as follows:</td>
+    </tr>
+    <tr>
+      <td width="18"></td>
+      <td width="20" valign="top">a.&nbsp;&nbsp;</td>
+      <td width="522" valign="top">Select a channel to calibrate.</td>
+    </tr>
+    <tr>
+      <td width="18"></td>
+      <td width="20" valign="top">b.</td>
+      <td width="522" valign="top">Select the input configuration of the channel.</td>
+    </tr>
+    <tr>
+      <td width="18"></td>
+      <td width="20" valign="top">c.</td>
+      <td width="522" valign="top">Select an input range of the channel.</td>
+    </tr>
+    <tr>
+      <td width="18"></td>
+      <td width="20" valign="top">d.</td>
+      <td width="522" valign="top">Select the method of calibration.</td>
+    </tr>
+    <tr>
+      <td width="18"></td>
+      <td width="20" valign="top">e.</td>
+      <td width="522" valign="top">Select the parameter to be calibrated.</td>
+    </tr>
+    <tr>
+      <td width="18"></td>
+      <td width="20"></td>
+      <td width="522" valign="top">
+        <table border="1" width="517" cellspacing="1" height="150">
+          <tr>
+            <td width="352" height="19">
+              <p align="center"><b>Model</b></td>
+            <td width="149" height="19">
+              <p align="center"><b>Calibration Order</b></td>
+          </tr>
+          <tr>
+            <td width="352" height="103" valign="top"><font face="Times New Roman">PCI-3126,
+              PCI-3133, PCI-3153, PCI-3161, PCI-3163, PCI-3166, PCI-3168C,
+              PCI-3177C, PCI-3178, PCI-320112, PCI-3521, PCI-3525, PCI-320412,
+              PCI-320416, PCI-360116, PCI-360112, PCI-360216<br>
+              LPC-320724, LPC-321012, LPC-321116, LPC-321216, LPC-361116,
+              LPC-361216<br>
+              PEX-320724, PEX-321012, PEX-321116, PEX-321216, PEX-361116,
+              PEX-361216<br>
+              PCI-361812, PCI-321516<br>
+              CTP/CPZ-3126, CTP/CPZ-3133, CTP/CPZ-3165(for unipolar), CTP/CPZ-3167(for
+              unipolar), CTP/CPZ-3168, CTP/CPZ-3175(for unipolar), CTP/CPZ-3177,
+              CTP/CPZ-3178, CTP/CPZ-3182(for unipolar), CTP/CPZ-3183, CTP/CPZ-3521,
+              CTP/CPZ-320412, CTP/CPZ-320416, CTP/CPZ-3525, CTP/CPZ-360116, CTP/CPZ-360112,
+              CTP/CPZ-360810<br>
+              CSI/CBI-320412, CBI-320412TR, CBI-320412TK, CBI-320412TL,
+              CSI/CBI-320416, CBI-320416TR, CBI-320416TK, CBI-320416TL,
+              CSI/CBI-360112, CBI-360112TR, CBI-360112TK, CBI-360112TL,
+              CSI/CBI-360116, CBI-360116TR, CBI-360116TK, CBI-360116TL</font>
+            </td>
+            <td width="149" valign="top" height="103">1st: Offset<br>
+              2nd: Gain<br>
+              3rd: Half scale range</td>
+          </tr>
+          <tr>
+            <td width="352" valign="top" height="23"><font face="Times New Roman">PCI-3135,
+              PCI-3155, PCI-3165, PCI-3174, PCI-3175, PCI-3176<br>
+              LPC-321316, LPC-321416, LPC-361316, LPC-361416<br>
+              PEX-321316, PEX-321416, PEX-361316, PEX-361416<br>
+              CTP/CPZ-3135, CTP/CPZ-3165(for bipolar), CTP/CPZ-3167(for bipolar),
+              CTP/CPZ-3174, CTP/CPZ-3175(for bipolar), CTP/CPZ-3182(for bipolar)<br>
+              CBI-3133A, CBI-3133B, CBI-3134A, CBI-3134B,&nbsp;<br>
+              CSI/CBI-320212, CBI-320212TR, CBI-320212TK, CBI-320212TL,
+              CSI/CBI-320312, CBI-320312TR, CBI-320312TK, CBI-320312TL</font>
+            </td>
+            <td width="149" height="23" valign="top">1st: Half scale range<br>
+              2nd: Gain<br>
+              3rd: Offset</td>
+          </tr>
+          <tr>
+            <td width="352" valign="top" height="57">PCI-3120, PCI-3170A,
+              PCI-3171A, PCI-3172A, PCI-3173A, PCI-3180, PCI-3522A, PCI-3523A<br>
+              LPC-320910<br>
+              PEX-320910<br>
+              CTP/CPZ-3120A, CTP/CPZ-3120B, CTP/CPZ-3120C, CTP/CPZ-3170, CTP/CPZ-3171,
+              CTP/CPZ-3172, CTP/CPZ-3173, CTP/CPZ-3180A, CTP/CPZ-3180B, CTP/CPZ-3180C,
+              CTP/CPZ-3522, CTP/CPZ-3523<br>
+              CSI/CBI-320110,CBI-320110TK,CBI-320110TL
+            </td>
+            <td width="149" valign="top" height="57">Not applicable</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="18"></td>
+      <td width="20" valign="top"><font color="#000000">f.</font></td>
+      <td width="522" valign="top"><font color="#000000">Follow the instructions shown in the <b>Reference Voltage
+        Setting</b>  group box. The following models load the calibration value
+        that is written in EEPROM when click <b>Cancel</b>.<br>
+        <br>
+        <font color="#ff0000">PCI-320112, PCI-320412, PCI-320416, PCI-360116,
+        PCI-360112, PCI-360216<br>
+        LPC-320724, LPC-321012, LPC-321116, LPC-321216, LPC-321316, LPC-321416,
+        LPC-361116, LPC-361216, LPC-361316, LPC-361416<br>
+        PEX-320724, PEX-321012, PEX-321116, PEX-321216, PEX-321316, PEX-321416,
+        PEX-361116, PEX-361216, PEX-361316, PEX-361416<br>
+        PCI-361812</font></font><font color="#ff0000">, PCI-321516</font><font color="#000000">
+        <font color="#ff0000"><br>
+        CTP/CPZ-3183, CTP/CPZ-320412, CTP/CPZ-320416, CTP/CPZ-360116, CTP/CPZ-360810<br>
+        CBI-3133A, CBI-3133B, CBI-3134A, CBI-3134B,&nbsp;<br>
+        CSI/CBI-320212, CBI-320212TR, CBI-320212TK, CBI-320212TL,&nbsp;<br>
+        CSI/CBI-320312, CBI-320312TR, CBI-320312TK, CBI-320312TL,&nbsp;<br>
+        CSI/CBI-320412, CBI-320412TR, CBI-320412TK, CBI-320412TL,&nbsp;<br>
+        CSI/CBI-320416, CBI-320416TR, CBI-320416TK, CBI-320416TL,&nbsp;<br>
+        CSI/CBI-360112, CBI-360112TR, CBI-360112TK, CBI-360112TL,&nbsp;<br>
+        CSI/CBI-360116, CBI-360116TR, CBI-360116TK, CBI-360116TL<br>
+        <br>
+        </font>Some models do not support RevisionID, so please confirm the corresponding model of the
+        <a href="AdReadAdjustVR.html">AdReadAdjustVR</a> function.
+        </font>
+      </td>
+    </tr>
+    <tr>
+      <td width="18"></td>
+      <td width="20" valign="top">g.</td>
+      <td width="522" valign="top">Calibrate the parameter.</td>
+    </tr>
+    <tr>
+      <td width="18" valign="top">&nbsp;&nbsp;&nbsp;</td>
+      <td width="545" colspan="2" valign="top"></td>
+    </tr>
+    <tr>
+      <td width="18" valign="top">4.</td>
+      <td width="545" colspan="2" valign="top">After one parameter is calibrated,
+        calibrate the
+        remaining ones in the order shown in the above table.</td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="4"><a name="14.3 Double-Clocked Mode Calibration Program">12.3
+Double-Clocked Mode Calibration Program</a></font></b></p>
+  
+<blockquote>
+      
+  <table border="0" width="561">     
+    <tr>
+      <td valign="top" width="586"><font face="Times New Roman">It is sometimes
+        necessary to calibrate the AD converter to ensure accuracy. This program
+        is provided to calibrate the conversion accuracy of two AD converters when using the double-clocked mode.</font> 
+      </td> 
+    </tr>
+  </table>   
+   
+</blockquote>
+ 
+<p><b><font face="Arial" size="3"><a name="14.3.1 Required Items for the Double-Clocked Mode Calibration Program">12.3.1 Required Items for the
+Double-Clocked Mode Calibration
+Program</a></font></b></p>  
+  
+<blockquote>
+  
+  <table border="0" width="559">  
+    <tr>  
+      <td valign="top" width="554"> 
+        <ul> 
+          <li><font face="Times New Roman">Interface analog input board&nbsp;</font></li> 
+          <li><font face="Times New Roman">Interface analog input board double-clocked mode
+            calibration program</font></li> 
+          <li><font face="Times New Roman">Terminal block which is appropriate for the
+            board</font></li> 
+          <li><font face="Times New Roman">Reference power supply<br>
+            Use a power supply with an accuracy of at least five significant
+            digits.</font></li> 
+          <li><font face="Times New Roman">Cables<br>
+            Use a shielded cable of length less than or equal to 50 cm. (19.69
+            in.)</font></li> 
+        </ul> 
+      </td> 
+    </tr> 
+  </table> 
+ 
+</blockquote>
+ 
+<p><b><font face="Arial" size="3"><a name="14.3.2 Starting the Double-Clocked Mode Calibration Program">12.3.2 Starting the
+Double-Clocked Mode Calibration Program</a></font></b></p>
+<blockquote>
+  <table border="0" width="557">
+    <tr>
+      <td valign="top" width="20">1.&nbsp;&nbsp;</td>
+      <td width="523" valign="top">Click the <b>Start </b>button, point to <b>Programs</b>,
+        point to <b>Interface GPF-3100</b>, and then click <b>Double-Clocked Mode</b>
+        <b>Calibration</b> <b>Program</b>.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="20">&nbsp;&nbsp;&nbsp;</td>
+      <td width="523" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="20">2.</td>
+      <td width="523" valign="top">The <b>Interface Analog Input Board Double-Clocked Mode</b>
+        <b>Calibration</b> <b>Program </b>main window will appear.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="20"></td>
+      <td width="523" valign="top">
+      <img border="0" src="Utilit4.gif" width="535" height="218">
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="20"></td>
+      <td width="523" valign="top">The following table shows available menu items and commands.
+              <table border="1" width="537">
+                <tr vAlign="top" align="middle">
+                  <td width="114" align="center" valign="top"><b><font face="Times New Roman">Menu</font></b></td>
+                  <td width="135" align="center" valign="top"><b><font face="Times New Roman">Command</font></b></td>
+                  <td width="278" align="center" valign="top"><b><font face="Times New Roman">Description</font></b></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="114" rowspan="2" valign="top"><font face="Times New Roman">Device</font></td>
+                  <td width="135" valign="top"><font face="Times New Roman">Open New Device</font></td>
+                  <td width="278" valign="top"><font face="Times New Roman">Opens the device to
+                    be calibrated.</font></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="135" valign="top">Close the Device</td>
+                  <td width="278" valign="top"><font face="Times New Roman">Closes the device.</font></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="114" valign="top"><font face="Times New Roman">Help</font></td>
+                  <td width="135" valign="top">
+                    <p align="left"><font face="Times New Roman">Version
+                    Information</font></td>
+                  <td width="278" align="center" valign="top">
+                    <p align="left">Displays the version information.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="114" valign="top"><font face="Times New Roman">Exit</font></td>
+                  <td width="135" valign="top">
+                    <p align="center"><font face="Times New Roman">-</font></td>
+                  <td width="278" align="center" valign="top">
+                    <p align="left">Closes the program.</td>
+                </tr>
+              </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="20">&nbsp;&nbsp;&nbsp;</td>
+      <td width="523" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="20">3.</td>
+      <td width="523" valign="top">Click <b>Open New Device </b>on the <b>Device </b>menu. Then the list
+        of available analog input boards will be displayed on the screen. Select a
+        device that you want to calibrate. This program can open only one device at a time.</td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="3"><a name="14.3.3 Calibrating the Device">12.3.3 Calibrating the Device</a></font></b></p>
+  
+<blockquote>
+  <table border="0" width="552" height="366">
+    <tr>
+      <td valign="top" width="19" height="144">1.&nbsp;</td>
+      <td width="521" colspan="2" valign="top" height="144">Provide parameters shown in the
+        following table in the <b>Interface Analog Input Board Double-Clocked Mode</b>
+        <b>Calibration</b> <b>Program </b>main window.
+        <table border="1" width="499">
+          <tr valign="top" align="center">
+            <td width="143"><b>Parameter</b></td>
+            <td width="340"><b>Description</b></td>
+          </tr>
+          <tr valign="top">
+            <td width="143" valign="top">Range</td>
+            <td width="340" valign="top">Select the range.</td>
+          </tr>
+          <tr valign="top">
+            <td width="143" valign="top">Method</td>
+            <td width="340" valign="top">Toggle between manual and automatic operation.</td>
+          </tr>
+          <tr valign="top">
+            <td width="143" valign="top">Calibration Item</td>
+            <td width="340" valign="top">Select the parameter to calibrate.</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="19" height="19">&nbsp;&nbsp;&nbsp;</td>
+      <td width="521" colspan="2" valign="top" height="19"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="19" height="78">2.</td>
+      <td width="521" colspan="2" valign="top" height="78">Follow the instructions shown in the <b>Reference
+        Voltage Setting </b>group box. After starting calibration, a
+        calibration indicator will be displayed on the screen. For manual
+        calibration, use the spin control to calibrate the item selected. After the
+        calibration is successfully completed, click <b>OK</b>. If you want to
+        abort the calibration, click <b>Cancel</b>.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="19" height="21">&nbsp;&nbsp;&nbsp;</td>
+      <td width="521" colspan="2" valign="top" height="21"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="19" height="21">3.</td>
+      <td width="521" colspan="2" valign="top" height="21">The basic flow of calibration is as follows:</td>
+    </tr>
+    <tr>
+      <td valign="top" width="19" height="21"></td>
+      <td width="21" valign="top" height="21">a.&nbsp;&nbsp;</td>
+      <td width="494" valign="top" height="21">Select an input range for the channel.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="19" height="21"></td>
+      <td width="21" valign="top" height="21">b.</td>
+      <td width="494" valign="top" height="21">Select the method of calibration.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="19" height="40"></td>
+      <td valign="top" width="21" height="40">c.</td>
+      <td width="494" valign="top" height="40">Select the parameter to be
+        calibrated. First, adjust
+        <b>Offset</b>, and then <b>Gain</b>, and finally <b>Half scale range</b>.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="19" height="21"></td>
+      <td width="21" valign="top" height="21">d.</td>
+      <td width="494" valign="top" height="21">Follow the instructions shown in the <b>Reference Voltage
+        Setting</b>  group box.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="19" height="21"></td>
+      <td width="21" valign="top" height="21">e.</td>
+      <td width="494" valign="top" height="21">Calibrate the parameter.</td>
+    </tr>
+    <tr>
+      <td width="19" valign="top" height="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="521" colspan="2" valign="top" height="22"></td>
+    </tr>
+    <tr>
+      <td width="19" valign="top" height="22">4.</td>
+      <td width="521" colspan="2" valign="top" height="22">After one parameter is calibrated,
+        calibrate the
+        others in the specified order.</td>
+    </tr>
+    <tr>
+      <td width="540" valign="top" height="22" colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="540" valign="top" height="44" colspan="3">Notes:
+        <ul>
+          <li>For the PCI-3161, use the <b>Manual </b>method to calibrate the <b>Offset
+            </b>and <b>Half scale range</b>. The upper indicator shows the
+            calibration status of channel 1, the lower indicator shows the
+            calibration status of channel 2. Use the spin control of the upper
+            indicator to calibrate both channel 1 and channel 2.</li>
+          <li>The Calibration Program and Double-Clocked Mode Calibration Program may be unable to
+            calibrate at one time. In this case, choose the <b> Manual
+            </b>method and tune the volume carefully to become being the target value.</li>
+          <li>Three calibration items have much effect on each other. If the
+            second calibration item does not satisfy its tolerance, you need to
+            calibrate the first calibration item again.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="4"><a name="14.4 Waveform Viewer">12.4 Waveform
+Viewer</a></font></b></p>
+  
+<blockquote>
+      
+  <table border="0" width="550">     
+    <tr>
+      <td valign="top" width="575"> This
+            program can display waveforms from a function generator or signal
+            source on the screen. Up to two channels can be viewed
+        simultaneously in this program. The sampling rate is the same for both
+        channels. 
+      </td> 
+    </tr>
+  </table>   
+   
+</blockquote>
+ 
+<p><b><font face="Arial" size="3"><a name="14.4.1 Required Items for the Waveform Viewer">12.4.1 Required Items for the Waveform Viewer</a></font></b></p>  
+  
+<blockquote>
+  
+  <table border="0" width="549">  
+    <tr>  
+      <td valign="top" width="544"> 
+        <ul> 
+          <li><font face="Times New Roman">Interface analog input board&nbsp;</font></li> 
+          <li><font face="Times New Roman">Interface analog input board waveform
+            viewer</font></li> 
+          <li><font face="Times New Roman">Terminal block which is appropriate for
+            the board</font></li> 
+          <li><font face="Times New Roman">Function generator or signal source</font></li> 
+          <li><font face="Times New Roman">Cables<br>
+            Use a shielded cable of length less than or equal to 50 cm. (19.69
+            in.)</font></li> 
+        </ul> 
+      </td> 
+    </tr> 
+  </table> 
+ 
+</blockquote>
+ 
+<p><b><font face="Arial" size="3"><a name="14.4.2 Starting the Waveform Viewer">12.4.2 Starting the Waveform Viewer</a></font></b></p>  
+  
+<blockquote>
+  <table border="0" width="552" height="965">
+    <tr>
+      <td valign="top" width="41" height="40">1.&nbsp;&nbsp;&nbsp;</td>
+      <td width="585" valign="top" height="40">Click the <b>Start </b>button, point to <b>Programs</b>,
+        point to <b>Interface GPF-3100</b>, and then click <b>Waveform Viewer</b>.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="21">&nbsp;&nbsp;&nbsp;</td>
+      <td width="585" valign="top" height="21"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="21">2.</td>
+      <td width="585" valign="top" height="21">The <b>Interface Analog Input Board Waveform Viewer </b>main
+        window will appear.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="521"></td>
+      <td width="585" valign="top" height="521"><img border="0" src="Utilit10.gif" width="608" height="592">
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="250"></td>
+      <td width="585" valign="top" height="250">The following table shows available menu items and commands.
+              <table border="1" width="549" height="201">
+                <tr vAlign="top" align="middle">
+                  <td width="97" align="center" height="19"><b><font face="Times New Roman">Menu</font></b></td>
+                  <td width="136" align="center" height="19"><b><font face="Times New Roman">Command</font></b></td>
+                  <td width="286" align="center" height="19"><b><font face="Times New Roman">Description</font></b></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="97" rowspan="3" valign="top" height="69"><font face="Times New Roman">Device</font></td>
+                  <td width="136" height="19" valign="top"><font face="Times New Roman">Open New Device</font></td>
+                  <td width="286" height="19" valign="top"><font face="Times New Roman">Opens
+                    the device</font> to start the waveform viewer.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="136" height="19" valign="top">Close the Device</td>
+                  <td width="286" height="19" valign="top"><font face="Times New Roman">Closes the device.</font></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="136" height="19" valign="top"><font face="Times New Roman">Save</font></td>
+                  <td width="286" valign="top" height="19">Saves the results of sampling.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="97" rowspan="3" valign="top" height="45"><font face="Times New Roman">Sampling</font>
+                    <p>&nbsp;</p>
+                  </td>
+                  <td width="136" height="19" valign="top"><font face="Times New Roman">Sampling
+                    Condition</font></td>
+                  <td width="286" height="19" valign="top"><font face="Times New Roman">Configures
+                    sampling conditions.&nbsp;</font></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="136" height="19" valign="top">Start</td>
+                  <td width="286" height="19" valign="top">Starts sampling.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="136" height="19" valign="top">Stop</td>
+                  <td width="286" height="19" valign="top">Stops sampling.&nbsp;&nbsp;</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="97" valign="top" height="19">Help</td>
+                  <td width="136" valign="top" height="19">
+                    <p align="left"><font face="Times New Roman">Version
+                    Information</font></td>
+                  <td width="286" align="center" valign="top" height="19">
+                    <p align="left">Displays the version information.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="97" valign="top" height="19"><font face="Times New Roman">Exit</font></td>
+                  <td width="136" valign="top" height="19">
+                    <p align="center"><font face="Times New Roman">-</font></td>
+                  <td width="286" align="center" valign="top" height="19">
+                    <p align="left">Closes the program.</td>
+                </tr>
+              </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="21">&nbsp;&nbsp;&nbsp;</td>
+      <td width="585" valign="top" height="21"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="59">3.</td>
+      <td width="585" valign="top" height="59">Click <b>Open New Device </b>on the <b>Device </b>menu. The list
+        of available analog input boards will be displayed on the screen. Select
+        the device that you want to use to view waveforms. This program can open
+        only one device at a time.</td>
+    </tr>
+    <tr>
+      <td valign="top" height="25"><font color="#000000">Note:.</font></td>
+      <td height="25"><font color="#000000">The maximum channel is two to sample
+        simultaneously in this utility. The sampling frequency cannot be
+        configured for every channel</font></td>
+    </tr>
+  </table>
+</blockquote>
+  <table border="0" width="698">
+    <tr>
+      <td valign="top" width="75"></td>
+      <td width="609" valign="top">The following table shows available menu items and commands.
+              <table border="1" width="554" height="622">
+                <tr vAlign="top" align="middle">
+                  <td width="201" align="center" valign="top" height="19"><b><font face="Times New Roman">Operating
+                    Suggestions</font></b></td>
+                  <td width="208" align="center" valign="top" height="19"><b><font face="Times New Roman">Description</font></b></td>
+                </tr>
+                <tr>
+                  <td width="201" valign="top" height="38">This utility cannot
+                    open multiple devices simultaneously.&nbsp;</td>
+                  <td width="208" valign="top" height="38" align="center">-</td>
+                </tr>
+                <tr>
+                  <td width="201" valign="top" height="39">This utility can be
+                    used under single processor environment.</td>
+                  <td width="208" valign="top" height="39" align="center">-</td>
+                </tr>
+                <tr>
+                  <td width="201" valign="top" height="41">This utility
+                    samples&nbsp; up to 2 channels simultaneously.&nbsp;&nbsp;</td>
+                  <td width="208" valign="top" height="41" align="center">-</td>
+                </tr>
+                <tr>
+                  <td width="201" valign="top" height="57">No trigger, external
+                    trigger, and&nbsp; analog trigger are available in this
+                    utility.</td>
+                  <td width="208" valign="top" height="57" align="center">-</td>
+                </tr>
+                <tr>
+                  <td width="201" valign="top" height="63">This utility can use
+                    the functions programmable by the AdSetSampling
+                    function.&nbsp;&nbsp;</td>
+                  <td width="208" valign="top" height="63" align="center">-</td>
+                </tr>
+                <tr>
+                  <td width="201" valign="top" height="95">For PCI/CT/CPZ-3525,
+                    LPC/PEX-320724, and&nbsp; PCI-361812, external trigger input
+                    and&nbsp; external clock input are not available in this
+                    utility.&nbsp;</td>
+                  <td width="208" valign="top" height="95">Create a program by
+                    the <a href="AdSetFunction.html"> AdSetFunction</a> function.</td>
+                </tr>
+                <tr>
+                  <td width="201" valign="top" height="57">External trigger
+                    output&nbsp; and&nbsp; external clock output are not
+                    available in this utility.&nbsp;</td>
+                  <td width="208" valign="top" height="57">Create a program by
+                    the <a href="AdSetOutMode.html">AdSetOutMode</a> function.</td>
+                </tr>
+                <tr>
+                  <td width="201" valign="top" height="39">This utility cannot simultaneously
+                    sample multiple devices.</td>
+                  <td width="208" valign="top" height="39">
+                    <p align="center">-</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="201" valign="top" height="114">This utility is not
+                    applicable for CSI/CBI-320110,CBI-320110TK, CBI-320110TL,
+                    LPC-320910, PEX-320910, and CTP/CPZ-360810.</td>
+                  <td width="208" valign="top" height="114">Use Waveform Viewer
+                    (memory).</td>
+                </tr>
+              </table>
+      </td>
+    </tr>
+  </table>
+  
+  <p><b><font face="Arial" size="3"><a name="14.4.3 Viewing Waveforms">12.4.3 Viewing Waveforms</a></font></b></p>
+  
+<blockquote>
+  <table border="0" width="574">
+    <tr>
+      <td valign="top" width="22">1.&nbsp;&nbsp;&nbsp;</td>
+      <td width="551" valign="top">Click <b>Sampling Condition</b> on the <b>Sampling </b>menu to
+        configure the sampling conditions.&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="551" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">2.&nbsp;&nbsp;</td>
+      <td width="551" valign="top">The <b> Sampling Condition </b>dialog box will appear.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22"></td>
+      <td width="551" valign="top">
+        <img border="0" src="Utilit6.gif" width="532" height="362">
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="22"></td>
+      <td width="551" valign="top">
+ The following table shows available parameters.
+        <table border="1" width="540">
+          <tr valign="top" align="center">
+            <td width="213"><b>Parameter</b></td>
+            <td width="311"><b>Description</b></td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Number of samples</td>
+            <td width="311" valign="top">Select the number of samples to acquire from
+              512
+              through 524288.</td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Sampling rate</td>
+            <td width="311" valign="top">Specify sampling rate in Hz.</td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top"><a href="Sampling%20Mode.html">Data transfer mode</a></td>
+            <td width="311" valign="top">Select the data transfer mode.<sup><font color="#FF0080"><a href="#*3">*3</a></font>&nbsp;</sup></td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Input configuration</td>
+            <td width="311" valign="top">Select the input configuration.<sup><font color="#FF0080"><a href="#*3">*3</a></font></sup></td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Double-clocked mode</td>
+            <td width="311" valign="top">Enable or disable the double-clocked mode.<sup><font color="#FF0080"><a href="#*3">*3</a></font></sup></td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Channel</td>
+            <td width="311" valign="top">Select the channels to view.<sup><font color="#FF0080"><a href="#*3">*3</a></font></sup></td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Range</td>
+            <td width="311" valign="top">Select the input range for the channel.<sup><font color="#FF0080"><a href="#*3">*3</a></font></sup></td>
+          </tr>
+          <tr>
+            <td width="213" valign="top">AC coupling</td>
+            <td width="311" valign="top">Enable/disable the AC coupling. <sup><a href="#*4">*4</a></sup></td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Trigger configuration</td>
+            <td width="311" valign="top">Select the trigger.</td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Trigger-channel</td>
+            <td width="311" valign="top">Select the trigger channel.</td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">External trigger edge selection</td>
+            <td width="311" valign="top">Select falling or rising edge.</td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">DI mask</td>
+            <td width="311" valign="top">Select the general purpose digital input pins to mask the external trigger.</td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Trigger point</td>
+            <td width="311" valign="top">Select the trigger point. Only &quot;Start-trigger&quot; is
+              applicable to this version.
+            </td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Number of pre-trigger/post-trigger samples </td>
+            <td width="311" valign="top">Specify the number of pre-trigger or post-trigger samples. For pre-trigger, give a
+              negative value. For post-trigger, give a positive value.&nbsp;</td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Trigger level 1, Trigger level 2</td>
+            <td width="311" valign="top">Specify the threshold for the analog trigger.</td>
+          </tr>
+          <tr valign="top">
+            <td width="213" valign="top">Zoom</td>
+            <td width="311" valign="top">Select the zoom factor.</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="287"></td>
+      <td valign="top">Notes:
+              <ul>
+                <li>Up to two channels can be sampled simultaneously in
+            this program. Both channels will have the same sampling rate.</li>
+                <li><font color="#FF00FF"><sup><a name="*3">*3</a></sup>  </font>Available values for the
+                  device can be selected.</li>
+                <li><sup><font color="#FF00FF"><a name="*4">*4</a></font>&nbsp;
+                  This parameter is available only in LPC-320724, PEX-320724.</sup></li>
+              </ul>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">3.&nbsp;&nbsp;</td>
+      <td width="563" valign="top">Click <b>OK </b>if the settings are correct.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">4.</td>
+      <td width="563" valign="top">To start the sampling, click <b> Start</b> on the <b> Sampling
+        </b> menu.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">5.</td>
+      <td width="563" valign="top">To stop the sampling, click <b> Stop </b> on the <b> Sampling</b> menu.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">6.</td>
+      <td width="563" valign="top">To save the acquired samples, click <b> Save </b> on the <b>Device
+        </b>menu. Data can be saved in either binary or CSV format.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">7.</td>
+      <td width="563" valign="top">To close the device, click <b> Close the Device</b> on the
+        <b>Device</b> menu.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">8.</td>
+      <td width="563" valign="top">To terminate this program, first close the device,
+        and then click <b> Exit</b>.</td>
+    </tr>
+  </table>
+</blockquote>
+<p><font color="#000000"><a name="14.5 Waveform Viewer for the CBI-320110/Tx and CIZ-320110TL"><font face="Arial" size="4"><b>12.5 Waveform
+Viewer (Memory)</b></font></a></font></p>
+  
+<blockquote>
+      
+  <table border="0" width="550">     
+    <tr>
+      <td valign="top" width="575"> This
+            program can display waveforms from a function generator or signal
+            source on the screen. Up to two channels can be viewed
+        simultaneously in this program. The sampling rate is the same for both
+        channels. 
+      </td> 
+    </tr>
+  </table>   
+   
+</blockquote>
+ 
+<p><b><font face="Arial" size="3" color="#000000"><a name="14.5.1 Required Items for the Waveform Viewer 2">12.5.1 Required Items for the Waveform Viewer
+(Memory)</a></font></b></p>  
+  
+<blockquote>
+  
+  <table border="0" width="549">  
+    <tr>  
+      <td valign="top" width="544"> 
+        <ul> 
+          <li><font face="Times New Roman">Interface analog input card&nbsp;</font></li> 
+          <li><font face="Times New Roman">Interface analog input card waveform
+            viewer</font></li> 
+          <li><font face="Times New Roman">Terminal block which is appropriate for
+            the card</font></li> 
+          <li><font face="Times New Roman">Function generator or signal source</font></li> 
+          <li><font face="Times New Roman">Cables<br>
+            Use a shielded cable of length less than or equal to 50 cm. (19.69
+            in.)</font></li> 
+        </ul> 
+      </td> 
+    </tr> 
+  </table> 
+ 
+</blockquote>
+ 
+<p><b><font face="Arial" size="3"><a name="14.5.2 Starting the Waveform Viewer 2">12.5.2 Starting the Waveform Viewer
+(Memory)</a></font></b></p>  
+  
+<blockquote>
+  <table border="0" width="552" height="965">
+    <tr>
+      <td valign="top" width="41" height="40">1.&nbsp;&nbsp;&nbsp;</td>
+      <td width="585" valign="top" height="40">Click the <b>Start </b>button, point to <b>Programs</b>,
+        point to <b>Interface GPF-3100</b>, and then click <b>Waveform Viewer
+        2</b>.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="21">&nbsp;&nbsp;&nbsp;</td>
+      <td width="585" valign="top" height="21"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="21">2.</td>
+      <td width="585" valign="top" height="21">The <b>Interface Analog Input Board Waveform Viewer
+        2 </b>main
+        window will appear.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="521"></td>
+      <td width="585" valign="top" height="521"><img border="0" src="Utilit5.gif" width="608" height="592">
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="250"></td>
+      <td width="585" valign="top" height="250">The following table shows available menu items and commands.
+              <table border="1" width="549" height="201">
+                <tr vAlign="top" align="middle">
+                  <td width="97" align="center" height="19"><b><font face="Times New Roman">Menu</font></b></td>
+                  <td width="136" align="center" height="19"><b><font face="Times New Roman">Command</font></b></td>
+                  <td width="286" align="center" height="19"><b><font face="Times New Roman">Description</font></b></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="97" rowspan="3" valign="top" height="69"><font face="Times New Roman">Device</font></td>
+                  <td width="136" height="19" valign="top"><font face="Times New Roman">Open New Device</font></td>
+                  <td width="286" height="19" valign="top"><font face="Times New Roman">Opens
+                    the device</font> to start the waveform viewer.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="136" height="19" valign="top">Close the Device</td>
+                  <td width="286" height="19" valign="top"><font face="Times New Roman">Closes the device.</font></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="136" height="19" valign="top"><font face="Times New Roman">Save</font></td>
+                  <td width="286" valign="top" height="19">Saves the results of sampling.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="97" rowspan="3" valign="top" height="45"><font face="Times New Roman">Sampling</font>
+                    <p>&nbsp;</p>
+                  </td>
+                  <td width="136" height="19" valign="top"><font face="Times New Roman">Sampling
+                    Condition</font></td>
+                  <td width="286" height="19" valign="top"><font face="Times New Roman">Configures
+                    sampling conditions.&nbsp;</font></td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="136" height="19" valign="top">Start</td>
+                  <td width="286" height="19" valign="top">Starts sampling.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="136" height="19" valign="top">Stop</td>
+                  <td width="286" height="19" valign="top">Stops sampling.&nbsp;&nbsp;</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="97" valign="top" height="19">Help</td>
+                  <td width="136" valign="top" height="19">
+                    <p align="left"><font face="Times New Roman">Version
+                    Information</font></td>
+                  <td width="286" align="center" valign="top" height="19">
+                    <p align="left">Displays the version information.</td>
+                </tr>
+                <tr vAlign="top">
+                  <td width="97" valign="top" height="19"><font face="Times New Roman">Exit</font></td>
+                  <td width="136" valign="top" height="19">
+                    <p align="center"><font face="Times New Roman">-</font></td>
+                  <td width="286" align="center" valign="top" height="19">
+                    <p align="left">Closes the program.</td>
+                </tr>
+              </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="21">&nbsp;&nbsp;&nbsp;</td>
+      <td width="585" valign="top" height="21"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="41" height="59">3.</td>
+      <td width="585" valign="top" height="59">Click <b>Open New Device </b>on the <b>Device </b>menu. The list
+        of available analog input boards will be displayed on the screen. Select
+        the device that you want to use to view waveforms. This program can open
+        only one device at a time.</td>
+    </tr>
+    <tr>
+      <td valign="top" height="25"><font color="#000000">Note:.</font></td>
+      <td height="25"><font color="#000000">- The maximum channel is two to sample
+        simultaneously in this utility. The sampling frequency cannot&nbsp;&nbsp;<br>
+        &nbsp; be
+        configured for every channel.<br>
+        - This program is available in CSI/CBI-320110, CBI-320110TK,
+        CBI-320110TL,&nbsp;<br>
+        &nbsp; LPC-320910, PEX-320910 and CTP/CPZ-360810.</font></td>
+    </tr>
+  </table>
+</blockquote>
+  <p><b><font face="Arial" size="3"><a name="14.5.3 Viewing Waveforms">12.5.3 Viewing Waveforms</a></font></b></p>
+  
+<blockquote>
+  <table border="0" width="574">
+    <tr>
+      <td valign="top" width="22">1.&nbsp;&nbsp;&nbsp;</td>
+      <td width="551" valign="top">Click <b>Sampling Condition</b> on the <b>Sampling </b>menu to
+        configure the sampling conditions.&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="551" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">2.&nbsp;&nbsp;</td>
+      <td width="551" valign="top">The <b> Sampling Condition </b>dialog box will appear.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22"></td>
+      <td width="551" valign="top">
+        <img border="0" src="Utilit9.gif" width="560" height="588">
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="22"></td>
+      <td width="551" valign="top">
+ The following table shows available parameters.
+       
+    <div align="center"><center>      
+    <table border="2" cellpadding="2" width="561" height="581">      
+      <tr>      
+        <td width="243" colspan="2" height="19">
+          <p align="center"><b>Parameter</b></td>      
+        <td width="296" height="19">
+          <p align="center"><b><font face="Times New Roman">Description</font></b></td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="1">Sampling rate</td>      
+        <td width="296" height="1">Specify sampling rate in Hz.</td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="19"><font face="Times New Roman">Input
+          configuration</font></td>      
+        <td width="296" height="19">Select the input configuration.</td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="16">Double-clocked mode</td>      
+        <td width="296" height="16">Enable or disable the double-clocked mode.</td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="16">Channel</td>      
+        <td width="296" height="16">Select the channels to view.</td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="16">Range</td>      
+        <td width="296" height="16">Select the input range for the channel.</td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="16">Stop condition </td>      
+        <td width="296" height="16">Select the sampling stop condition.</td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="19">Level 1</td>      
+        <td width="296" height="19">Specify the polarity of analog trigger level
+          1.</td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="19">Level 2</td>      
+        <td width="296" height="19">Specify the polarity of analog trigger level
+          2.</td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="32" valign="top">Stop trigger edge</td>      
+        <td width="296" height="32">Select the edge
+          polarity of external trigger stop condition.</td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="16">Number of pre-trigger samples</td>      
+        <td width="296" height="16">Specify the number of pre-trigger samples.</td>      
+      </tr>      
+      <tr>      
+        <td width="243" colspan="2" height="16">Number of post-trigger samples</td>      
+        <td width="296" height="16">Specify the number of post-trigger samples.</td>      
+      </tr>      
+      <tr>      
+        <td width="103" rowspan="6" valign="top" height="150">Analog Trigger</td>          
+        <td width="132" height="19" valign="top">Triggered-channel 1</td>          
+        <td width="296" height="19" valign="top">Select the channel of analog
+          trigger level 1.</td>         
+      </tr>         
+      <tr>      
+        <td width="132" height="19" valign="top">Trigger level 1</td>          
+        <td width="296" height="19" valign="top">Specify the trigger level of
+          analog trigger level 1.</td>         
+      </tr>         
+      <tr>      
+        <td width="132" height="19" valign="top">Hysteresis 1</td>          
+        <td width="296" height="19" valign="top">Specify the hysteresis of
+          analog trigger level 1.</td>         
+      </tr>         
+      <tr>      
+        <td width="132" height="16" valign="top">Triggered-channel 2</td>          
+        <td width="296" height="1" valign="top">Select the channel of analog
+          trigger level 2.</td>         
+      </tr>         
+      <tr>      
+        <td width="132" height="18" valign="top">Trigger level 2</td>          
+        <td width="296" height="2" valign="top">Specify the trigger level of
+          analog trigger level 2.</td>         
+      </tr>         
+      <tr>      
+        <td width="132" height="19" valign="top">Hysteresis 2</td>          
+        <td width="296" height="3" valign="top">Specify the hysteresis of analog
+          trigger level 2.</td>         
+      </tr>         
+      <tr>      
+        <td width="103" rowspan="4" valign="top" height="94">Analog Trigger
+          Pulse</td>          
+        <td width="132" height="16" valign="top">Occurring Condition</td>          
+        <td width="296" height="16" valign="top">Select the occurring condition
+          of analog trigger pulse.</td>         
+      </tr>         
+      <tr>      
+        <td width="132" height="19" valign="top">Level 1</td>          
+        <td width="296" height="19" valign="top">Select the occurring condition
+          of level 1.</td>         
+      </tr>         
+      <tr>      
+        <td width="132" height="19" valign="top">Level 2</td>          
+        <td width="296" height="19" valign="top">Select the occurring condition
+          of level 2.</td>         
+      </tr>         
+      <tr>      
+        <td width="132" height="16" valign="top">Output Polarity</td>          
+        <td width="296" height="16" valign="top">Select the polarity of analog
+          trigger pulse.</td>         
+      </tr>         
+      <tr>         
+        <td width="243" colspan="2" height="19" valign="top">Zoom</td>         
+        <td width="296" height="19" valign="top">Select the zoom factor.</td>         
+      </tr>         
+    </table>         
+    </center></div>         
+         
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="287"></td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">3.&nbsp;&nbsp;</td>
+      <td width="563" valign="top">To configure the
+        conditions of external trigger output and external clock output, click <b>External
+        output setting</b>.<br>
+        <img border="0" src="Utilit7.gif" width="380" height="150">
+      <table border="1" width="84%">
+        <tr>
+          <td width="33%" align="center"><b>Parameter</b></td>
+          <td width="67%" align="center"><b>Description</b></td>
+        </tr>
+        <tr>
+          <td width="33%">ExTrigMode</td>
+          <td width="67%">Select the mode of external trigger output.</td>
+        </tr>
+        <tr>
+          <td width="33%">ExClkMode</td>
+          <td width="67%">Select the mode of external clock output.</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">4.&nbsp;&nbsp;</td>
+      <td width="563" valign="top">To configure the DI
+        conditions of DI pattern trigger matching condition,&nbsp;<br>
+        click <b>DI pattern setting</b>.<br>
+        <img border="0" src="Utilit8.gif" width="431" height="176">
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">5.&nbsp;&nbsp;</td>
+      <td width="563" valign="top">Click <b>OK </b>if the settings are correct.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">6.</td>
+      <td width="563" valign="top">To start the sampling, click <b> Start</b> on the <b> Sampling
+        </b> menu.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">7.</td>
+      <td width="563" valign="top">To stop the sampling, click <b> Stop </b> on the <b> Sampling</b> menu.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">8.</td>
+      <td width="563" valign="top">To save the acquired samples, click <b> Save </b> on the <b>Device
+        </b>menu. Data can be saved in either binary or CSV format.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">9.</td>
+      <td width="563" valign="top">To close the device, click <b> Close the Device</b> on the
+        <b>Device</b> menu.</td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">&nbsp;&nbsp;&nbsp;</td>
+      <td width="563" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="22">10.</td>
+      <td width="563" valign="top">To terminate this program, first close the device,
+        and then click <b> Exit</b>.</td>
+    </tr>
+  </table>
+</blockquote>
+  <hr>
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+Corporation. All rights reserved.
+</font></p>
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

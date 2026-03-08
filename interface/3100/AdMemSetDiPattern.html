@@ -1,0 +1,406 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdMemSetDiPattern</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdMemSetDiPattern</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The AdMemSetDiPattern function configures the analog-to-digital input pattern matching
+  conditions.&nbsp;
+  <font color="#FF00FF">
+ </font></td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <b>C&nbsp;<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472" valign="top"><font face="Courier New" size="3">INT
+          AdMemSetDiPattern(</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> HANDLE&nbsp;</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font size="3" face="Courier New">ULONG</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"><i>ulCh,</i></font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="132" valign="top"> <font size="3" face="Courier New">ULONG</font></td>
+        <td width="317" valign="top"> <font face="Courier New" size="3"><i>*bPatternTrug</i></font></td>
+      </tr>
+      <tr>
+        <td width="472" colspan="3" valign="top">
+    <font face="Courier New" size="3">
+    );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <b>Visual Basic<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">Declare Function
+          </font><font face="Courier New" size="3">AdMemSetDiPattern </font><font face="Courier New">Lib &quot;FbiAd.DLL&quot;
+          ( _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal</font></td>
+        <td width="149" valign="top"> <font face="Courier New"> <i>hDeviceHandle</i> </font></td>
+        <td width="246" valign="top"> <font face="Courier New"> As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByVal</font></td>
+        <td width="149" valign="top"> <font face="Courier New" size="3"><i>ulCh</i></font></td>
+        <td width="246" valign="top"> <font face="Courier New"> As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="54" valign="top"> <font face="Courier New"> ByRef</font></td>
+        <td width="149" valign="top"> <i><font face="Courier New">ulPatternTrug</font></i></td>
+        <td width="246" valign="top"> <font face="Courier New"> As Long _</font></td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4" valign="top">
+    <font face="Courier New">
+    ) As Long</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <b>Delphi<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">function
+          </font><font face="Courier New" size="3">AdMemSetDiPattern</font><font face="Courier New">(</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><font face="Courier New"><i>hDeviceHandle</i> &nbsp;</font></td>
+        <td width="276" valign="top"> <font face="Courier New"> : THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="14" colspan="2" valign="top"></td>
+        <td width="170" valign="top"><font face="Courier New" size="3"><i>ulCh</i></font></td>
+        <td width="276" valign="top"> <font face="Courier New"> : Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="7" valign="top"></td>
+        <td width="7" valign="top"><font face="Courier New">var</font></td>
+        <td width="170" valign="top"><i><font face="Courier New">ulPatternTrug</font></i></td>
+        <td width="276" valign="top"><font face="Courier New">: Cardinal</font></td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4" valign="top">
+    <font face="Courier New">
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="546" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="130"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td width="411" valign="top">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="130"></td>
+      <td width="411" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="130"><font face="Courier New" size="3"><i>ulCh</i></font></td>
+      <td width="411" valign="top">Specifies the number of
+        channels to perform the DI pattern matching in the range of 1 through 8.
+        Specifies 1 or more larger value.</td> 
+    </tr>
+    <tr> 
+      <td valign="top" nowrap width="130"></td>
+      <td width="411" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="130"><i><font face="Courier New">ulPatternTrug</font></i></td>
+      <td width="411" valign="top">Points to a condition setting variable of DI
+        pattern matching trigger.&nbsp;<br>
+        &nbsp;&nbsp;&nbsp;<br>
+        ulPattern[0]: DI1<br>
+        ulPattern[1]: DI2<br>
+        ulPattern[2]: DI3<br>
+        ulPattern[3]: DI4<br>
+        ulPattern[4]: DI5<br>
+        ulPattern[5]: DI6<br>
+        ulPattern[6]: DI7<br>
+        ulPattern[7]: DI8<br>
+        &nbsp;&nbsp;&nbsp;
+        <table border="1" cellspacing="1" width="93%">
+          <tr>
+            <td width="36%" align="center"><b>Code</b></td>
+            <td width="64%" align="center"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="36%">AD_DISABLE</td>
+            <td width="64%">No setting (default setting)</td>
+          </tr>
+          <tr>
+            <td width="36%">AD_LOW_LEVEL</td>
+            <td width="64%">Input signal status: 0 (low
+              level)</td>
+          </tr>
+          <tr>
+            <td width="36%">AD_HIGH_LEVEL</td>
+            <td width="64%">Input signal status: 1 (high
+              level)</td>
+          </tr>
+          <tr>
+            <td width="36%">AD_DOWN_EDGE&nbsp;</td>
+            <td width="64%">Falling edge</td>
+          </tr>
+          <tr>
+            <td width="36%">AD_UP_EDGE&nbsp;</td>
+            <td width="64%">Rising edge</td>
+          </tr>
+        </table>
+      </td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td width="480">
+  The AdMemSetDiPattern function returns AD_ERROR_SUCCESS if the process is
+  successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Comments</font></strong></p>
+  <table border="0" width="520" cellspacing="1">
+    <tr>
+      <td width="596" valign="top">
+      <ul>
+        <li>This function is not available while the sampling is running.</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top">
+  <ul>
+    <li>This function is enable to use when the sampling
+      end condition is configured to the DI pattern matching &#65288;AD_STOP_DI_EQ&#65289;by
+      using the <a href="AdMemSetSamplingConfig.html"> AdMemSetSamplingConfig</a> function.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top">
+  <ul>
+    <li>This function cannot use with the digital output.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="596" valign="top">
+  <ul>
+    <li>This function is applicable to the CSI/CBI-320110, CBI-320110TK,
+      CBI-320110TL, LPC-320910, PEX-320910 and CTP/CPZ-360810.</li>
+  </ul>
+      </td>
+    </tr>
+  </table>
+ 
+<p><strong><font face="Times New Roman" size="4"> Examples</font></strong></p>
+
+  <blockquote>
+  <b>C&nbsp;<br>
+  </b>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td valign="top">
+    <font face="Courier New">ULONG ulPatternTrig[2];</font>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td valign="top"><font face="Courier New">ulPatternTrig[0] =
+          AD_LOW_LEVEL; // DI1</font></td>
+      </tr>
+      <tr>
+        <td valign="top"><font face="Courier New">ulPatternTrig[1] = AD_UP_EDGE;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          // DI2</font></td>
+      </tr>
+      <tr>
+        <td valign="top">
+    <font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td valign="top">
+    <font face="Courier New">nRet = AdMemSetDiPattern( hDeviceHandle, 2,
+    &amp;ulPatternTrig[0] );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <strong><font face="Times New Roman" size="3">Visual Basic<br>
+  </font></strong>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1" height="63">
+      <tr>
+        <td height="21" valign="top">
+    <font face="Courier New">Dim ulPatternTrig(1) As Long</font>
+        </td>
+      </tr>
+      <tr>
+        <td height="1" valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td height="1" valign="top">
+    <font face="Courier New">ulPatternTrig(0) = AD_LOW_LEVEL ' DI1</font></td>
+      </tr>
+      <tr>
+        <td height="1" valign="top">
+    <font face="Courier New">ulPatternTrig(1) = AD_UP_EDGE ' DI2</font></td>
+      </tr>
+      <tr>
+        <td height="1" valign="top">
+    <font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td height="1" valign="top">
+    <font face="Courier New">nRet = AdMemSetDiPattern( hDeviceHandle, 2,
+    ulPatternTrig(0) )</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <strong><font face="Times New Roman" size="3">Delphi<br>
+  </font></strong>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td height="21" colspan="2" width="542" valign="top">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">var</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" colspan="2" width="542" valign="top">
+          <p ALIGN="JUSTIFY"><font face="Courier New" size="3">&nbsp;&nbsp;
+          ulPatternTrig: array[0..1] of Cardinal;</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" colspan="2" width="542" valign="top">
+          <p ALIGN="JUSTIFY"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" colspan="2" width="542" valign="top">
+          <p ALIGN="JUSTIFY"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;ulPatternTrig[0]
+          := AD_LOW_LEVEL; // DI1</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" colspan="2" width="542" valign="top">
+          <p ALIGN="JUSTIFY"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;ulPatternTrig[1]
+          := AD_UP_EDGE;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // DI2</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td height="19" colspan="2" width="542" valign="top">
+          <p ALIGN="JUSTIFY"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td width="32" valign="top">
+        <p ALIGN="JUSTIFY">
+        </td>
+        <td width="504" valign="top">
+    <p ALIGN="JUSTIFY"><font face="Courier New" size="3">nRet :=
+    AdMemSetDiPattern( hDeviceHandle, 2, ulPatternTrig(0) );</font></p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top">
+<font size="3">Specify&nbsp;the digital input pattern matching conditions on the
+board/card specified by
+hDeviceHandle as follows.<br>
+<br>
+- DI1: Low level<br>
+- DI2: Raising edge</font>
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

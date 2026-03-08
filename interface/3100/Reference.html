@@ -1,0 +1,475 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Reference</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">11. Reference</font></b></p>
+<p><b><a name="13.1 Programming Guide"><font size="4" face="Arial">11.1
+Programming Guide</font></a></b></p>
+<blockquote>
+  <table border="0" width="588">
+    <tr>
+      <td width="580" valign="top">This section explains how to use the provided
+        functions. Sample codes are written in C.
+        <p>When you use two or more identical boards, remember to set the RSW1 on each
+  board so as not to conflict with any other before the board installation. The
+        CardBus cards have no rotary switch, and the software considers their
+        board number is 0.</td>
+    </tr>
+  </table>
+</blockquote>
+<blockquote>
+<p><b><a name="13.1.1 Initializing"><font face="Arial" size="3">11.1.1
+Initializing</font></a></b></p>
+  <blockquote>
+    <table border="0" width="489">
+      <tr>
+        <td colspan="2" width="740" valign="top">
+      The <a href="AdOpen.html">AdOpen</a>  function initializes the board.
+      <p>This is a code fragment illustrating how to use the function.
+      Hereafter, all code fragments are formatted in courier new font.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" width="431" valign="top">
+          <blockquote>
+            <font face="Courier New">
+            hDeviceHandle = AdOpen (&quot;FBIAD1&quot;)</font>
+          </blockquote>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" width="513" valign="top">
+    A board named &quot;FBIAD1&quot; is initialized.
+        </td>
+      </tr>
+      <tr>
+        <td width="944" colspan="2" valign="top">
+      The device driver assigns device names as follows:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;FBIAD1, FBIAD2, ... , FBIAD255</td>
+      </tr>
+      <tr>
+        <td width="1" valign="top"></td>
+        <td width="943" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="944" colspan="2" valign="top">A device handle is returned to hDeviceHandle
+          after the board is successfully initialized. The device handle allows
+          you to reference the board and must be specified when a function is
+          called.
+          <p>The initialized board must be closed by the <a href="AdClose.html">AdClose</a> 
+          function before the application is terminated.</p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><b><font face="Arial" size="3"><a name="13.1.2 Event Settings">11.1.2
+  Event Settings</a></font></b></p>
+  <blockquote>
+    <table border="0" width="491">
+      <tr>
+        <td width="742" valign="top">
+      The <a href="AdSetBoardConfig.html">AdSetBoardConfig</a>
+      function setups event conditions. When the <a href="AdStartSampling.html">AdStartSampling</a> 
+      function is performed as an overlapped process (an asynchronous process),
+      the event must be used. If the <a href="AdSetBoardConfig.html">AdSetBoardConfig</a> 
+      function isn't used, default values are used for the settings.
+        </td>
+      </tr>
+      <tr>
+        <td width="441" valign="top">
+          <blockquote>
+            <font face="Courier New">
+            hEvent = CreateEvent(0, TRUE, FALSE, NULL);<br>
+            AdSetBoardConfig(hDeviceHandle, hEvent, CallBackProc,dwUser);</font>
+          </blockquote>
+        </td>
+      </tr>
+      <tr>
+        <td width="515" valign="top">
+      <p>Executing the <a href="AdSetBoardConfig.html">AdSetBoardConfig</a> function while
+      sampling is running, the configurations are updated immediately.</p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><font face="Arial" size="3"><b><a name="13.1.3 Sampling Condition Settings">11.1</a></b></font><b><a name="13.1.3 Sampling Condition Settings"><font face="Arial" size="3">.3
+  Sampling Condition Settings
+  </font></a></b></p>
+  <blockquote>
+    <table border="0" width="493" height="588">
+      <tr>
+        <td width="761" valign="top" height="97">
+      The <a href="AdSetSamplingConfig.html">AdSetSamplingConfig</a>
+      or <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a> 
+      function specifies sampling conditions. Default values are used for sampling conditions, if the <a href="AdSetSamplingConfig.html">AdSetSamplingConfig</a>
+      or <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a> function has not been called. (The default values are
+      retrieved by calling the <a href="AdGetSamplingConfig.html"> AdGetSamplingConfig</a> or
+      <a href="AdBmGetSamplingConfig.html">AdBmGetSamplingConfig</a> function
+      after the board is opened.)
+        </td>
+      </tr>
+      <tr>
+        <td width="452" valign="top" height="16">
+          <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+        </td>
+      </tr>
+      <tr>
+        <td width="452" valign="top" height="400">
+          <font face="Courier New">AdSmplConfig.ulChCount = 1;<br>
+          AdSmplConfig.SmplChReq[0].ulChNo = 1;<br>
+          AdSmplConfig.SmplChReq[0].ulRange = AD_5V;<br>
+          AdSmplConfig.ulSamplingMode = AD_IO_SAMPLING;<br>
+          AdSmplConfig.ulSingleDiff = AD_INPUT_SINGLE;<br>
+          AdSmplConfig.ulSmplNum = 1024;<br>
+          AdSmplConfig.ulSmplEventNum = 0;<br>
+          AdSmplConfig.fSmplFreq = 1000.0;<br>
+          AdSmplConfig.ulTrigPoint = AD_TRIG_START;<br>
+          AdSmplConfig.ulTrigMode = AD_FREERUN;<br>
+          AdSmplConfig.lTrigDelay = 0;<br>
+          AdSmplConfig.ulTrigCh = 1;<br>
+          AdSmplConfig.fTrigLevel1 = 0.0;<br>
+          AdSmplConfig.fTrigLevel2 = 0.0;<br>
+          AdSmplConfig.ulEClkEdge = AD_DOWN_EDGE;<br>
+          AdSmplConfig.ulATrgPulse = AD_LOW_PULSE;<br>
+          AdSmplConfig.ulTrigEdge = AD_DOWN_EDGE;<br>
+          AdSmplConfig.ulTrigDI = 1;<br>
+          AdSmplConfig.ulFastMode = AD_NORMAL_MODE;<br>
+          <br>
+          AdSetSamplingConfig( hDeviceHandle , &amp;AdSmplConfig );</font>
+          <p>&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td width="534" valign="top" height="59">
+      <p>Executing the <a href="AdSetSamplingConfig.html">AdSetSamplingConfig</a> 
+      or <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a> function while
+      sampling is running, specified sampling conditions are valid when next sampling starts.</p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><b><font face="Arial" size="3"><a name="13.1.4 Starting the Sampling">11.1.4
+  Starting the
+  Sampling</a> </font></b></p>
+  <blockquote>
+    <table border="0" width="495">
+      <tr>
+        <td width="746" valign="top">
+      The <a href="AdStartSampling.html">AdStartSampling</a>  function starts
+      sampling.
+        </td>
+      </tr>
+      <tr>
+        <td width="437" valign="top">
+        <font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="437" valign="top">
+        <blockquote>
+          <p><font face="Courier New">AdStartSampling(hDeviceHandle, FLAG_SYNC);</font></p>
+          </blockquote>
+        </td>
+      </tr>
+      <tr>
+        <td width="519" valign="top">
+      <p>Specifying the process as a non-overlapped process (FLAG_SYNC), it doesn't
+      return until the sampling is completed. Specifying the process as an overlapped process (FLAG_ASYNC), it returns
+      immediately after calling the function.<br>
+      By using the function such as the CreateEvent or WaitForSingleObject function
+      of Win32 API, you can wait for the event signal. If you want to know how to use the CreateEvent and WaitForSingleObject
+      functions,
+      please refer to Microsoft Win32 API reference.</p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+<p><b><font face="Arial" size="3"><a name="13.1.5 Terminating the Sampling">11.1.5</a></font></b><font face="Arial" size="3"><a name="13.1.5 Terminating the Sampling"><b>
+Terminating the Sampling</b></a></font></p>
+<blockquote>
+  <table border="0" width="497">
+    <tr>
+      <td width="489" valign="top">
+      The <a href="AdStopSampling.html">AdStopSampling </a> function can stop sampling.
+      </td>
+    </tr>
+    <tr>
+      <td width="489" valign="top">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td width="489" valign="top">
+        <blockquote>
+          <p><font face="Courier New">AdStopSampling(hDeviceHandle);</font></p>
+        </blockquote>
+      </td>
+    </tr>
+    <tr>
+      <td width="489" valign="top">
+      <p>If you want to stop the sampling that is performed as an overlapped process,
+      call
+      the <a href="AdStopSampling.html">AdStopSampling</a> function.</p>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+  <p><b><font face="Arial" size="3"><a name="13.1.6 Reading Sampling Data">11.1.6 Reading Sampling Data</a></font></b></p>
+  <blockquote>
+    <font size="3">
+    <table border="0" width="499">
+      <tr>
+        <td width="517" valign="top">
+    <font size="3">
+    The <a href="AdGetSamplingData.html">AdGetSamplingData</a>
+      or <a href="AdBmGetSamplingData.html">AdBmGetSamplingData</a>  function
+    can transfer </font>sampling data from the sampling buffer to the user buffer
+      even if<font size="3"> the sampling is running.
+    </font>
+        </td>
+      </tr>
+      <tr>
+        <td width="517" valign="top">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td width="517" valign="top">
+          <blockquote>
+            <font face="Courier New">
+            ulpSmplNum = 1024;<br>
+            AdGetSamplingData( hDeviceHandle , pSmplData , &amp;ulpSmplNum );</font>
+          </blockquote>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+    <p><font face="Arial"><b><a name="13.1.7 Closing the Board">11</a></b></font><a name="13.1.7 Closing the Board"><b><font face="Arial">.1.7 Closing</font></b><font face="Arial"><b>
+    the Board</b></font></a></p>
+    <blockquote>
+  <table border="0" width="498">
+    <tr>
+      <td width="559" valign="top">
+    <font size="3">
+      The <a href="AdClose.html"> AdClose</a> function closes the board and releases the resources.
+    </font>
+      </td>
+    </tr>
+    <tr>
+      <td width="559" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td width="559" valign="top">
+      <blockquote>
+        <p><font size="3" face="Courier New">
+    AdClose(hDeviceHandle);
+    </font>
+        </p>
+      </blockquote>
+      </td>
+    </tr>
+  </table>
+    </blockquote>
+    <p><font face="Arial"><b><a name="13.1.8 Overlapped Process (Asynchronous Process)">11</a></b></font><font face="Arial"><a name="13.1.8 Overlapped Process (Asynchronous Process)"><b>.1.8 Overlapped
+    Process (Asynchronous Process)</b></a></font></p>
+    <blockquote>
+    <table border="0" width="503" height="126">
+      <tr>
+        <td width="521" height="19" valign="top">
+    <font size="3">
+    The following code fragment shows an overlapped process (an asynchronous process)
+    how to start sampling and detect the sampling completion.
+    </font>
+        </td>
+      </tr>
+      <tr>
+        <td width="521" height="19" valign="top">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td width="521" height="158" valign="top">
+          <blockquote>
+            <font face="Courier New">
+            // Create an event object.<br>
+        hEvent = CreateEvent(0, TRUE, FALSE, NULL);<br>
+            AdSetBoardConfig( hDeviceHandle , hEvent , NULL , 0 );<br>
+        <br>
+        // Starts sampling asynchronously.<br>
+            AdStartSampling( hDeviceHandle , FLAG_ASYNC );<br>
+        <br>
+            // Wait until the event object is<br>
+            // signaled.<br>
+            WaitForSingleObject(hEvent, INFINITE);</font>
+            <p><font face="Courier New">// Reset the event.<br>
+            ResetEvent(hEvent);</font></p>
+            <p><font face="Courier New">//&nbsp;Close the event handle.<br>
+            CloseHandle(hEvent);</font></p>
+          </blockquote>
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+    </font>
+<p align="left">
+    <font face="Arial" size="3"><b><a name="13.1.9 Example for Overlapped Process (Asynchronous Process) in Visual Basic">11</a></b></font><font face="Arial"><a name="13.1.9 Example for Overlapped Process (Asynchronous Process) in Visual Basic"><b>.1.9
+    Example for Overlapped
+    Process (Asynchronous Process)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in Visual Basic</b></a></font></p>
+<blockquote>
+  <table border="0" width="505">
+    <tr>
+      <td width="497" valign="top">You need to add the following Win32 function declarations into the standard
+        module.
+        <p>  
+  <font face="Courier New">  
+  Declare Function CreateEvent Lib &quot;kernel32&quot; Alias &quot;CreateEventA&quot;
+  (ByVal lpEventAttributes As Long, ByVal&nbsp; ManualReset As Long, ByVal bInitialState As   
+  Long, ByVal lpName As String) As Long<br>  
+  Declare Function WaitForSingleObject Lib &quot;kernel32&quot; (ByVal hHandle As Long,   
+  ByVal dwMilliseconds As Long) As Long<br>  
+  Declare Function CloseHandleLib &quot;kernel32&quot; (ByVal hObject As Long) As Long</font></td>
+    </tr>
+  </table>
+  <table border="0" width="507" height="1">
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">The following steps show pseudo
+        codes.</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">1.&nbsp; Create an
+        event object.
+      </td>
+    </tr>
+    <tr>
+      <td width="37" height="1" valign="top"></td>
+      <td width="456" height="1" valign="top"><font face="Courier New">hEvent = CreateEvent(0, True,
+        Fale, 0)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">2.&nbsp; Register the event handle.
+      </td>
+    </tr>
+    <tr>
+      <td width="37" height="1" valign="top"></td>
+      <td width="456" height="1" valign="top"><font face="Courier New">AdSetBoardConfig(hDeviceHandle,
+        hEvent, 0, 0)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">3.&nbsp; Start sampling asynchronously.
+      </td>
+    </tr>
+    <tr>
+      <td width="37" height="1" valign="top"></td>
+      <td width="456" height="1" valign="top"><font face="Courier New">AdStartSampling(hDeviceHandle,
+        FLAG_ASYNC)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">4.&nbsp; Wait until
+        the event object is signaled.
+      </td>
+    </tr>
+    <tr>
+      <td width="37" height="1" valign="top"></td>
+      <td width="456" height="1" valign="top"><font face="Courier New">WaitForSingleObject(hEvent,
+        -1)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">5.&nbsp; Reset&nbsp; the event.
+      </td>
+    </tr>
+    <tr>
+      <td width="37" height="5" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+      <td width="456" height="19" valign="top"><font face="Courier New">ResetEvent (hEvent)</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" width="499" height="21" valign="top">6.&nbsp; Close the event handle.</td>
+    </tr>
+    <tr>
+      <td width="37" height="1" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+      <td width="456" height="1" valign="top"><font face="Courier New">AdStartSampling(hDeviceHandle,
+        FLAG_ASYNC)</font></td>
+    </tr>
+  </table>
+</blockquote>
+<p align="left"><font face="Arial" size="3"><b><a name="13.1.10 Examples of the CallBackProc Function in Visual Basic">11</a></b></font><font face="Arial"><a name="13.1.10 Examples of the CallBackProc Function in Visual Basic"><b>.1.10
+Examples of the CallBackProc Function in Visual Basic</b></a></font></p>
+<blockquote>
+  <table border="0" width="509">
+    <tr>
+      <td width="501" valign="top">1.&nbsp; Declare your callback routine in the standard module.</td>
+    </tr>
+    <tr>
+      <td width="501" valign="top">
+        <blockquote>
+          <p>  
+  <font face="Courier New">  
+  Sub lpEventProc(ByVal dwUser As Long)<br>  
+  </font>&#12288;<font face="Courier New">'Write your code.<br> 
+  End Sub</font></p>
+        </blockquote>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="512">
+    <tr>
+      <td width="504" valign="top">2.&nbsp; Configure callback routine.
+      </td>
+    </tr>
+    <tr>
+      <td width="504" valign="top">
+        <blockquote>
+          <p>  
+  <font face="Courier New">  
+  AdSetBoardConfig(hDeviceHandle,0,AddressOf lpEventProc,0)</font></p>
+        </blockquote>
+      </td>
+    </tr>
+    <tr>
+      <td width="504" valign="top">When you follow these procedures, the callback routine (lpEventProc)
+        runs when the sampling is stopped. You can decide the function's name of callback routine.
+        What you need to
+        do is passing the address of the routine to the <a href="AdSetBoardConfig.html"> AdSetBoardConfig</a>
+        function.</td>
+    </tr>
+  </table>
+</blockquote>
+</blockquote>
+  <hr>
+
+  <p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+  Corporation. All rights reserved.
+  </font></p>
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

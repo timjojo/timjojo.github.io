@@ -1,0 +1,345 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=x-sjis">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 AdStartSampling</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p><b><font face="Arial" size="5">AdBmStartSampling</font></b></p>    
+    
+<p> <b><font face="Times New Roman" size="4">Description</font></b></p> 
+ 
+<blockquote> 
+  <p><font face="Times New Roman">The AdBmStartSampling function starts continuous sampling on the board/card. When using this function, data is directly DMA transferred to the 
+  specified buffer.<br>
+  </font></p> 
+</blockquote> 
+ 
+<p><b><font size="4"> </font><font face="Times New Roman" size="4">Syn</font></b><font face="Times New Roman" size="4"><b>tax</b></font></p> 
+ 
+<blockquote> 
+  <p><b><font face="Times New Roman">C</font></b></p> 
+ 
+  <blockquote> 
+    <p><b><font face="Courier New">INT AdStartSampling(<br>                   
+    </font> <font face="Courier New">HANDLE </font> </b><font face="Courier New"><i>hDeviceHandle,</i><b><br>                      
+    </font> <font face="Courier New">PVOID&nbsp;&nbsp; </font></b><font face="Courier New"><i>pSmplData,<br>      
+    </i><b></font> <font face="Courier New">ULONG </font> </b><font face="Courier New"><i>ulSize</i><br>                    
+    );</font></p>    
+  </blockquote>    
+    
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>     
+    
+  <blockquote>    
+    <p><b><font face="Courier New">Declare Function AdStartSampling Lib &quot;FbiAd.DLL&quot; 
+    ( _<br>                   
+    </font> <font face="Courier New">ByVal </font> </b><font face="Courier New"><i>hDeviceHandle</i><b> As 
+    Long, _<br>                       
+    </font> <font face="Courier New">ByRef </font> </b><font face="Courier New"><i>pSmplData</i><b>  As 
+    Any _<br>         
+    &nbsp; ByVal <i>ulSize</i> As Long _<br>        
+    ) As Long</b></font></p>                
+  </blockquote>    
+    
+  <p><b><font face="Times New Roman">Delphi</font></b></p>    
+    
+  <blockquote>    
+    <p><b><font face="Courier New">function AdStartSampling(<br>                  
+    </font> </b><font face="Courier New"><i>hDeviceHandle</i><b>: THandle;<br>           
+    &nbsp;&nbsp;&nbsp;</b><i>pSmplData</i><b> : Pointer;<br>          
+    &nbsp; </b><i>ulSize</i><b> : Cardinal<br>         
+    ) : DWORD; stdcall; external 'FbiAd.DLL'</b>;</font></p> 
+  </blockquote> 
+</blockquote> 
+ 
+<p> <br>
+<b><font face="Times New Roman" size="4">Parameters</font><font size="4"> </font></b></p> 
+ 
+<blockquote> 
+  <table border="0" width="80%"> 
+    <tr> 
+      <td width="20%" valign="top"><i><font face="Courier New">DeviceHandle</font></i></td> 
+      <td width="80%"><font face="Times New Roman">Specifies the device handle 
+        obtained by the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdOpen.html">AdOpen</a> 
+        function.</font> 
+      </td> 
+    </tr> 
+    <tr> 
+      <td width="20%" valign="top"></td> 
+      <td width="80%"> 
+      </td> 
+    </tr> 
+    <tr>
+      <td width="20%" valign="top"><i><font face="Courier New">pSmplData</font></i></td> 
+      <td width="80%"><font face="Times New Roman">Points to the buffer to store 
+        sampling data obtained from the board/card.</font> 
+      </td> 
+    </tr>
+    <tr>
+      <td width="20%" valign="top"></td> 
+      <td width="80%"> 
+      </td> 
+    </tr>
+    <tr>
+      <td width="20%" valign="top"><i><font face="Courier New">ulSize</font></i></td> 
+      <td width="80%"><font face="Times New Roman">Specifies the buffer size for      
+        sampling data obtained from the board/card.&nbsp;</font>      
+      </td> 
+    </tr>
+  </table> 
+</blockquote> 
+ 
+<p align="left"><br>
+<b><font face="Times New Roman" size="4">Return Value</font></b></p>      
+ 
+<blockquote> 
+  <p><font face="Times New Roman">The AdBmStartSampling function returns 
+  AD_ERROR_SUCCESS if the process is successfully completed. Otherwise, this 
+  function returns another code. Please refer to the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/Return%20Values.html">error 
+  codes</a>.</p> </font> 
+</blockquote> 
+ 
+<p><b><font face="Times New Roman" size="4">Comments</font><font size="4"> </font></b></p> 
+ 
+<blockquote>
+  <table cellSpacing="0" cellPadding="0" border="0" height="714" width="535">
+    <tbody>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="34"><font>-</font></td>
+        <td width="518" height="34"><font face="Times New Roman">board/card other than the PCI/CTP/CPZ-3525, LPC/PEX-320724can use only even number    
+          of channels.</font></td>   
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="18"></td>
+        <td width="518" height="18"></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="146">-</td>
+        <td width="518" height="146"><font face="Times New Roman">Notes     
+          for PCI/CTP/CPZ-3525</font><br>    
+          <font face="Times New Roman" >Normal clock mode:</font><font > </font><font face="Times New Roman" >available     
+          only in even number channels</font><font><br>    
+          </font><font face="Times New Roman">Double clock mode:</font><font> </font><font face="Times New Roman" >available     
+          only in channel 1</font><font><br>    
+          <br>
+          </font><font face="Times New Roman" >Use only channel 1 in the double clock mode.<br> 
+          The actual sampling frequency is two times as the frequency configured  
+          by the <a href="AdSetSamplingConfig.html">AdSetSamplingConfig</a>  
+          function or <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>  
+          function.</font><br>
+          <font face="Times New Roman">The number of sampling and delay is      
+          specified in even number.&nbsp;&nbsp;&nbsp;</font>&nbsp;<br>     
+          <font face="Times New Roman">The configurable number is power of      
+          two.&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="18"></td>
+        <td width="518" height="18"></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="50"><font>-</font></td>
+        <td width="518" height="50"><font face="Times New Roman">This     
+          function does not support pre-trigger delay.</font><font><br>    
+          </font><font face="Times New Roman">Therefore, do not set      
+          pre-trigger for the delay by&nbsp; the <a href="AdSetSamplingConfig.html">AdSetSamplingConfig</a>      
+          function or <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig    
+          </a>  
+          function.</font></td> 
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="18"></td>
+        <td width="518" height="18"></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="50"><font>-</font></td>
+        <td width="518" height="50"><font face="Times New Roman">This     
+          function does not support bus master sumpling status.</font><font><br>    
+          </font><font><font face="Times New Roman">Therefore, do not  
+          set sapmling status using the <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a></font> 
+          <font face="Times New Roman">function.&nbsp;</font></font></td>    
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="18"></td>
+        <td width="518" height="18"></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="50"><font>-</font></td>
+        <td width="518" height="50"><font face="Times New Roman">Configure    
+          the sampling condition using the <a href="AdSetSamplingConfig.html">AdSetSamplingConfig</a>    
+          function or <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>    
+          function.</font><font><br>  
+          </font><font face="Times New Roman">This function does not 
+          configure the number of channels and samplings.</font></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="18"></td>
+        <td width="518" height="18"></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="135">-</td>
+        <td width="518" height="135"><font face="Times New Roman">Prepare     
+          enough size of DMA buffer. The required size for DMA buffer is&nbsp;     
+          obtained by the following formula;<br>    
+          &nbsp;&nbsp;<br>
+          the number of samplings * the number of repetition * Data size of one     
+          channel * the number of channels</font>    
+          <p><font face="Times New Roman">The lack of the buffer size 
+          causes overrun error. Make sure to set the enough size of buffer.</font></p>
+        </td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="18"></td>
+        <td width="518" height="18"></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="53">-</td>
+        <td width="518" height="53">W<font face="Times New Roman">hen an event  
+          is registered by the <a href="AdSetBoardConfig.html">AdSetBoardConfig</a></font><font> 
+          </font><font><font face="Times New Roman">function and 
+          sampling is asynchronously processed,</font> <font face="Times New Roman">the 
+          sampling-stop event is occurred after the number of processing (the 
+          specified number of sampling * repetition number) is completed.</font></font></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="18"></td>
+        <td width="518" height="18"></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="18">-</td>
+        <td width="518" height="18"><font face="Times New Roman">This     
+          function is processed asynchronously.&nbsp;</font></td>    
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="18"></td>
+        <td width="518" height="18"></td>
+      </tr>
+      <tr>
+        <td vAlign="top" align="middle" width="13" height="34">-</td>
+        <td width="518" height="34"><font face="Times New Roman"><font>Use    
+          the </font><a href="AdGetStatus.html">AdGetStatus</a> function to    
+          confirm the number of the completed samplings and sampling status.</font></td>   
+      </tr>
+    </tbody>
+  </table>
+  <p><font face="Times New Roman">The data size of each data depends on the the 
+  resolution. Refer to <a href="Data%20Format.html#8.2 Analog Input Data">Data 
+  Format</a></font>)<br>
+  <font face="Times New Roman">The table blow shows the variable type for each    
+  language.</font></p>
+  <table border="1" width="60%">
+    <tr>
+      <td width="20%" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Resolution</font></b></td>
+      <td width="20%" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Size 
+        (Byte)</font></b></td>
+      <td width="20%" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">C</font></b></td>
+      <td width="20%" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Visual Basic</font></b></td>                  
+      <td width="20%" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Delphi</font></b></td>     
+    </tr>     
+    <tr>     
+      <td width="20%" align="center"><font face="Times New Roman">8bit</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">1</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">BYTE</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">Byte</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">Byte</font></td>     
+    </tr>     
+    <tr>
+      <td width="20%" align="center"><font face="Times New Roman">10bit</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">2</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">WORD</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">Integer</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">Word</font></td>     
+    </tr>
+    <tr>     
+      <td width="20%" align="center"><font face="Times New Roman">12bit</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">2</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">WORD</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">Integer</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">Word</font></td>     
+    </tr>     
+    <tr>     
+      <td width="20%" align="center"><font face="Times New Roman">16bit</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">2</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">WORD</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">Integer</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">Word</font></td>     
+    </tr>     
+    <tr>     
+      <td width="20%" align="center"><font face="Times New Roman">24bit</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">4</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">DWORD</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">Long</font></td>     
+      <td width="20%" align="center"><font face="Times New Roman">Dword</font></td>     
+    </tr>     
+  </table>     
+     
+</blockquote>
+   
+<p><b><font face="Times New Roman" size="4">Examples</font><font size="4"> </font></b></p>   
+   
+<blockquote>   
+  <p><b><font face="Times New Roman">C</font></b></p>   
+   
+  <blockquote>   
+    <p align="justify"><font face="Courier New">PVOID pSmplData;<br>    
+    ULONG ulSmplNum;<br>    
+    ULONG ulRepeatCount;<br>    
+    ULONG ulSize;</font></p>  
+    <p align="justify"><font face="Courier New">ulChCount = 2;<br>      
+    ulSmplNum = 1024;<br>        
+    ulRepeatCount = 600;<br>        
+    <br>
+    ulSize =ulSmplNum * ulChCount * ulRepeatCount * sizeof( DWORD );&nbsp;</font></p>       
+    <p align="justify"><font face="Courier New">pSmplData= calloc(ulSize ,    
+    sizeof(BYTE));</font></p>  
+    <p><font face="Courier New">nRet = AdBmStartSampling( hDeviceHandle, 
+    pSmplData, ulSize);</font></p>             
+  </blockquote>    
+    
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>      
+    
+  <blockquote>
+    <p><font face="Courier New">Dim SmplData(1024, 600) As Long<br>     
+    <br>
+    ulSize = 1024 * 600 * 2 * 4<br>   
+    <br>
+    nRet = AdBmStartSampling( hDeviceHandle, SmplData(0,0), ulSize )<br>    
+    </font> 
+    </p>
+  </blockquote>
+    
+  <p><b><font face="Times New Roman">Delphi</font></b></p>    
+    
+  <blockquote>    
+    <p><font face="Courier New">var<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; pSmplData: Pointer;<br>       
+    &nbsp;&nbsp;&nbsp;&nbsp; ulChCount : Cardinal;<br>       
+    &nbsp;&nbsp;&nbsp;&nbsp; ulSmplNum: Cardinal;<br>       
+    &nbsp;&nbsp;&nbsp;&nbsp; ulRepeatCount: Cardinal;<br>       
+    &nbsp;&nbsp;&nbsp;&nbsp; ulSize: Cardinal;<br>       
+    <br>
+    ulChCount := 2;<br>     
+    ulSmplNum := 1024;<br>       
+    ulRepeatCount:= 600;<br>       
+    <br>
+    ulSize:= ulSmplNum * ulChCount * ulRepeatCount* SizeOf(DWORD);</font></p>     
+    <p><font face="Courier New">pSmplData := AllocMem(ulSize);</font></p> 
+    <p><font face="Courier New">nRet := AdBmStartSampling( hDeviceHandle, pSmplData, ulSize );<br>  
+    </font>
+    </p>
+  </blockquote>    
+    
+  <p><font face="Times New Roman">Start the continuous sampling on the board/card specified by hDeviceHandle</font></p>     
+    
+</blockquote>   
+   
+<hr>   
+   
+<p align="right"><font face="Times New Roman">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>              
+   
+<p ALIGN="center"><a href="Help.htm"><font face="Times New Roman">[</font> <font face="Times New Roman">Top</font> <font face="Times New Roman">]</font></a></p> 
+ 
+</body>   
+</html>   

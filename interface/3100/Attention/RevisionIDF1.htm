@@ -1,0 +1,150 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 Attention</title>
+</head>
+
+<body>
+
+<blockquote>    
+  <table border="0" width="90%">    
+    <tr>      
+      <td width="100%" valign="top" align="center" colspan="2">
+        <p align="left">      
+        <b><font size="4" face="Arial">Functional Differences in Revision ID</font><br> 
+        </b>CBI-3133A, CBI-3133B,           
+CBI-3134A, CBI-3134B</p>  
+      </td>      
+    </tr>     
+    <tr>     
+      <td width="3%" valign="top" align="center"></td>     
+      <td width="97%">     
+        <table border="0">
+          <tr>
+            <td width="3%" align="right">-</td>
+            <td width="97%"><font face="Times New Roman">RevisionID = 1</font></td>            
+          </tr>   
+          <tr>   
+            <td width="3%"></td>  
+            <td width="97%">    
+         <table width="511">
+          <tr>
+            <td vAlign="top" align="middle" width="185"><b><font face="Times New Roman">Function</font></b></td>
+            <td vAlign="top" align="middle" width="312"><b><font face="Times New Roman">Description</font></b></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="185"><font face="Times New Roman">Full-scale range detection&nbsp;</font></td>     
+            <td vAlign="top" width="312"><font face="Times New Roman">Not supported.</font></td>     
+          </tr>
+          <tr>
+            <td vAlign="top" width="185"><font face="Times New Roman">Programmed I/O mode</font></td> 
+            <td vAlign="top" width="312"><font face="Times New Roman">Supported</font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="185"><font face="Times New Roman">FIFO&nbsp;mode</font></td>
+            <td vAlign="top" width="312"><font face="Times New Roman">Not supported.</font></td> 
+          </tr>
+         </table>
+            </td>  
+          </tr>  
+          <tr>  
+            <td width="3%" align="right">-</td>  
+            <td width="97%"><font face="Times New Roman">RevisionID              
+        = 2</font></td>           
+          </tr>   
+          <tr>   
+            <td width="3%"></td>  
+            <td width="97%">
+              <table width="550">
+                <tr>
+                  <td vAlign="top" align="middle" width="186" height="19"><b><font face="Times New Roman">Function</font></b></td>
+                  <td vAlign="top" align="middle" width="350" height="19"><b><font face="Times New Roman">Description</font></b></td>
+                </tr>
+                <tr>
+                  <td vAlign="top" width="186" height="19"><font face="Times New Roman">Full-scale range  
+                    detection</font></td>
+                  <td vAlign="top" width="350" height="19"><font face="Times New Roman">Not supported.</font></td> 
+                </tr>
+                <tr>
+                  <td vAlign="top" width="186" height="19"><font face="Times New Roman">Programmed I/O&nbsp;mode</font></td>     
+                  <td vAlign="top" width="350" height="19"><font face="Times New Roman">Supported</font></td>
+                </tr>
+                <tr>
+                  <td vAlign="top" width="186" height="1" rowSpan="2"><font face="Times New Roman">FIFO&nbsp;mode</font></td>
+                  <td vAlign="top" width="350" height="1"><font face="Times New Roman">Fixed number sampling  
+                    and infinite sampling are supported.</font></td> 
+                </tr>
+                <tr>
+                  <td vAlign="top" width="350" height="1"><font face="Times New Roman">Trigger capabilities  
+                    and trigger delay capabilities are not supported.</font></td> 
+                </tr>
+              </table>
+            </td>  
+          </tr>  
+          <tr>  
+            <td width="3%" align="right">-</td>  
+            <td width="97%"><font face="Times New Roman">RevisionID              
+        = 3 or later</font></td>          
+          </tr>   
+          <tr>   
+            <td width="3%"></td>  
+            <td width="97%">
+              <table width="510">
+                <tr>
+                  <td vAlign="top" align="middle" width="185"><b><font face="Times New Roman">Function</font></b></td>
+                  <td vAlign="top" align="middle" width="311"><b><font face="Times New Roman">Description</font></b></td>
+                </tr>
+                <tr>
+                  <td vAlign="top" width="185"><font face="Times New Roman">Full-scale range detection</font></td> 
+                  <td vAlign="top" width="311"><font face="Times New Roman">Supported</font></td>
+                </tr>
+                <tr>
+                  <td vAlign="top" width="185"><font face="Times New Roman">Programmed I/O&nbsp;mode</font></td>     
+                  <td vAlign="top" width="311"><font face="Times New Roman">Supported</font></td>
+                </tr>
+                <tr>
+                  <td vAlign="top" width="185"><font face="Times New Roman">FIFO&nbsp;mode</font></td>
+                  <td vAlign="top" width="311"><font face="Times New Roman">Supported</font></td>
+                </tr>
+              </table>
+              <p><font face="Times New Roman">The <a href="../AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>,   
+              <a href="../AdBmGetSamplingConfig.html">AdBmGetSamplingConfig</a>,  
+              <a href="../AdSetRangeEvent.html">AdSetRangeEvent</a>, <a href="../AdGetRangeEventStatus.html">AdGetRangeEventStatus</a>,      
+              and <a href="../AdResetRangeEvent.html">AdResetRangeEvent</a>      
+              function</font>s <font face="Times New Roman">are available for the boards of Revision ID      
+              3.</font></p>
+            </td> 
+          </tr> 
+          <tr> 
+            <td width="3%"></td> 
+            <td width="97%"></td> 
+          </tr> 
+          <tr> 
+            <td width="100%" colspan="2">
+              <table>
+                <tr>
+                  <td vAlign="top" width="36"><font face="Times New Roman">Note:</font></td>
+                  <td vAlign="top" width="523"><font face="Times New Roman">You can check the Revision ID by  
+                    using the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdCommonGetPciDeviceInfo.html">AdCommonGetPciDeviceInfo</a>  
+                    function.</font></td> 
+                </table>
+              </td> 
+          </tr> 
+        </table> 
+        </td>      
+    </tr>      
+  </table>      
+</blockquote>      
+      
+<p> </p>  
+      
+<hr>      
+      
+    
+<p align="right"><font face="Times New Roman">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>                 
+         
+</body>         
+</html>         

@@ -1,0 +1,379 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdGetBoardConfig</title>
+</head>
+
+<body>
+
+<p><b><font size="5" face="Arial">AdGetBoardConfig</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="558" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="550" valign="top">
+  The AdGetBoardConfig function retrieves an event <font SIZE="3">source called </font>on the board.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+
+<font size="3">
+  <blockquote>
+<p><font face="Times New Roman" size="3"><b>C&nbsp;</b></font> 
+    </p>
+</font>
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472" valign="top"><font face="Courier New">INT
+            AdGetBoardConfig(</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="62" valign="top"><font face="Courier New">HANDLE</font></td>
+          <td width="378" valign="top"><font face="Courier New"><i>hDeviceHandle</i>,</font></td>
+        </tr>
+
+<font size="3">
+        <tr>
+          <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+</font>
+          <td width="62" valign="top"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="378" valign="top"> <i><font face="Courier New">*ulAdSmplEventFactor</font></i></td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472" valign="top">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+  </blockquote>
+    <blockquote>
+  <p><b><font size="3">Visual Basic&nbsp;</font></b></p>
+
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">Declare Function AdGetBoardConfig
+          Lib _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="49" valign="top"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="152" valign="top"> <font face="Courier New"> <i>hDeviceHandle</i>  &nbsp;</font></td>
+        <td width="249" valign="top"> <font face="Courier New">  As Long, _</font></td>
+      </tr>
+
+<font size="3">
+      <tr>
+        <td width="20" valign="top"></td>
+</font>
+        <td width="49" valign="top"><font face="Courier New">ByRef</font></td>
+        <td width="152" valign="top"><font face="Courier New"><i>ulAdSmplEventFactor</i>&nbsp;</font></td>
+        <td width="249" valign="top"><font face="Courier New">  As Long _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">) As Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><font face="Times New Roman" size="3"><b>Delphi</b></font></p>
+
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">function
+          AdGetBoardConfig(</font></td>
+      </tr>
+      <tr>
+        <td width="49" colspan="2" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="192" valign="top"><i><font face="Courier New">hDeviceHandle</font></i></td>
+        <td width="219" valign="top"><font face="Courier New">: THandle;</font></td>
+      </tr>
+
+<font size="3">
+      <tr>
+        <td width="11" valign="top">&nbsp;&nbsp;</td>
+</font>
+        <td width="32" valign="top"><font face="Courier New">var</font></td>
+        <td width="192" valign="top"><font face="Courier New"> <i>ulAdSmplEventFactor</i></font></td>
+        <td width="219" valign="top"><font face="Courier New">: Cardinal</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472" valign="top"><font face="Courier New">) : DWORD; stdcall; external
+          'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+  <p><b><big>Parameters</big></b>
+</p>
+<font face="Times New Roman" size="3">
+  </font>
+  <table width="635" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="193" valign="top"><var><font face="Courier New">hDeviceHandle</font></var></td>
+        <td width="502" valign="top">Specifies the device handle obtained by the
+          <a href="AdOpen.html">
+          AdOpen</a> function.</td>
+      </tr>
+      <tr>
+      <td valign="top" width="193"></td>
+      <td width="502" valign="top" >
+        &nbsp;&nbsp;
+      </td>
+      </tr>
+      <tr>
+      <td valign="top" width="193"><var><font face="Courier New">ulAdSmplEventFactor</font></var></td>
+      <td width="502" valign="top" >
+        Points to a variable to receive an event source of the sampling.
+        <table border="1" width="535" cellspacing="1">
+          <tr align="center">
+            <td width="208" valign="top"><b>Code</b></td>
+            <td width="112" valign="top" align="center"><b>Value</b></td>
+            <td width="351" valign="top"><b>Description</b></td>
+          </tr>
+          <tr valign="TOP">
+            <td width="208" valign="top">AD_EVENT_SMPLNUM</td>
+            <td width="112" valign="top" align="center">1</td>
+            <td width="351" valign="top">The specified number of samples has been
+              acquired.</td>
+          </tr>
+          <tr valign="TOP">
+            <td width="208" valign="top">AD_EVENT_STOP_TRIGGER</td>
+            <td width="112" valign="top" align="center"><font size="3">2</font></td>
+            <td width="351" valign="top"><font SIZE="3">The sampling has been stopped because a
+              trigger is asserted.</font></td>
+          </tr>
+          <tr valign="TOP">
+            <td width="208" valign="top">AD_EVENT_STOP_FUNCTION</td>
+            <td width="112" valign="top" align="center">3</td>
+            <td width="351" valign="top">The sampling has been stopped by software.</td>
+          </tr>
+          <tr valign="TOP">
+            <td width="208" valign="top">AD_EVENT_STOP_TIMEOUT</td>
+            <td width="112" valign="top" align="center"><font size="3">4</font></td>
+            <td width="351" valign="top"><font SIZE="3">The sampling </font> has been<font SIZE="3">
+              stopped because a
+              time-out interval elapsed.</font></td>
+          </tr>
+          <tr>
+            <td width="208" valign="top">AD_EVENT_STOP_SAMPLING</td>
+            <td width="112" valign="top" align="center">5</td>
+            <td width="351" valign="top">The sampling is stopped.</td>
+          </tr>
+          <tr valign="TOP">
+            <td width="208" valign="top">AD_EVENT_STOP_SCER</td>
+            <td width="112" valign="top" align="center">6</td>
+            <td width="351" valign="top">The sampling has been stopped because
+              the sampling pacer clock error occurs.</td>
+          </tr>
+          <tr valign="TOP">
+            <td width="208" valign="top">AD_EVENT_STOP_ORER</td>
+            <td width="112" valign="top" align="center">7</td>
+            <td width="351" valign="top">The sampling has been stopped because
+              the overrun error occurs.</td>
+          </tr>
+          <tr valign="TOP">
+            <td width="208" valign="top">AD_EVENT_SCER</td>
+            <td width="112" valign="top" align="center">8</td>
+            <td width="351" valign="top">The sampling pacer clock error occurs.</td>
+          </tr>
+          <tr>
+            <td width="208" valign="top">AD_EVENT_ORER</td>
+            <td width="112" valign="top" align="center">9</td>
+            <td width="351" valign="top">The overrun error occurs.</td>
+          </tr>
+          <tr>
+            <td width="208" valign="top">AD_EVENT_STOP_LV_1</td>
+            <td width="112" valign="top" align="center">10</td>
+            <td width="351" valign="top">The channel 1 sampling is stopped. (Only
+              for the PCI-3179 and CTP/CPZ-3179)</td>
+          </tr>
+          <tr>
+            <td width="208" valign="top">AD_EVENT_STOP_LV_2</td>
+            <td width="112" valign="top" align="center">11</td>
+            <td width="351" valign="top">The channel 2 sampling is stopped. (Only
+              for the PCI-3179 and CTP/CPZ-3179)</td>
+          </tr>
+          <tr>
+            <td width="208" valign="top">AD_EVENT_STOP_LV_3</td>
+            <td width="112" valign="top" align="center">12</td>
+            <td width="351" valign="top">The channel 3 sampling is stopped. (Only
+              for the PCI-3179 and CTP/CPZ-3179)</td>
+          </tr>
+          <tr>
+            <td width="208" valign="top">AD_EVENT_STOP_LV_4</td>
+            <td width="112" valign="top" align="center">13</td>
+            <td width="351" valign="top">The channel 4 sampling is stopped. (Only
+              for the PCI-3179 and CTP/CPZ-3179)</td>
+          </tr>
+          <tr>
+            <td width="208" valign="top">AD_EVENT_RANGE</td>
+            <td width="112" valign="top" align="center"><font size="3">14</font></td>
+            <td width="351" valign="top"><font SIZE="3">The AD conversion value reached the
+              full-scale range.</font></td>
+          </tr>
+          <tr>
+            <td width="208" valign="top">AD_EVENT_STOP_RANGE</td>
+            <td width="112" valign="top" align="center"><font size="3">15</font></td>
+            <td width="351" valign="top"><font SIZE="3">The sampling is stopped by the
+              full-scale range detection.</font></td>
+          </tr>
+          <tr>
+            <td width="208" valign="top">AD_EVENT_OVPM</td>
+            <td width="112" valign="top" align="center">16
+            </td>
+            <td width="351" valign="top">Automatic
+              range-switching capability at overvoltage input occurs.
+            </td>
+          </tr>
+          <tr valign="TOP">
+            <td width="208" valign="top">AD_EVENT_STOP_OVPM</td>
+            <td width="112" valign="top" align="center">17
+            </td>
+            <td width="351" valign="top">The sampling is
+              stopped by automatic range-switching capability at overvoltage input.
+            </td>
+          </tr>
+        </table>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+<p><b><big>Return Value</big></b></p>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="550" valign="top">
+  The AdGetBoardConfig function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Comments</big></b></p>
+
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="550" valign="top">
+      <ul>
+        <li>
+      A sampling clock error occurs when the next sampling clock signal inputs
+      during channel scanning. If the sampling clock error is detected, the board continues or
+      stops the sampling depending on the setting.</li>
+      </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="550" valign="top">
+  <ul>
+    <li>
+      Overrun errors occur when data is lost because the DMA buffer becomes
+      full during sampling. You can set stop/continue sampling by using the <a href="AdBmSetSamplingConfig.html"> AdBmSetSamplingConfig</a>
+      function
+      against overrun error. The number of samples differs from expected number if you set continue
+      sampling.</li>
+  </ul>
+        </td>
+      </tr>
+  </table>
+
+<p><b><big>Target Products</big></b></p>
+  <blockquote>
+  <table width="550" cellspacing="1" height="25">
+      <tr>
+        <td width="550" valign="top" height="21">
+  Refer to &quot;<a href="Structure/SetBoardConfig.htm">Corresponding Identifiers
+  for Each Model</a>&quot;.&nbsp;
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="452" height="21" valign="top"><font face="Courier New">ULONG
+        ulAdSmplEventFactor;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21" valign="top"><font face="Courier New">nRet =
+        AdGetBoardConfig( hDeviceHandle, &amp;ulAdSmplEventFactor );</font></td>
+    </tr>
+  </table>
+    </blockquote>
+<p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="502" valign="top"><font face="Courier New">Dim ulAdSmplEventFactor As Long</font></td>
+      </tr>
+      <tr>
+        <td width="502" valign="top"><font face="Courier New">nRet = AdGetBoardConfig(
+          hDeviceHandle, _ ulAdSmplEventFactor )</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1" height="49">
+      <tr>
+        <td width="500" height="20" valign="top"><font face="Courier New">var
+          ulAdSmplEventFactor: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="500" height="21" valign="top"><font face="Courier New">nRet :=
+          AdGetBoardConfig( hDeviceHandle, ulAdSmplEventFactor );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="545" valign="top">
+Retrieve an event source called on the board specified by hDeviceHandle.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

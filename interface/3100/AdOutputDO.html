@@ -1,0 +1,274 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdOutputDO</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdOutputDO</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td>
+  The AdOutputDO function <font SIZE="3">writes data to the
+  digital output pins on the board.</font></td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><font face="Times New Roman" size="3"><strong>C</strong></font></p> 
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="783"><font face="Courier New" size="3">INT AdOutputDO(</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="72"> 
+ <font face="Courier New" size="3"> 
+ HANDLE&nbsp;</font></td>
+        <td width="677"> 
+ <font face="Courier New" size="3"> 
+ <i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="22"></td>
+        <td width="72"> <font face="Courier New" size="3"> DWORD&nbsp;</font></td>
+        <td width="677"> <i><font face="Courier New" size="3">dwData</font></i></td>
+      </tr>
+      <tr>
+        <td width="22">
+    <font face="Courier New" size="3">
+    );</font> 
+        </td>
+        <td width="755" colspan="2"></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p>
+  <b>Visual Basic
+  </b>
+  </p> 
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New" size="3">Declare Function AdOutputDO
+          Lib &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="11"></td>
+        <td width="62"> <font face="Courier New" size="3"> ByVal</font>
+        </td>
+        <td width="140"> <font face="Courier New" size="3"> <i>hDeviceHandle</i> </font>
+        </td>
+        <td width="241"> <font face="Courier New" size="3"> As Long, _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="11"></td>
+        <td width="62"> <font face="Courier New" size="3"> ByVal&nbsp;</font> 
+        </td>
+        <td width="140"> <font face="Courier New" size="3"> <i>dwData</i> </font> 
+        </td>
+        <td width="241"> <font face="Courier New" size="3"> As Long _</font> 
+        </td>
+      </tr>
+      <tr>
+        <td width="472" colspan="4">
+    <p ALIGN="JUSTIFY"> 
+    <font face="Courier New" size="3"> 
+    ) As Long</font> 
+    </p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p> 
+  <b>Delphi
+  </b>
+  </p> 
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472">
+    <font face="Courier New" size="3">
+    function AdOutputDO(</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="132"><em><font face="Courier New" size="3">hDeviceHandle</font></em>
+        </td>
+        <td width="314"><font face="Courier New" size="3">: THandle;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="132"><font face="Courier New" size="3"><i>dwData</i> &nbsp;</font> 
+        </td>
+        <td width="314"> <font face="Courier New" size="3"> : DWORD</font> 
+        </td>
+      </tr>
+      <tr>
+        <td width="472" colspan="3">
+    <p ALIGN="JUSTIFY"> 
+    <font face="Courier New" size="3"> 
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font> 
+    </p>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td valign="top" width="484" height="21">Specifies the device handle obtained by the
+        <a href="AdOpen.html">
+        AdOpen</a> function.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">dwData</font></i></td>
+      <td valign="top" width="484" height="21"><font SIZE="3">Specifies the
+        digital data to be output. </font>Please refer to &quot;<a href="Data%20Format.html">Data Format</a>.&quot;</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td>
+  The AdOutputDO function returns AD_ERROR_SUCCESS if the process is
+  successfully completed. Otherwise, this function returns another code. Please refer to
+  the <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Comment</font></strong></p>
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td>The AdOutputDO function is not applicable to the boards (PCI-3161 and
+        PCI-3163) that have no <font SIZE="3">digital </font> output pins.</td>
+    </tr>
+  </table>
+  <table border="0" width="530" cellspacing="1">
+    <tr>
+      <td valign="top">
+  <br>
+  To use digital output on the PCI-3525, and CTP/CPZ-3525, 
+  change either CN3 or CN4 to digital output pin by the <a href="AdSetFunction.html"> AdSetFunction</a> function. 
+</tr>
+  </table>
+<table border="0" width="530" cellspacing="1">
+    <tr>
+      <td valign="top">
+  <br>
+  To use digital output on the PCI-361812, 
+  change the pin to be used to digital output pin by the <a href="AdSetFunction.html"> AdSetFunction</a> function. 
+</tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Examples</font></strong></p>
+
+  <blockquote>
+  <p><font face="Times New Roman" size="3"><strong>C</strong></font></p> 
+  <blockquote>
+    <table border="0" width="483" cellspacing="1">
+      <tr>
+        <td width="475">
+    <font face="Courier New" size="3">
+    nRet = AdOutputDO(<b> </b>hDeviceHandle, 0x03 );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <p>
+  <strong><font face="Times New Roman" size="3">Visual Basic
+  </font></strong>
+  </p> 
+  <blockquote>
+    <table border="0" width="483" cellspacing="1">
+      <tr>
+        <td>
+    <font face="Courier New" size="3">
+    nRet = AdOutputDO( hDeviceHandle, &amp;H03 )</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p> 
+  <strong><font face="Times New Roman" size="3">Delphi
+  </font></strong>
+  </p> 
+  <blockquote>
+    <table border="0" width="483" cellspacing="1">
+      <tr>
+        <td>
+    <font face="Courier New" size="3">
+    nRet := AdOutputDO( hDeviceHandle, $03 );</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td>
+Output the data 03h to the general purpose <font SIZE="3">
+  digital </font> output pins on the board specified by
+hDeviceHandle.
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

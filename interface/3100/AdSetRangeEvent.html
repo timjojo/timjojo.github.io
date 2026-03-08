@@ -1,0 +1,439 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdSetRangeEvent</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdSetRangeEvent</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The AdSetRangeEvent function configures the event
+        mask setting for the full-scale range detection and automatic
+  range-switching capability at overvoltage input.
+      </td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" height="21" valign="top"><font face="Courier New">INT
+          AdSetRangeEvent(</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">HANDLE&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <font face="Courier New"><i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <font face="Courier New"><i>dwEventMask</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">DWORD&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <i><font face="Courier New">dwStopMode</font></i></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top">
+    <font face="Courier New">
+    );</font>
+        </td>
+        <td width="470" height="21" colspan="2" valign="top"></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="4" width="492" height="21" valign="top"><font face="Courier New">Declare
+          Function AdSetRangeEvent Lib _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="22" height="21" valign="top"> <font face="Courier New"> ByVal&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <i><font face="Courier New">hDeviceHandle</font></i>  </td>
+        <td width="395" height="21" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="22" height="20" valign="top"> <font face="Courier New"> ByVal&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <i><font face="Courier New">dwEventMask</font></i></td>
+        <td width="325" height="20" valign="top"> <font face="Courier New">As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="22" height="20" valign="top"> <font face="Courier New"> ByVal&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <i><font face="Courier New">dwStopMode</font></i></td>
+        <td width="325" height="20" valign="top"> <font face="Courier New">  As
+          Long _</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="4" height="21" valign="top">
+    <font face="Courier New">
+    ) As Long</font></td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" valign="top"><font face="Courier New">function
+          AdSetRangeEvent(</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="104" valign="top"><font face="Courier New"><i>hDeviceHandle</i>&nbsp;</font></td>
+        <td width="366" valign="top"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="104" valign="top"><i><font face="Courier New">dwEventMask</font></i></td>
+        <td width="366" valign="top"> <font face="Courier New">: DWORD;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="104" valign="top"><i><font face="Courier New">dwStopMode</font></i></td>
+        <td width="366" valign="top"> <font face="Courier New"> :&nbsp;DWORD</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3" valign="top">
+    <font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+</blockquote>
+
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="359" cellspacing="1" height="563">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td valign="top" width="449" height="21" colspan="2">Specifies the device
+        handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="520" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><font face="Courier New"><i>dwEventMask</i><b>&nbsp;</b></font></td>
+      <td valign="top" width="449" height="21" colspan="2">Specifies the event
+        mask for the full-scale range detection and automatic
+        range-switching capability at overvoltage input.
+      </td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="56"></td>
+      <td valign="top" width="449" colspan="2" height="56">
+        <table border="1" width="100%">
+          <tr>
+            <td width="15%" align="center" valign="top">bit7</td>
+            <td width="16%" align="center" valign="top">bit6</td>
+            <td width="55%" align="center" valign="top">bit5
+              through bit3</td>
+            <td width="16%" align="center" valign="top">bit2</td>
+            <td width="16%" align="center" valign="top">bit1</td>
+            <td width="16%" align="center" valign="top">bit0</td>
+          </tr>
+          <tr>
+            <td width="15%" align="center" valign="top">PM2</td>
+            <td width="16%" align="center" valign="top">PM1</td>
+            <td width="56%" align="center" valign="top">0</td>
+            <td width="16%" align="center" valign="top">OV</td>
+            <td width="16%" align="center" valign="top">PFE</td>
+            <td width="16%" align="center" valign="top">NFE</td>
+          </tr>
+        </table>
+      </td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="141" height="21"><font color="#000000">bit6, bit7</font></td> 
+      <td valign="top" width="308" height="21">Configures automatic
+        range-switching capability at overvoltage input.<font color="#FF00FF"><br>
+        </font>
+        0: Mask<br>
+        1: Automatic
+        range-switching (+/-50 V)&nbsp;<br>
+        2: Inside GND connection status
+      </td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="19"></td>
+      <td valign="top" width="141" height="19"><font color="#000000">bit3
+        through bit5</font></td> 
+      <td valign="top" width="308" height="19"><font color="#000000">Reserved</font></td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="78"></td>
+      <td valign="top" width="141" height="78"><font color="#000000">bit2</font></td> 
+      <td valign="top" width="308" height="78">Specifies
+        the mask setting of automatic
+        range-switching capability at overvoltage input detection
+        event.<font color="#FF00FF"> <br>
+        </font>
+        0: Mask<br>
+        1: Unmask&nbsp;</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="71" height="78"></td>
+      <td valign="top" width="141" height="78"><font color="#000000">bit1</font></td> 
+      <td valign="top" width="308" height="78"><font color="#000000">Specifies the mask condition at the
+        positive full-scale range detection event.<br>
+        0: Mask<br>
+        1: Unmask&nbsp;</font></td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="71" height="78"></td>
+      <td valign="top" width="141" height="78"><font color="#000000">bit0</font></td> 
+      <td valign="top" width="308" height="78"><font color="#000000">Specifies the mask condition at the negative
+        full-scale range detection event.<br>
+        0: Mask<br>
+        1: Unmask&nbsp;</font></td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="520" height="21" colspan="3"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="20"><font face="Courier New"><i>dwStopMode</i><b>&nbsp;</b></font></td>
+      <td valign="top" width="449" colspan="2" height="20">Specifies the sampling conditions
+        at the full-scale range detection and automatic
+        range-switching capability at overvoltage input.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="56"></td>
+      <td valign="top" width="449" colspan="2" height="56">
+        <table border="1" width="100%">
+          <tr>
+            <td width="46%" align="center" valign="top">bit31 through bit3</td>
+            <td width="22%" align="center" valign="top">bit2</td>
+            <td width="22%" align="center" valign="top">bit1</td>
+            <td width="22%" align="center" valign="top">bit0</td>
+          </tr>
+          <tr>
+            <td width="46%" align="center" valign="top">Reserved</td>
+            <td width="22%" align="center" valign="top">OV</td>
+            <td width="22%" align="center" valign="top">PFS</td>
+            <td width="22%" align="center" valign="top">NFS</td>
+          </tr>
+        </table>
+      </td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="141" height="21">bit31 through bit3</td> 
+      <td valign="top" width="308" height="21">Reserved</td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="71" height="78"></td>
+      <td valign="top" width="141" height="78">bit2</td> 
+      <td valign="top" width="308" height="78"><font SIZE="3">Specifies
+        </font>the <font SIZE="3"> sampling
+        conditions</font> of automatic
+        range-switching capability at overvoltage input detection.<font SIZE="3"><br>
+        0: Not stop the sampling.<br>
+        1: Stop the sampling.</font>
+      </td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="71" height="78"></td>
+      <td valign="top" width="141" height="78">bit1</td> 
+      <td valign="top" width="308" height="78"><font SIZE="3">Specifies the sampling
+        conditions at the positive full-scale range detection.<br>
+        0: Not stopped<br>
+        1: Stopped</font></td> 
+    </tr>
+    <tr>
+      <td valign="top" nowrap width="71" height="78"></td>
+      <td valign="top" width="141" height="78">bit0</td> 
+      <td valign="top" width="308" height="78"><font SIZE="3">Specifies the sampling
+        conditions at the negative full-scale range detection.<br>
+        0: Not stopped<br>
+        1: Stopped</font></td> 
+    </tr>
+  </table> 
+  </blockquote> 
+</blockquote>
+
+<blockquote> 
+ <p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480" valign="top">
+  <font SIZE="3">The AdSetRangeEvent function returns AD_ERROR_SUCCESS if the
+  process is successfully completed. </font>Otherwise, this function returns another code.
+  Please refer to the <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+ <p><strong><font face="Times New Roman" size="4">Comments</font></strong></p>
+  <table border="0" width="500" cellspacing="1" height="277">
+    <tr>
+      <td valign="top" height="59">
+  <ul>
+    <li>Configure the event handling by the AdSetRangeEvent and <a href="AdSetBoardConfig.html"> AdSetBoardConfig</a>
+      functions to occur an event.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="78">
+  <ul>
+    <li>
+  The <a href="AdGetBoardConfig.html"> AdGetBoardConfig</a> function retrieves the event regarding to the full-scale
+  range detection and automatic
+        range-switching capability at overvoltage input detection.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="59">
+  <ul>
+    <li>The <a href="AdGetRangeEventStatus.html">AdGetRangeEventStatus</a> function retrieves
+  the status of the full-scale range detection.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="59">
+  <ul>
+    <li>The <a href="AdGetOverRangeChStatus.html">AdGetOverRangeChStatus</a> function retrieves
+  the status of the automatic
+        range-switching capability at overvoltage input detection.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+    <td width="942" height="2" valign="top">
+      <ul>
+        <li>Refer to &quot;<a href="List%20of%20Capabilities%20for%20Each%20Model.html">List
+          of Capabilities for Each Model</a>,&quot; for more details of the
+          product models and capabilities.
+        </li>
+      </ul>
+    </td>
+    </tr>
+  </table>
+ 
+</blockquote> 
+ 
+
+<blockquote> 
+ 
+<p><b><big>Target Products</big></b></p>
+<blockquote>
+  <table height="25" cellSpacing="1" width="550">
+    <tbody>
+      <tr>
+        <td vAlign="top" width="550" height="21">Refer to &quot;<a href="Structure/OverRange.htm">Corresponding
+          Identifiers for Each Model</a>&quot;.&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Examples</font></strong></p>
+
+  <blockquote>
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="500" valign="top"><font face="Courier New">nRet =
+          AdSetRangeEvent( hDeviceHandle, 0x0001, 0x0002 );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="498" valign="top"><font face="Courier New">nRet =
+          AdSetRangeEvent( hDeviceHandle, H0001, _ H0002 )</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="504" valign="top"><font face="Courier New">nRet :=
+          AdSetRangeEvent( hDeviceHandle, $0001, $0002 );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+</blockquote>
+
+<blockquote> 
+  <blockquote> 
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+Specifies the operation at the full-scale range detection on the board/card specified by
+hDeviceHandle.
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

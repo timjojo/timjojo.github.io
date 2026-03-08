@@ -1,0 +1,671 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Reference</title>
+</head>
+
+<body>
+
+<p align="left"><b><a name="13.2 Data Acquisition Programming Technique"><font size="4" face="Arial">11.2
+Data Acquisition Programming Technique</font></a></b></p>
+<blockquote>
+  <p align="left"><font size="3" face="Arial"><b><a name="13.2.1 Continuous Sampling">11.2.1 Continuous Sampling</a></b></font></p>
+  <blockquote>
+    <table border="0" width="514">
+      <tr>
+        <td width="506" valign="top"><font SIZE="3">First, configure the
+          sampling conditions of the board by using the </font> <a href="AdSetSamplingConfig.html"> AdSetSamplingConfig</a>
+          <font SIZE="3">function. Then start the continuous sampling by using
+          the </font><a href="AdStartSampling.html">AdStartSampling</a> <font SIZE="3">function.
+          The sampling data can be retrieved by using the </font><a href="AdGetSamplingData.html">AdGetSamplingData</a>
+          <font SIZE="3">function. </font>
+          To configure the sampling conditions of the board with the bus master
+          transfer mode, call the <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a> and <a href="AdBmGetSamplingData.html"> AdBmGetSamplingData</a> 
+          functions.
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="516" height="602">
+      <tr>
+        <td width="508" height="21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="508" height="21" valign="top"><b>Example (C)&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+      </tr>
+      <tr>
+        <td width="508" height="523" valign="top"><p><font face="Courier New">HANDLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hDeviceHandle;<br>
+          ADSMPLREQ&nbsp;&nbsp; AdSmplConfig;<br>
+          ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulSmplNum;<br>
+          WORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wSmplData[1024][2];</font></p><p><font face="Courier New">hDeviceHandle = AdOpen( "FBIAD1" );</font></p><p><font face="Courier New">AdSmplConfig.ulChCount
+          = 2;<br>
+          AdSmplConfig.SmplChReq[0].ulChNo = 1;<br>
+          AdSmplConfig.SmplChReq[0].ulRange = AD_5V;<br>
+          AdSmplConfig.SmplChReq[1].ulChNo = 2;<br>
+          AdSmplConfig.SmplChReq[1].ulRange = AD_5V;<br>
+          AdSmplConfig.ulSamplingMode = AD_IO_SAMPLING;<br>
+          AdSmplConfig.ulSingleDiff = AD_INPUT_SINGLE;<br>
+          AdSmplConfig.ulSmplNum = 1024;<br>
+          AdSmplConfig.ulSmplEventNum = 0;<br>
+          AdSmplConfig.fSmplFreq = 1000.0;<br>
+          AdSmplConfig.ulTrigPoint = AD_TRIG_START;<br>
+          AdSmplConfig.ulTrigMode = AD_FREERUN;<br>
+          AdSmplConfig.lTrigDelay = 0;<br>
+          AdSmplConfig.ulTrigCh = 1;<br>
+          AdSmplConfig.fTrigLevel1 = 0.0;<br>
+          AdSmplConfig.fTrigLevel2 = 0.0;<br>
+          AdSmplConfig.ulEClkEdge = AD_DOWN_EDGE;<br>
+          AdSmplConfig.ulATrgPulse = AD_LOW_PULSE;<br>
+          AdSmplConfig.ulTrigEdge = AD_DOWN_EDGE;<br>
+          AdSmplConfig.ulTrigDI = 1;<br>
+          AdSmplConfig.ulFastMode = AD_NORMAL_MODE;</font></p><p><font face="Courier New"><font color="#ff0000">//
+          Configure the sampling conditions.<br>
+          </font>AdSetSamplingConfig( hDeviceHandle, &amp;AdSmplConfig );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Start the sampling.<br>
+</FONT>AdStartSampling( hDeviceHandle, FLAG_SYNC );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Retrieve the sampling data.<br>
+</FONT>ulSmplNum = 1024;<br>
+          AdGetSamplingData( hDeviceHandle, &amp;wSmplData[0][0], &amp;ulSmplNum
+          );<br>
+          .<br>
+          .<br>
+          .</font>	</p></td>
+      </tr>
+    </table>
+  </blockquote>
+<p align="left"><font size="3" face="Arial"><b><a name="13.2.2 One-Shot Sampling">11.2.2 One-Shot Sampling</a></b></font></p>
+  <blockquote>
+    <table border="0" width="518">
+      <tr>
+        <td width="510" valign="top">The software-paced one-shot sampling needs
+          to use the <a href="AdInputAD.html"> AdInputAD</a>
+          function.</td>
+      </tr>
+    </table>
+    <table border="0" width="517">
+      <tr>
+        <td width="509" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="509" valign="top"><b>Example (C)&nbsp;&nbsp;&nbsp;</b></td>
+      </tr>
+      <tr>
+        <td width="509" valign="top"><p><font face="Courier New">HANDLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hDeviceHandle;<br>
+          ADSMPLCHREQ AdSmplChReq[2];<br>
+          WORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wData[2];</font></p><p><font face="Courier New">hDeviceHandle = AdOpen( "FBIAD1" );</font></p><p><font face="Courier New">AdSmplChReq[0].ulChNo
+          = 1;<br>
+          AdSmplChReq[0].ulRange = AD_5V;<br>
+          AdSmplChReq[1].ulChNo = 2;<br>
+          AdSmplChReq[1].ulRange = AD_5V;</font></p><p><font face="Courier New"><FONT color=#ff0000>// One-shot
+          sampling<br>
+</FONT>AdInputAD( hDeviceHandle, 2, AD_INPUT_SINGLE, &amp;AdSmplChReq[0],
+          &amp;wData[0]);</font></p><p>	<font face="Courier New">	:<br>
+          :</font></p></td>
+      </tr>
+    </table>
+  </blockquote>
+<p align="left"><font size="3" face="Arial"><b><a name="13.2.3 Parallel Sampling">11.2.3 Parallel Sampling</a></b></font></p>
+  <blockquote>
+    <table border="0" width="515" height="100">
+      <tr>
+        <td width="507" colspan="2" height="40" valign="top">In the parallel
+          sampling configuration, as a single master and one or more slave
+          boards exist in the system. The following shows how to start the
+          parallel sampling.</td>
+      </tr>
+      <tr>
+        <td width="16" height="19" valign="top">1.</td>
+        <td width="491" height="19" valign="top"><font SIZE="3">Configure the
+          sampling conditions for each board by using the </font><a href="AdSetSamplingConfig.html"> AdSetSamplingConfig</a>
+          <font SIZE="3">function.</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top">2.</td>
+        <td width="491" height="21" valign="top"><font SIZE="3">Call the </font><a href="AdSyncSampling.html"> AdSyncSampling</a>
+          <font SIZE="3">function
+          in the slave boards.</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="19" valign="top">3.</td>
+        <td width="491" height="19" valign="top"><font SIZE="3">Call the </font><a href="AdSyncSampling.html"> AdSyncSampling</a>
+          <font SIZE="3">function in the master board.</font></td>
+      </tr>
+      <tr>
+        <td width="507" colspan="2" height="4" valign="top"><font SIZE="3">Then
+          the parallel sampling starts. The samples can be retrieved by using
+          the <a href="AdGetSamplingData.html"> AdGetSamplingData</a> function
+          in each board.
+          <p></font>
+          When you use boards that support the bus master mode, you can use the <a href="AdBmSetSamplingConfig.html">
+          AdBmSetSamplingConfig</a> and <a href="AdBmGetSamplingData.html"> AdBmGetSamplingData</a> functions.</td>
+      </tr>
+    </table>
+    <table border="0" width="513">
+      <tr>
+        <td width="505">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="505" valign="top"><b>Example (C)&nbsp;&nbsp;&nbsp;</b></td>
+      </tr>
+      <tr>
+        <td width="505" valign="top"><p><font face="Courier New">HANDLE&nbsp;&nbsp;&nbsp;&nbsp; hDeviceMaster;<br>
+          HANDLE&nbsp;&nbsp;&nbsp;&nbsp; hDeviceSlave1;<br>
+          HANDLE&nbsp;&nbsp;&nbsp;&nbsp; hDeviceSlave2;<br>
+          ADSMPLREQ&nbsp; AdConfigMaster;<br>
+          ADSMPLREQ&nbsp; AdConfigSlave1;<br>
+          ADSMPLREQ&nbsp; AdConfigSlave2;<br>
+          WORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wDataMaster[1024][2];<br>
+          WORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wDataSlave1[1024][2];<br>
+          WORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wDataSlave2[1024][2];<br>
+          ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulSmplNum;</font></p><p><font face="Courier New">hDeviceMaster =
+          AdOpen( &quot;FBIAD1&quot; );<br>
+          hDeviceSlave1 = AdOpen( &quot;FBIAD2&quot; );<br>
+          hDeviceSlave2 = AdOpen( &quot;FBIAD3&quot; );</font></p><p><font face="Courier New">AdConfigMaster.ulChCount
+          = 2;<br>
+          AdConfigMaster.SmplChReq[0].ulChNo = 1;<br>
+          AdConfigMaster.SmplChReq[0].ulRange = AD_5V;<br>
+          AdConfigMaster.SmplChReq[1].ulChNo = 2;<br>
+          AdConfigMaster.SmplChReq[1].ulRange = AD_5V;<br>
+          AdConfigMaster.ulSamplingMode = AD_IO_SAMPLING;<br>
+          AdConfigMaster.ulSingleDiff = AD_INPUT_SINGLE;<br>
+          AdConfigMaster.ulSmplNum = 1024;<br>
+          AdConfigMaster.ulSmplEventNum = 0;<br>
+          AdConfigMaster.fSmplFreq = 1000.0;<br>
+          AdConfigMaster.ulTrigPoint = AD_TRIG_START;<br>
+          AdConfigMaster.ulTrigMode = AD_FREERUN;<br>
+          AdConfigMaster.lTrigDelay = 0;<br>
+          AdConfigMaster.ulTrigCh = 1;<br>
+          AdConfigMaster.fTrigLevel1 = 0.0;<br>
+          AdConfigMaster.fTrigLevel2 = 0.0;<br>
+          AdConfigMaster.ulEClkEdge = AD_DOWN_EDGE;<br>
+          AdConfigMaster.ulATrgPulse = AD_LOW_PULSE;<br>
+          AdConfigMaster.ulTrigEdge = AD_DOWN_EDGE;<br>
+          AdConfigMaster.ulTrigDI = 1;<br>
+          AdConfigMaster.ulFastMode = AD_NORMAL_MODE;</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Configure the sampling conditions<br>
+          // (master board).<br>
+</FONT>AdSetSamplingConfig( hDeviceMaster, &amp;AdConfigMaster );</font></p><p><font face="Courier New">AdConfigSlave1.ulChCount
+          = 2;<br>
+          AdConfigSlave1.SmplChReq[0].ulChNo = 1;<br>
+          AdConfigSlave1.SmplChReq[0].ulRange = AD_5V;<br>
+          AdConfigSlave1.SmplChReq[1].ulChNo = 2;<br>
+          AdConfigSlave1.SmplChReq[1].ulRange = AD_5V;<br>
+          .<br>
+          .<br>
+          .</font></p><p><font face="Courier New"><FONT color=#ff0000>// Configure
+          the sampling conditions<br>
+          // (slave board 1).<br>
+</FONT>AdSetSamplingConfig( hDeviceSlave1, &amp;AdConfigSlave1 );</font></p><p><font face="Courier New">AdConfigSlave2.ulChCount
+          = 2;<br>
+          AdConfigSlave2.SmplChReq[0].ulChNo = 1;<br>
+          AdConfigSlave2.SmplChReq[0].ulRange = AD_5V;<br>
+          AdConfigSlave2.SmplChReq[1].ulChNo = 2;<br>
+          AdConfigSlave2.SmplChReq[1].ulRange = AD_5V;<br>
+          .<br>
+          .<br>
+          .</font></p><p><font face="Courier New"><FONT color=#ff0000>// Configure
+          the sampling conditions<br>
+          // (slave board 2).<br>
+</FONT>AdSetSamplingConfig( hDeviceSlave2, &amp;AdConfigSlave2 );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Parallel sampling (slave boards)<br>
+</FONT>AdSyncSampling( hDeviceSlave1, AD_SLAVE_MODE );<br>
+          AdSyncSampling( hDeviceSlave2, AD_SLAVE_MODE );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Parallel sampling (master board)<br>
+</FONT>AdSyncSampling( hDeviceMaster, AD_MASTER_MODE );<br>
+          .<br>
+          .<br>
+          .</font></p><p><font face="Courier New"><FONT color=#ff0000>// Retrieve
+          the sampling data (master board).<br>
+</FONT>ulSmplNum = 1024;<br>
+          AdGetSamplingData( hDeviceMaster, &amp;wDataMaster[0][0], &amp;ulSmplNum
+          );</font></p><p><font face="Courier New"><FONT color=#ff0000>// Retrieve
+          the sampling data (slave board 1).<br>
+</FONT>ulSmplNum = 1024;<br>
+          AdGetSamplingData( hDeviceSlave1, &amp;wDataSlave1[0][0], &amp;ulSmplNum
+          );</font>	</p><p><font face="Courier New"><FONT color=#ff0000>// Retrieve
+          the sampling data (slave board 2).<br>
+</FONT>ulSmplNum = 1024;<br>
+          AdGetSamplingData( hDeviceSlave2, &amp;wDataSlave2[0][0], &amp;ulSmplNum
+          );<br>
+          .<br>
+          .<br>
+          .</font>	</p></td>
+      </tr>
+    </table>
+    <table border="0" width="511">
+      <tr>
+        <td width="36" valign="top">Note:</td>
+        <td width="467" valign="top">You can use the same external signal to synchronize
+          sampling timing on each board. Refer to &quot;<a href="#13.2.5 External Triggers">External
+          Triggers</a>&quot; and &quot;<a href="#13.2.6 External Clock">External Clock</a>,&quot;
+          respectively.&nbsp;</td>
+      </tr>
+    </table>
+  </blockquote>
+<p align="left"><font size="3" face="Arial"><b><a name="13.2.4 Event Notification">11.2.4 Event Notification</a></b></font></p>
+  <blockquote>
+    <table border="0" width="511">
+      <tr>
+        <td width="503" valign="top">Event methods need to create the event object by using
+          the CreateEvent function of the Win32 API and to register the handle
+          by using the <a href="AdSetBoardConfig.html"> AdSetBoardConfig</a> function.<br>
+          Configure sampling conditions of the board by using the <a href="AdSetSamplingConfig.html">
+          AdSetSamplingConfig</a> function and start overlapped continuous sampling
+          by using the <a href="AdStartSampling.html"> AdStartSampling</a> function. Refer to the followings.&nbsp;&nbsp;&nbsp;
+          <table border="0" width="500">
+            <tr>
+              <td width="492">
+        <small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>
+              </td>
+            </tr>
+            <tr>
+              <td width="492" valign="top">
+        &lt;Overlapped Operation (FLAG_ASYNC)&gt;<br>
+          Control returns immediately without waiting for the completion of the
+          continuous sampling. Completion of the continuous sampling is notified by the event signaling.
+                <table border="0" width="400">
+                  <tr>
+              <td width="113" valign="top">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td width="23" valign="top">&nbsp;</td>
+              <td width="144" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
+              <td width="20" valign="top">&nbsp;</td>
+              <td width="174" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                  </tr>
+                  <tr>
+              <td width="113" valign="top">User application</td>
+              <td width="23" valign="top">&nbsp;</td>
+              <td width="144" valign="top">DLL</td>
+              <td width="20" valign="top">&nbsp;</td>
+              <td width="174" valign="top">Driver/Board</td>
+                  </tr>
+                  <tr>
+              <td width="160" valign="top"><table border="1" cellspacing="1" height="126">
+                <tr>
+                  <td height="120"><small>Application<br>
+                  Return to the application<br>
+                  <br>
+                  WaitForSingleObject<br>
+                  (wait for event) </small></td>
+                </tr>
+              </table>
+              </td>
+              <td width="23" valign="top">-&gt;<br>
+              &lt;-<br>
+              <br>
+              <br>
+              &lt;- </td>
+              <td width="155" valign="top"><table border="1" cellspacing="1" width="144" height="127">
+                <tr>
+                  <td width="134" height="121"><small>AdStartSamplng&nbsp;<br>
+                    <br>
+                    Return control<br>
+                    <br>
+                  <br>
+                    Signal event.<br>
+                    Invoke the callback routine. </small></td>
+                </tr>
+              </table>
+              </td>
+              <td width="20" valign="top">-&gt;<br>
+              <br>
+              <br>
+              <br>
+              &lt;- </td>
+              <td width="192" valign="top"><table border="1" cellspacing="1" width="163">
+                <tr>
+                  <td width="153"><small>Beginning of the continuous sampling<br>
+                    &nbsp;&nbsp; :<br>
+                    &nbsp;&nbsp; :[Running the continuous sampling]<br>
+                    &nbsp;&nbsp; :<br>
+                  End of the continuous sampling</small></td>
+                </tr>
+              </table>
+              </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="509">
+      <tr>
+        <td width="501" valign="top">Retrieve samples by using the <a href="AdGetSamplingData.html"> AdGetSamplingData</a>
+          function.<br>
+          When you use boards which support the bus master mode, you can use the
+          <a href="AdBmSetSamplingConfig.html">
+          AdBmSetSamplingConfig</a> and <a href="AdBmGetSamplingData.html"> AdBmGetSamplingData</a> functions.</td>
+      </tr>
+    </table>
+    <table border="0" width="508">
+      <tr>
+        <td width="500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="500" valign="top"><b>Example (C)&nbsp;&nbsp;</b></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top"><p><font face="Courier New">HANDLE&nbsp;&nbsp;&nbsp;&nbsp; hDeviceHandle;<br>
+          HANDLE&nbsp;&nbsp;&nbsp;&nbsp; hEvent;<br>
+          ADSMPLREQ&nbsp; AdSmplConfig;<br>
+          ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulSmplNum;<br>
+          WORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wSmplData[1024][2];</font></p><p><font face="Courier New">hDeviceHandle = AdOpen( "FBIAD1" );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Register an event handle<br>
+</FONT>hEvent = CreateEvent(0, TRUE, FALSE, NULL);<br>
+          AdSetBoardConfig( hDeviceHandle, hEvent, NULL, 0 );</font></p><p><font face="Courier New">AdSmplConfig.ulChCount
+          = 2;<br>
+          AdSmplConfig.SmplChReq[0].ulChNo = 1;<br>
+          AdSmplConfig.SmplChReq[0].ulRange = AD_5V;<br>
+          AdSmplConfig.SmplChReq[1].ulChNo = 2;<br>
+          AdSmplConfig.SmplChReq[1].ulRange = AD_5V;<br>
+          AdSmplConfig.ulSamplingMode = AD_IO_SAMPLING;<br>
+          AdSmplConfig.ulSingleDiff = AD_INPUT_SINGLE;<br>
+          AdSmplConfig.ulSmplNum = 1024;<br>
+          AdSmplConfig.ulSmplEventNum = 0;<br>
+          AdSmplConfig.fSmplFreq = 1000.0;<br>
+          AdSmplConfig.ulTrigPoint = AD_TRIG_START;<br>
+          AdSmplConfig.ulTrigMode = AD_FREERUN;<br>
+          AdSmplConfig.lTrigDelay = 0;<br>
+          AdSmplConfig.ulTrigCh = 1;<br>
+          AdSmplConfig.fTrigLevel1 = 0.0;<br>
+          AdSmplConfig.fTrigLevel2 = 0.0;<br>
+          AdSmplConfig.ulEClkEdge = AD_DOWN_EDGE;<br>
+          AdSmplConfig.ulATrgPulse = AD_LOW_PULSE;<br>
+          AdSmplConfig.ulTrigEdge = AD_DOWN_EDGE;<br>
+          AdSmplConfig.ulTrigDI = 1;<br>
+          AdSmplConfig.ulFastMode = AD_NORMAL_MODE;</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Configure the sampling conditions.<br>
+</FONT>AdSetSamplingConfig( hDeviceHandle, &amp;AdSmplConfig );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Parallel sampling (overlapped)<br>
+</FONT>AdStartSampling( hDeviceHandle, <FONT color=#ff0000>FLAG_ASYNC</FONT>  );</font></p><p><font face="Courier New"><FONT color=#ff0000>//&nbsp;</FONT><font color="#FF0000">Wait for completion of the continuous sampling<br>
+          // to be notified by the event signaling.</font><FONT color=#ff0000><br>
+</FONT>WaitForSingleObject(hEvent, INFINITE);</font></p><p><font face="Courier New"><FONT color=#ff0000>// Retrieve
+          the sampling data.&nbsp;<br>
+</FONT>ulSmplNum = 1024;<br>
+          AdGetSamplingData( hDeviceHandle, &amp;wSmplData[0][0], &amp;ulSmplNum
+          );<br>
+          .<br>
+          .<br>
+          .</font>	</p></td>
+      </tr>
+    </table>
+  </blockquote>
+<p align="left"><font size="3" face="Arial"><b><a name="13.2.5 External Triggers">11.2.5 External Triggers</a></b></font></p>
+  <blockquote>
+    <table border="0" width="506" height="114">
+      <tr>
+        <td width="498" height="110" valign="top"><font SIZE="3">The sampling
+          can start at the assertion of an external trigger. Configure the
+          sampling conditions by using the </font> <a href="AdSetSamplingConfig.html">
+          AdSetSamplingConfig</a> <font SIZE="3">function. The </font><a href="AdStartSampling.html"> AdStartSampling</a>
+          <font SIZE="3">function starts continuous sampling on the board. The
+          samples can be retrieved by using the </font><a href="AdGetSamplingData.html"> AdGetSamplingData</a>
+          <font SIZE="3">function.</font>
+          <p>
+          When you use boards which support the bus master mode, you can use the
+          <a href="AdBmSetSamplingConfig.html">
+          AdBmSetSamplingConfig</a> and <a href="AdBmGetSamplingData.html"> AdBmGetSamplingData</a> functions.</td>
+      </tr>
+    </table>
+    <table border="0" width="504">
+      <tr>
+        <td width="496" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="496" valign="top"><b>Example (C)&nbsp;&nbsp;</b></td>
+      </tr>
+      <tr>
+        <td width="496" valign="top"><p><font face="Courier New">HANDLE&nbsp;&nbsp;&nbsp;&nbsp; hDeviceHandle;<br>
+          ADSMPLREQ&nbsp; AdSmplConfig;<br>
+          ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulSmplNum;<br>
+          WORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wSmplData[1024][2];</font></p><p><font face="Courier New">hDeviceHandle = AdOpen( "FBIAD1" );</font></p><p><font face="Courier New">AdSmplConfig.ulChCount
+          = 2;<br>
+          AdSmplConfig.SmplChReq[0].ulChNo = 1;<br>
+          AdSmplConfig.SmplChReq[0].ulRange = AD_5V;<br>
+          AdSmplConfig.SmplChReq[1].ulChNo = 2;<br>
+          AdSmplConfig.SmplChReq[1].ulRange = AD_5V;<br>
+          AdSmplConfig.ulSamplingMode = AD_IO_SAMPLING; <br>
+          AdSmplConfig.ulSingleDiff = AD_INPUT_SINGLE;<br>
+          AdSmplConfig.ulSmplNum = 1024;<br>
+          AdSmplConfig.ulSmplEventNum = 0;<br>
+          AdSmplConfig.fSmplFreq = 1000.0;<br>
+          AdSmplConfig.ulTrigPoint = <FONT color=#ff0000>AD_TRIG_START</FONT>;<br>
+          <FONT color=#ff0000>// Start sampling by the trigger.&nbsp;</FONT>
+          <br>
+          AdSmplConfig.ulTrigMode = <FONT color=#ff0000>AD_EXTTRG</FONT>;<br>
+          <FONT color=#ff0000>// External trigger</FONT>
+          <br>
+          AdSmplConfig.lTrigDelay = 0;<br>
+          AdSmplConfig.ulTrigCh = 1;<br>
+          AdSmplConfig.fTrigLevel1 = 0.0;<br>
+          AdSmplConfig.fTrigLevel2 = 0.0;<br>
+          AdSmplConfig.ulEClkEdge = AD_DOWN_EDGE;<br>
+          AdSmplConfig.ulATrgPulse = AD_LOW_PULSE;<br>
+          AdSmplConfig.ulTrigEdge = AD_DOWN_EDGE;<br>
+          AdSmplConfig.ulTrigDI = 1;<br>
+          AdSmplConfig.ulFastMode = AD_NORMAL_MODE;</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Configure the sampling conditions.<br>
+</FONT>AdSetSamplingConfig( hDeviceHandle, &amp;AdSmplConfig );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Wait for an assertion of the external trigger.<br>
+          // Starts the continuous sampling.<br>
+</FONT>AdStartSampling( hDeviceHandle, FLAG_SYNC );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Retrieve the sampling data.<br>
+</FONT>ulSmplNum = 1024;<br>
+          AdGetSamplingData( hDeviceHandle, &amp;wSmplData[0][0], &amp;ulSmplNum
+          );<br>
+          .<br>
+          .<br>
+          .</font>	</p></td>
+      </tr>
+    </table>
+    <table border="0" width="502">
+      <tr>
+        <td width="494">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="494" valign="top">Please refer to &quot;<a href="External%20Trigger%20Function.html">External Trigger
+          Function</a>.&quot;</td>
+      </tr>
+    </table>
+  </blockquote>
+<p><font size="3" face="Arial"><b><a name="13.2.6 External Clock">11.2.6 External Clock</a></b></font></p>
+  <blockquote>
+    <table border="0" width="506">
+      <tr>
+        <td width="498" valign="top"><font SIZE="3">An external clock can be
+          used as a sampling pacer clock. To use the external clock, specify
+          zero to sampling rates. The </font> <a href="AdStartSampling.html"> AdStartSampling</a>
+          <font SIZE="3">function starts continuous sampling on the board. The
+          samples can be retrieved by using the </font><a href="AdGetSamplingData.html"> AdGetSamplingData</a>
+          <font SIZE="3">function.</font>
+          <p>
+          When you use boards which support the bus master mode, you can use the
+          <a href="AdBmSetSamplingConfig.html">
+          AdBmSetSamplingConfig</a> and <a href="AdBmGetSamplingData.html"> AdBmGetSamplingData</a> functions.</td>
+      </tr>
+    </table>
+    <table border="0" width="504">
+      <tr>
+        <td width="496" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="496" valign="top"><b>Example (C)&nbsp;&nbsp;</b></td>
+      </tr>
+      <tr>
+        <td width="496" valign="top"><p><font face="Courier New">HANDLE&nbsp;&nbsp;&nbsp;&nbsp; hDeviceHandle;<br>
+          ADSMPLREQ&nbsp; AdSmplConfig;<br>
+          ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulSmplNum;<br>
+          WORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wSmplData[1024][2];</font></p><p><font face="Courier New">hDeviceHandle = AdOpen( "FBIAD1" );</font></p><p><font face="Courier New">AdSmplConfig.ulChCount
+          = 2;<br>
+          AdSmplConfig.SmplChReq[0].ulChNo = 1;<br>
+          AdSmplConfig.SmplChReq[0].ulRange = AD_5V;<br>
+          AdSmplConfig.SmplChReq[1].ulChNo = 2;<br>
+          AdSmplConfig.SmplChReq[1].ulRange = AD_5V;<br>
+          AdSmplConfig.ulSamplingMode = AD_IO_SAMPLING; <br>
+          AdSmplConfig.ulSingleDiff = AD_INPUT_SINGLE;<br>
+          AdSmplConfig.ulSmplNum = 1024;<br>
+          AdSmplConfig.ulSmplEventNum = 0;<br>
+          <FONT color=#ff0000>
+          // Use the external clock.<br>
+          </FONT>AdSmplConfig.fSmplFreq = <FONT color=#ff0000>0.0</FONT>;<br>
+<FONT color=#000000>AdSmplConfig.ulTrigPoint = AD_TRIG_START;<br>
+AdSmplConfig.ulTrigMode = AD_FREERUN;<br>
+</FONT>AdSmplConfig.lTrigDelay = 0;<br>
+          AdSmplConfig.ulTrigCh = 1;<br>
+          AdSmplConfig.fTrigLevel1 = 0.0;<br>
+          AdSmplConfig.fTrigLevel2 = 0.0;<br>
+          AdSmplConfig.ulEClkEdge = AD_DOWN_EDGE;<br>
+          AdSmplConfig.ulATrgPulse = AD_LOW_PULSE;<br>
+          AdSmplConfig.ulTrigEdge = AD_DOWN_EDGE;<br>
+          AdSmplConfig.ulTrigDI = 1;<br>
+          AdSmplConfig.ulFastMode = AD_NORMAL_MODE;</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Configure the sampling conditions.<br>
+</FONT>AdSetSamplingConfig( hDeviceHandle, &amp;AdSmplConfig );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Start the continuous sampling after inputted<br>
+          // the external trigger clock.<br>
+          </FONT>AdStartSampling( hDeviceHandle, FLAG_SYNC );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Retrieve the sampling data.<br>
+</FONT>ulSmplNum = 1024;<br>
+          AdGetSamplingData( hDeviceHandle, &amp;wSmplData[0][0], &amp;ulSmplNum
+          );<br>
+          .<br>
+          .<br>
+          .</font>	</p></td>
+      </tr>
+    </table>
+    <table border="0" width="502">
+      <tr>
+        <td width="494">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="494" valign="top">Please refer to &quot;<a href="External%20Trigger%20Function.html">External Trigger
+          Function</a>.&quot;</td>
+      </tr>
+    </table>
+  </blockquote>
+<p><font size="3" face="Arial"><b><a name="13.2.7 Trigger-Paced Sampling">11.2.7 Trigger-Paced Sampling</a></b></font></p>
+  <blockquote>
+    <table border="0" width="502">
+      <tr>
+        <td width="494" valign="top"><font SIZE="3">The </font> <a href="AdTriggerSampling.html"> AdTriggerSampling</a>
+          <font SIZE="3">function samples a single channel on the board at each
+          trigger asserted on the EXTRG IN pin. This function is only applicable
+          to the boards whose analog input channels are multiplexed into an AD
+          converter and whose data transfer mode is the programmed I/O mode.</font></td>
+      </tr>
+    </table>
+    <table border="0" width="504">
+      <tr>
+        <td width="496" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="496" valign="top"><b>Example (C)&nbsp;&nbsp;</b></td>
+      </tr>
+    </table>
+    <table border="0" width="502">
+      <tr>
+        <td width="995" valign="top"><p><font face="Courier New">HANDLE&nbsp;&nbsp;&nbsp;&nbsp; hDeviceHandle;<br>
+          ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulSmplNum;<br>
+          WORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wSmplData[1024];</font></p><p><font face="Courier New">hDeviceHandle = AdOpen( "FBIAD1" );</font></p><p><font face="Courier New"><FONT color=#ff0000>//
+          Samples a single channel on the board at each<br>
+          // trigger asserted on the
+          EXTRG IN pin.<br>
+</FONT>AdTriggerSampling( hDeviceHandle, 1, AD_5V, AD_INPUT_SINGLE, AD_EXTTRG,
+          AD_DOWN_EDGE, 1024 );</font></p><p><font face="Courier New"><FONT color=#ff0000>// Retrieve
+          the sampling data.<br>
+</FONT>ulSmplNum = 1024;<br>
+          AdGetSamplingData( hDeviceHandle, &amp;wSmplData[0], &amp;ulSmplNum
+          );<br>
+          .<br>
+          .<br>
+          .</font>	</p></td>
+      </tr>
+    </table>
+    <table border="0" width="500" height="48">
+      <tr>
+        <td width="492" height="21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="492" height="19" valign="top">Please refer to the <a href="AdTriggerSampling.html">AdTriggerSampling</a>
+          function and
+          &quot;<a href="External%20Trigger%20Function.html">External
+          Trigger Function</a>.&quot;</td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><font size="3" face="Arial"><b><a name="13.2.8 Sampling for the CBI-320110/Tx and CIZ-320110TL">11.2.8
+  </a> </b></font><a name="13.2.8 Sampling for the CBI-320110/Tx and CIZ-320110TL"><b><font size="3" face="Arial">Sampling
+  for the CSI/CBI-320110, CTP/CPZ-360810, LPC/PEX-320910</font></b></a></p>
+  <blockquote>
+    <table border="0" width="502">
+      <tr>
+        <td width="494" valign="top">For the sampling of theCSI/CBI-320110, CTP/CPZ-360810
+          and LPC-320910, PEX-320910, the <a href="AdMemSetSamplingConfig.html">AdMemSetSamplingConfig</a>
+          function configures the sampling conditions and the <a href="AdStartSampling.html">AdStartSampling</a>
+          function starts the sampling. The <a href="AdGetSamplingData.html">AdGetSamplingData</a>
+          function retrieves the sampling data.</td>
+      </tr>
+      <tr>
+        <td width="496" valign="top">&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="496" valign="top"><b>Example (C)&nbsp;&nbsp;</b></td>
+      </tr>
+      <tr>
+        <td width="494" valign="top">
+          <blockquote>
+            <pre>HANDLE         hDeviceHandle;
+ADMEMSMPLREQ   AdSmplConfig;
+ULONG          ulSmplNum;
+WORD           wSmplData[1024][2];</pre>
+            <pre>hDeviceHandle = AdOpen( &quot;FBIAD1&quot; );
+
+<font color="#ff0000" face="Courier New">// Configures the sampling conditions.</font><font color="#ff0000">
+</font>AdMemGetSamplingConfig( hDeviceHandle, &amp;AdSmplConfig );
+
+AdSmplConfig.ulChCount = 2;
+AdSmplConfig.SmplChReq[0].ulChNo = 1;
+AdSmplConfig.SmplChReq[0].ulRange = AD_1V;
+AdSmplConfig.SmplChReq[1].ulChNo = 2;
+AdSmplConfig.SmplChReq[1].ulRange = AD_1V;
+AdSmplConfig.fSmplFreq = 1000.0;
+AdSmplConfig.ulStopMode = AD_STOP_SOFT;
+AdSmplConfig.ulPreTrigDelay = 1024;
+AdSmplConfig.ulPostTrigDelay = 0;
+<font color="#ff0000">
+</font><font color="#ff0000" face="Courier New">// Configures the sampling conditions.</font><font color="#ff0000">
+</font>AdMemSetSamplingConfig( hDeviceHandle, &amp;AdSmplConfig );</pre>
+            <pre><font color="#ff0000" face="Courier New">// Starts the sampling.</font><font color="#ff0000">(asynchronous sampling)
+</font>AdStartSampling( hDeviceHandle, FLAG_ASYNC );
+  :
+<font color="#FF0000">// waiting for a trigger. </font>
+  :<font color="#ff0000">
+</font><font color="#ff0000" face="Courier New">// Stops the sampling.</font><font color="#ff0000">
+</font>AdStopSampling( hDeviceHandle );
+  :<font color="#ff0000">
+</font>  :<font color="#ff0000">
+</font><font color="#ff0000" face="Courier New">// Retrieve the sampling data.</font><font color="#ff0000">
+</font>ulSmplNum = 1024;
+AdGetSamplingData( hDeviceHandle, &amp;wSmplData[0][0], &amp;ulSmplNum );	</pre>
+          </blockquote>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+  <hr>
+
+  <p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+  Corporation. All rights reserved.
+  </font></p>
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

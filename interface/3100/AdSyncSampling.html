@@ -1,0 +1,578 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdSyncSampling</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdSyncSampling</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td>The AdSyncSampling function enables you to achieve a <font SIZE="3">synchronous
+        sampling on boards/cards connected in parallel.</font>  &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+ <font SIZE="3">The parallel
+        sampling is not supported between different type of boards/cards. You should
+        connect the same type boards/cards by the synchronous cables.</font>
+      </td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" height="21" valign="top"><font face="Courier New" size="3">INT
+          AdSyncSampling(</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New" size="3"> HANDLE&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i></font><font face="Courier New">,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New" size="3"> ULONG&nbsp;</font>
+        </td>
+        <td width="356" height="21" valign="top"> <i><font face="Courier New" size="3">ulMode</font></i>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top">
+    <font face="Courier New">
+    );</font>
+        </td>
+        <td width="470" height="21" colspan="2" valign="top"></td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <p>
+  <strong><font face="Times New Roman" size="3">Visual Basic
+  </font></strong>
+  </p>
+  <blockquote>
+    <table border="0" width="520" cellspacing="1">
+      <tr>
+        <td colspan="4" width="512" valign="top"><font face="Courier New" size="3">Declare Function AdSyncSampling Lib &quot;FbiAd.DLL&quot;
+          ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"> <font face="Courier New" size="3"> ByVal&nbsp;</font></td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> <i>hDeviceHandle</i> </font></td>
+        <td width="286" valign="top"> <font face="Courier New" size="3"> As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="62" valign="top"> <font face="Courier New" size="3"> ByVal&nbsp;</font>
+        </td>
+        <td width="132" valign="top"> <font face="Courier New" size="3"> <i>ulMode</i> &nbsp;</font>
+        </td>
+        <td width="286" valign="top"> <font face="Courier New" size="3"> As Long
+          _</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="512" colspan="4" valign="top">
+    <font face="Courier New" size="3">
+    ) As Long</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p>
+  <strong><font face="Times New Roman" size="3">Delphi</font></strong>
+  </p>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="472" valign="top"><font face="Courier New" size="3">function
+          AdSyncSampling(</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"> <font face="Courier New" size="3"><i>hDeviceHandle</i> </font></td>
+        <td width="378" valign="top"> <font face="Courier New" size="3"> : Integer;</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+        <td width="62" valign="top"> <font face="Courier New" size="3"><i>ulMode</i>&nbsp;</font>
+        </td>
+        <td width="378" valign="top"> <font face="Courier New" size="3"> : Integer</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="472" colspan="3" valign="top">
+    <font face="Courier New" size="3">
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New" size="3">hDeviceHandle</font></i></td>
+      <td valign="top" width="484" height="21">Specifies the device handle obtained by the
+        <a href="AdOpen.html">
+        AdOpen</a> function.</td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="1"></td>
+      <td valign="top" width="484" height="1">&nbsp;&nbsp;
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="1"><i><font face="Courier New" size="3">ulMode</font></i></td>
+      <td valign="top" width="484" height="1">Specifies a role of the board/card,
+        master or slave, by using the following codes exclusively.
+      <table border="1" width="300" height="69">
+        <tr valign="top">
+          <td align="center" width="156" valign="top" height="19"><b>Code</b></td>
+          <td align="center" width="128" valign="top" height="19"><b>Value</b></td>
+          <td align="center" width="128" valign="top" height="19"><b>Description</b></td>
+        </tr>
+        <tr valign="top">
+          <td width="156" valign="top" height="13">AD_MASTER_MODE</td>
+          <td width="128" valign="top" height="13" align="center">1</td>
+          <td width="128" valign="top" height="13">Master</td>
+        </tr>
+        <tr valign="top">
+          <td width="156" valign="top" height="19">AD_SLAVE_MODE</td>
+          <td width="128" valign="top" height="19" align="center">2</td>
+          <td width="128" valign="top" height="19">Slave</td>
+        </tr>
+      </table>
+      </td> 
+    </tr> 
+    <tr> 
+      <td valign="top" nowrap width="71" height="1"></td>
+      <td valign="top" width="484" height="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        For the CompactPCI board, synchronous number must be set.
+      <table border="1" width="315" height="216">
+        <tr valign="top">
+          <td align="center" width="156" valign="top" height="38"><b>Code</b></td>
+          <td align="center" width="143" valign="top" height="38"><b>Value</b></td>
+          <td align="center" width="143" valign="top" height="38"><b>Synchronous Number</b></td>
+        </tr>
+        <tr valign="top">
+          <td width="156" valign="top" height="19">AD_SYNC_NUM1</td>
+          <td width="143" valign="top" align="center" height="19">0x0100</td>
+          <td width="143" valign="top" align="center" height="19">1</td>
+        </tr>
+        <tr valign="top">
+          <td width="156" valign="top" height="19">AD_SYNC_NUM2</td>
+          <td width="143" valign="top" align="center" height="19">0x0200</td>
+          <td width="143" valign="top" align="center" height="19">2</td>
+        </tr>
+        <tr valign="top">
+          <td width="156" valign="top" height="16">AD_SYNC_NUM3</td>
+          <td width="143" valign="top" align="center" height="16">0x0400</td>
+          <td width="143" valign="top" align="center" height="16">3</td>
+        </tr>
+        <tr valign="top">
+          <td width="156" valign="top" height="19">AD_SYNC_NUM4</td>
+          <td width="143" valign="top" align="center" height="19">0x0800</td>
+          <td width="143" valign="top" align="center" height="19">4</td>
+        </tr>
+        <tr valign="top">
+          <td width="156" valign="top" height="19">AD_SYNC_NUM5</td>
+          <td width="143" valign="top" align="center" height="19">0x1000</td>
+          <td width="143" valign="top" align="center" height="19">5</td>
+        </tr>
+        <tr valign="top">
+          <td width="156" valign="top" height="19">AD_SYNC_NUM6</td>
+          <td width="143" valign="top" align="center" height="19">0x2000</td>
+          <td width="143" valign="top" align="center" height="19">6</td>
+        </tr>
+        <tr valign="top">
+          <td width="156" valign="top" height="19">AD_SYNC_NUM7</td>
+          <td width="143" valign="top" align="center" height="19">0x4000</td>
+          <td width="143" valign="top" align="center" height="19">7</td>
+        </tr>
+      </table>
+        <p>If programmed I/O transfer mode is specified, one of the seven numbers
+        above is selected. If other transfer modes are specified, two of the
+        seven numbers above are selected.<br>
+        For models of parallel sampling, the identical synchronous number must
+        be specified.</p>
+        <table border="0" cellspacing="1" width="397">
+          <tr>
+            <td valign="top" width="44">Note:</td>
+            <td width="339">If some models synchronize with other models by
+              using the synchronous number, be careful not to conflict between
+              the each synchronous number.</td>
+          </tr>
+        </table>
+        <p>Example1)<br>
+        Data transfer mode: programmable I/O mode<br>
+        Synchronous number: 1<br>
+        Role of the board: master<br>
+        <br>
+        <font size="3">The code fragment is as follows.</font><br>
+        <font face="Courier New">ulMode = AD_MASTER_MODE + AD_SYNC_NUM1</font><br>
+        <br>
+        Example 2)<br>
+        Data transfer mode: bus master mode<br>
+        Synchronous number: 2, 3<br>
+        Role of the board: slave<br>
+        <br>
+        The code fragment is as follows.<br>
+        <font face="Courier New">ulMode = AD_SLAVE_MODE + AD_SYNC_NUM2 +
+        AD_SYNC_NUM3</font>
+      </td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td width="480" valign="top">The AdSyncSampling function returns AD_ERROR_SUCCESS if the process
+        is
+        successfully completed. Otherwise, this function returns another code.
+        Please refer to the <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+  </blockquote>
+ 
+  <p><strong><font face="Times New Roman" size="4">Comments</font></strong></p> 
+  <table border="0" width="550" cellspacing="1" height="1100">
+    <tr>
+      <td width="544" valign="top" height="40">
+  <ul>
+    <li><font SIZE="3">This function always performs as an overlapped operation.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="570" height="78">
+  <ul>
+    <li>
+  <font SIZE="3">The driver software is capable of event signaling and callback
+  routine of your procedure at completion of the parallel sampling. You should
+  configure event settings and register your callback routine to the master board, not to slave
+  boards.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="40">
+  <ul>
+    <li>
+  <font SIZE="3">Use the <a href="AdStopSampling.html"> AdStopSampling</a> function to terminate the sampling in
+  progress.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="40">
+  <ul>
+    <li>
+  Use the <a href="AdSetSamplingConfig.html"> AdSetSamplingConfig</a> function to set up sampling conditions.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="40">
+  <ul>
+    <li>
+  <font SIZE="3">The driver software uses a sampling rate of the master board
+  in
+  parallel sampling.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="40">
+  <ul>
+    <li><font SIZE="3">Configure input ranges and input configurations for each
+  channel on each board.</font></li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="78">
+  <ul>
+    <li>
+  <font SIZE="3">When you select the programmed I/O mode as a data transfer mode
+  on each board connected, you should configure each board
+  to be the same number
+  of channels to sample and the same number of samples.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="40">
+  <ul>
+    <li>
+  <font SIZE="3">Only start-trigger with no delay is available for triggering in
+  this parallel sampling.</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="15">
+  <ul>
+    <li>
+  <font SIZE="3">Available trigger modes depend on the <a href="Sampling%20Mode.html"> data transfer
+  mode</a>.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="59">
+  <ul>
+    <li>
+  <font SIZE="3">In the parallel sampling for the programmed I/O mode, a single
+  channel is sampled at each clock on each board.</font></li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" valign="top" height="471">
+  <ul>
+    <li>
+  <font SIZE="3">In the non-parallel sampling for the programmed I/O mode, the
+  each specified channel is sampled at the same clock or clock phase. The
+  following figures illustrate the sampling timing for the parallel sampling and
+  non-parallel sampling in case that the number of the sampling channels is
+  three.<br>
+  <b>&lt;AdSyncSampling . . . parallel sampling&gt;<br>
+  </b>
+  <img border="0" src="SyncSampling.gif" width="600" height="152"><br>
+  <b>&lt;AdStartSampling . . . non-parallel sampling&gt;<br>
+  </b>
+  <img border="0" src="SyncSampling2.gif" width="598" height="184"></font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" height="40">
+      <ul>
+        <li>
+  <font SIZE="3">You can retrieve sampled data to call the <a href="AdGetSamplingData.html"> AdGetSamplingData</a>
+  function on each board.</font>
+        </li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" height="59">
+  <ul>
+    <li>
+  <font SIZE="3">You can specify the master mode only one of the boards in the
+  parallel sampling. The others should be specified as the slave mode.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" height="78">
+  <ul>
+    <li>
+  <font SIZE="3">In execution order of this function, first, you should call
+  this function to each slave board in sequence to place them into the ready
+  state, and then call this function to the master board to start sampling in
+  parallel.</font>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+    <td width="942" height="1" valign="top">
+      <ul>
+        <li>The slave board/card retrieves the trigger generated at the master
+          board/card, and generates triggers in synchronization with the master
+          board/card in the CPZ-360810.&nbsp;&nbsp;&nbsp;
+        </li>
+      </ul>
+    </td>
+    </tr>
+    <tr>
+    <td width="942" height="1" valign="top">
+      <ul>
+        <li>In bus master, the slave board/card may not be terminated (DMA
+          transfer completion) even if the master board is terminated. Wait
+          until all devices are terminated.&nbsp;&nbsp;&nbsp;
+        </li>
+      </ul>
+    </td>
+    </tr>
+  </table>
+ 
+  <table border="0" cellspacing="1" width="600">
+    <tr>
+      <td width="100%">
+        <ul>
+          <li>Please refer to &quot;<a href="Structure/SyncSampling.htm">Corresponding
+            Identifier for Each Model</a>,&quot; for more details.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+ 
+  <p><b><big>Target Products</big></b></p>
+  <blockquote>
+    <table height="25" cellSpacing="1" width="550">
+      <tbody>
+        <tr>
+          <td vAlign="top" width="550" height="21">Refer to &quot;<a href="Structure/SyncSampling.htm">Corresponding
+            Identifiers for Each Model</a>&quot;.&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Examples</font></strong></p>
+
+  <blockquote>
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="500" valign="top"><font face="Courier New" size="3">nRet =
+          AdSyncSampling( hDeviceHandle2, AD_SLAVE_MODE );</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top"><font face="Courier New" size="3"> 
+    nRet = AdSyncSampling( hDeviceHandle1, AD_MASTER_MODE );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p>
+  <strong><font face="Times New Roman" size="3">Visual Basic
+  </font></strong>
+    </p> 
+    <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="500" valign="top"><font face="Courier New" size="3">nRet =
+          AdSyncSampling( hDeviceHandle2, _ AD_SLAVE_MODE )</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top"> 
+    <font face="Courier New" size="3"> 
+    nRet = AdSyncSampling( hDeviceHandle1, _ AD_MASTER_MODE )</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<blockquote> 
+  <blockquote> 
+  <p>
+  <strong><font face="Times New Roman" size="3">Delphi</font></strong>
+  </p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="500" valign="top"><font face="Courier New" size="3">nRet = AdSyncSampling ( hDeviceHandle2, AD_SLAVE_MODE );</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top"> 
+    <font face="Courier New" size="3"> 
+    nRet = AdSyncSampling ( hDeviceHandle1, AD_MASTER_MODE );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <table border="0" width="531" cellspacing="1">
+    <tr>
+      <td valign="top" width="533">Configure a board described by hDeviceHandle1 as a master
+        board/card and a board described by
+        hDeviceHandle2 as a slave board, then start sampling in parallel.
+
+      </td>
+    </tr>
+    <tr>
+        <td width="533" valign="top"><b>Sample Programs for Parallel Sampling</b>
+    <table border="1" width="530">
+      <tr>
+        <td width="93" align="center"><font face="Times New Roman" size="3"><b>&nbsp;Programming
+          Language</b></font></td>
+        <td width="213" align="center"><b>Master Mode</b></td>
+        <td width="214" align="center"><b>Slave Mode</b></td>
+      </tr>
+      <tr>
+        <td width="93" valign="top">Visual C++ (C)</td>
+        <td width="213" valign="top">AdSmpl_C.c (S_SamplingMasterDlgProcMaster)</td>
+        <td width="214" valign="top">AdSmpl_C.c (S_SamplingSlaveDlgProcSlave)</td>
+      </tr>
+      <tr>
+        <td width="93" valign="top">Visual C++ (C++)</td>
+        <td width="213" valign="top">SSamplingDlgMaster.cpp</td>
+        <td width="214" valign="top">SSamplingDlgSlave.cpp</td>
+      </tr>
+      <tr>
+        <td width="93" valign="top">Visual Basic</td>
+        <td width="213" valign="top">Form6.frm</td>
+        <td width="214" valign="top">Form7.frm</td>
+      </tr>
+      <tr>
+        <td width="93" valign="top">Delphi</td>
+        <td width="213" valign="top">Unit6.pas</td>
+        <td width="214" valign="top">Unit7.pas</td>
+      </tr>
+    </table>
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

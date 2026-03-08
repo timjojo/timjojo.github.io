@@ -1,0 +1,290 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdGetSamplingData</title>
+</head>
+
+<body>
+
+<p><b><font size="5" face="Arial">AdOutputSync</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="558" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="556" valign="top">
+  The AdOutputSync function configures internal synchronization control of
+  analog input devices.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><big><b>Syntax</b></big></p>
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font> 
+</b> 
+    </p>
+    <font size="3">
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="507" valign="top"><font face="Courier New">INT AdOutputSync(</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="80" valign="top"><font face="Courier New">HANDLE&nbsp;</font></td>
+          <td width="395" valign="top"> <font face="Courier New">hDeviceHandle,</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="80" valign="top"><font face="Courier New">ULONG</font><font face="Courier New">
+            &nbsp;</font></td>
+          <td width="395" valign="top"><font face="Courier New">TrgLine,</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="80" valign="top"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="395" valign="top"><font face="Courier New"><i>TrgMode</i></font>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="507" valign="top">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    </blockquote>
+  </font>
+    <blockquote>
+<p><b>Visual Basic&nbsp;</b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="485" cellspacing="1">
+      <tr>
+        <td colspan="4" width="512" valign="top"><font face="Courier New">Declare Function AdOutputSync Lib "FbiAd.DLL" (</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="62" valign="top"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="134" valign="top"> <font face="Courier New"><i>hDeviceHandle&nbsp;</i></font></td>
+        <td width="284" valign="top"> <font face="Courier New" size="3">   As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="134" valign="top"><font face="Courier New"><i>TrgLine</i></font></td>
+        <td width="284" valign="top"><font face="Courier New">As Long,</font><font face="Courier New" size="3">_</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"><font face="Courier New">ByVal</font></td>
+        <td width="134" valign="top"><font face="Courier New"><i>TrgMode&nbsp;</i></font></td>
+        <td width="284" valign="top"><font face="Courier New" size="3">   As
+          Long _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="512" valign="top"><font face="Courier New">) As
+          Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New">function AdOutputSync(</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="10" valign="top"></td>
+        <td width="138" valign="top"><i><font face="Courier New">hDeviceHandle</font></i></td>
+        <td width="337" valign="top"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="10" valign="top"></td>
+        <td width="138" valign="top"><font face="Courier New"><i>TrgLine:</i></font></td>
+        <td width="337" valign="top">  <font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="10" valign="top"></td>
+        <td width="138" valign="top"><font face="Courier New"><i>TrgMode:</i></font></td>
+        <td width="337" valign="top">  <font face="Courier New">: Cardinal</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  </blockquote>
+<p><b><big>Parameters</big></b>
+  </p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="571" cellspacing="1" height="1">
+    <tbody>
+      <tr>
+        <td width="41" valign="top" height="21"><var><font face="Courier New">hDeviceHandle</font></var></td>
+        <td width="529" valign="top" height="21">Specifies the device handle obtained by the
+          <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"></td>
+        <td width="529" valign="top" height="21">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="127"><var><font face="Courier New">TrgLine</font></var></td>
+        <td width="529" valign="top" height="127">
+        Specifies the signal to perform internal synchronization output.&nbsp;<br>
+        Selectable identifiers are as follows.&nbsp;
+        <table border="1" cellspacing="1" width="424" height="33">
+        <tr>
+          <td width="83" height="19">
+            <p align="center"><b>Identifier</b></td>
+          <td width="98" height="19">
+            <p align="center"><b>Value</b></td>
+          <td width="422" height="19">
+            <p align="center"><b>Description</b></td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_SYNC_NUM_1&nbsp;</td>
+          <td width="98" height="19" align="center">
+            0x0100&nbsp;</td>
+          <td width="241" height="19">Internal synchronization line 1</td>
+        </tr>
+        <tr>
+          <td width="83" height="1">AD_SYNC_NUM_2&nbsp;</td>
+          <td width="98" height="1" align="center">
+            0x0200</td>
+          <td width="241" height="1">Internal synchronization line 2</td>
+        </tr>
+      </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="6"></td>
+        <td width="529" valign="top" height="6">
+        &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="121"><font face="Courier New"><i>TrgMode</i></font></td>
+        <td width="529" valign="top" height="121">
+        Specifies internal synchronization trigger output condition from the
+        following identifiers.
+        <table border="1" cellspacing="1" width="424" height="81">
+        <tr>
+          <td width="83" height="19" align="center">
+            <p align="center"><b>&nbsp;&nbsp;&nbsp;&nbsp; Identifier</b></td>
+          <td width="98" height="19" align="center">
+            <p align="center"><b>Value</b></td>
+          <td width="422" height="19" align="center">
+            <p align="center"><b>Description</b></td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_DISABLE&nbsp;</td>
+          <td width="98" height="19" align="center">
+            0x80000000</td>
+          <td width="241" height="19">No external trigger output (default)</td>
+        </tr>
+        <tr>
+          <td width="83" height="1">AD_ATRIG_MODE</td>
+          <td width="98" height="1" align="center">
+ 8&nbsp;</td>
+          <td width="241" height="1">Trigger timing</td>
+        </tr>
+      </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdOutputSync function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="556" cellspacing="1">
+    <tr>
+      <td width="527" height="21" valign="top"><font face="Courier New" size="3">nRet = AdOutputSync( hDeviceHandle, AD_SYNC_NUM_1,  AD_ATRIG_MODE );</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+    <blockquote>
+    <table border="0" width="558" cellspacing="1">
+      <tr>
+        <td width="577" valign="top">
+      nRet = AdOutputSync( hDeviceHandle, AD_SYNC_NUM_1,  AD_ATRIG_MODE )
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="556" cellspacing="1">
+      <tr>
+        <td width="576" valign="top">nRet := AdOutputSync( hDeviceHandle, AD_SYNC_NUM_1,  AD_ATRIG_MODE );</td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="591" cellspacing="1">
+      <tr>
+        <td width="586" valign="top">
+Performing analog trigger output from the analog-to-digital
+input device, internal synchronization trigger1 specified in&nbsp; hDevicehandle.&nbsp;&nbsp;
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

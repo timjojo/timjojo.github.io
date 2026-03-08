@@ -1,0 +1,219 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 fnConv</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">fnConv</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+  The fnConv function is a placeholder for a callback routine used in the <a href="AdDataConv.html">
+  AdDataConv</a> function. This function is called when each data is converted.</td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Syntax</font></strong></p>
+
+<blockquote>
+
+  <b>C<br>
+  </b>
+  <blockquote>
+    <table border="0" width="450" cellspacing="1">
+      <tr>
+        <td colspan="3" width="492" height="19"><font face="Courier New">CONVPROC
+          fnConv(</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21"></td>
+        <td width="91" height="21"> 
+ <font face="Courier New"> 
+ INT&nbsp;</font></td>
+        <td width="379" height="21"> 
+ <font face="Courier New"> 
+ <em>nCh</em>,&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21"></td>
+        <td width="91" height="21"> 
+ <font face="Courier New"> 
+ DWORD&nbsp;</font></td>
+        <td width="379" height="21"> 
+ <font face="Courier New"> 
+ <em>dwCount</em>,&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21"></td>
+        <td width="91" height="21"> <font face="Courier New"> PVOID</font></td>
+        <td width="379" height="21"> <font face="Courier New"> <em>lpData</em>&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21">
+    <font face="Courier New">
+    );</font>
+        </td>
+        <td width="470" height="21" colspan="2"></td>
+      </tr>
+    </table>
+  </blockquote>
+  <b>Visual Basic<br>
+  </b>
+  <blockquote>
+    <table border="0" width="450" cellspacing="1" height="50">
+      <tr>
+        <td colspan="4" width="492" height="20"><font face="Courier New">Sub
+          fnConv(_</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21"></td>
+        <td width="95" height="21" valign="top"> <font face="Courier New"> ByVal<em> &nbsp;</em>
+          </font>
+        </td>
+        <td width="76" height="21" valign="top"> <font face="Courier New"> <em> nCh</em>&nbsp;&nbsp;</font>
+        </td>
+        <td width="299" height="21" valign="top"> <font face="Courier New"> As Long,_&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" height="1"></td>
+        <td width="95" height="1" valign="top"> <font face="Courier New"> ByVal<em>  </em>&nbsp;</font>
+        </td>
+        <td width="76" height="1" valign="top"> <font face="Courier New"> <em> dwCount</em>&nbsp;</font>
+        </td>
+        <td width="299" height="1" valign="top"> <font face="Courier New"> As Long,_&nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" height="21"></td>
+        <td width="95" height="21" valign="top"> <font face="Courier New"> ByRef<em>&nbsp;</em> &nbsp;</font>
+        </td>
+        <td width="76" height="21" valign="top"> <font face="Courier New"> <em>lpData</em>&nbsp;&nbsp;</font>
+        </td>
+        <td width="299" height="21" valign="top"> <font face="Courier New"> As Any_</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="486" colspan="4" height="20">
+    <font face="Courier New">
+    )</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <b>Delphi<br>
+  </b>
+  <blockquote>
+    <table border="0" width="450" cellspacing="1" height="1">
+      <tr>
+        <td colspan="3" width="492" valign="top" height="20">
+    <font face="Courier New">
+    procedure fnConv(</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="21"></td>
+        <td width="86" valign="top" height="21"><font face="Courier New"><em>nCh</em> &nbsp;</font>
+        </td>
+        <td width="384" valign="top" height="21"> <font face="Courier New"> : Integer;&nbsp;&nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="1"></td>
+        <td width="86" valign="top" height="1"><font face="Courier New"><em>dwCount</em></font>
+        </td>
+        <td width="384" valign="top" height="1"> <font face="Courier New"> : DWORD;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="16" valign="top" height="1"></td>
+        <td width="86" valign="top" height="1"><font face="Courier New"><em>lpData</em> &nbsp;</font>
+        </td>
+        <td width="384" valign="top" height="1"> <font face="Courier New"> : Pointer</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3" valign="top" height="20">
+    <font face="Courier New">
+    ); stdcall;</font>
+        </td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><em><font face="Courier New">nCh</font></em></td>
+      <td valign="top" width="484" height="21">Contains the channel number
+        regarding to the data pointed by
+        lpData.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><em><font face="Courier New">dwCount</font></em></td>
+      <td valign="top" width="484" height="21">Contains an index of the data.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="484" height="21">&nbsp;&nbsp;</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><em><font face="Courier New">lpData</font></em></td>
+      <td valign="top" width="484" height="21">Points to the data to be processed in this function.
+        After processing,
+        restore the processed data into the area pointed by lpData.</td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480">
+  This function has no return value.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+</blockquote> 
+ 
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

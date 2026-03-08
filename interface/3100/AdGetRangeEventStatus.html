@@ -1,0 +1,342 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdGetRangeEventStatus</title>
+</head>
+
+<body>
+
+<p><strong><font size="5" face="Arial">AdGetRangeEventStatus</font></strong></p> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Description</font></strong> </p>
+
+<blockquote>
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td>
+  The AdGetRangeEventStatus function retrieves the status of the full-scale
+  range detection event.&nbsp;
+      </td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4">Syntax</font></strong></p>
+
+<blockquote>
+
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" height="21" valign="top"><font face="Courier New">INT
+          AdGetRangeEventStatus(</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">HANDLE&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <b></b><font face="Courier New"><i>hDeviceHandle</i>,</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">ULONG&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <font face="Courier New"><i>*ulEventChNo</i>,</font><b></b></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="114" height="21" valign="top"> <font face="Courier New">ULONG&nbsp;</font></td>
+        <td width="356" height="21" valign="top"> <i><font face="Courier New">*ulEventStatus</font></i></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top">
+    <font face="Courier New">
+    );</font>
+        </td>
+        <td width="470" height="21" colspan="2" valign="top"></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="4" width="492" height="21" valign="top"><font face="Courier New">Declare
+          Function AdGetRangeEventStatus Lib &quot;FbiAd.DLL&quot; (_</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="21" valign="top"></td>
+        <td width="22" height="21" valign="top"> <font face="Courier New"> ByVal&nbsp;</font></td>
+        <td width="53" height="21" valign="top"> <b></b><font face="Courier New"><i>hDeviceHandle</i>&nbsp;</font>  </td>
+        <td width="395" height="21" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="22" height="20" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <b></b><font face="Courier New"><i>ulEventChNo</i>&nbsp;</font></td>
+        <td width="325" height="20" valign="top"> <font face="Courier New">As
+          Long, _&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="16" height="20" valign="top"></td>
+        <td width="22" height="20" valign="top"> <font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="123" height="20" valign="top"> <b></b><font face="Courier New"><i>ulEventStatus</i>&nbsp;</font></td>
+        <td width="325" height="20" valign="top"> <font face="Courier New">  As
+          Long _</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="4" height="21" valign="top">
+    <font face="Courier New">
+    ) As Long</font></td>
+      </tr>
+    </table>
+  </blockquote>
+</blockquote>
+ 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="450">
+      <tr>
+        <td colspan="3" width="492" valign="top"><font face="Courier New">function
+          AdGetRangeEventStatus(</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"></td>
+        <td width="104" valign="top"><i><font face="Courier New">hDeviceHandle</font></i><b></b></td>
+        <td width="366" valign="top"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"><font face="Courier New">var</font></td>
+        <td width="104" valign="top"><b></b><font face="Courier New"><i>ulEventChNo</i>&nbsp;</font></td>
+        <td width="366" valign="top"> <font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="16" valign="top"><font face="Courier New">var</font></td>
+        <td width="104" valign="top"><b></b><i><font face="Courier New">ulEventStatus</font></i></td>
+        <td width="366" valign="top"> <font face="Courier New"> :&nbsp;Cardinal</font></td>
+      </tr>
+      <tr>
+        <td width="486" colspan="3" valign="top">
+    <font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+ 
+</blockquote>
+
+
+<blockquote> 
+ 
+<p><strong><font face="Times New Roman" size="4"> Parameters</font></strong></p>
+
+  <blockquote>
+  <table border="0" width="517" cellspacing="1">
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">hDeviceHandle</font></i></td>
+      <td valign="top" width="480" height="21">Specifies the device handle
+        obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="551" height="21" colspan="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">ulEventChNo</font></i></td>
+      <td valign="top" width="480" height="21">Points to a variable to receive
+        the channel number where the full-scale range detection event occurred.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="551" height="21" colspan="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"><i><font face="Courier New">ulEventStatus</font></i></td>
+      <td valign="top" width="480">Points to a variable to receive the full-scale range detection status. The variable will contain one of the
+        following codes.</td> 
+    </tr> 
+    <tr>
+      <td valign="top" nowrap width="71" height="21"></td>
+      <td valign="top" width="480">
+        <table border="1" width="99%">
+          <tr>
+            <td width="67%" align="center" valign="top"><b>Code</b></td>
+            <td width="33%" align="center" valign="top"><b>Value</b></td>
+            <td width="33%" align="center" valign="top"><b>Description</b></td>
+          </tr>
+          <tr>
+            <td width="67%" valign="top">AD_STATUS_POSITIVE_FULL_SCALE</td>
+            <td width="33%" valign="top" align="center">1</td>
+            <td width="33%" valign="top">Positive full-scale range</td>
+          </tr>
+          <tr>
+            <td width="67%" valign="top">AD_STATUS_NEGATIVE_FULL_SCALE</td>
+            <td width="33%" valign="top" align="center">2</td>
+            <td width="33%" valign="top">Negative full-scale range</td>
+          </tr>
+        </table>
+      </td> 
+    </tr> 
+  </table> 
+  </blockquote> 
+</blockquote>
+
+<blockquote> 
+ <p><strong><font face="Times New Roman" size="4"> Return Value</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480" valign="top">
+  <font SIZE="3">The AdGetRangeEventStatus function returns AD_ERROR_SUCCESS if the
+  process is successfully completed. </font>Otherwise, this function returns another code.
+  Please refer to the <a href="Return%20Values.html"> error codes</a>.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+ <p><strong><font face="Times New Roman" size="4">Comments</font></strong></p>
+<blockquote>
+  <table border="0" width="547" cellspacing="1">
+    <tr>
+      <td width="591" valign="top">
+  <ul>
+    <li>
+  The array for parameters changes in the required size with control mode of the
+  board/card. The board/card of <font SIZE="3">multiplexer </font>mode
+  prepares the array for channels. The board/card of ADC mode parameters
+  the array for the maximum number of channel to use.</li>
+  </ul>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="500" cellspacing="1">
+  </table>
+</blockquote>
+ 
+</blockquote> 
+ 
+
+<blockquote> 
+ 
+ <p><strong><font face="Times New Roman" size="4">Target Products</font></strong></p> 
+ 
+<blockquote>
+  <table border="0" width="488" cellspacing="1">
+    <tr>
+      <td width="480" valign="top">
+  Refer to &quot;<a href="List%20of%20Capabilities%20for%20Each%20Model.html">List
+          of Capabilities for Each Model</a>,&quot; for more details of the
+          product models and capabilities.</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><strong><font face="Times New Roman" size="4">Examples</font></strong></p>
+
+  <blockquote>
+  <p><strong><font face="Times New Roman" size="3">C&nbsp;</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="500" valign="top"><font face="Courier New">ULONG ulEventChNo[2];</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top"><font face="Courier New">ULONG ulEventStatus[2];</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="500" valign="top"><font face="Courier New">nRet = AdGetRangeEventStatus(
+          hDeviceHandle, ulEventChNo, ulEventStatus );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><strong><font face="Times New Roman" size="3">Visual Basic</font></strong></p> 
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="498" valign="top"><font face="Courier New">Dim ulEventChNo(0 to 1) As Long</font></td>
+      </tr>
+      <tr>
+        <td width="498" valign="top"><font face="Courier New">Dim ulEventStatus(0 to 1) As
+          Long</font></td>
+      </tr>
+      <tr>
+        <td width="498" valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="498" valign="top"><font face="Courier New">nRet = AdGetRangeEventStatus(
+          hDeviceHandle, _ ulEventChNo(0), ulEventStatus(0) )</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote> 
+</blockquote> 
+ 
+<blockquote> 
+  <blockquote> 
+  <p><strong><font face="Times New Roman" size="3">Delphi</font></strong></p>
+  <blockquote>
+    <table border="0" width="480">
+      <tr>
+        <td width="504" valign="top"><font face="Courier New">var</font></td>
+      </tr>
+      <tr>
+        <td width="504" valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp; ulEventChNo:
+          array[0..1] of Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="504" valign="top"><font face="Courier New">&nbsp;&nbsp;&nbsp;
+          ulEventStatus : array[0..1] of Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="504" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="504" valign="top"><font face="Courier New">nRet := AdGetRangeEventStatus(
+          hDeviceHandle, @ulEventChNo[0], @ulEventStatus[0] );</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+</blockquote>
+
+<blockquote> 
+  <blockquote> 
+  <table border="0" width="500" cellspacing="1">
+    <tr>
+      <td valign="top">
+<font SIZE="3">Retrieves the status of the full-scale range detection event of
+the board/card specified by hDeviceHandle.</font>
+
+      </td>
+    </tr>
+  </table>
+  </blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p> 
+ 
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

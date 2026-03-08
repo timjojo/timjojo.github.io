@@ -1,0 +1,194 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdResetOverRangeCh</title>
+</head>
+
+<body>
+
+<p><b><font size="5" face="Arial">AdResetOverRangeCh</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="556">
+  The AdResetOverRangeChfunction resets the event status
+  of automatic range-switching capability at overvoltage input.&nbsp;
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font> 
+</b> 
+    </p>
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472"><font face="Courier New">INT
+            AdResetOverRangeCh(</font></td>
+        </tr>
+        <tr>
+          <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="62"><font face="Courier New">HANDLE&nbsp;&nbsp;</font></td>
+          <td width="378"><font face="Courier New"><i>hDeviceHandle</i>
+            &nbsp;</font></td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472"><font face="Courier New">);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+<p><b>Visual Basic&nbsp;</b></p>
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="4" width="472"><font face="Courier New">Declare Function
+            AdResetOverRangeCh Lib _ &quot;FbiAd.DLL&quot; ( _</font></td>
+        </tr>
+        <tr>
+          <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="52"><font face="Courier New">ByVal&nbsp;&nbsp;</font></td>
+          <td width="133"><font face="Courier New"><i>hDeviceHandle</i>  </font></td>
+          <td width="255"><font face="Courier New">  As Long _</font></td>
+        </tr>
+        <tr>
+          <td colspan="4" width="472"><font face="Courier New">) As Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        </tr>
+      </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472"><font face="Courier New">function
+            AdResetOverRangeCh(</font></td>
+        </tr>
+        <tr>
+          <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="132"><i><font face="Courier New">hDeviceHandle</font></i></td>
+          <td width="308"><font face="Courier New">: THandle &nbsp;</font></td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472"><font face="Courier New">):DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+        </tr>
+      </table>
+    </blockquote>
+  </blockquote>
+<p><b><big>Parameter</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="520" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="41" valign="top"><var><font face="Courier New">hDeviceHandle</font></var>&nbsp;</td>
+        <td width="508" valign="top">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+  <blockquote>
+  <table width="520" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdResetOverRangeCh function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html">error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+</blockquote>
+
+<blockquote>
+
+<p><b><big>Comment</big></b></p> 
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td width="544">
+                <p align="left">After occurring an event
+                of automatic range-switching capability at overvoltage input,
+                the next event will not occur. Because this function is waiting
+                for the event reset completion.
+      </td>
+    </tr>
+  </table>
+ 
+</blockquote>
+ 
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="451" height="21"><font face="Courier New">nRet =
+        AdResetOverRangeCh( hDeviceHandle );</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="499">
+      <p><font face="Courier New">nRet = AdResetOverRangeCh( hDeviceHandle )</font></p>
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="500"><font face="Courier New">nRet := AdResetOverRangeCh( hDeviceHandle );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="545" valign="top">
+Reset the event status of automatic range-switching
+capability at overvoltage input of the board/card specified by hDeviceHandle.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

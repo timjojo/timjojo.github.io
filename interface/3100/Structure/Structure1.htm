@@ -1,0 +1,364 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 ADBOARDSPEC</title>
+</head>
+
+<body>
+
+  <p><b><font face="Arial" size="4">ADBOARDSPEC Structure</font></b></p>                     
+<blockquote>
+  <p><font face="Times New Roman"><a>The </a>ADBOARDSPEC structure contains the specifications of the board/card.  
+  This structure is used for the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdGetDeviceInfo.html">AdGetDeviceInfo</a>  
+  function.</font></p>          
+  <p><font face="Times New Roman">- C<br>                     
+  </font><font face="Courier New">                    
+  typedef struct {<br>                     
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp; ulBoardType; <br>                    
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp; ulBoardID; <br>                    
+  </font> <font face="Courier New">DWORD&nbsp;&nbsp;&nbsp; dwSamplingMode; <br>                    
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp; ulChCountS; <br>                    
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp; ulChCountD; <br>                    
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp; ulResolution; <br>                    
+  </font> <font face="Courier New">DWORD&nbsp;&nbsp;&nbsp; dwRange;&nbsp;&nbsp;&nbsp; <br>                    
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp; ulIsolation; <br>                    
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp; ulDi; <br>                    
+  </font> <font face="Courier New">ULONG&nbsp;&nbsp;&nbsp; ulDo; <br>                    
+  } ADBOARDSPEC, *PADBOARDSPEC;</font><font face="Times New Roman"><br>                   
+  <br>         
+  - Visual Basic<br>                     
+  </font><font face="Courier New">                    
+  Type ADBOARDSPEC<br>                     
+  </font> <font face="Courier New">ulBoardType As Long<br>                     
+  </font> <font face="Courier New">ulBoardID As Long<br>                     
+  </font> <font face="Courier New">dwSamplingMode As Long<br>                     
+  </font> <font face="Courier New">ulChCountS As Long<br>                     
+  </font> <font face="Courier New">ulChCountD As Long<br>                     
+  </font> <font face="Courier New">ulResolution As Long<br>                     
+  </font> <font face="Courier New">dwRange As Long<br>                     
+  </font> <font face="Courier New">ulIsolation As Long<br>                     
+  </font> <font face="Courier New">ulDi As Long<br>                     
+  </font> <font face="Courier New">ulDo As Long<br>                     
+  End Type<br>                     
+  <br>         
+  </font><font face="Times New Roman">         
+  - Delphi<br>                     
+  type<br>         
+  </font><font face="Courier New">         
+  ADBOARDSPEC = record<br>                     
+  </font> <font face="Courier New">ulBoardType: Cardinal; <br>                     
+  </font> <font face="Courier New">ulBoardID: Cardinal; <br>                     
+  </font> <font face="Courier New">dwSamplingMode: DWORD; <br>                    
+  </font> <font face="Courier New">ulChCountS: Cardinal; <br>                     
+  </font> <font face="Courier New">ulChCountD: Cardinal; <br>                     
+  </font> <font face="Courier New">ulResolution: Cardinal; <br>                     
+  </font> <font face="Courier New">dwRange: DWORD; <br>                    
+  </font> <font face="Courier New">ulIsolation: Cardinal; <br>                     
+  </font> <font face="Courier New">ulDi: Cardinal; <br>                     
+  </font> <font face="Courier New">ulDo: Cardinal; <br>                      
+  end;<br>         
+  </font>         
+  </p>         
+  <table border="0" width="90%">         
+    <tr>         
+      <td width="15%"><font face="Times New Roman"><b><u>Member</u></b></font><hr></td>         
+      <td width="85%"><b><u><font face="Times New Roman">Description</font></u></b><hr></td>         
+    </tr>         
+    <tr>         
+      <td width="15%" valign="top"><font face="Times New Roman">ulBoardType</font></td>         
+      <td width="85%"><font face="Times New Roman">Receives the board type.<br> 
+        If you use the PCI-3135, this member will contain 3135 in decimal.</font></td>          
+    </tr>         
+    <tr>         
+      <td width="15%" valign="top"><font face="Times New Roman">&nbsp;&nbsp;</font></td>         
+      <td width="85%"></td>              
+    </tr>       
+    <tr>         
+      <td width="15%" valign="top"><font face="Times New Roman">ulBoardID</font></td>         
+      <td width="85%"><font face="Times New Roman">Receives the board ID (RSW1 value of the board).<br>
+        If you use the      
+        CBI-3133A, CBI-3133B, CBI-3134A, CBI-3134B<font color="#000000">, this  
+        member will contain 0 in decimal.</font></font></td>                
+    </tr>       
+    <tr>       
+      <td width="15%" valign="top"><font face="Times New Roman">&nbsp;&nbsp;</font></td>       
+      <td width="85%">       
+      </td>       
+    </tr>       
+    <tr>       
+      <td width="15%" valign="top"><font face="Times New Roman">dwSamplingMode</font></td>       
+      <td width="85%"><font face="Times New Roman">Receives the data  
+        transfer mode that the board <font size="3">provides</font>.<br> 
+        </font>
+        <table>
+          <tr>
+            <td vAlign="top" align="center" width="95" height="19"><b><font face="Times New Roman">Bit</font></b></td>
+            <td vAlign="top" align="center" width="182" height="19"><b><font face="Times New Roman">Data  
+              Transfer Mode</font></b></td> 
+          </tr>
+          <tr>
+            <td vAlign="top" width="95" height="19">
+              <p align="center"><font face="Times New Roman">0</font></p>
+            </td>
+            <td vAlign="top" width="182" height="19"><font face="Times New Roman">Programmed I/O</font></td> 
+          </tr>
+          <tr>
+            <td vAlign="top" width="95" height="19">
+              <p align="center"><font face="Times New Roman">1</font></p>
+            </td>
+            <td vAlign="top" width="182" height="19"><font face="Times New Roman">FIFO</font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="95" height="19">
+              <p align="center"><font face="Times New Roman">2</font></p>
+            </td>
+            <td vAlign="top" width="182" height="19"><font face="Times New Roman">Memory</font></td>
+          </tr>
+          <tr>
+            <td vAlign="top" width="95" height="19">
+              <p align="center"><font face="Times New Roman">3</font></p>
+            </td>
+            <td vAlign="top" width="182" height="19"><font face="Times New Roman">Bus master</font></td> 
+          </tr>
+          <tr>
+            <td vAlign="top" width="95" height="20">
+              <p align="center"><font face="Times New Roman">4 through 31</font></p> 
+            </td>
+            <td vAlign="top" width="182" height="20"><font face="Times New Roman">Reserved(0)</font></td>
+          </tr>
+        </table>
+      <table border="0" width="100%">       
+        <tr>       
+          <td width="100%"><font face="Times New Roman">0</font>:<font face="Times New Roman">Not supported, 1</font>:<font face="Times New Roman">Supported</font></td>       
+        </tr>       
+      </table>       
+      </td>       
+    </tr>       
+    <tr>       
+      <td width="15%" valign="top"><font face="Times New Roman">ulChCountS</font></td>       
+      <td width="85%"><font face="Times New Roman">Receives the number of channels for single-ended input.</font></td>        
+    </tr>       
+    <tr>       
+      <td width="15%" valign="top"><font face="Times New Roman">&nbsp;&nbsp;</font></td>       
+      <td width="85%"></td>       
+    </tr>       
+    <tr>       
+      <td width="15%" valign="top"><font face="Times New Roman">ulChCountD</font></td>       
+      <td width="85%"><font face="Times New Roman">Receives the number of channels for differential input.</font></td>        
+    </tr>       
+    <tr>       
+      <td width="15%" valign="top"><font face="Times New Roman">&nbsp;&nbsp;</font></td>       
+      <td width="85%"></td>             
+    </tr>       
+    <tr>       
+      <td width="15%" valign="top"><font face="Times New Roman">ulResolution</font></td>       
+      <td width="85%"><font face="Times New Roman">Receives the resolution of the board.<br> 
+        If you use a 12-bit analog-to-digital input board, this  
+        member will contain 12.</font></td>                 
+    </tr>       
+    <tr>       
+      <td width="15%" valign="top"><font face="Times New Roman">&nbsp;&nbsp;</font></td>       
+      <td width="85%">    
+      </td>    
+    </tr>    
+    <tr>       
+      <td width="15%" valign="top"><font face="Times New Roman">dwRange</font></td>       
+      <td width="85%"><font face="Times New Roman">Receives the input ranges that the board <font size="3">provides</font>.<br> 
+        </font>
+        <table width="427">
+          <tbody>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><b><font face="Times New Roman">Bit</font></b></td>
+              <td vAlign="top" align="middle" width="318">
+                <p align="center"><b><font face="Times New Roman">Description</font></b></p>
+              </td>
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">0</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: unipolar 0 V to +1 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">1</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: unipolar 0 V to +2.5 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">2</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: unipolar 0 V to +5 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">3</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: unipolar 0 V to +10 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">4</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: unipolar +1 V to +5 V</font></td> 
+            </tr>
+            <tr>
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">5</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: unipolar 0 V to +2 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">6</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: unipolar 0 V to +0.125  
+                V</font></td>
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">7</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: unipolar 0 V to +1.25  
+                V</font></td>
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">8</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: unipolar 0 V to +0.625  
+                V</font></td>
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">9</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: unipolar 0 V to +0.156  
+                V</font></td>
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">10, 11</font></td> 
+              <td vAlign="top" width="318"><font face="Times New Roman">Reserved (Specify 0.)</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">12</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Current range: unipolar 0 mA to +20  
+                mA</font></td>
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">13</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Current range: unipolar +4 mA to +20  
+                mA</font></td>
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">14, 15</font></td> 
+              <td vAlign="top" width="318"><font face="Times New Roman">Reserved(Specify 0.)</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">16</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-1 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">17</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-2.5 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">18</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-5 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">19</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-10 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">20, 21</font></td> 
+              <td vAlign="top" width="318"><font face="Times New Roman">Reserved (Specify 0.)</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">22</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-0.125 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">23</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-1.25 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">24</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-0.625 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">25</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-0.156 V</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">26</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-1.25 V<br> 
+                (with AC coupling)</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">27</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-0.625 V<br> 
+                (with AC coupling)</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">28</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Voltage range: bipolar +/-0.156 V<br> 
+                (with AC coupling)</font></td> 
+            </tr>
+            <tr>
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">29 through 30</font></td> 
+              <td vAlign="top" width="318"><font face="Times New Roman">Reserved (Specify 0.)</font></td> 
+            </tr>
+            <tr>
+              <td vAlign="top" align="center" width="95"><font face="Times New Roman">31</font></td>
+              <td vAlign="top" width="318"><font face="Times New Roman">Inside GND</font></td> 
+            </tr>
+            <tr vAlign="top">
+              <td vAlign="top" align="center" width="413" colspan="2">
+                <p align="left"><font face="Times New Roman">0</font>:<font face="Times New Roman">Not supported, 1</font>:<font face="Times New Roman">Supported</font></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>    
+    </tr>    
+    <tr>    
+      <td width="15%" valign="top"></td>    
+      <td width="85%">    
+      </td>    
+    </tr>    
+    <tr>    
+      <td width="15%" valign="top"><font face="Times New Roman">ulIsolation</font></td>    
+      <td width="85%"><font face="Times New Roman">Receives the isolation capability.<br> 
+        </font>
+        <table>
+          <tr vAlign="top">
+            <td align="center" width="162"><b><font face="Times New Roman">Code</font></b></td>
+            <td align="center" width="118"><b><font face="Times New Roman">Description</font></b></td>
+          </tr>
+          <tr vAlign="top">
+            <td vAlign="top" width="162"><font face="Times New Roman">AD_ISOLATION</font></td>
+            <td vAlign="top" width="118"><font face="Times New Roman">Isolated</font></td>
+          </tr>
+          <tr vAlign="top">
+            <td vAlign="top" width="162"><font face="Times New Roman">AD_NOT_ISOLATION</font></td>
+            <td vAlign="top" width="118"><font face="Times New Roman">Not isolated</font></td> 
+          </tr>
+        </table>
+      </td>    
+    </tr>    
+    <tr>    
+      <td width="15%" valign="top"></td>    
+      <td width="85%"></td>    
+    </tr>    
+    <tr>    
+      <td width="15%" valign="top"><font face="Times New Roman">ulDi</font></td>    
+      <td width="85%"><font face="Times New Roman">Receives the number of the digital input pins on the board/card.</font></td>     
+    </tr>    
+    <tr>    
+      <td width="15%" valign="top"></td>    
+      <td width="85%"></td>    
+    </tr>    
+    <tr>    
+      <td width="15%" valign="top"><font face="Times New Roman">ulDo</font></td>    
+      <td width="85%"><font face="Times New Roman">Receives the number of the general purpose digital output  
+        pins on the board/card.</font></td>     
+    </tr>    
+  </table>    
+</blockquote>
+    
+<p> </p>    
+    
+<hr>    
+    
+<p ALIGN="center"><a href="../Help.htm"><font face="Times New Roman">[</font> <font face="Times New Roman">Top</font> <font face="Times New Roman">]</font></a></p>   
+   
+<p align="right"><font face="Times New Roman">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>                  
+
+</body>
+
+</html>

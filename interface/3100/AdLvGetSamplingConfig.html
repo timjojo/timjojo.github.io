@@ -1,0 +1,397 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdLvGetSamplingConfig</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">AdLvGetSamplingConfig</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="557">
+  The AdLvGetSamplingConfig function retrieves sampling conditions of the <font color="#000000">board/card.&nbsp;This function is applicable to the
+  PCI-3179 and CTP/CPZ-3179.</font></td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <font size="3">
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472"><font face="Courier New">INT
+            AdLvGetSamplingConfig(</font></td>
+        </tr>
+        <tr>
+          <td width="8">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td width="72"><font face="Courier New">HANDLE&nbsp;</font></td>
+          <td width="380"> <font face="Courier New"> <i>hDeviceHandle</i>,</font></td>
+        </tr>
+        <tr>
+          <td width="8"></td>
+          <td width="72"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="380"><font face="Courier New"><i>ulChNo</i><b>,</b> </font> </td>
+        </tr>
+        <tr>
+          <td width="8"></td>
+          <td width="72"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="380"><font face="Courier New"> *<i>ulSmplNum</i><b>,</b> </font> </td>
+        </tr>
+        <tr>
+          <td width="8"></td>
+          <td width="72"><font face="Courier New">float&nbsp;</font></td>
+          <td width="380"><font face="Courier New"> *</font><font face="Courier New"><i>fSmplFreq</i><b>,</b> </font> </td>
+        </tr>
+        <tr>
+          <td width="8"></td>
+          <td width="72"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="380"><font face="Courier New"> *</font><font face="Courier New"><i>ulRange</i> </font> </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    </blockquote>
+  </font>
+    <blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New" size="3">Declare Function AdLvGetSamplingConfig
+          _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="62"><font face="Courier New" size="3">ByVal&nbsp;</font></td>
+        <td width="134"><font face="Courier New" size="3"><i>hDeviceHandle&nbsp;&nbsp;</i>  </font></td>
+        <td width="244"><font face="Courier New" size="3">  As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="62"><font size="3" face="Courier New">ByVal&nbsp;
+  </font>
+        </td>
+        <td width="134"><font face="Courier New" size="3"><i> ulChNo</i> </font></td>
+        <td width="244"><font face="Courier New" size="3"> As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="62"><font size="3" face="Courier New">ByRef&nbsp;
+  </font>
+        </td>
+        <td width="134"><font face="Courier New" size="3"><i> ulSmplNum</i> </font></td>
+        <td width="244"><font face="Courier New" size="3"> As Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="62"><font size="3" face="Courier New">ByRef&nbsp;
+  </font>
+        </td>
+        <td width="134"><font face="Courier New" size="3"><i> fSmplFreq</i> </font></td>
+        <td width="244"><font face="Courier New" size="3"> As Single, _</font></td>
+      </tr>
+      <tr>
+        <td width="20"></td>
+        <td width="62"><font face="Courier New" size="3">ByRef&nbsp;</font></td>
+        <td width="134"><font face="Courier New" size="3"><i> ulRange</i> </font></td>
+        <td width="244"><font face="Courier New" size="3"> As Long _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New" size="3">) As Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="481" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New" size="3">function
+          AdLvGetSamplingConfig(</font></td>
+      </tr>
+      <tr>
+        <td width="11"><font face="Courier New">&nbsp;</font></td>
+        <td width="12"></td>
+        <td width="132"><i><font face="Courier New" size="3">hDeviceHandle</font></i></td>
+        <td width="308"><font face="Courier New" size="3">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="11"></td>
+        <td width="12"></td>
+        <td width="132"><i><font face="Courier New" size="3">ulChNo</font></i></td>
+        <td width="308">  
+  <font face="Courier New" size="3">
+  :&nbsp;DWORD;</font></td>
+      </tr>
+      <tr>
+        <td width="11"></td>
+        <td width="12"><font face="Courier New" size="3">var</font></td>
+        <td width="132"><font face="Courier New" size="3"> <i>ulSmplNum</i></font></td>
+        <td width="308">  
+  <font face="Courier New" size="3">
+  :&nbsp;DWORD;</font></td>
+      </tr>
+      <tr>
+        <td width="11"></td>
+        <td width="12"><font face="Courier New" size="3">var</font></td>
+        <td width="132"><font face="Courier New" size="3"> <i>fSmplFreq</i></font></td>
+        <td width="308">  
+  <font face="Courier New" size="3">
+  : Single;</font></td>
+      </tr>
+      <tr>
+        <td width="11"></td>
+        <td width="12"><font face="Courier New" size="3">var</font></td>
+        <td width="132"><font face="Courier New" size="3"> <i>ulRange</i></font></td>
+        <td width="308">  
+  <font face="Courier New" size="3">
+  : DWORD</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472">   
+    <font face="Courier New" size="3">   
+    ) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  </blockquote>
+  <p><b><big>Parameters</big></b>
+  </p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="41" height="21"><var><font face="Courier New">hDeviceHandle</font></var></td>
+        <td width="507" height="21">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="507" height="21">
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"><i><font face="Courier New">ulChNo</font></i></td>
+        <td>
+        <font SIZE="3">Specifies an analog input channel. Only one channel can
+        be specified.</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="507" height="21">
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"><i><font face="Courier New">ulSmplNum</font></i></td>
+        <td width="507" height="21">
+        Points to a variable to receive the number of data to be acquired.
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="18"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="507" height="18">
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"><i><font face="Courier New">fSmplFreq</font></i></td>
+        <td width="507" height="21">
+        Points to a variable to receive the sampling rate.
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="507" height="21">
+        &nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"><var><font face="Courier New">ulRange</font></var></td>
+        <td width="507" height="21">
+        Points to a variable to receive the analog input range.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdLvGetSamplingConfig function returns AD_ERROR_SUCCESS if the process is
+  successfully completed. Otherwise, this function returns another code. Please
+  refer to the <a href="Return%20Values.html">error codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Comment</big></b></p>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The following boards/cards are applicable
+          to use this function.
+  <table border="1" cellspacing="1" width="49%">
+    <tr>
+      <td width="29%" align="center"><b>Model</b></td>
+      <td width="71%" align="center"><b>AC Coupling Capability</b></td>
+    </tr>
+    <tr>
+      <td width="29%">PCI-3179</td>
+      <td width="71%" align="center">-</td>
+    </tr>
+    <tr>
+      <td width="29%">CTP/CPZ-3179</td>
+      <td width="71%" align="center">Available</td>
+    </tr>
+  </table>
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="452" height="21"> 
+    <font face="Courier New"> 
+    ULONG ulSmplNum;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21">  
+    <font face="Courier New">  
+    float fSmplFreq;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21">  
+    <font face="Courier New">  
+    ULONG ulRange;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21">  
+    <font face="Courier New">  
+    nRet = AdLvGetSamplingConfig( hDeviceHandle, 1, &amp;ulSmplNum, &amp;fSmplFreq, &amp;ulRange );</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>
+    <blockquote>
+    <table border="0" width="503" cellspacing="1">
+      <tr>
+        <td width="523">  
+    <font face="Courier New">  
+    Dim ulSmplNum As Long</font></td>
+      </tr>
+      <tr>
+        <td width="523">  
+    <font face="Courier New">  
+    Dim fSmplFreq As Single</font></td>
+      </tr>
+      <tr>
+        <td width="523">  
+    <font face="Courier New">  
+    Dim ulRange As Long</font></td>
+      </tr>
+      <tr>
+        <td width="523"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="523">  
+    <font face="Courier New">  
+    nRet = AdLvGetSamplingConfig( hDeviceHandle, 1, _ ulSmplNum, fSmplFreq, ulRange )</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="498" colspan="2"><font face="Courier New">var</font></td>
+      </tr>
+      <tr>
+        <td width="18"><font face="Courier New">&nbsp;</font></td>
+        <td width="480"><font face="Courier New">ulSmplNum: DOWRD;</font></td>
+      </tr>
+      <tr>
+        <td width="18"></td>
+        <td width="480"><font face="Courier New">fSmplFreq: Single;</font></td>
+      </tr>
+      <tr>
+        <td width="18"></td>
+        <td width="480"><font face="Courier New">ulRange: DWORD;</font></td>
+      </tr>
+      <tr>
+        <td width="498" colspan="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="498" colspan="2"><font face="Courier New">nRet := AdLvGetSamplingConfig( hDeviceHandle, 1,
+          ulSmplNum, fSmplFreq, ulRange );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="542" valign="top">
+Retrieve sampling conditions of the board/card specified by hDeviceHandle.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

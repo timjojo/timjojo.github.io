@@ -1,0 +1,348 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdOpen</title>
+</head>
+
+<body>
+
+<p><b><font size="5" face="Arial">AdOpen</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<blockquote>
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td width="546" valign="top"><font size="3">The </font> AdOpen function opens an
+        analog-to-digital input board/card and enables to access to the board/card.<font size="3">
+        To open the board/card,
+        specify a device name of the board/card, FBIAD<i>x</i> (<i>x =</i> 1 through
+        255), automatically specified by the device driver.&nbsp;</font>
+        <p><font size="3">
+        If you use two or more PCI/CompactPCI board/card, check the device names beforehand.&nbsp;</font>
+        In Windows 7/Server 2008/Vista/XP/Server 2003/2000/Me/98/95, Interface analog-to-digital input
+        board names, RSW1 values, and device names are listed under <b>FbiPciAd</b> in the <b>Device
+        Manager</b>. You can also check these items by using the diagnostic
+        program (DIAGAD.EXE), calibration program (ADCALIB.EXE), or waveform viewer
+        (ADWAVESMP.EXE). The list will be
+        displayed while you use them.&nbsp;</p>
+        <p> In Windows NT 4.0, use the diagnostic program (DIAGAD.EXE),
+        calibration program (ADCALIB.EXE), or waveform viewer (ADWAVESMP.EXE) to
+        check these items.</p>
+        <p>If you change the system configuration (the number of boards/cards or slot position,
+        and so on),
+  assigned device name may also be changed. If you often
+        change the system configuration, we suggest you write your application
+        to be capable of identifying this and alter the device name at run-time.</p>
+        <p>The CardBus cards have no rotary switch, and the software considers
+        their board number is 0.</p>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<font size="3">
+
+</font>
+<blockquote>
+<p><b><big>Syntax</big></b></p>
+  <blockquote>
+<p><b>C&nbsp;(86 bits)</b> 
+    </p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="507" valign="top"><font face="Courier New">HANDLE AdOpen(</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="72" height="21" valign="top"><font face="Courier New">LPCTSTR&nbsp;&nbsp;</font></td>
+        <td width="403" valign="top"> <font face="Courier New"> <i>lpszName</i>   &nbsp;</font></td>
+      </tr>
+      <tr>
+        <td colspan="3" width="507" valign="top"><font face="Courier New">);</font></td>
+      </tr>
+    </table>
+    </blockquote>
+<p><b>C&nbsp;(64 bits)</b> 
+    </p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="507" valign="top"><font face="Courier New">HANDLE AdOpen(</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="72" height="21" valign="top"><font face="Courier New">LPCTSTR&nbsp;&nbsp;</font></td>
+        <td width="403" valign="top"> <font face="Courier New"> <i>lpszName</i>   &nbsp;</font></td>
+      </tr>
+      <tr>
+        <td colspan="3" width="507" valign="top"><font face="Courier New">);</font></td>
+      </tr>
+    </table>
+    </blockquote>
+<p><b>Visual Basic</b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New">Declare Function AdOpen Lib &quot;FbiAd.DLL&quot;
+          ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="52" valign="top">
+<font face="Courier New">
+ByVal&nbsp;&nbsp;</font></td>
+        <td width="82" valign="top"><font face="Courier New"><i>lpszName</i></font></td>
+        <td width="341" valign="top"><font face="Courier New">As String _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New">) As Long&nbsp;</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="3" width="507" valign="top"><font face="Courier New">function AdOpen(</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="82" valign="top"><i><font face="Courier New">lpszName</font></i></td>
+        <td width="393" valign="top"><font face="Courier New">: Pointer</font></td>
+      </tr>
+      <tr>
+        <td colspan="3" width="507" valign="top"><font face="Courier New">):Thandle; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+<p><b><big>Parameter</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="46" valign="top"><var><font face="Courier New">lpszName</font>&nbsp;</var></td>
+        <td width="503" valign="top">Specifies the device name to open. This device name is from FBIAD1 through FBIAD255.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">The AdOpen function returns a valid handle when the process is
+          successfully completed. Otherwise, this function returns
+          INVALID_HANDLE_VALUE(FFFFFFFFh) if the process is
+  failed.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;(32-bit compiler)</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New">HANDLE hDeviceHandle;</font></td>
+    </tr>
+    <tr>
+      <td width="445" height="21" valign="top"><font face="Courier New">hDeviceHandle =
+        AdOpen</font>(<font face="Courier New">&quot;FBIAD1&quot;</font>)<font face="Courier New">;</font>
+      </td>
+    </tr>
+  </table>
+    </blockquote>
+<p><b><font face="Times New Roman">C&nbsp;(32-bit compiler UNICODE)</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1" height="46">
+    <tr>
+      <td width="451" height="18" valign="top"><font face="Courier New">HANDLE
+        hDeviceHandle;</font></td>
+    </tr>
+    <tr>
+      <td width="445" height="20" valign="top"><font face="Courier New">hDeviceHandle
+        = AdOpen((LPCTSTR)&quot;FBIAD1&quot;);</font>
+      </td>
+    </tr>
+  </table>
+    </blockquote>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1" height="46">
+    <tr>
+      <td width="451" height="18" valign="top"><font face="Courier New">HANDLE
+        hDeviceHandle;</font></td>
+    </tr>
+    <tr>
+      <td width="445" height="20" valign="top"><font face="Courier New">char*
+        lpszName = "FBIAD1";</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="445" height="20" valign="top"><font face="Courier New">hDeviceHandle
+        = AdOpen((LPCTSTR)lpszName);</font>
+      </td>
+    </tr>
+  </table>
+    </blockquote>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1" height="46">
+    <tr>
+      <td width="451" height="18" valign="top"><font face="Courier New">HANDLE
+        hDeviceHandle;</font></td>
+    </tr>
+    <tr>
+      <td width="445" height="20" valign="top"><font face="Courier New">LPCWSTR
+        UnicodeName = L"FBIAD1";</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="451" height="18" valign="top"><font face="Courier New">char
+        DeviceName[256];</font></td>
+    </tr>
+    <tr>
+      <td width="445" height="20" valign="top"><font face="Courier New">int len;</font>
+      </td>
+    </tr>
+  </table>
+    </blockquote>
+    <blockquote>
+  <table border="0" width="601" cellspacing="1" height="46">
+    <tr>
+      <td width="572" height="18" valign="top"><font face="Courier New">len =
+        WideCharToMultiByte(CP_ACP, 0, UnicodeName, -1, NULL, 0, NULL, NULL);</font></td>
+    </tr>
+    <tr>
+      <td width="566" height="20" valign="top"><font face="Courier New">WideCharToMultiByte(CP_ACP,
+        0, UnicodeName, -1, DeviceName, len, NULL, NULL);</font>
+      </td>
+    </tr>
+  </table>
+    </blockquote>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1" height="25">
+    <tr>
+      <td width="451" height="1" valign="top">hDeviceHandle =
+        AdOpen((LPCTSTR)DeviceName);</td>
+    </tr>
+  </table>
+    </blockquote>
+<p><b><font face="Times New Roman">C&nbsp;(64-bit compiler)</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New">HANDLE
+        hDeviceHandle;</font></td>
+    </tr>
+    <tr>
+      <td width="445" height="21" valign="top"><font face="Courier New">hDeviceHandle
+        = AdOpen(&quot;FBIAD1&quot;);</font>
+      </td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New">
+      Dim lpszName As String</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New">
+      Dim hDeviceHandle As Long</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New">
+      lpszName = &quot;FBIAD1&quot; &amp; Chr( 0 )</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+      <p>
+      <font face="Courier New">
+      hDeviceHandle = AdOpen</font>(<font face="Courier New">lpszName</font>)</p>
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="2" width="498" valign="top"><font face="Courier New">var</font></td>
+      </tr>
+      <tr>
+        <td width="15" valign="top">
+        <font face="Courier New">&nbsp;&nbsp;</font>
+        </td>
+        <td width="477" valign="top"><font face="Courier New">lpszName: array[0..15] of Char;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="15" valign="top">
+        <font face="Courier New">&nbsp;&nbsp;</font>
+        </td>
+        <td width="477" valign="top">
+        <font face="Courier New">
+        &nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" width="498" valign="top"><font face="Courier New">StrCopy( lpszName, 'FBIAD1');
+          &amp; Chr( 0 )<br>
+          hDeviceHandle := AdOpen( @lpszName[0] );</font>
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="543" valign="top">Open the board/card whose device name is FBIAD1 and receive a device
+          handle in hDeviceHandle.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,876 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 ADSMPLREQ</title>
+</head>
+
+<body>
+
+  <p> <b><font size="4"> <font face="Arial"><a name="ADSMPLREQ">ADSMPLREQ Structure</a></font></font></b></p>                                      
+            
+<blockquote>            
+  <p><font face="Times New Roman"><a><font size="3">The ADSAMPLREQ structure contains sampling conditions. 
+  This structure is used by the </font></a><a href="../AdDataConv.html"><font size="3">AdDataConv</font></a><font size="3"> 
+  and <a href="../AdSetSamplingConfig.html">AdSetSamplingConfig</a>  
+  functions.</font></font></p>                    
+  <p><font face="Times New Roman">- C</font><br>                                     
+ <font face="Courier New">typedef struct {<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulChCount;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ADSMPLCHREQ&nbsp; SmplChReq[256];<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulSamplingMode;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulSingleDiff;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulSmplNum;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulSmplEventNum;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">float&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  fSmplFreq;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulTrigPoint;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulTrigMode;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">LONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  lTrigDelay;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulTrigCh;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">float&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  fTrigLevel1;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">float&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  fTrigLevel2;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulEClkEdge;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulATrgPulse;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulTrigEdge;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulTrigDI;<br>
+  </font>                                   
+  &#12288;<font face="Courier New">ULONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ulFastMode;<br>
+  } ADSMPLREQ, *PADSMPLREQ<br>
+  <br>
+  </font>                                   
+  <br>                    
+  <font face="Times New Roman">                    
+  - Visual Basic<br>                                     
+  </font> <font face="Courier New">Type ADSMPLREQ<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulChCount As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">SmplChReq(0 To 255) As ADSMPLCHREQ<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulSamplingMode As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulSingleDiff As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulSmplNum As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">uSmplEventNum As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">fSmplFreq As Single<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulTrigPoint As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulTrigMode As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">lTrigDelay As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulTrigCh As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">fTrigLevel1 As Single<br>
+  </font>                                    
+  &#12288;<font face="Courier New">fTrigLevel2 As Single<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulEClkEdge As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulATrgPulse As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulTrigEdge As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulTrigDI As Long<br>
+  </font>                                    
+  &#12288;<font face="Courier New">ulFastMode As Long<br>
+  End Type<br>                                     
+  </font>                                    
+  <br>                    
+  -<font face="Times New Roman"> Delphi</font><br>                                     
+  type<br>
+  &#12288;<font face="Courier New">ADSMPLREQ = record<br>
+  </font>&#12288;<font face="Courier New">ulChCount: Cardinal;<br>
+  </font>&#12288;<font face="Courier New">SmplChReq: array[0..255] of
+  ADSMPLCHREQ;<br>
+  </font>&#12288;<font face="Courier New">ulSamplingMode : Cardinal;<br>
+  </font>&#12288;<font face="Courier New">ulSingleDiff : Cardinal;<br>
+  </font>&#12288;<font face="Courier New">ulSmplNum: Cardinal;<br>
+  </font>&#12288;<font face="Courier New">ulSmplEventNum : Cardinal;<br>
+  </font>&#12288;<font face="Courier New">fSmplFreq: Single;<br>
+  </font>&#12288;<font face="Courier New">ulTrigPoint : Cardinal;<br>
+  </font>&#12288;<font face="Courier New">ulTrigMode: Cardinal;<br>
+  </font>&#12288;<font face="Courier New">lTrigDelay: Integer;<br>
+  </font>&#12288;<font face="Courier New">ulTrigCh: Cardinal;<br>
+  </font>&#12288;<font face="Courier New">fTrigLevel1 : Single;<br>
+  </font>&#12288;<font face="Courier New">fTrigLevel2 : Single;<br>
+  </font>&#12288;<font face="Courier New">ulEClkEdge : Cardinal;<br>
+  </font>&#12288;<font face="Courier New">ulATrgPulse : Cardinal;<br>
+  </font>&#12288;<font face="Courier New">ulTrigEdge: Cardinal;<br>
+  </font>&#12288;<font face="Courier New">ulTrigDI: Cardinal;<br>
+  </font>&#12288;<font face="Courier New">ulFastMode : Cardinal;<br>
+  end;</font>                    
+  </p>                    
+  <table border="0" width="90%" height="5495">                    
+    <tr>                    
+      <td width="15%" height="40"><b><u><font face="Times New Roman">Member</font></u></b><hr></td>                    
+      <td width="85%" height="40"><b><u><font face="Times New Roman">Description</font></u></b><hr></td>                    
+    </tr>                    
+    <tr>                    
+      <td width="15%" valign="top" height="59"><font face="Times New Roman">ulChCount</font></td>                    
+      <td width="85%" height="59"><font face="Times New Roman">Specifies the number of channels to sample. It is in the   
+        range of 1 through the number of channels that the board provides. The   
+        default setting value is 1. Specifies the channel numbers in the <a href="Structure4.htm">ADSMPLCHREQ</a>   
+        structure.</font></td>                     
+    </tr>                    
+    <tr>                    
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                    
+      <td width="85%" height="21"></td>                    
+    </tr>                    
+    <tr>                    
+      <td width="15%" valign="top" height="40"><font face="Times New Roman">SmplChReq</font></td>                    
+      <td width="85%" height="40"><font face="Times New Roman">Specifies an array of the <a href="Structure4.htm">ADSMPLCHREQ</a> 
+        structure containing the sampling conditions for the channel.</font></td>                      
+    </tr>                    
+    <tr>                    
+      <td width="15%" valign="top" height="19"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                    
+      <td width="85%" height="19"></td>                    
+    </tr>                    
+    <tr>                    
+      <td width="15%" valign="top" height="226"><font face="Times New Roman">ulSamplingMode</font></td>                    
+      <td width="85%" height="226"><font face="Times New Roman">Specifies the <font size="3">data  
+        transfer mode</a></font>.<br>                    
+        Specifies either one of the following codes for ulSamplingMode.</font>                     
+      <table border="1">                    
+        <tr>                    
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="72" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="178" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+        </tr>                    
+        <tr>                    
+          <td width="156"><font face="Times New Roman">AD_IO_SAMPLING</font></td>                    
+          <td width="72" align="center"><font face="Times New Roman">1</font></td>                    
+          <td width="178"><font face="Times New Roman">Programmed I/O</font></td>                     
+        </tr>                    
+        <tr>                    
+          <td width="156"><font face="Times New Roman">AD_FIFO_SAMPLING</font></td>                    
+          <td width="72" align="center"><font face="Times New Roman">2</font></td>                    
+          <td width="178"><font face="Times New Roman">FIFO</font></td>                    
+        </tr>                    
+        <tr>                    
+          <td width="156"><font face="Times New Roman">AD_MEM_SAMPLING</font></td>                    
+          <td width="72" align="center"><font face="Times New Roman">4</font></td>                    
+          <td width="178"><font face="Times New Roman">Memory</font></td>                    
+        </tr>                    
+        <tr>                    
+          <td width="156"><font face="Times New Roman">AD_BM_SAMPLING</font></td>                    
+          <td width="72" align="center"><font face="Times New Roman">8</font></td>                    
+          <td width="178"><font face="Times New Roman">Bus master</font></td>                     
+        </tr>                    
+      </table>                    
+      <p><font face="Times New Roman">The default setting is dependent on the board. It is retrieved by   
+      calling the <a href="../AdGetSamplingConfig.html"><font size="3">AdGetSamplingConfig</font></a>   
+      function after the board is opened.</font></td>                      
+    </tr>                    
+    <tr>                    
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                    
+      <td width="85%" height="21"></td>                    
+    </tr>                    
+    <tr>                    
+      <td width="15%" valign="top" height="157"><font face="Times New Roman">ulSingleDiff</font></td>                    
+      <td width="85%" height="157"><font face="Times New Roman">Specifies the input configuration.</font>                     
+      <table border="1">                    
+        <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="72" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="178" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+        </tr>
+        <tr>                    
+          <td width="153"><font face="Times New Roman">AD_INPUT_SINGLE</font></td>                    
+          <td width="76" align="center"><font face="Times New Roman">1</font></td>                    
+          <td width="174"><font face="Times New Roman">Single-ended</font></td>                    
+        </tr>                    
+        <tr>                    
+          <td width="153"><font face="Times New Roman">AD_INPUT_DIFF</font></td>                    
+          <td width="76" align="center"><font face="Times New Roman">2</font></td>                    
+          <td width="174"><font face="Times New Roman">Differential</font></td>                    
+        </tr>                    
+      </table>                    
+      <p><font face="Times New Roman">The default setting is dependent on the board. It is retrieved by   
+      calling the <a href="../AdGetSamplingConfig.html"><font size="3">AdGetSamplingConfig</font></a><font size="3"> 
+      </font>function after the board is opened.</font></td>                      
+    </tr>                    
+    <tr>
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                    
+      <td width="85%" height="21"></td>                    
+    </tr>
+    <tr>                    
+      <td width="15%" valign="top" height="40"><font face="Times New Roman">ulSmplNum</font></td>                    
+      <td width="85%" height="40"><font face="Times New Roman">Specifies the number of samples per channel from 1 through  
+        1073741824. The default setting value is 1024. Actual upper limit is  
+        dependent on your system.</font></td>                     
+    </tr>                    
+    <tr>                    
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                    
+      <td width="85%" height="21"></td>                    
+    </tr>                    
+    <tr>                    
+      <td width="15%" valign="top" height="59"><font face="Times New Roman">ulSmplEventNum</font></td>                    
+      <td width="85%" height="59"><font size="3" face="Times New Roman">Specifies the event interval according to 
+        the number of samples to notify the event. Each event is notified 
+        whenever the number of acquired samples reaches to multiples of the 
+        number specified by this member. The default setting value is 0.</font></td>                    
+    </tr>                    
+    <tr>                    
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                    
+      <td width="85%" height="21">              
+      </td>                  
+    </tr>                  
+    <tr>                    
+      <td width="15%" valign="top" height="809"><font face="Times New Roman">fSmplFreq</font></td>                    
+      <td width="85%" height="809"><font face="Times New Roman">Specifies the sampling rate in Hz. You can specify this      
+        from 0.0f to the maximum sampling rate that the board provides. To use      
+        the external clock, please specify 0.0f. The external clock input pin is      
+        dependent on the board. Refer to &quot;<a href="../Attention.html">Attentions</a>&quot;      
+        for more details.<br>     
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        The default setting value is dependent on the board. It is retrieved by      
+        calling the <a href="../AdGetSamplingConfig.html"><font size="3">AdGetSamplingConfig</font></a><font size="3">     
+        </font>function after the board is opened.&nbsp;</font>     
+        <ul>
+          <li><font face="Times New Roman">Requirement of EXCLK IN on CN4<br>     
+            When a sampling pacer clock is set to the external sampling pacer      
+            clock, (fSmplFreq = 0.0), CN4 becomes EXCLK IN.&nbsp;If you do not      
+            use the external sampling pacer clock, when ulEClkEdge is specified      
+            to AD_EXCLK_IN, CN4 becomes EXCLK IN.<br>     
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></li>
+          <li><font face="Times New Roman">Requirement of EXCLK OUT on CN4<br>     
+            When a sampling pacer clock is set to the internal sampling pacer      
+            clock,&nbsp; (fSmplFreq <font size="2">is not </font>0.0), CN4 becomes      
+            EXCLK OUT</font></li>     
+        </ul>
+        <p><font face="Times New Roman">Requirements of signals on CN4 are summarized in the following table.<br> 
+        </font>
+        </p>
+        <table border="1" width="492">
+          <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">fSmplFreq</font></b></td>                    
+          <td width="95" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">ulEClkEdge</font></b></td>                    
+          <td width="281" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">CN4 Signal  
+            Definition</font></b></td>                    
+          </tr>
+          <tr>
+            <td width="75" valign="top"><font face="Times New Roman">0.0</font></td>
+            <td width="144" valign="top"><font face="Times New Roman">Don't care</font></td> 
+            <td width="273" valign="top"><font face="Times New Roman">External clock input&nbsp;<br>     
+              (EXCLK IN)</font></td>     
+          </tr>
+          <tr>
+            <td width="75" valign="top" rowspan="2"><font size="2" face="Times New Roman">Not</font><font face="Times New Roman"><font SIZE="2"> </font>0.0</font></td> 
+            <td width="144" valign="top"><font face="Times New Roman">AD_EXCLK_IN</font></td>
+          </tr>
+          <tr>
+            <td width="144" valign="top"><font size="2" face="Times New Roman">Not</font><font face="Times New Roman"><font SIZE="2"> </font>AD_EXCLK_IN</font></td> 
+            <td width="273" valign="top">
+              <p align="left"><font face="Times New Roman">External clock output&nbsp;<br>     
+              (EXCLK OUT)</font></td>     
+          </tr>
+        </table>
+        <p><font face="Times New Roman">If you use the external clock in PCI-3525, CTP/CPZ-3525, change the   
+        CN3 or CN4 pins to EXCLK_IN</font> <font face="Times New Roman">pin by <a href="../AdSetFunction.html"> AdSetFunction</a> function.</font></p>       
+        <p><font face="Times New Roman">If you use the external clock in LPC/PEX-320724,   
+        change the CN3 pin to EXCLK_IN</font> <font face="Times New Roman">pin by the <a href="../AdSetFunction.html">AdSetFunction</a> function.</font></p>                 
+        <p><font face="Times New Roman">External clock is not available in the
+        PCI-321516.</font></p>                 
+        <p><font face="Times New Roman">If you use the external clock in PCI-361812,   
+        change the pin to EXCLK_IN pin by the <a href="../AdSetFunction.html">AdSetFunction</a> function.</font></p>                 
+        <p>                
+        <p>                  
+        <font face="Times New Roman">                  
+        The default setting value is dependent on the board. It is retrieved by   
+        calling the <a href="../AdGetSamplingConfig.html"><font size="3">AdGetSamplingConfig</font></a><font size="3">  
+        </font>function after the board is opened.</font></p>                
+      </td>                  
+    </tr>                  
+    <tr>                  
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                  
+      <td width="85%" height="21">                  
+      </td>                  
+    </tr>                  
+    <tr>                  
+      <td width="15%" valign="top" height="144"><font face="Times New Roman">ulTrigPoint</font></td>                  
+      <td width="85%" height="144"><font face="Times New Roman"><font size="3">Specifies the trigger timing. One of the 
+        following codes must be set exclusively. </font>Refer to &quot;<a href="../TrigPattern.htm">Available   
+        Combinations of Trigger Parameters</a>&quot; for more details.</font><table border="1" height="100">                    
+        <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center" height="19"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="72" align="center" bgcolor="#C0C0C0" height="19"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="178" bgcolor="#C0C0C0" align="center" height="19"><b><font face="Times New Roman">Description</font></b></td>                    
+        </tr>
+        <tr>                  
+          <td width="157" height="19"><font face="Times New Roman">AD_TRIG_START</font></td>                  
+          <td width="61" align="center" height="19"><font face="Times New Roman">1</font></td>                  
+          <td width="239" height="19"><font face="Times New Roman">Start-trigger (default setting)</font></td>                   
+        </tr>                  
+        <tr>                  
+          <td width="157" height="19"><font face="Times New Roman">AD_TRIG_STOP</font></td>                  
+          <td width="61" align="center" height="19"><font face="Times New Roman">2</font></td>                  
+          <td width="239" height="19"><font face="Times New Roman">Stop-trigger</font></td>                  
+        </tr>                  
+        <tr>                  
+          <td width="157" height="19"><font face="Times New Roman">AD_TRIG_START_STOP</font></td>                  
+          <td width="61" align="center" height="19"><font face="Times New Roman">3</font></td>                  
+          <td width="239" height="19"><font face="Times New Roman">Start/stop-trigger&nbsp;</font></td>                  
+        </tr>                  
+      </table>                  
+      </td>                  
+    </tr>                  
+    <tr>                  
+      <td width="15%" valign="top" height="21">  </td>                  
+      <td width="85%" height="21">               
+      </td>     
+    </tr>     
+    <tr>                  
+      <td width="15%" valign="top" height="2051"><font face="Times New Roman">ulTrigMode</font></td>                  
+      <td width="85%" height="2051"><font face="Times New Roman">Specifies the trigger mode. The external trigger input pin      
+        is dependent on the board. Refer to &quot;<a href="../Attention.html">Attentions</a>,&quot;      
+        for more details.&nbsp;The trigger functions depend on the samplings.      
+        Refer to &quot;<a href="../TrigPattern.htm">Available Combinations of      
+        Trigger Parameters</a>&quot; for more details.</font>                       
+      <table border="1" width="513" height="287"> <br>                 
+        <p><font face="Times New Roman">If you use the external clock in PCI-3525, CTP/CPZ-3525, change the   
+        CN3 or CN4 pins to EXCLK_IN</font> <font face="Times New Roman">pin by <a href="../AdSetFunction.html"> AdSetFunction</a> function.</font></p>       
+        <p><font face="Times New Roman">If you use the external clock in LPC/PEX-320724,   
+        change the CN3 pin to EXCLK_IN</font> <font face="Times New Roman">pin by the <a href="../AdSetFunction.html">AdSetFunction</a> function.</font></p>                 
+        <p>                
+        <p><font face="Times New Roman">If you use the external clock in PCI-361812,   
+        change the pin to EXCLK_IN pin by the <a href="../AdSetFunction.html">AdSetFunction</a> function.</font></p>                 
+        <p>                <br>
+        <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center" height="19"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="91" align="center" bgcolor="#C0C0C0" height="19"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="244" bgcolor="#C0C0C0" align="center" height="19"><b><font face="Times New Roman">Description</font></b></td>                    
+        </tr>
+        <tr>                  
+          <td width="156" height="19"><font face="Times New Roman">AD_FREERUN</font></td>                  
+          <td width="91" align="center" height="19"><font face="Times New Roman">1</font></td>                  
+          <td width="244" height="19"><font face="Times New Roman">No trigger (default setting)</font></td>                   
+        </tr>                  
+        <tr>                  
+          <td width="156" height="19"><font face="Times New Roman">AD_EXTTRG</font></td>                  
+          <td width="91" align="center" height="19"><font face="Times New Roman">2</font></td>                  
+          <td width="244" height="19"><font face="Times New Roman">External trigger</font></td>                   
+        </tr>                  
+        <tr>                  
+          <td width="156" height="38"><font face="Times New Roman">AD_EXTTRG_DI</font></td>                  
+          <td width="91" align="center" height="38"><font face="Times New Roman">3</font></td>                  
+          <td width="244" height="38"><font face="Times New Roman">External trigger with mask using general purpose  
+            digital input pin</font></td>                   
+        </tr>                  
+        <tr>                  
+          <td width="156" height="19"><font face="Times New Roman">AD_LEVEL_P</font></td>                  
+          <td width="91" align="center" height="19"><font face="Times New Roman">4</font></td>                  
+          <td width="244" height="19"><font face="Times New Roman">Analog trigger (low-to-high transition)</font></td>                   
+        </tr>                  
+        <tr>                  
+          <td width="156" height="19"><font face="Times New Roman">AD_LEVEL_M</font></td>                  
+          <td width="91" align="center" height="19"><font face="Times New Roman">5</font></td>                  
+          <td width="244" height="19"><font face="Times New Roman">Analog trigger (high-to-low transition)</font></td>                   
+        </tr>                  
+        <tr>                  
+          <td width="156" height="38"><font face="Times New Roman">AD_LEVEL_D</font></td>                  
+          <td width="91" align="center" height="38"><font face="Times New Roman">6</font></td>                  
+          <td width="244" height="38"><font face="Times New Roman">Analog trigger (low-to-high or high-to-low transition)</font></td>                   
+        </tr>                  
+        <tr>                  
+          <td width="156" height="19"><font face="Times New Roman">AD_INRANGE</font></td>                  
+          <td width="91" align="center" height="19"><font face="Times New Roman">7</font></td>                  
+          <td width="244" height="19"><font face="Times New Roman">Analog trigger (into the range)</font></td>                   
+        </tr>                  
+        <tr>                  
+          <td width="156" height="18"><font face="Times New Roman">AD_OUTRANGE</font></td>                  
+          <td width="91" align="center" height="18"><font face="Times New Roman">8</font></td>                  
+          <td width="244" height="18"><font face="Times New Roman">Analog trigger (out of the range)</font></td>                   
+        </tr>                  
+        <tr>                  
+          <td width="156" height="19"><font face="Times New Roman">AD_ETERNITY</font></td>                  
+          <td width="91" align="center" height="19"><font face="Times New Roman">9</font></td>                  
+          <td width="244" height="19"><font face="Times New Roman">Infinite sampling</font>(<font face="Times New Roman"><a href="#1"><font color="#FF00FF">*</font><font color="#FF0080">1</font></a></font>)</td>                  
+        </tr>                  
+      </table>                  
+      <p><font face="Times New Roman">The following codes are applicable to the start/stop-trigger on the   
+      FIFO or bus master data transfer mode</font>(<font face="Times New Roman"><a href="#2"><font color="#FF00FF">*</font><font color="#FF0080">2</font></a></font>)<br> 
+      <font face="Times New Roman">
+      Use the following codes instead of the codes above.</font> </p>                                     
+      <p><font face="Times New Roman">For start-point</font> </p>                               
+        <table border="1">
+          <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="72" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="178" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+          </tr>
+          <tr>
+          <td width="159"><font face="Times New Roman">AD_START_P1</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00000010h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 1 low-to-high transition</font></td>                    
+          </tr>
+          <tr>
+          <td width="159"><font face="Times New Roman">AD_START_M1</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00000020h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 1 high-to-low transition</font></td>                    
+          </tr>
+          <tr>
+          <td width="159"><font face="Times New Roman">AD_START_D1</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00000040h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 1 low-to-high transition or high-to-low  
+            transition</font></td>                   
+          </tr>
+          <tr>
+          <td width="159"><font face="Times New Roman">AD_START_P2</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00000080h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 2 low-to-high transition</font></td>                    
+          </tr>
+          <tr>
+          <td width="159"><font face="Times New Roman">AD_START_M2</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00000100h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 2 high-to-low transition</font></td>                    
+          </tr>
+          <tr>
+          <td width="159"><font face="Times New Roman">AD_START_D2</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00000200h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 2 low-to-high transition or high-to-low  
+            transition</font></td>                   
+          </tr>
+        </table>
+      <p><font face="Times New Roman">For stop-point</font> </p>                               
+        <table border="1">
+          <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="72" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="178" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+          </tr>
+          <tr>
+          <td width="158"><font face="Times New Roman">AD_STOP_P1</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00000400h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 1 low-to-high transition</font></td>                    
+          </tr>
+          <tr>
+          <td width="158"><font face="Times New Roman">AD_STOP_M1</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00000800h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 1 high-to-low transition</font></td>                    
+          </tr>
+          <tr>
+          <td width="158"><font face="Times New Roman">AD_STOP_D1</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00001000h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 1 low-to-high transition or high-to-low  
+            transition</font></td>                   
+          </tr>
+          <tr>
+          <td width="158"><font face="Times New Roman">AD_STOP_P2</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00002000h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 2 low-to-high transition</font></td>                    
+          </tr>
+          <tr>
+          <td width="158"><font face="Times New Roman">AD_STOP_M2</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00004000h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 2 high-to-low transition</font></td>                    
+          </tr>
+          <tr>
+          <td width="158"><font face="Times New Roman">AD_STOP_D2</font></td>                   
+          <td width="144" align="center"><font face="Times New Roman">00008000h</font></td>                   
+          <td width="313"><font face="Times New Roman">Level 2 low-to-high transition or high-to-low  
+            transition</font></td>                   
+          </tr>
+        </table>
+      <p><font face="Times New Roman">For filter (Only applicable to the FIFO data transfer mode)</font> </p>                                   
+        <table border="1">
+          <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="72" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="178" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+          </tr>
+          <tr>
+          <td width="156"><font face="Times New Roman">AD_ANALOG_FILTER</font></td>                    
+          <td width="146" align="center"><font face="Times New Roman">00010000h</font></td>                    
+          <td width="311"><font face="Times New Roman">Uses the analog trigger filter.</font>(<font face="Times New Roman"><a href="#3"><font color="#FF00FF">*</font><font color="#FF0080">3</font></a></font>)</td>                    
+          </tr>
+        </table>
+        <ul>
+          <li><font face="Times New Roman">Requirement of EXTRG IN on CN3<br>    
+            When a trigger mode is set to the external trigger mode,&nbsp;<br>    
+            (ulTrigMode = AD_EXTTRG), CN3 becomes EXTRG IN.<br>    
+            If you do not use the external trigger, when a trigger edge is set     
+            to the external trigger input, (ulTrigEdge = AD_EXTRG_IN), CN3     
+            becomes EXTRG IN.<br>    
+            </font>
+          <li><font face="Times New Roman">Requirement of EXTRG OUT on CN3<br>    
+            When a trigger mode is set to no-trigger or infinite sampling,&nbsp;<br>    
+            (ulTrigMode = AD_FREERUN or AD_ETERNITY), CN3 becomes EXTRG IN.</font></li>    
+        </ul>
+        <p><font face="Times New Roman">Requirements of signals on CN3 are summarized in the following table.</font>                                   
+        <table border="1" width="549">
+          <tr>
+          <td width="138" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="164" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="225" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+          </tr>
+          <tr>
+          <td width="138"><font face="Times New Roman">AD_EXTTRG</font></td>                    
+          <td width="164" align="center"><font face="Times New Roman">Don't care</font></td>                     
+          <td width="225"><font face="Times New Roman">External trigger input&nbsp;<br>    
+            (EXTRG IN)</font></td>                        
+          </tr>
+          <tr>
+          <td width="138" rowspan="2"><font face="Times New Roman">AD_FREERUN or<br> 
+            AD_ETERNITY</font></td>                    
+          <td width="164" align="center"><font face="Times New Roman">AD_EXTRG_IN</font></td>                    
+          <td width="225" rowspan="2"><font face="Times New Roman">External trigger output&nbsp;<br>    
+            (EXTRG OUT)</font></td>                        
+          </tr>
+          <tr>
+          <td width="164" align="center"><font size="2" face="Times New Roman">Not</font><font face="Times New Roman"><font size="2"> </font>AD_EXTRG_IN</font></td>                     
+          </tr>
+        </table>
+        <p>                   
+      </td>     
+    </tr>     
+    <tr>     
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>     
+      <td width="85%" height="21"></td>                   
+    </tr>                   
+    <tr>     
+      <td width="15%" valign="top" height="168"><font face="Times New Roman">lTrigDelay</font></td>     
+      <td width="85%" height="168"><font face="Times New Roman"><font size="3">Specifies the number of pre-trigger samples 
+        or post-trigger samples. This member is available when the trigger mode 
+        except AD_FRRERUN is set. The default setting value is 0.</font><br>     
+        </font>     
+      <table border="0" width="100%">     
+        <tr>     
+          <td width="30%"><font size="3" face="Times New Roman">Number of pre-trigger samples:</font></td>     
+          <td width="70%"><font face="Times New Roman">-1 through -1073741824</font></td>                                 
+        </tr>                   
+        <tr>                   
+          <td width="30%"><font face="Times New Roman">Number of post-trigger samples:</font></td>                    
+          <td width="70%"><font face="Times New Roman">1 through 1073741824</font></td>                                 
+        </tr>                   
+      </table>                   
+        <font face="Times New Roman">                   
+        The default setting value is 1.</font></td>                    
+    </tr>                   
+    <tr>                   
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                   
+      <td width="85%" height="21"></td>                   
+    </tr>                   
+    <tr>                   
+      <td width="15%" valign="top" height="78"><font face="Times New Roman">ulTrigCh</font></td>                   
+      <td width="85%" height="78"><font face="Times New Roman">Specifies the channel number 
+        to judge trigger.</font><br>                   
+        <font face="Times New Roman">This function is available when analog  
+        trigger is specified in ulTrigMode. The channele set to ulTrigCh must be  
+        specified by <a href="Structure4.htm">ADSMPLCHREQ</a>&nbsp;  
+        structure.</font><br>                   
+        <font face="Times New Roman">The default value is 1.</font></td>                   
+    </tr>                   
+    <tr>                   
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                   
+      <td width="85%" height="21">                   
+      </td>                   
+    </tr>                   
+    <tr>                   
+      <td width="15%" valign="top" height="302"><font face="Times New Roman">fTrigLevel1<br>                   
+        fTrigLevel2</font></td>                   
+      <td width="85%" height="302"><font size="3" face="Times New Roman">Specifies the threshold levels for the 
+        analog trigger. These members are available when the analog trigger mode 
+        is applied. If the input range is voltage input, specify them in 
+        voltage. If the input range is current input, specify them in 
+        milliampere.</font>                   
+      <table border="1">                   
+        <tr>                   
+          <td width="315" valign="top"><b><font face="Times New Roman">Analog Trigger</font></b></td>                    
+          <td width="246" valign="top"><b><font face="Times New Roman">TrigLevel1</font></b></td>                   
+          <td width="235" valign="top"><b><font face="Times New Roman">TrigLevel2</font></b></td>                   
+        </tr>                   
+        <tr>                   
+          <td width="315" valign="top"><font face="Times New Roman">Low-to-high<br>
+            High-to-low<br>
+            Low-to-high or high-to-low</font></td>                    
+          <td width="246" valign="top"><font face="Times New Roman">Available</font></td>                   
+          <td width="235" valign="top">
+            <p align="center"><font face="Times New Roman">-&nbsp;</font></p>
+          </td>                   
+        </tr>                   
+        <tr>                   
+          <td width="315" valign="top"><font face="Times New Roman">Out of the range</font></td>                      
+          <td width="246" valign="top"><font face="Times New Roman">Lower threshold of the range</font></td>                    
+          <td width="235" valign="top"><font face="Times New Roman">Higher threshold of the range</font></td>                    
+        </tr>                   
+        <tr>                   
+          <td width="315" valign="top"><font face="Times New Roman">Into the range</font></td>                    
+          <td width="246" valign="top"><font face="Times New Roman">Lower threshold of the range</font></td>                    
+          <td width="235" valign="top"><font face="Times New Roman">Higher threshold of the range</font></td>                    
+        </tr>                   
+        <tr>                   
+          <td width="315" valign="top"><font face="Times New Roman">Start/stop-trigger (applicable to the  
+            FIFO transfer mode and the bus master mode)</font></td>                                 
+          <td width="246" valign="top"><font face="Times New Roman">Available</font></td>                   
+          <td width="235" valign="top"><font face="Times New Roman">Available</font></td>                   
+        </tr>                   
+      </table>                   
+      </td>                   
+    </tr>                   
+    <tr>                   
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                   
+      <td width="85%" height="21">                 
+      </td>                 
+    </tr>                 
+    <tr>                   
+      <td width="15%" valign="top" height="249"><font face="Times New Roman">ulEClkEdge</font></td>                   
+      <td width="85%" height="249"><font size="3" face="Times New Roman">Specifies the edge polarity of the external 
+        clock signal. This member is available when 0.0f is set to fSmplFreq.</font>             
+        <table border="1" width="471">            
+          <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="72" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="178" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+          </tr>
+          <tr>            
+            <td width="139"><font face="Times New Roman">AD_DOWN_EDGE</font></td>            
+            <td width="86" align="center"><font face="Times New Roman">1</font></td>            
+            <td width="224"><font face="Times New Roman">Falling edge (default setting)</font></td>             
+          </tr>            
+          <tr>            
+            <td width="139"><font face="Times New Roman">AD_UP_EDGE</font></td>            
+            <td width="86" align="center"><font face="Times New Roman">2</font></td>            
+            <td width="224"><font face="Times New Roman">Rising edge</font></td>             
+          </tr>            
+        </table>            
+        <p><font face="Times New Roman">When the following code is specified, CN4 becomes EXCLK IN.</font></p>                           
+        <table border="1" width="471">            
+          <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="89" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="204" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+          </tr>
+          <tr>            
+            <td width="156"><font face="Times New Roman">AD_EXCLK_IN</font></td>            
+            <td width="89" align="center"><font face="Times New Roman">4</font></td>            
+            <td width="204"><font face="Times New Roman">External clock input<br> 
+              (EXCLK IN)</font></td>             
+          </tr>            
+        </table>            
+      </td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                 
+      <td width="85%" height="21">                 
+      </td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top" height="119"><font face="Times New Roman">ulATrgPulse</font></td>                 
+      <td width="85%" height="119"><font size="3" face="Times New Roman">Specifies the pulse polarity of the analog 
+        trigger notification pulse. This member is available for boards that 
+        support the analog trigger notification pulse function.</font>                 
+      <table border="1" width="469">                 
+        <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="82" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="209" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+        </tr>
+        <tr>                 
+          <td width="156"><font face="Times New Roman">AD_LOW_PULSE</font></td>                 
+          <td width="82" align="center"><font face="Times New Roman">1</font></td>                 
+          <td width="209"><font face="Times New Roman">Negative pulse (default setting)</font></td>                  
+        </tr>                 
+        <tr>                 
+          <td width="156"><font face="Times New Roman">AD_HIGH_PULSE</font></td>                 
+          <td width="82" align="center"><font face="Times New Roman">2</font></td>                 
+          <td width="209"><font face="Times New Roman">Positive pulse</font></td>                  
+        </tr>                 
+      </table>                 
+      </td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top" height="21"><font face="Times New Roman">&nbsp;&nbsp;</font></td>                 
+      <td width="85%" height="21">                 
+      </td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top" height="249"><font face="Times New Roman">ulTrigEdge</font></td>                 
+      <td width="85%" height="249"><font size="3" face="Times New Roman">Specifies the edge polarity of the external 
+        trigger. This member is available when the trigger mode is the external 
+        trigger or the external trigger with mask using a general purpose 
+        digital input pin.</font>            
+        <table border="1">            
+          <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="72" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="178" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+          </tr>
+          <tr>            
+            <td width="144"><font face="Times New Roman">AD_DOWN_EDGE</font></td>            
+            <td width="79" align="center"><font face="Times New Roman">1</font></td>            
+            <td width="222"><font face="Times New Roman">Falling edge (default setting)</font></td>             
+          </tr>            
+          <tr>            
+            <td width="144"><font face="Times New Roman">AD_UP_EDGE</font></td>            
+            <td width="79" align="center"><font face="Times New Roman">2</font></td>            
+            <td width="222"><font face="Times New Roman">Rising edge</font></td>             
+          </tr>            
+        </table>            
+        <p><font face="Times New Roman">When the following code is specified, CN3 becomes EXTRG IN.</font></p>                           
+        <table border="1" width="392">            
+          <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="72" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="178" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+          </tr>
+          <tr>            
+            <td width="135"><font face="Times New Roman">AD_EXTRG_IN</font></td>            
+            <td width="82" align="center"><font face="Times New Roman">3</font></td>            
+            <td width="153"><font face="Times New Roman">External trigger input&nbsp;<br>   
+              (EXTRG IN)</font></td>               
+          </tr>            
+        </table>            
+      </td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top" height="21">  </td>                 
+      <td width="85%" height="21"></td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top" height="116"><font face="Times New Roman">ulTrigDI</font></td>                 
+      <td width="85%" height="116"><font size="3" face="Times New Roman">Selects a single digital input pin to be  
+        used with the trigger conditions. While the status of the digital input  
+        pin is low, the assertion of the external trigger is valid. The  
+        available number of digital input pins for the mask settings depends on  
+        the board specifications. This member is available when the trigger mode  
+        is an external trigger with mask using the digital input pin. The format  
+        of ulTrigDI is the same as digital input data. Please refer to &quot;<a href="../Data%20Format.html">Data  
+        Format</a>.&quot; The default setting value is 1.</font></td>                  
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top" height="21">  </td>                 
+      <td width="85%" height="21">                 
+      </td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top" height="119"><font face="Times New Roman">ulFastMode</font></td>                 
+      <td width="85%" height="119"><font size="3" face="Times New Roman">Specifies the operation clock mode. This 
+        member is applicable to double-clocked mode of the memory transfer mode.</font>                 
+      <table border="1">                 
+        <tr>
+          <td width="156" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                    
+          <td width="72" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td>                    
+          <td width="178" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td>                    
+        </tr>
+        <tr>                 
+          <td width="153"><font face="Times New Roman">AD_NORMAL_MODE</font></td>                 
+          <td width="91" align="center"><font face="Times New Roman">1</font></td>                 
+          <td width="271"><font face="Times New Roman">Normal mode (default setting)</font></td>                  
+        </tr>                 
+        <tr>                 
+          <td width="153"><font face="Times New Roman">AD_FAST_MODE</font></td>                 
+          <td width="91" align="center"><font face="Times New Roman">2</font></td>                 
+          <td width="271"><font face="Times New Roman">Double-clocked mode.</font></td>                  
+        </tr>                 
+      </table>                 
+      </td>                 
+    </tr>                 
+  </table>                 
+  <p> </p> 
+  <table border="0">
+    <tr>
+      <td width="31" valign="top"><a name="1"><font color="#FF0080" face="Times New Roman">*1</font></a></td>
+      <td width="765"><font face="Times New Roman">Specifying AD_ETERNITY, the sampling executes repeatedly.    
+        This process operates until the <a href="http://192.168.100.100/catalog/prdchelp/english/gpf3100/AdStopSampling.html">AdStopSampling</a>    
+        function is called. The samples are stored into the ring buffer. This    
+        buffer size is specified by ulSmplNum.<br>   
+        For the PCI-3153,           
+        PCI-3155, specify ulSmplNum and ulChCount to satisfy the following    
+        condition:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ulSmplNum * ulChCount =&gt; 32768<br>   
+        </font>
+      </td>
+    </tr>
+    <tr>
+      <td width="31" valign="top"><a name="2"><font color="#FF0080" face="Times New Roman">*2</font></a></td>
+      <td width="765"><p><font face="Times New Roman">When the analog triggers are applied with the  
+        start/stop-trigger on the FIFO and bus master transfer modes, specify  
+        these codes like the followings:</font></p>  
+  <blockquote> 
+    <p><font face="Times New Roman">Example 1) <font size="3">Level 1 low-to-high transition is applied to    
+    the start-trigger and level 2 high-to-low&nbsp;&nbsp;&nbsp;&nbsp;<br>   
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+    transition is applied to the stop-trigger.</font></font></p>    
+    <p> <font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+    </font> <font face="Times New Roman">ulTrigMode = AD_START_P1 + AD_STOP_M2;</font></p>                                
+    <p><font face="Times New Roman">Example 2) <font size="3">Both level 1 low-to-high transition and level 2    
+    high-to-low transition are applied to the&nbsp;&nbsp;&nbsp;&nbsp;<br>   
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+    start-trigger and level 1 high-to-low transition is applied to the    
+    stop-trigger. The analog&nbsp;<br>   
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+    trigger filter is used with these analog triggers.</font></font></p>                    
+    <p> <font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+    </font> <font face="Times New Roman">ulTrigMode = AD_START_P1 + AD_START_M2 + AD_STOP_M1  
+    +AD_ANALOG_FILTER;</font></p>                            
+  </blockquote>                 
+  <p><font face="Times New Roman">These codes can be combined with plus operators (+). Both a start point  
+  condition and stop point condition must be supplied.<br> 
+  </font>
+        </p>                 
+      </td>
+    </tr>
+    <tr>
+      <td width="31" valign="top"><a name="3"><font color="#FF0080" face="Times New Roman">*3</font></a></td>
+      <td width="765"><font size="3" face="Times New Roman">If the analog trigger filter is used, the 
+        trigger is delayed for 1 microsecond. If the analog trigger improperly 
+        works under your operating environment, use the analog trigger filter. 
+        We recommend you to use the filter when you input sine waves less than 1 
+        kHz.</font></td>
+    </tr>
+  </table>
+ 
+</blockquote>    
+    
+  <p> </p>
+    
+<hr>    
+    
+<p ALIGN="center"><a href="../Help.htm"><font face="Times New Roman">[</font> <font face="Times New Roman">Top</font> <font face="Times New Roman">]</font></a></p>   
+   
+<p align="right"><font face="Times New Roman">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>                    
+
+</body>
+
+</html>

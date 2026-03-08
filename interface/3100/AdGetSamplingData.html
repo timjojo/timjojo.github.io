@@ -1,0 +1,451 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdGetSamplingData</title>
+</head>
+
+<body>
+
+<p><b><font size="5" face="Arial">AdGetSamplingData</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="558" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="556" valign="top">
+  The AdGetSamplingData function retrieves sampling data from the board/card.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font> 
+</b> 
+    </p>
+    <font size="3">
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="507" valign="top"><font face="Courier New">INT
+            AdGetSamplingData(</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="80" valign="top"><font face="Courier New">HANDLE&nbsp;</font></td>
+          <td width="395" valign="top"> <font face="Courier New"> <i>hDeviceHandle</i>,</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="80" valign="top"><font face="Courier New">PVOID &nbsp;</font></td>
+          <td width="395" valign="top"><font face="Courier New"><i>pSmplData</i>,</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="80" valign="top"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="395" valign="top"><i><font face="Courier New">*ulSmplNum</font></i>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="507" valign="top">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    </blockquote>
+  </font>
+    <blockquote>
+<p><b>Visual Basic&nbsp;</b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New">Declare Function AdGetSamplingData
+          Lib _ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="62" valign="top"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="134" valign="top"> <font face="Courier New"><i>hDeviceHandle&nbsp;&nbsp;</i></font></td>
+        <td width="279" valign="top"> <font face="Courier New" size="3">   As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"><font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="134" valign="top"><font face="Courier New"><i>pSmplData</i></font></td>
+        <td width="279" valign="top"><font face="Courier New" size="3">   As
+          Any, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"><font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="134" valign="top"><font face="Courier New"><i>ulSmplNum</i></font></td>
+        <td width="279" valign="top"><font face="Courier New" size="3">   As
+          Long _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New">) As
+          Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New">function
+          AdGetSamplingData(</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="10" valign="top"></td>
+        <td width="138" valign="top"><i><font face="Courier New">hDeviceHandle</font></i></td>
+        <td width="337" valign="top"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="10" valign="top"></td>
+        <td width="138" valign="top"><font face="Courier New"><i>pSmplData</i>  </font></td>
+        <td width="337" valign="top">  <font face="Courier New">  : Pointer;</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="10" valign="top"><font face="Courier New" size="3">var</font></td>
+        <td width="138" valign="top">
+  <font size="3">
+  <font face="Courier New" size="3"><i>ulSmplNum</i>  </font>
+  </font>
+        </td>
+        <td width="337" valign="top">  <font face="Courier New">  : Cardinal</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  </blockquote>
+<p><b><big>Parameters</big></b>
+  </p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="41" valign="top"><var><font face="Courier New">hDeviceHandle</font></var></td>
+        <td width="508" valign="top">Specifies the device handle obtained by the
+          <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top"></td>
+        <td width="508" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top"><var><font face="Courier New">pSmplData</font></var></td>
+        <td width="508" valign="top">Points to a buffer to receive samples.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top"></td>
+        <td width="508" valign="top">
+        &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top"><font face="Courier New"><var>ulSmplNum</var>&nbsp;</font></td>
+        <td width="508" valign="top">
+        <font SIZE="3">Points to a variable containing the number of samples to
+        be retrieved. Before calling this function, specify the number of
+        samples to be received. After the function returned, it receives the number
+        of samples actually stored into the buffer pointed by pSmplData.</font></td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdGetSamplingData function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+  <p><b><big>Comments</big></b></p> 
+  <table border="0" width="550" cellspacing="1">
+    <tr>
+      <td width="542" valign="top">
+  <ul>
+    <li>
+  This function transfers samples from the internal buffer of the driver software
+  into user supplied buffer.</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="542" valign="top">
+  <ul>
+    <li>
+  Data unit depends on the resolution of the board/card. Please
+      refer to &quot;<a href="Data%20Format.html">Data Format</a>&quot; and the following table.
+      <table border="1" cellspacing="1" width="501">
+        <tr>
+          <td rowspan="2" width="83">
+            <p align="center"><b>Resolution</b></td>
+          <td rowspan="2" width="117">
+            <p align="center"><b>Data Unit (byte)</b></td>
+          <td colspan="3" width="279">
+            <p align="center"><b>Language</b></td>
+        </tr>
+        <tr>
+          <td width="98">
+            <p align="center"><b>C</b></td>
+          <td width="98">
+            <p align="center"><b>Visual Basic</b></td>
+          <td width="98">
+            <p align="center"><b>Delphi</b></td>
+        </tr>
+        <tr>
+          <td width="83">8 bits</td>
+          <td width="117">
+            <p align="center">1</td>
+          <td width="98">BYTE</td>
+          <td width="98">Byte</td>
+          <td width="98">Byte</td>
+        </tr>
+        <tr>
+          <td width="83">10 bits</td>
+          <td width="117">
+            <p align="center">2</td>
+          <td width="98">WORD</td>
+          <td width="98">Integer</td>
+          <td width="98">Word</td>
+        </tr>
+        <tr>
+          <td width="83">12 bits</td>
+          <td width="117">
+            <p align="center">2</td>
+          <td width="98">WORD</td>
+          <td width="98">Integer</td>
+          <td width="98">Word</td>
+        </tr>
+        <tr>
+          <td width="83">16 bits</td>
+          <td width="117">
+            <p align="center">2</td>
+          <td width="98">WORD</td>
+          <td width="98">Integer</td>
+          <td width="98">Word</td>
+        </tr>
+        <tr>
+          <td width="83">24 bits</td>
+          <td width="117">
+            <p align="center">4</td>
+          <td width="98">DWORD</td>
+          <td width="98">Long</td>
+          <td width="98">Dword</td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="542" valign="top">
+  <ul>
+    <li>
+  &lt;PCI-3153 with FIFO transfer mode&gt;
+  <font color="#ff0000"><br>
+  </font>When you used <font face="Times New Roman">the</font> <font face="Times New Roman">GPC-3100
+  Version 1.41-26 or older versions in the </font>PCI-3153 with FIFO transfer
+  mode<font face="Times New Roman">, the FIFO status information was added
+  to&nbsp; the upper 3-bit of sampling data. However, the FIFO status
+  information&nbsp; is not added in the current version. </font>If you need the digital input data and
+  FIFO status, please use the <a href="AdFifoGetSamplingData.html"> AdFifoGetSamplingData</a> function.</li>
+  </ul>
+      </td>
+    </tr>
+  </table>
+ 
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">PVOID pSmplData;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">HANDLE hHeap;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">ULONG ulSmplNum</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"> 
+    <font face="Courier New" size="3"> 
+    ULONG ulSmplChCount;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">ulSmplNum = 256;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"> 
+    <font face="Courier New" size="3"> 
+    ulSmplChCount = 3;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">hHeap = GetProcessHeap();</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"> 
+    <font face="Courier New" size="3"> 
+    pSmplData = HeapAlloc( hHeap, HEAP_ZERO_MEMORY, ulSmplNum * ulSmplChCount *
+        sizeof( WORD ) );</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="451" height="21" valign="top"><font face="Courier New" size="3">nRet = AdGetSamplingData( hDeviceHandle,
+        pSmplData, &amp;ulSmplNum);</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New" size="3">
+      Dim SmplData(2,255) As Integer</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New" size="3">
+      Dim ulSmplNum As Long</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+        <font face="Courier New" size="3">
+        &nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New" size="3">
+      ulSmplNum = 256</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+        <font face="Courier New" size="3">
+        &nbsp;&nbsp;</font>
+        </td>
+      </tr>
+      <tr>
+        <td width="499" valign="top">
+      <p><font face="Courier New" size="3">nRet = AdGetSamplingData(
+      hDeviceHandle, _ SmplData(0,0), ulSmplNum )</font></p>
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="500" colspan="2" valign="top"><font face="Courier New" size="3">var</font></td>
+      </tr>
+      <tr>
+        <td width="2" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td width="498" valign="top"><font face="Courier New" size="3">pSmplData: Pointer;</font></td>
+      </tr>
+      <tr>
+        <td width="2" valign="top"></td>
+        <td width="498" valign="top"><font face="Courier New" size="3">ulSmplNum: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="2" valign="top"></td>
+        <td width="498" valign="top"><font face="Courier New" size="3">ulSmplChCount: Cardianl;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top"><font face="Courier New" size="3">ulSmplNum := 256;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top"><font face="Courier New" size="3">ulSmplChCount := 3;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top">
+    <font face="Courier New" size="3">
+    pSmplData := AllocMem(ulSmplNum * ulSmplChCount * SizeOf(Word));</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top"><font face="Courier New" size="3">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="500" colspan="2" valign="top"> 
+    <font face="Courier New" size="3"> 
+    nRet := AdGetSamplingData( hDeviceHandle, pSmplData, ulSmplNum );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="545" valign="top">
+Retrieve 256 samples (2 byte/sample) per channel for 3 channels on the 12-bit or
+16-bit resolution board/card specified by hDeviceHandle. Samples are stored into the buffer pointed by
+pSmplData. The ulSmplNum parameter contains the number of samples that are actually
+acquired after the sampling is successfully completed.
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

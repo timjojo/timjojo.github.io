@@ -1,0 +1,1208 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 How to Use .NET</title>
+</head>
+
+<body>
+
+<p><font size="5"><b><a name="15. How to Use .NET">15. How to Use .NET</a></b></font></p> 
+ 
+<p><font size="5"><b><a name="15.1 Overview">15.1 Overview</a></b></font></p> 
+ 
+<blockquote> 
+ 
+  <table border="0" width="531" cellspacing="1">
+    <tr>
+      <td width="523">
+  This chapter explains how to use the GPF-3100 for .NET.&nbsp;<br>
+  The following table shows the supported languages.</td>
+    </tr>
+  </table>
+ 
+  <table border="0" width="530" cellspacing="1">
+    <tr>
+      <td width="522">
+  <table border="1" width="100%" height="100">
+    <tr>
+      <td width="30%" rowspan="4" valign="top" height="94">Supported Languages</td>
+      <td width="70%" height="19">Microsoft Visual C++ .NET 2002, .NET 2003, 2005, 2008, 2010</td>
+    </tr>
+    <tr>
+      <td width="70%" height="19">Microsoft Visual C# .NET 2002, .NET 2003, 2005, 2008, 2010</td>
+    </tr>
+    <tr>
+      <td width="70%" height="19">Microsoft Visual Basic .NET 2002, .NET 2003, 2005, 2008, 2010</td>
+    </tr>
+    <tr>
+      <td width="70%" height="19">Borland Delphi 8 for the Microsoft .NET Framework</td>
+    </tr>
+  </table>
+      </td>
+    </tr>
+  </table>
+ <table border="0" width="531" cellspacing="1">
+    <tr>
+      <td width="523"><font color ="#FF0000">Before building a program, convert
+        *.csproj file for Visual C# 2005 and *.vbproj file for Visual Basic 2005 by the Visual Studio conversion wizard. </font> 
+  </td>
+    </tr>
+  </table>
+</blockquote> 
+ 
+<p><font size="5"><b><a name="15.2 Class Library">15.2 Class Library</a></b></font></p>
+
+<p><b><font size="4"><a name="15.2.1 Creating the Class Library">15.2.1 Creating the Class Library</a></font></b></p>
+
+<blockquote> 
+  <table border="0" width="531" cellspacing="1">
+    <tr>
+      <td width="523">
+  To call DLL functions on .NET, you need to prepare class library first.</td>
+    </tr>
+  </table>
+ 
+  <p><strong><font face="Times New Roman" size="3">Visual C# .NET</font><font face="Times New Roman" size="4">&nbsp;</font></strong></p>
+
+</blockquote>
+ 
+<blockquote> 
+ 
+  <table border="0" width="531" cellspacing="1" height="103">
+    <tr>
+      <td width="23" height="21">
+  1.</td>
+      <td width="500" height="21">
+  Start Visual Studio.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+      </td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="21">
+  2.</td>
+      <td width="500" height="21">
+  Open the following project file.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+      </td>
+      <td width="500" height="1">
+  &lt;installation destination>&nbsp;<br>
+  \interface\GPF3100\samples\CS_NET\IFCAD\IFCAD.csproj<br>
+  After building the project file, IFCAD.DLL is created in the bin folder.&nbsp;</td>
+    </tr>
+  </table>
+ 
+<p><strong><font face="Times New Roman" size="3">Visual Basic .NET</font></strong></p> 
+ 
+  <table border="0" width="531" cellspacing="1" height="95">
+    <tr>
+      <td width="23" height="14">
+  1.</td>
+      <td width="500" height="14">
+  Start Visual Studio.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+      </td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="21">
+  2.</td>
+      <td width="500" height="21">
+  Open the following project file.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+      </td>
+      <td width="500" height="1">
+  &lt;installation destination><br>
+  \interface\GPF3100\samples\VB_NET\IFCAD\IFCAD.vbproj&nbsp;<br>
+  After building the project file, IFCAD.DLL is created in the bin folder.&nbsp;</td>
+    </tr>
+  </table>
+ 
+<p><strong><font face="Times New Roman" size="3">Delphi 8</font></strong></p> 
+ 
+  <table border="0" width="531" cellspacing="1" height="121">
+    <tr>
+      <td width="23" height="21">
+  1.</td>
+      <td width="500" height="21">
+  Start Delphi.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+      </td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="21">
+  2.</td>
+      <td width="500" height="21">
+  Open the following project file.</td>
+    </tr>
+    <tr>
+      <td width="23" height="4">
+      </td>
+      <td width="500" height="4">
+  &lt;installation destination><br>
+  \interface\GPF3100\samples\DELPHI_NET\IFCAD\IFCAD.bdsproj<br>
+  After building the project file, IFCAD.DLL is created in the bin folder.</td>
+    </tr>
+  </table>
+ 
+</blockquote> 
+ 
+<p>&nbsp;</p>
+ <font size="4"><a name="15.2.2 Adding Class Library Reference"><b>15.2.2 Adding
+Class Library Reference</b></a></font>
+
+<blockquote> 
+ 
+  <p><strong><font face="Times New Roman">Visual C# .NET and Visual Basic .NET</font></strong></p>
+
+</blockquote>
+ 
+<blockquote> 
+ 
+  <table border="0" width="531" cellspacing="1" height="156">
+    <tr>
+      <td width="23" height="21">
+  1.</td>
+      <td width="500" height="21">
+  Start Visual Studio.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+      </td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="21">
+  2.</td>
+      <td width="500" height="21">
+  Select <b> Project</b> > <b> Add Reference</b>.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+      </td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  3.</td>
+      <td width="500" height="1">
+  Click the <b> Browse</b> button.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+      </td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  4.</td>
+      <td width="500" height="1">
+  Specify the class library DLL to refer.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+      </td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  5.</td>
+      <td width="500" height="1">
+  The DLL file will be displayed in <b> Selected Components</b>.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+      </td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  6.</td>
+      <td width="500" height="1">
+  Click OK.</td>
+    </tr>
+    <tr>
+      <td width="23" height="7">
+      </td>
+      <td width="500" height="7">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="54" valign="top">
+  7.</td>
+      <td width="500" height="54">
+  Add the namespace of InterfaceCorpDllWrap as below at the header of your source file to call the&nbsp;DLL functions.</td>
+    </tr>
+  </table>
+ 
+<p><strong><font face="Times New Roman" size="3">Delphi 8</font></strong></p> 
+ 
+  <table border="0" width="531" cellspacing="1" height="98">
+    <tr>
+      <td width="23" height="21">
+  1.</td>
+      <td width="500" height="21">
+  Start Delphi 8.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  &nbsp;</td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="22">
+  2.</td>
+      <td width="500" height="22">
+  Select <b> Project</b> > <b> Add Reference</b>.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  &nbsp;</td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  3.</td>
+      <td width="500" height="1">
+  Specify the class library DLL to refer.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  &nbsp;</td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  4.</td>
+      <td width="500" height="1">
+  The DLL file will be displayed.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  &nbsp;</td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  5.</td>
+      <td width="500" height="1">
+  Click OK.</td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  &nbsp;</td>
+      <td width="500" height="1">
+  &nbsp;</td>
+    </tr>
+    <tr>
+      <td width="23" height="1" valign="top">
+  6.</td>
+      <td width="500" height="1">
+  Add the namespace of InterfaceCorpDllWrap as below at the header of your source file to call the&nbsp;<br>
+  DLL functions.</td>
+    </tr>
+  </table>
+ 
+  <table border="0" width="531" cellspacing="1" height="156">
+    <tr>
+      <td width="523" height="21" colspan="3">
+      </td>
+    </tr>
+    <tr>
+      <td width="523" height="21" colspan="3">
+      </td>
+    </tr>
+    <tr>
+      <td width="28" height="21">
+      </td>
+      <td width="495" height="21" colspan="2">
+  <font face="Times New Roman"><b>Visual C# .NET</b></font></td>
+    </tr>
+    <tr>
+      <td width="28" height="21">
+      </td>
+      <td width="27" height="21">
+      </td>
+      <td width="468" height="21">
+  <font face="Courier New">using InterfaceCorpDllWrap;</font></td>
+    </tr>
+    <tr>
+      <td width="28" height="23">
+      </td>
+      <td width="27" height="23">
+      </td>
+      <td width="468" height="23">
+      </td>
+    </tr>
+    <tr>
+      <td width="28" height="21">
+      </td>
+      <td width="495" height="21" colspan="2">
+  <font face="Times New Roman"><b>Visual Basic .NET</b></font></td>
+    </tr>
+    <tr>
+      <td width="28" height="21">
+      </td>
+      <td width="27" height="21">
+      </td>
+      <td width="468" height="21">
+  <font face="Courier New">Imports  InterfaceCorpDllWrap</font></td>
+    </tr>
+    <tr>
+      <td width="28" height="11">
+      </td>
+      <td width="27" height="11">
+      </td>
+      <td width="468" height="11">
+      </td>
+    </tr>
+    <tr>
+      <td width="28" height="23">
+      </td>
+      <td width="495" height="23" colspan="2">
+  <font face="Times New Roman"><b>Delphi 8</b></font></td>
+    </tr>
+    <tr>
+      <td width="28" height="36">
+      </td>
+      <td width="27" height="36">
+      </td>
+      <td width="468" height="36">
+  <font face="Courier New">uses InterfaceCorpDllWrap;<br>
+  uses InterfaceCorpDllWrap.IFCAD;</font> (for callback function)</td>
+    </tr>
+  </table>
+ 
+</blockquote> 
+ <p><font size="5"><b><a name="16. Sample Programs for .NET">16. Sample Programs for .NET</a></b></font></p> 
+ <blockquote> 
+  <table border="0" width="531" cellspacing="1">
+    <tr>
+      <td width="523">
+ This chapter describes the outline of sample programs prepared for each .NET language.
+ </tr>
+  </table>
+  </blockquote>
+
+<p><font size="5"><b><a name="16.1 Execution Procedure">16.1 Execution Procedure</a></b></font></p> 
+ 
+  <blockquote> 
+ 
+  <table border="0" width="531" cellspacing="1">
+    <tr>
+      <td width="523">
+  The GPF-3100 has sample programs for Visual C# .NET, Visual Basic .NET., and Delphi 8.
+  For Visual C++ .NET, use sample programs for Visual C++.<br>
+Each sample programs are created by Visual Studio .NET2003.</td>
+    </tr>
+  </table>
+ 
+  <p><strong><font face="Times New Roman" size="3">Execution procedure</font></strong></p> 
+ 
+  <table border="0" width="531" cellspacing="1">
+    <tr>
+      <td width="523">
+  <font SIZE="3">
+  <p ALIGN="LEFT">Executable files of the sample programs are not included with
+  this product.</font>&nbsp;<br>
+  <font SIZE="3">Compile the source code and create executable file to start.</font></td>
+    </tr>
+  </table>
+ 
+  <p><b><font SIZE="3">Visual C# .NET</font></b></p>
+ 
+  <table border="0" width="531" cellspacing="1" height="98">
+    <tr>
+      <td width="23" height="21">
+  <font face="Times New Roman">
+  1.</font></td>
+      <td width="500" height="21">
+  <font face="Times New Roman">Start Visual Studio.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="22">
+  <font face="Times New Roman">
+  2.</font></td>
+      <td width="500" height="22">
+  <font face="Times New Roman">Select <b>File </font></b>&gt; <b>Open
+  &gt; Project</font></b>.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  3.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Open the project file, <b>*.csproj</b>.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  4.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Build the project file.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  5.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Run the executable file, <b><font LANG="JA">*.exe</font></b>.</font></td>
+    </tr>
+  </table>
+ 
+  <p><b><font SIZE="3">Visual C# .NET</font></b></p>
+ 
+  <table border="0" width="531" cellspacing="1" height="98">
+    <tr>
+      <td width="23" height="21">
+  <font face="Times New Roman">
+  1.</font></td>
+      <td width="500" height="21">
+  <font face="Times New Roman">Start Visual Studio.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="22">
+  <font face="Times New Roman">
+  2.</font></td>
+      <td width="500" height="22">
+  <font face="Times New Roman">Select <b>File </b>&gt; <b>Open
+  &gt; Project</b>.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  3.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Open the project file, <b>*.vbproj.</b></font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  4.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Build the project file.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  5.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Run the executable file, <b>*.exe</b>.</font></td>
+    </tr>
+  </table>
+ 
+  <p><b><font SIZE="3">Visual Basic .NET</font></b></p>
+ 
+  <table border="0" width="531" cellspacing="1" height="98">
+    <tr>
+      <td width="23" height="21">
+  <font face="Times New Roman">
+  1.</font></td>
+      <td width="500" height="21">
+  <font face="Times New Roman">Start Visual Studio.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="22">
+  <font face="Times New Roman">
+  2.</font></td>
+      <td width="500" height="22">
+  <font face="Times New Roman">Select <b>File </b>&gt; <b>Open
+  &gt; Project</b>.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  3.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Open the project file, <b>*.csproj</b>.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  4.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Build the project file.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  5.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Run the executable file, <b>*.exe</b>.</font></td>
+    </tr>
+  </table>
+ 
+  <p><b><font size="3">Delphi 8</font></b></p>
+ 
+  <table border="0" width="531" cellspacing="1" height="98">
+    <tr>
+      <td width="23" height="21">
+  <font face="Times New Roman">
+  1.</font></td>
+      <td width="500" height="21">
+  <font face="Times New Roman">Start Delphi.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="22">
+  <font face="Times New Roman">
+  2.</font></td>
+      <td width="500" height="22">
+  <font face="Times New Roman">Select <b>File </b>&gt; <b>Open Project</b>.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  3.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Open the project file, <b>*.dpr</b>.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  4.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Build the project file.</font></td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  &nbsp;</font></td>
+      <td width="500" height="1">
+      </td>
+    </tr>
+    <tr>
+      <td width="23" height="1">
+  <font face="Times New Roman">
+  5.</font></td>
+      <td width="500" height="1">
+  <font face="Times New Roman">Run the executable file, <b>*.exe</b>.</font></td>
+    </tr>
+  </table>
+ 
+  <table border="0" width="531" cellspacing="1">
+    <tr>
+      <td width="523">
+  <br>
+  <font face="Times New Roman">
+  <br>
+  Note : The class library will be automatically built at the
+  same time as opening the<br>
+  project files.</font></td>
+    </tr>
+  </table>
+  
+  </blockquote> 
+ <p><font size="5"><b><a name="16.2 List of Sample Programs">16.2 List of Sample Programs</b><br>
+ <br>
+ </a></b></font> <b><font SIZE="3">Visual C# .NET</font></b><font size="5"> 
+<table BORDER="1" CELLSPACING="2" CELLPADDING="6" DIR="LTR" height="1048" width="645">
+  <tr>
+    <td WIDTH="284" VALIGN="TOP" COLSPAN="2" BGCOLOR="#00ffff" height="16"><p ALIGN="CENTER"><b><font face="Times New Roman">Sample
+      program</font></b></td>
+    <td WIDTH="325" VALIGN="TOP" BGCOLOR="#00ffff" height="16">
+      <p align="center"><b><font face="Times New Roman">Description</font></b></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" height="2"><font face="Times New Roman">GUI program</font></td>
+    <td WIDTH="135" VALIGN="TOP" height="2"><font face="Times New Roman">AdSmpl_Cs</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="2">
+      <font face="Times New Roman">1.One-shot sampling</font> <br>
+  <font face="Times New Roman"> 
+      2.Continuous sampling (overlapped
+        operation)&nbsp;&nbsp; <br>
+  <font face="Times New Roman"> 
+      3.Continuous sampling (Non-overlapped
+        operation)&nbsp;&nbsp;&nbsp; <br>
+  <font face="Times New Roman"> 
+      4.Sampling for the master
+        transfer mode <br>
+  <font face="Times New Roman"> 
+      5.Sampling for the slave mode&nbsp;&nbsp; <br>
+  <font face="Times New Roman"> 
+      6.DMA <font face="Times New Roman">transfer
+      sampling</font><br>
+      <font face="Times New Roman">
+      7.Memory sampling</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"> One-shot sampling&nbsp;</td>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">InputAD</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman"> One-shot sampling</font> 
+      </b> 
+      </font>
+<font face="Times New Roman">(specific channel)</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" ROWSPAN="12" height="404">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Standard
+      sampling</font></td>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Sampling</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Normal
+      sampling&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">WaitEvent</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      events</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Callback</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      callback functions</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ExClk</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external clock</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ATrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      analog trigger start&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ATrg2</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      analog trigger stop</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ExTrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external trigger input start/stop</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Eternity</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling until
+      stop request is issued</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">SyncPci</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman"> Simultaneous
+      sampling (PCI products)</td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">SyncCpz</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"> <font face="Times New Roman">Simultaneous sampling (CPZ products)</font> </td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Trigger</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Program that uses the
+      <a href="AdTriggerSampling.html">AdTriggerSampling</a> function&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">MemTrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Program that uses the
+      <a href="AdMemTriggerSampling.html">AdMemTriggerSampling</a> function</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" ROWSPAN="5" height="194">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Bus master
+      sampling</font></td>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">BmSampling</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Data sampling
+      with status&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">BmSamplingEx</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling while
+      user buffer is being directly transferred</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">BmExClk</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external clock input</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">BmExTrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external trigger input start/stop</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">BmReTrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Repetitive
+      sampling</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" ROWSPAN="3" height="89">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Memory sampling</font></td>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">MemSampling</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      software trigger</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">MemExClk</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external clock input</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">MemExTrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external trigger&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" ROWSPAN="3" height="89">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Cotrol
+      input/output</font></td>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ExTrgOut</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">External trigger
+      output&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ExClkOut</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">External clock
+      output&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="135" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">StatOut</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling status
+      output&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" height="1">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Digital
+      input/output</font></td>
+    <td WIDTH="135" VALIGN="TOP" height="1">
+      Dio</td>
+    <td WIDTH="325" VALIGN="TOP" height="1">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Digital input/output</font></td>
+  </tr>
+</table>
+<p ALIGN="left"><b><font face="Times New Roman"><br>
+</font><font SIZE="3">Visual Basic .NET</font></b> 
+<table BORDER="1" CELLSPACING="2" CELLPADDING="6" DIR="LTR" height="1048" width="646">
+  <tr>
+    <td WIDTH="285" VALIGN="TOP" COLSPAN="2" BGCOLOR="#00ffff" height="16"><p ALIGN="CENTER"><b><font face="Times New Roman">Sample
+      program</font></b></td>
+    <td WIDTH="325" VALIGN="TOP" BGCOLOR="#00ffff" height="16">
+      <p align="center"><b><font face="Times New Roman">Description</font></b></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" height="2"><font face="Times New Roman">GUI</font>
+      <font face="Times New Roman">program</font></td>
+    <td WIDTH="136" VALIGN="TOP" height="2"><span lang="EN-US" style="font-size: 10.5pt; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: Times New Roman; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA"><font face="Times New Roman">AdSmpl_B_NET</font></span></td>
+    <td WIDTH="325" VALIGN="TOP" height="2">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">1.</font>One-shot sampling&nbsp;&nbsp;&nbsp;</font> <br>
+      </font><font face="Times New Roman"> 
+      2.</font>Continuous sampling (overlapped
+        operation)</font>&nbsp;&nbsp; <br>
+      </font><font face="Times New Roman"> 
+      3.</font>Continuous sampling (Non-overlapped
+        operation)&nbsp;&nbsp;&nbsp;</font> <br>
+      </font><font face="Times New Roman"> 
+      4.</font>Sampling for the master
+        transfer mode</font> <br>
+      </font><font face="Times New Roman"> 
+      5.</font>Sampling for the slave mode&nbsp;&nbsp;</font> <br>
+      </font><font face="Times New Roman"> 
+      6.</font>DMA</font>  </font> <font face="Times New Roman">transfer
+      sampling</font><br>
+      <font face="Times New Roman">
+      7.Memory sampling</font></font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"> One-shot sampling&nbsp;</td>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">InputAD</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman"> One-shot sampling</font> 
+      </font><font face="Times New Roman">(specific channel)</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" ROWSPAN="12" height="404">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Standard
+      sampling</font></td>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Sampling</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Normal
+      sampling&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">WaitEvent</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      events</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Callback</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      callback functions</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ExClk</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external clock</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ATrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      analog trigger start&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ATrg2</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      analog trigger stop</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ExTrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external trigger input start/stop</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Eternity</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling until
+      stop request is issued</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">SyncPci</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman"> Simultaneous
+      sampling (PCI products) </td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">SyncCpz</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"> <font face="Times New Roman">Simultaneous sampling
+      (CPZ products) 
+      </font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Trigger</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Program that uses the
+      <a href="AdTriggerSampling.html">AdTriggerSampling</a> function&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">MemTrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">Program that uses the
+      <a href="AdMemTriggerSampling.html">AdMemTriggerSampling</a> function</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" ROWSPAN="5" height="194">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Bus master
+      sampling</font></td>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">BmSampling</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Data sampling
+      with status&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">BmSamplingEx</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling while
+      user buffer is being directly transferred</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">BmExClk</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external clock input</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">BmExTrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external trigger input start/stop</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">BmReTrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Repetitive
+      sampling</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" ROWSPAN="3" height="89">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Memory sampling</font></td>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">MemSampling</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      software trigger</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">MemExClk</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external clock input</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">MemExTrg</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling with
+      external trigger&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" ROWSPAN="3" height="89">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Cotrol
+      input/output</font></td>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ExTrgOut</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">External trigger
+      output&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">ExClkOut</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">External clock
+      output&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman">StatOut</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="19">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Sampling status
+      output&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="133" VALIGN="TOP" height="1">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Digital
+      input/output</font></td>
+    <td WIDTH="136" VALIGN="TOP" height="1">
+      <font face="Times New Roman">Dio</font></td>
+    <td WIDTH="325" VALIGN="TOP" height="1">
+      <p ALIGN="JUSTIFY"><font   face="Times New Roman">Digital input/output</font></td>
+  </tr>
+</table>
+
+<p ALIGN="left"><b><font face="Times New Roman"><font SIZE="3">Delphi 8</font></font></b>
+<table BORDER="1" CELLSPACING="2" CELLPADDING="6" DIR="LTR" width="645">
+  <tr>
+    <td WIDTH="283" VALIGN="TOP" COLSPAN="2" BGCOLOR="#00ffff"><p ALIGN="CENTER"><b><font   face="Times New Roman">Sample
+      program</font></b></td>
+    <td WIDTH="326" VALIGN="TOP" BGCOLOR="#00ffff"><p ALIGN="CENTER"><b><font   face="Times New Roman">Description</font></b></td>
+  </tr>
+  <tr>
+    <td WIDTH="132" VALIGN="TOP"><font face="Times New Roman">GUI program</font></td>
+    <td WIDTH="135" VALIGN="TOP"><span lang="EN-US" style="font-size: 10.5pt; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: Times New Roman; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: AR-SA"><font face="Times New Roman">AdSmpl_D_NET</font></span></td>
+    <td WIDTH="326" VALIGN="TOP">
+      <p ALIGN="JUSTIFY"><font face="Times New Roman"> 1.</font> One-shot sampling&nbsp;&nbsp;&nbsp; <br>
+      <font face="Times New Roman"> 
+      2.</font>Continuous sampling (overlapped
+        operation)&nbsp;&nbsp; <br>
+      <font face="Times New Roman"> 
+      3.</font>Continuous sampling (Non-overlapped
+        operation)&nbsp;&nbsp;&nbsp; <br>
+      <font face="Times New Roman"> 
+      4.</font>Sampling for the master
+        transfer mode <br>
+      <font face="Times New Roman"> 
+      5.</font>Sampling for the slave mode&nbsp;&nbsp;</td>
+  </tr>
+</table>
+  <blockquote> 
+ 
+ <hr>
+<p align="right"><font size="2">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>
+<p align="center"><font size="2">[<a href="Help.htm">Top</a>]</p>
+</blockquote>
+</body>
+

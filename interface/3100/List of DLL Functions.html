@@ -1,0 +1,569 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 List of DLL Functions</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">13.5 List of DLL Functions</font></b></p>
+
+<table BORDER="1" CELLSPACING="1" CELLPADDING="2" WIDTH="597" height="1657">
+  <tr>
+    <td WIDTH="25" VALIGN="middle" bgcolor="#FFFFFF" align="center" height="38"><font face="Times New Roman" size="3"><b>No.</b></font></td>
+    <td WIDTH="184" VALIGN="middle" bgcolor="#FFFFFF" align="center" height="38"><font face="Times New Roman" size="3"><b>Function</b></font></td>
+    <td WIDTH="287" VALIGN="middle" bgcolor="#FFFFFF" align="center" height="38"><font face="Times New Roman" size="3"><b>Description</b></font></td>
+    <td width="72" VALIGN="middle" bgcolor="#FFFFFF" align="center" height="38"><font face="Times New Roman" size="3"><b>Applicable
+      Note</b></font></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38"><p ALIGN="center">1</td>
+      <td VALIGN="TOP" width="184" height="38"><p ALIGN="JUSTIFY"><a href="AdOpen.html">AdOpen</a></td>
+      <td VALIGN="TOP" width="287" height="38">Opens an analog-to-digital input board/card
+        and
+        enables to access to the board/card.</td>
+      <td VALIGN="middle" width="72" height="38" align="center">
+        <p align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="57"><p ALIGN="center">2</td>
+      <td VALIGN="TOP" width="184" height="57"><p ALIGN="JUSTIFY"><a href="AdClose.html">AdClose</a></td>
+      <td VALIGN="TOP" width="287" height="57"><p ALIGN="left">Closes the analog-to-digital input
+        board/card and releases the resources.
+  Any subsequent accesses to the board/card are forbidden.</td>
+      <td VALIGN="middle" width="72" height="57" align="center">
+        <p align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p ALIGN="center">3</td>
+      <td VALIGN="TOP" width="184" height="19"><p ALIGN="JUSTIFY"><a href="AdGetDeviceInfo.html">AdGetDeviceInfo</a></td>
+      <td VALIGN="TOP" width="287" height="19"><p ALIGN="JUSTIFY">Retrieves the specifications of the
+        board/card.</td>
+      <td VALIGN="middle" width="72" height="19" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="11"><p ALIGN="center">4</td>
+      <td VALIGN="TOP" width="184" height="11"><p ALIGN="JUSTIFY"><a href="AdSetBoardConfig.html">AdSetBoardConfig</a></td>
+      <td VALIGN="TOP" width="287" height="11"><p ALIGN="JUSTIFY">Configures event handing&nbsp;of
+        the board/card.</td>
+      <td VALIGN="middle" width="72" height="11" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p ALIGN="center">5</td>
+      <td VALIGN="TOP" width="184" height="19"><p ALIGN="JUSTIFY"><a href="AdGetBoardConfig.html">AdGetBoardConfig</a></td>
+      <td VALIGN="TOP" width="287" height="19"><p ALIGN="JUSTIFY">Retrieves an event
+        source called on the board/card.</td>
+      <td VALIGN="middle" width="72" height="19" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p ALIGN="center">6</td>
+      <td VALIGN="TOP" width="184" height="19"><p ALIGN="JUSTIFY"><a href="AdSetSamplingConfig.html">AdSetSamplingConfig</a></td>
+      <td VALIGN="TOP" width="287" height="19">Configures sampling conditions of the
+        board/card.</td>
+      <td VALIGN="middle" width="72" height="19" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="20"><p ALIGN="center">7</td>
+      <td VALIGN="TOP" width="184" height="20"><p ALIGN="JUSTIFY"><a href="AdGetSamplingConfig.html">AdGetSamplingConfig</a></td>
+      <td VALIGN="TOP" width="287" height="20">Retrieves sampling conditions on the
+        board/card.</td>
+      <td VALIGN="middle" width="72" height="20" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p ALIGN="center">8</td>
+      <td VALIGN="TOP" width="184" height="19"><a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a></td>
+      <td VALIGN="TOP" width="287" height="19">Configures sampling conditions. </td>
+      <td VALIGN="middle" width="72" height="19" align="center"><a href="#1">1</a> </td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p ALIGN="center">9</td>
+      <td VALIGN="TOP" width="184" height="19"><a href="AdBmGetSamplingConfig.html">AdBmGetSamplingConfig</a></td>
+      <td VALIGN="TOP" width="287" height="19">Retrieves sampling conditions. </td>
+      <td VALIGN="middle" width="72" height="19" align="center"><a href="#1">1</a> </td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="8">
+        <p align="center">10</td>
+      <td VALIGN="TOP" width="184" height="8"><a href="AdLvSetSamplingConfig.html">AdLvSetSamplingConfig</a></td>
+      <td VALIGN="TOP" width="287" height="8"> Configures sampling conditions of the
+        board/card. </td>
+      <td VALIGN="middle" width="72" height="8" align="center"> <a href="#2">2</a> </td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="18">
+        <p align="center">11</td>
+      <td VALIGN="TOP" width="184" height="18"><a href="AdLvGetSamplingConfig.html">AdLvGetSamplingConfig</a></td>
+      <td VALIGN="TOP" width="287" height="18"> Retrieves sampling conditions of
+        the board/card. </td>
+      <td VALIGN="middle" width="72" height="18" align="center"> <a href="#2">2</a> </td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="18">
+        <p align="center">12</td>
+      <td VALIGN="TOP" width="184" height="18"> <a href="AdAllocateSamplingBuffer.html"> AdAllocateSamplingBuffer</a></td>
+      <td VALIGN="TOP" width="287" height="18"> <font size="3">Allocates a
+        sampling buffer.</font> &nbsp; </td>
+      <td VALIGN="middle" width="72" height="18" align="center"> - </td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="18">
+        <p align="center">13</td>
+      <td VALIGN="TOP" width="184" height="18"><a href="AdLvCalibration.html">AdLvCalibration</a></td>
+      <td VALIGN="TOP" width="287" height="18"> Runs automatic calibration of the
+        board/card.&nbsp; </td>
+      <td VALIGN="middle" width="72" height="18" align="center"> <a href="#2">2</a> </td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p ALIGN="center">14</td>
+      <td VALIGN="TOP" width="184" height="19"><p ALIGN="JUSTIFY"><a href="AdGetSamplingData.html">AdGetSamplingData</a></td>
+      <td VALIGN="TOP" width="287" height="19">Retrieves sampling data from the board/card. </td>
+      <td VALIGN="middle" width="72" height="19" align="center">- </td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p ALIGN="center">15</td>
+      <td VALIGN="TOP" width="184" height="19"><a href="AdBmGetSamplingData.html">AdBmGetSamplingData</a></td>
+      <td VALIGN="TOP" width="287" height="19">Retrieves sampling data.</td>
+      <td VALIGN="middle" width="72" height="19" align="center"><a href="#3">3</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="10">
+        <p align="center">16</td>
+      <td VALIGN="TOP" width="184" height="10"><a href="AdLvGetSamplingData.html">AdLvGetSamplingData</a></td>
+      <td VALIGN="TOP" width="287" height="10">Retrieves sampling data from the board/card.</td>
+      <td VALIGN="middle" width="72" height="10" align="center"><a href="#2">2</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38"><p align="center">17</td>
+      <td VALIGN="TOP" width="184" height="38"><p ALIGN="JUSTIFY"> <a href="AdFifoGetSamplingData.html"> AdFifoGetSamplingData</a>&nbsp;</td>
+      <td VALIGN="TOP" width="287" height="38">Retrieves sampling data and digital data from the
+        board/card.</td>
+      <td VALIGN="middle" width="72" height="38" align="center"><a href="#4">4</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p align="center">18</td>
+      <td VALIGN="TOP" width="184" height="19"><p ALIGN="JUSTIFY"><a href="AdClearSamplingData.html">AdClearSamplingData</a></td>
+      <td VALIGN="TOP" width="287" height="19">Clears the sampling data in the sampling buffer.</td>
+      <td VALIGN="middle" width="72" height="19" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="30"><p align="center">19</td>
+      <td VALIGN="TOP" width="184" height="30"><p ALIGN="JUSTIFY"> <a href="AdReadSamplingBuffer.html"> AdReadSamplingBuffer</a></td>
+      <td VALIGN="TOP" width="287" height="30">Reads sampling data contained in
+        the sampling buffer.</td>
+      <td VALIGN="middle" width="72" height="30" align="center"><a href="#5">5</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p align="center">20</td>
+      <td VALIGN="TOP" width="184" height="19"><p ALIGN="JUSTIFY"><a href="AdStartSampling.html">AdStartSampling</a></td>
+      <td VALIGN="TOP" width="287" height="19">Starts continuous sampling on the
+        board/card.</td>
+      <td VALIGN="middle" width="72" height="19" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19">
+        <p align="center">21</td>
+      <td VALIGN="TOP" width="184" height="19"><a href="AdLvStartSampling.html">AdLvStartSampling</a></td>
+      <td VALIGN="TOP" width="287" height="19">Starts continuous sampling on
+        the board/card.</td>
+      <td VALIGN="middle" width="72" height="19" align="center"><a href="#2">2</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38"><p align="center">22</td>
+      <td VALIGN="TOP" width="184" height="38"><p ALIGN="JUSTIFY"><a href="AdStartFileSampling.html">AdStartFileSampling</a></td>
+      <td VALIGN="TOP" width="287" height="38">Starts continuous sampling and saves
+        the data into a data file
+        simultaneously.</td>
+      <td VALIGN="middle" width="72" height="38" align="center"><a href="#5">5</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38">
+        <p align="center">23</td>
+      <td VALIGN="TOP" width="184" height="38"><a href="AdBmStartFileSampling.html">AdBmStartFileSampling</a></td>
+      <td VALIGN="TOP" width="287" height="38">
+  Starts continuous sampling and saves the data into a
+  data file simultaneously.</td>
+      <td VALIGN="middle" width="72" height="38" align="center">
+  <a href="#3">3</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="114"><p>24</td>
+      <td VALIGN="TOP" width="184" height="114"><a href="AdTriggerSampling.html">AdTriggerSampling</a></td>
+      <td VALIGN="TOP" width="287" height="114">Samples a single channel on the board/card
+        at each trigger
+  asserted on the EXTRG IN pin. (only for the boards/cards whose analog-to-digital input
+        channels are multiplexed
+  into an AD converter and whose data transfer mode is the programmed I/O mode)</td>
+      <td VALIGN="middle" width="72" height="114" align="center"><a href="#6">6</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38"><p ALIGN="center">25</td>
+      <td VALIGN="TOP" width="184" height="38"><a href="AdMemTriggerSampling.html">AdMemTriggerSampling</a></td>
+      <td VALIGN="TOP" width="287" height="38">Acquires the specified number of samples at
+        each external trigger assertion.</td>
+      <td VALIGN="middle" width="72" height="38" align="center"><a href="#6">6</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38"><p ALIGN="center">26</td>
+      <td VALIGN="TOP" width="184" height="38"><a href="AdSyncSampling.html">AdSyncSampling</a></td>
+      <td VALIGN="TOP" width="287" height="38">Enables you to
+      achieve a synchronous sampling on boards/cards connected in parallel.</td>
+      <td VALIGN="middle" width="72" height="38" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38"><p ALIGN="center">27</td>
+      <td VALIGN="TOP" width="184" height="38"><p ALIGN="JUSTIFY"><a href="AdStopSampling.html">AdStopSampling</a></td>
+      <td VALIGN="TOP" width="287" height="38">Stops
+        continuous sampling performed as an overlapped operation.</td>
+      <td VALIGN="middle" width="72" height="38" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38">
+        <p align="center">28</td>
+      <td VALIGN="TOP" width="184" height="38"><a href="AdLvStopSampling.html">AdLvStopSampling</a></td>
+      <td VALIGN="TOP" width="287" height="38">Stops continuous sampling
+        performed as an overlapped operation.</td>
+      <td VALIGN="middle" width="72" height="38" align="center"><a href="#2">2</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p ALIGN="center">29</td>
+      <td VALIGN="TOP" width="184" height="19"><p ALIGN="JUSTIFY"><a href="AdGetStatus.html">AdGetStatus</a></td>
+      <td VALIGN="TOP" width="287" height="19">Retrieves the sampling
+      status on the board/card.&nbsp;</td>
+      <td VALIGN="middle" width="72" height="19" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19">
+        <p align="center">30</td>
+      <td VALIGN="TOP" width="184" height="19"><a href="AdLvGetStatus.html">AdLvGetStatus</a></td>
+      <td VALIGN="TOP" width="287" height="19">Retrieves the sampling status on
+        the board/card.</td>
+      <td VALIGN="middle" width="72" height="19" align="center"><a href="#2">2</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19"><p ALIGN="center">31</td>
+      <td VALIGN="TOP" width="184" height="19"><p ALIGN="JUSTIFY"><a href="AdInputAD.html">AdInputAD</a></td>
+      <td VALIGN="TOP" width="287" height="19">Performs one-shot sampling.</td>
+      <td VALIGN="middle" width="72" height="19" align="center"><a href="#5">5</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38"><p ALIGN="center">32</td>
+      <td VALIGN="TOP" width="184" height="38"><p ALIGN="JUSTIFY"><a href="AdInputDI.html">AdInputDI</a></td>
+      <td VALIGN="TOP" width="287" height="38"><font size="3">Reads
+        data from the digital input pins on the board/card.</font></td>
+      <td VALIGN="middle" width="72" height="38" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38"><p ALIGN="center">33</td>
+      <td VALIGN="TOP" width="184" height="38"><p ALIGN="JUSTIFY"><a href="AdOutputDO.html">AdOutputDO</a></td>
+      <td VALIGN="TOP" width="287" height="38"><font SIZE="3">Writes data to the&nbsp;
+        digital output pins on the board/card.</font></td>
+      <td VALIGN="middle" width="72" height="38" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="1">
+        <p align="center">34</td>
+      <td VALIGN="TOP" width="184" height="1"><a href="AdMeasureTemperture.html">AdMeasureTemperature</a></td>
+      <td VALIGN="TOP" width="287" height="1">Reads temperature
+        of the I/O connector on the board/card.</td>
+      <td VALIGN="middle" width="72" height="1" align="center"><a href="#2">2</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38">35</td>
+      <td VALIGN="TOP" width="184" height="38"><a href="AdSetRangeEvent.html">AdSetRangeEvent</a></td>
+      <td VALIGN="TOP" width="287" height="38">Configures the event
+        mask setting for the full-scale range detection and automatic
+  range-switching capability at overvoltage input.</td>
+      <td VALIGN="middle" width="72" height="38" align="center"><a href="#7">7</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="38">36</td>
+      <td VALIGN="TOP" width="184" height="38"><a href="AdGetRangeEventStatus.html">AdGetRangeEventStatus</a></td>
+      <td VALIGN="TOP" width="287" height="38">Retrieves the status of the
+        full-scale range detection event.</td>
+      <td VALIGN="middle" width="72" height="38" align="center"><a href="#7">7</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19">37</td>
+      <td VALIGN="TOP" width="184" height="19"><a href="AdResetRangeEvent.html">AdResetRangeEvent</a></td>
+      <td VALIGN="TOP" width="287" height="19">Resets the full-scale range detection
+        event.</td>
+      <td VALIGN="middle" width="72" height="19" align="center"><a href="#7">7</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19">38</td>
+      <td VALIGN="TOP" width="184" height="19"><a href="AdSetInterval.html">AdSetInterval</a></td>
+      <td VALIGN="TOP" width="287" height="19">Configures the interval timer
+        cycle.</td>
+      <td VALIGN="middle" width="72" height="19" align="center"><a href="#8">8</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19">39</td>
+      <td VALIGN="TOP" width="184" height="19"><a href="AdGetInterval.html">AdGetInterval</a></td>
+      <td VALIGN="TOP" width="287" height="19">Retrieves the interval timer
+        cycle.</td>
+      <td VALIGN="middle" width="72" height="19" align="center"><a href="#8">8</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="30">40</td>
+      <td VALIGN="TOP" width="184" height="30"><a href="AdSetFunction.html">AdSetFunction</a></td>
+      <td VALIGN="TOP" width="287" height="30">Configures the functional
+        configuration of the
+        CN3 and CN4 connectors.</td>
+      <td VALIGN="middle" width="72" height="30" align="center"><a href="#8">8</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="22">41</td>
+      <td VALIGN="TOP" width="184" height="22"><a href="AdGetFunction.html">AdGetFunction</a></td>
+      <td VALIGN="TOP" width="287" height="22">Retrieves the functional
+        configuration of the CN3 and CN4 connectors.</td>
+      <td VALIGN="middle" width="72" height="22" align="center"><a href="#8">8</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="10">42</td>
+      <td VALIGN="TOP" width="184" height="10"><p ALIGN="JUSTIFY"><a href="AdAdjustVR.html">AdAdjustVR</a></td>
+      <td VALIGN="TOP" width="287" height="10"><font SIZE="3">Controls the
+        digitally controlled potentiometer on the board/card for calibration purpose.</font></td>
+      <td VALIGN="middle" width="72" height="10" align="center"><a href="#9">9</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19">
+      43
+      </td>
+      <td VALIGN="TOP" width="184" height="19"><p ALIGN="JUSTIFY"><a href="AdDataConv.html">AdDataConv</a></td>
+      <td VALIGN="TOP" width="287" height="19">Converts the form of the analog
+        data.&nbsp;</td>
+      <td VALIGN="middle" width="72" height="19" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19">
+      44
+      </td>
+      <td VALIGN="TOP" width="184" height="19"><p ALIGN="JUSTIFY"><a href="AdReadFile.html">AdReadFile</a></td>
+      <td VALIGN="TOP" width="287" height="19">Reads the sampling data from a
+        file. </td>
+      <td VALIGN="middle" width="72" height="19" align="center">- </td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="57">
+      45
+      </td>
+      <td VALIGN="TOP" width="184" height="57"><p ALIGN="JUSTIFY"><a href="fnConv.html">fnConv</a></td>
+      <td VALIGN="TOP" width="287" height="57"><p>Is a placeholder for a
+        callback routine used in the <a href="AdDataConv.html"> AdDataConv</a> function. This function is
+        called when each data is converted.</td>
+      <td VALIGN="middle" width="72" height="57" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="57">
+      46
+      </td>
+      <td VALIGN="TOP" width="184" height="57"><p ALIGN="JUSTIFY"><a href="CallBackProc.html">CallBackProc</a></td>
+      <td VALIGN="TOP" width="287" height="57"><p>Is a placeholder for a callback
+        routine. This function is called when the sampling is completed.&nbsp;</td>
+      <td VALIGN="middle" width="72" height="57" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="30">
+      47
+      </td>
+      <td VALIGN="TOP" width="184" height="30"><a href="AdCommonGetPciDeviceInfo.html">AdCommonGetPciDeviceInfo</a></td>
+      <td VALIGN="TOP" width="287" height="30">Retrieves the configuration
+        registers and the board ID (RSW1).&nbsp;</td>
+      <td VALIGN="middle" width="72" height="30" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19">48</td>
+      <td VALIGN="TOP" width="184" height="19"><a href="AdGetOverRangeChStatus.html">AdGetOverRangeChStatus</a></td>
+      <td VALIGN="TOP" width="287" height="19">Retrieves the event
+  status of automatic range-switching capability at overvoltage input.</td>
+      <td VALIGN="middle" width="72" height="19" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="19">49</td>
+      <td VALIGN="TOP" width="184" height="19"><a href="AdResetOverRangeCh.html">AdResetOverRangeCh</a></td>
+      <td VALIGN="TOP" width="287" height="19">Resets the event status
+  of automatic range-switching capability at overvoltage input.</td>
+      <td VALIGN="middle" width="72" height="19" align="center">-</td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="1">
+    50
+    </td>
+      <td VALIGN="TOP" width="184" height="1"><a href="AdReadAdjustVR.html">AdReadAdjustVR</a></td>
+      <td VALIGN="TOP" width="287" height="1">Loads
+  the electric volume value.</td>
+      <td VALIGN="middle" width="72" height="1" align="center"><a href="#10">10</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="1">
+    51
+    </td>
+      <td VALIGN="TOP" width="184" height="1"><a href="AdGetOutMode.html">AdGetOutMode</a></td>
+      <td VALIGN="TOP" width="287" height="1">Retrieves the control setting of the external output
+  signals.&nbsp;</td>
+      <td VALIGN="middle" width="72" height="1" align="center"><a href="#11">11</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="1">
+    52
+    </td>
+      <td VALIGN="TOP" width="184" height="1"><a href="AdMemGetDiPattern.html">AdMemGetDiPattern</a></td>
+      <td VALIGN="TOP" width="287" height="1">Retrieves the digital input pattern matching
+  conditions.</td>
+      <td VALIGN="middle" width="72" height="1" align="center"><a href="#12">12</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="1">
+    53
+    </td>
+      <td VALIGN="TOP" width="184" height="1"><a href="AdMemGetSamplingConfig.html">AdMemGetSamplingConfig</a></td>
+      <td VALIGN="TOP" width="287" height="1">Retrieves the configured sampling
+  conditions.</td>
+      <td VALIGN="middle" width="72" height="1" align="center"><a href="#12">12</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="1">
+    54
+    </td>
+      <td VALIGN="TOP" width="184" height="1"><a href="AdMemSetDiPattern.html">AdMemSetDiPattern</a></td>
+      <td VALIGN="TOP" width="287" height="1">Configures the digital input pattern matching
+  conditions.</td>
+      <td VALIGN="middle" width="72" height="1" align="center"><a href="#12">12</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="1">
+    55
+    </td>
+      <td VALIGN="TOP" width="184" height="1"><a href="AdMemSetSamplingConfig.html">AdMemSetSamplingConfig</a></td>
+      <td VALIGN="TOP" width="287" height="1">Configures the sampling
+  conditions.</td>
+      <td VALIGN="middle" width="72" height="1" align="center"><a href="#12">12</a></td>
+  </tr>
+  <tr>
+      <td VALIGN="top" align="center" width="25" height="1">
+    56
+    </td>
+      <td VALIGN="TOP" width="184" height="1"><a href="AdSetOutMode.html">AdSetOutMode</a></td>
+      <td VALIGN="TOP" width="287" height="1">Configures the external output signals.&nbsp;</td>
+      <td VALIGN="middle" width="72" height="1" align="center"><a href="#11">11</a></td>
+  </tr>
+</table>
+
+<table border="0" cellspacing="1" width="600" height="621">
+  <tr>
+    <td width="39" height="21">Notes:</td>
+    <td width="547" colspan="2" height="21"></td>
+  </tr>
+  <tr>
+    <td width="39" height="78"></td>
+    <td width="18" valign="top" height="78"><a name="1"><font color="#FF00FF">1</font></a>:&nbsp;</td>
+    <td width="529" height="78">These function are applicable to the bus
+      master transfer mode and PCI-320112, PCI-3525, CTP-3167, CTP-3183,
+      CBI-3133A, CBI-3133B,
+      CBI-3134A, CBI-3134B, <font color="#000000">CBI-320212/T<i>x</i>,
+      CBI-320312/T<i>x</i>, CBI-320412/T<i>x</i></font><font color="#000000">,
+      CBI-320416/T<i>x</i>, CBI-360116/T<i>x</i>,
+      CIZ-320212TR, and CIZ-320312TR.</font></td>
+  </tr>
+  <tr>
+    <td width="39" height="21"></td>
+    <td width="18" valign="top" height="21"><a name="2"><font color="#FF00FF">2</font></a>:</td>
+    <td width="529" height="21">These functions are applicable to the PCI-3179 and CTP/CPZ-3179.</td>
+  </tr>
+  <tr>
+    <td width="39" height="40"></td>
+    <td width="18" valign="top" height="40"><a name="3"><font color="#FF00FF">3</font></a>:</td>
+    <td width="529" height="40">These functions are applicable to the bus
+      master transfer mode and PCI-320112,<font color="#000000"> CTP-3183,
+      CBI-320412/T<i>x</i>, CBI-320416/T<i>x</i>, and CBI-360116/T<i>x</i>.</font></td>
+  </tr>
+  <tr>
+    <td width="39" height="40"></td>
+    <td width="18" valign="top" height="40"><a name="4"><font color="#FF00FF">4</font></a>:</td>
+    <td width="529" height="40">This function is applicable to the PCI/PAZ-3153
+      and CTP-3167 with FIFO transfer
+      mode.</td>
+  </tr>
+  <tr>
+    <td width="39" height="40"></td>
+    <td width="18" valign="top" height="40"><a name="5"><font color="#FF00FF">5</font></a>:</td>
+    <td width="529" height="40">These function are <font color="#FF0000">not</font> applicable to the
+      CBI-320110,<font color="#000000"> CBI-320110T<i>x</i>, and CIZ-320110TL.</font></td>
+  </tr>
+  <tr>
+    <td width="39" height="59"></td>
+    <td width="18" valign="top" height="59"><a name="6"><font color="#FF00FF">6</font></a>:</td>
+    <td width="529" height="59">These functions are <font color="#FF0000">not </font>applicable to the
+      PCI/PAZ-3153, PCI-3179, CTP/CPZ-3179,&nbsp; CBI-3133A, CBI-3133B,
+      CBI-3134A, CBI-3134B,&nbsp;<font color="#000000">CBI-320110/T<i>x</i>,
+      CBI-320212/T<i>x</i>, CBI-320312/T<i>x</i>,
+      CIZ-320110TL, CIZ-320212TR, and CIZ-320312TR.</font></td>
+  </tr>
+  <tr>
+    <td width="39" height="97"></td>
+    <td width="18" valign="top" height="97"><a name="7"><font color="#FF00FF">7</font></a>:</td>
+    <td width="529" height="97">These functions are <font color="#FF0000">not </font>a<font color="#000000">pplicable to the
+      PCI</font>/PAZ<font color="#000000">-3120, PCI-3126, PCI-3133, PCI-3135,
+      PCI</font>/PAZ<font color="#000000">-3153, PCI</font>/PAZ<font color="#000000">-3163,
+      PCI-3165, PCI-3166, PCI-3168C, PCI-3170A, PCI-3171A, PCI-3172A, PCI-3173A,
+      PCI-3175, PCI</font>/PAZ<font color="#000000">-3176, PCI-3177C, PCI</font>/PAZ<font color="#000000">-3178,
+      PCI-3179, PCI-3180, PCI</font>/PAZ<font color="#000000">-3521, PCI-3522A,
+      PCI-3523A, and CTP/CPZ-3179.</font></td>
+  </tr>
+  <tr>
+    <td width="39" height="21"></td>
+    <td width="18" valign="top" height="21"><font color="#FF00FF"><a name="8">8</a></font>:</td>
+    <td width="529" height="21">These functions are applicable to only the PCI-3525.</td>
+  </tr>
+  <tr>
+    <td width="39" height="40"></td>
+    <td width="18" valign="top" height="40"><font color="#FF00FF"><a name="9">9</a></font>:</td>
+    <td width="529" height="40">This function is <font color="#FF0000">not </font>applicable to the
+      PCI-31<font color="#000000">79, CTP/CPZ-3179, CBI-320110/T<i>x</i>, and
+      CIZ-320110TL.</font></td>
+  </tr>
+  <tr>
+    <td width="39" height="97"></td>
+    <td width="18" valign="top" height="97"><font color="#FF00FF"><a name="10">10</a></font>:</td>
+    <td width="529" height="97">This function is applicable to th<font color="#000000">e
+      </font>
+      <font SIZE="3">PCI-320412, PCI-320416, PCI-360112, PCI/PAZ-360116,<font face="&#65325;&#65331; &#26126;&#26397;" lang="JA">
+      </font>PCI-360216, CTP-3183, CTP-320412, CTP-320416,CTP-360112,
+      CTP-360116, CBI-3133A,<font face="&#65325;&#65331; &#26126;&#26397;" lang="JA">
+      </font>CBI-3133B, CBI-3134A, CBI-3134B, CBI-320212/T<i>x</i>, CBI-320312/T<i>x</i>,
+      CBI-320412/T<i>x</i>, CBI-320416/T<i>x</i>, CBI-360116/T<i>x</i>, CIZ-320212TR, and CIZ-320312TR.</font></td>
+  </tr>
+  <tr>
+    <td width="39" height="34"></td>
+    <td width="18" valign="top" height="34"><font color="#FF00FF"><a name="11">11</a></font>:</td>
+    <td width="529" valign="top" height="34"><font color="#000000">This function is applicable to the
+      </font>
+      PCI-3174, PCI-320412, PCI-320416, PCI-360116, PCI-360112, PCI-360216,
+      CTP-3174, CTP-3175, CTP-3182, CTP-320412, CTP-320416, CTP-360116,
+      CTP-360112, CBI-320110/T<i>x</i>,<i> </i>CBI-320412<font color="#000000">/T<i>x</i></font>,
+      CBI-320416<font color="#000000">/T<i>x</i></font>, CBI-360116<font color="#000000">/T<i>x</i></font>,
+      <font color="#000000">and CIZ-320110TL.</font>
+    </td>
+  </tr>
+  <tr>
+    <td width="39" height="19"></td>
+    <td width="18" valign="top" height="19"><font color="#FF00FF"><a name="12">12</a></font>:</td>
+    <td width="529" valign="top" height="19"><font color="#000000">This function is applicable to the
+      CBI-320110/T<i>x</i> and CIZ-320110TL.</font></td>
+  </tr>
+</table>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

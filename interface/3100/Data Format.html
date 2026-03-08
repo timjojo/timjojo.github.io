@@ -1,0 +1,1930 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Data Format</title>
+</head>
+
+<body>
+
+<p><font face="Arial" size="5"><b>8. Data Format</b></font></p>
+
+<p><b><font face="Arial" size="4"><a name="8.1 Data Type">8.1 Data Type</a></font></b></p>
+
+<blockquote>
+  <table border="0" width="502">
+    <tr>
+      <td width="496" valign="top">The GPF-3100 handles the following four data
+        types.</td>
+    </tr>
+    <tr>
+      <td width="496">
+  <table border="1" width="494">
+    <tr>
+      <td width="140" align="center" valign="top"><b>Data Type</b></td>
+      <td width="338" align="center" valign="top"><b>Description</b></td>
+    </tr>
+    <tr>
+      <td width="140" valign="top"><a href="#8.2 Analog Input Data">Analog input data</a></td>
+      <td width="338" valign="top">Data handled by the <a href="AdStartSampling.html">AdStartSampling</a>,
+        <a href="AdStartFileSampling.html">AdStartFileSampling</a>, <a href="AdBmStartFileSampling.html">AdBmStartFileSampling</a>, and
+        <a href="AdInputAD.html">AdInputAD </a>
+        functions.</td>
+    </tr>
+    <tr>
+      <td width="140" valign="top"><a href="#8.3 Digital Input Data">Digital input data</a></td>
+      <td width="338" valign="top">Data handled by the <a href="AdInputDI.html">AdInputDI</a> function.</td>
+    </tr>
+    <tr>
+      <td width="140" valign="top"><a href="#8.4 Digital Output  Data">Digital output data</a></td>
+      <td width="338" valign="top">Data handled by the <a href="AdOutputDO.html">AdOutputDO</a> function.</td>
+    </tr>
+    <tr>
+      <td width="140" valign="top"><a href="#8.5 Bus Master Sampling Status">Sampling status data</a></td>
+      <td width="338" valign="top">Data handled by the <a href="AdBmSetSamplingConfig.html"> AdBmSetSamplingConfig</a>
+        function.</td>
+    </tr>
+  </table>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="4"><a name="8.2 Analog Input Data">8.2 Analog Input Data</a></font></b></p>
+
+<blockquote>
+  <table border="0" width="496">
+    <tr>
+      <td width="488" valign="top">The following tables describe how the data
+        are stored.</td>
+    </tr>
+  </table>
+</blockquote>
+<ul>
+  <li><font size="3"><b>Data Storage Format&nbsp;
+    </b></font> 
+    <table border="0" width="506">
+      <tr>
+        <td width="498" valign="top"><font size="3">(for the <a href="AdGetSamplingData.html">AdGetSamplingData</a>,
+          </font> 
+          <a href="AdStartFileSampling.html">AdStartFileSampling</a><font size="3">, </font> <a href="AdStartSampling.html">AdStartSampling</a>
+          <font size="3">and </font> <a href="AdInputAD.html">AdInputAD </a>
+          <font size="3">functions)</font> </td>
+      </tr>
+    </table>
+ <table border="1" width="50%">
+        <tr>
+          <td width="28%" align="center" bgcolor="#00FF00">First sampling</td>
+          <td width="22%" align="center">&lt;-</td>
+          <td width="50%" align="center"><table border="1" width="100%" bgcolor="#00FF00">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="28%" align="center" bgcolor="#FFFF00">Second sampling</td>
+          <td width="22%" align="center">&lt;-</td>
+          <td width="50%" align="center"><table border="1" width="100%" bgcolor="#FFFF00">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="28%" align="center">.<br>
+            .<br>
+            .
+          </td>
+          <td width="22%" align="center">.<br>
+            .<br>
+            .
+          </td>
+          <td width="50%" align="center">.<br>
+            .<br>
+            .
+          </td>
+        </tr>
+        <tr>
+          <td width="28%" align="center" bgcolor="#00FFFF"><i>m</i>-th sampling</td>
+          <td width="22%" align="center">&lt;-</td>
+          <td width="50%" align="center"><table border="1" width="100%" bgcolor="#00FFFF">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+      </table>
+  </li>
+</ul>
+<blockquote>
+  <table border="0" width="549">
+    <tr>
+      <td width="541">Using the <a href="AdInputAD.html">AdInputAD</a> function, only one analog input data
+      exists in the buffer.</td>
+    </tr>
+  </table>
+</blockquote>
+<ul>
+  <li><font size="3"><b>Data Storage Format&nbsp;<br>
+    </b>(for the <a href="AdBmGetSamplingData.html"> AdBmGetSamplingData</a> 
+    and <a href="AdBmStartFileSampling.html"> AdBmStartFileSampling</a> 
+    functions)</font> 
+    <table border="0" width="548">
+      <tr>
+        <td width="214">
+          <table border="1" width="273">
+            <tr>
+          <td width="251" align="center" colspan="3" valign="top">
+        <ul style="text-align: left; margin-left: 20">
+          <li>
+            <p align="left"><b>No bus master sampling status</b></li>
+          <li>
+            <p align="left"><b><i>n</i>: odd number</b></li>
+        </ul>
+          </td>
+            </tr>
+            <tr>
+          <td width="104" align="center" bgcolor="#00FF00">First sampling</td>
+          <td width="37" align="center">&lt;-</td>
+          <td width="110" align="center"><table border="1" width="100%" bgcolor="#00FF00">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">0</td>
+            </tr>
+          </table>
+          </td>
+            </tr>
+            <tr>
+          <td width="104" align="center" bgcolor="#FFFF00">Second sampling</td>
+          <td width="37" align="center">&lt;-</td>
+          <td width="110" align="center"><table border="1" width="100%" bgcolor="#FFFF00">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">0</td>
+            </tr>
+          </table>
+          </td>
+            </tr>
+            <tr>
+          <td width="104" align="center">.<br>
+            .<br>
+            .
+          </td>
+          <td width="37" align="center">.<br>
+            .<br>
+            .
+          </td>
+          <td width="110" align="center">.<br>
+            .<br>
+            .
+          </td>
+            </tr>
+            <tr>
+          <td width="104" align="center" bgcolor="#00FFFF"><i>m</i>-th sampling</td>
+          <td width="37" align="center">&lt;-</td>
+          <td width="110" align="center"><table border="1" width="100%" bgcolor="#00FFFF">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">0</td>
+            </tr>
+          </table>
+          </td>
+            </tr>
+          </table>
+        </td>
+        <td width="335">
+          <table border="1" width="285">
+            <tr>
+          <td width="263" align="center" colspan="3" valign="top">
+        <ul style="text-align: left; margin-left: 20">
+          <li>
+            <p align="left"><b>No bus master sampling status</b></li>
+          <li>
+            <p align="left"><b><i>n</i>: even number</b></li>
+        </ul>
+          </td>
+            </tr>
+            <tr>
+          <td width="103" align="center" bgcolor="#00FF00">First sampling</td>
+          <td width="36" align="center">&lt;-</td>
+          <td width="124" align="center"><table border="1" width="100%" bgcolor="#00FF00">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">:<br>
+              :<br>
+              :
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i>-1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+          </table>
+          </td>
+            </tr>
+            <tr>
+          <td width="103" align="center" bgcolor="#FFFF00">Second sampling</td>
+          <td width="36" align="center">&lt;-</td>
+          <td width="124" align="center"><table border="1" width="100%" bgcolor="#FFFF00">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i>-1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+          </table>
+          </td>
+            </tr>
+            <tr>
+          <td width="103" align="center">.<br>
+            .<br>
+            .
+          </td>
+          <td width="36" align="center">.<br>
+            .<br>
+            .
+          </td>
+          <td width="124" align="center">.<br>
+            .<br>
+            .
+          </td>
+            </tr>
+            <tr>
+          <td width="103" align="center" bgcolor="#00FFFF"><i>m</i>-th sampling</td>
+          <td width="36" align="center">&lt;-</td>
+          <td width="124" align="center"><table border="1" width="100%" bgcolor="#00FFFF">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i>-1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+          </table>
+          </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </li>
+</ul>
+<blockquote>
+  <table border="0" width="400" height="563">
+    <tr>
+      <td width="287" height="559" valign="top">
+        <table border="1" width="273">
+          <tr>
+          <td width="263" align="center" colspan="3" valign="top">
+        <ul style="text-align: left; margin-left: 20">
+          <li>
+            <p align="left"><b>With bus master sampling status</b></li>
+          <li>
+            <p align="left"><b><i>n</i>: odd number</b></li>
+        </ul>
+          </td>
+          </tr>
+          <tr>
+          <td width="96" align="center" bgcolor="#00FF00">First sampling</td>
+          <td width="30" align="center">&lt;-</td>
+          <td width="125" align="center"><table border="1" width="100%" bgcolor="#00FF00">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i>n</i>-1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Status</td>
+            </tr>
+          </table>
+          </td>
+          </tr>
+          <tr>
+          <td width="96" align="center" bgcolor="#FFFF00">Second sampling</td>
+          <td width="30" align="center">&lt;-</td>
+          <td width="125" align="center"><table border="1" width="100%" bgcolor="#FFFF00">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i>n</i>-1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i>n</i></td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Status</td>
+            </tr>
+          </table>
+          </td>
+          </tr>
+          <tr>
+          <td width="96" align="center">.<br>
+            .<br>
+            .
+          </td>
+          <td width="30" align="center">.<br>
+            .<br>
+            .
+          </td>
+          <td width="125" align="center">.<br>
+            .<br>
+            .
+          </td>
+          </tr>
+          <tr>
+          <td width="96" align="center" bgcolor="#00FFFF"><i>m</i>-th sampling</td>
+          <td width="30" align="center">&lt;-</td>
+          <td width="125" align="center"><table border="1" width="100%" bgcolor="#00FFFF">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i>-1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Status</td>
+            </tr>
+          </table>
+          </td>
+          </tr>
+        </table>
+      </td>
+      <td width="99" height="559" valign="top">
+        <table border="1" width="270">
+          <tr>
+          <td width="248" align="center" colspan="3">
+        <ul style="text-align: left; margin-left: 20">
+          <li>
+            <p align="left"><b>With bus master sampling status</b></li>
+          <li>
+            <p align="left"><b><i>n</i>: even number</b></li>
+        </ul>
+          </td>
+          </tr>
+          <tr>
+          <td width="98" align="center" bgcolor="#00FF00">First sampling</td>
+          <td width="32" align="center">&lt;-</td>
+          <td width="118" align="center"><table border="1" width="100%" bgcolor="#00FF00">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">0</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Status</td>
+            </tr>
+          </table>
+          </td>
+          </tr>
+          <tr>
+          <td width="98" align="center" bgcolor="#FFFF00">Second sampling</td>
+          <td width="32" align="center">&lt;-</td>
+          <td width="118" align="center"><table border="1" width="100%" bgcolor="#FFFF00">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">0</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Status</td>
+            </tr>
+          </table>
+          </td>
+          </tr>
+          <tr>
+          <td width="98" align="center">.<br>
+            .<br>
+            .
+          </td>
+          <td width="32" align="center">.<br>
+            .<br>
+            .
+          </td>
+          <td width="118" align="center">.<br>
+            .<br>
+            .
+          </td>
+          </tr>
+          <tr>
+          <td width="98" align="center" bgcolor="#00FFFF"><i>m</i>-th sampling</td>
+          <td width="32" align="center">&lt;-</td>
+          <td width="118" align="center"><table border="1" width="100%" bgcolor="#00FFFF">
+            <tr>
+              <td width="100%" align="center">Channel 1</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel 2</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">.<br>
+                .<br>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Channel <i> n</i></td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">0</td>
+            </tr>
+            <tr>
+              <td width="100%" align="center">Status</td>
+            </tr>
+          </table>
+          </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<ul>
+  <li><font face="Times New Roman" size="3"><b>Bit Arrangement of Data<br>
+    </b></font> <table border="1" width="580" height="296">
+        <tr>
+          <td width="206" align="center" height="19"><b><font face="Times New Roman">Resolution</font></b></td>
+          <td width="391" align="center" height="19"><b><font face="Times New Roman">Data</font></b></td>
+        </tr>
+        <tr>
+          <td width="206" rowspan="2" height="61"><font face="Times New Roman">8 bits: one
+            unsigned char<br>
+            (8 bits) used</font></td>
+          <td width="391" height="27"><table border="0" width="100%">
+            <tr>
+              <td width="76%" align="center"></td>
+              <td width="3%" align="center"><font face="Times New Roman">bit7</font></td>
+              <td width="18%" align="center"><font face="Times New Roman">. . .</font></td>
+              <td width="3%" align="center"><font face="Times New Roman">bit0</font></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="391" align="right" height="28"><table border="1" width="11%">
+            <tr>
+              <td width="100%" bgcolor="#808080">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="206" rowspan="2" height="62"><font face="Times New Roman">10 bits: one
+            unsigned short<br>
+            (16 bits) used</font></td>
+          <td width="391" height="27"><table border="0" width="104%">
+            <tr>
+              <td width="38%" align="center"></td>
+              <td width="10%" align="center">
+                <p align="left"><font face="Times New Roman">bit15</font></p>
+              </td>
+              <td width="11%" align="center"><font face="Times New Roman">. . .</font></td>
+              <td width="10%" align="center"><font face="Times New Roman">bit10,</font></td>
+              <td width="10%" align="center"><font face="Times New Roman">bit9</font></td>
+              <td width="10%" align="center"><font face="Times New Roman">. . .</font></td>
+              <td width="11%" align="center">
+                <p align="left"><font face="Times New Roman">bit0</font></p>
+              </td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="391" align="right" height="29"><table border="1" width="60%">
+            <tr>
+              <td width="56%"><p align="center"><font face="Times New Roman">0</font></td>
+              <td width="44%" bgcolor="#808080">&nbsp;</td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="206" rowspan="2" height="62"><font face="Times New Roman">12 bits: one
+            unsigned short<br>
+            (16 bits) used</font></td>
+          <td width="391" height="27"><table border="0" width="104%">
+            <tr>
+              <td width="38%" align="center"></td>
+              <td width="10%" align="center">
+                <p align="left"><font face="Times New Roman">bit15</font></p>
+              </td>
+              <td width="11%" align="center"><font face="Times New Roman">. . .</font></td>
+              <td width="10%" align="center"><font face="Times New Roman">bit12,</font></td>
+              <td width="10%" align="center"><font face="Times New Roman">bit11</font></td>
+              <td width="10%" align="center"><font face="Times New Roman">. . .</font></td>
+              <td width="11%" align="center">
+                <p align="left"><font face="Times New Roman">bit0</font></p>
+              </td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="391" align="right" height="29"><table border="1" width="60%">
+            <tr>
+              <td width="56%"><p align="center"><font face="Times New Roman">0</font></td>
+              <td width="44%" bgcolor="#808080">&nbsp;</td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="206" rowspan="2" height="62"><font face="Times New Roman">16 bits: one
+            unsigned short<br>
+            (16 bits) used</font></td>
+          <td width="391" height="27"><table border="0" width="100%" height="25">
+            <tr>
+              <td width="40%" align="center"></td>
+              <td width="3%" align="center"><font face="Times New Roman">bit15</font></td>
+              <td width="44%" align="center"><font face="Times New Roman">. . .</font></td>
+              <td width="3%" align="center"><font face="Times New Roman">bit0</font></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="391" align="right" height="29"><table border="1" width="60%">
+            <tr>
+              <td width="100%" bgcolor="#808080">&nbsp;</td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="206" rowspan="2" height="62"><font face="Times New Roman">24 bits: one
+            unsigned long<br>
+            (32 bits) used</font></td>
+          <td width="391" height="27"><table border="0" width="100%">
+            <tr>
+              <td width="4%" align="center"><font face="Times New Roman">bit31</font></td>
+              <td width="21%" align="center"><font face="Times New Roman">. . .</font></td>
+              <td width="2%" align="center"><font face="Times New Roman">bit24,</font></td>
+              <td width="1%" align="center"><font face="Times New Roman">bit23</font></td>
+              <td width="69%" align="center"><font face="Times New Roman">. . .</font></td>
+              <td width="3%" align="center"><font face="Times New Roman">bit0</font></td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="391" height="29"><table border="1" width="100%">
+            <tr>
+              <td width="35%" align="center"><font face="Times New Roman">0</font></td>
+              <td width="65%" bgcolor="#808080">&nbsp;</td>
+            </tr>
+          </table>
+          </td>
+        </tr>
+      </table>
+  </li>
+</ul>
+<blockquote>
+  <p>&nbsp;<font size="3" face="Times New Roman">The following table shows types
+  of variable under each supported language.</font></p>
+  <table border="0" width="501" height="1">
+    <tr>
+      <td width="498" height="1" valign="top">
+        <table border="1" width="496" height="60">
+          <tr>
+            <td width="85" valign="top" align="center" height="1"><b>Resolution</b></td>
+            <td width="132" valign="top" align="center" height="1"><b>Data
+              Unit (byte)</b></td>
+            <td width="91" valign="top" align="center" height="1"><b>C</b></td>
+            <td width="92" valign="top" align="center" height="1"><b>Visual
+              Basic</b></td>
+            <td width="92" valign="top" align="center" height="1"><b>Delphi</b></td>
+          </tr>
+          <tr>
+            <td width="85" valign="top" align="center" height="19">8 bits</td>
+            <td width="132" valign="top" align="center" height="19">1</td>
+            <td width="91" valign="top" align="center" height="19">BYTE</td>
+            <td width="92" valign="top" align="center" height="19">Byte</td>
+            <td width="92" valign="top" align="center" height="19">Byte</td>
+          </tr>
+          <tr>
+            <td width="85" valign="top" align="center" height="18">10 bits</td>
+            <td width="132" valign="top" align="center" height="18">2</td>
+            <td width="91" valign="top" align="center" height="18">WORD</td>
+            <td width="92" valign="top" align="center" height="18">Integer</td>
+            <td width="92" valign="top" align="center" height="18">Word</td>
+          </tr>
+          <tr>
+            <td width="85" valign="top" align="center" height="18">12 bits</td>
+            <td width="132" valign="top" align="center" height="18">2</td>
+            <td width="91" valign="top" align="center" height="18">WORD</td>
+            <td width="92" valign="top" align="center" height="18">Integer</td>
+            <td width="92" valign="top" align="center" height="18">Word</td>
+          </tr>
+          <tr>
+            <td width="85" valign="top" align="center" height="19">16 bits</td>
+            <td width="132" valign="top" align="center" height="19">2</td>
+            <td width="91" valign="top" align="center" height="19">WORD&nbsp;</td>
+            <td width="92" valign="top" align="center" height="19">Integer</td>
+            <td width="92" valign="top" align="center" height="19">Word</td>
+          </tr>
+          <tr>
+            <td width="85" valign="top" align="center" height="19">24 bits</td>
+            <td width="132" valign="top" align="center" height="19">4</td>
+            <td width="91" valign="top" align="center" height="19">DWORD</td>
+            <td width="92" valign="top" align="center" height="19">Long</td>
+            <td width="92" valign="top" align="center" height="19">DWord</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<ul>
+  <li><b><font size="3" face="Times New Roman"> Data Area Size</font></b></li>
+</ul>
+<blockquote>
+  <table border="0" width="574">
+    <tr>
+      <td valign="top" width="566">
+      Required data area is given by the following equation:</td>
+    </tr>
+    <tr>
+      <td valign="top" width="566">
+      Data area [byte] = (the number of channels) * (the number of samples) *
+      (data unit in bytes required for the resolution)</td>
+    </tr>
+    <tr>
+      <td valign="top" width="566">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top" width="566">
+      Where, data unit is as follows.
+      <table border="1" width="226">
+        <tr valign="top" align="center">
+          <td width="88" valign="top">
+            <p align="center"><b>Resolution</b></p>
+ </td>
+          <td width="122" valign="top">
+            <p align="center"><b>Data Unit (byte)</b> </p>
+ </td>
+        </tr>
+        <tr valign="top" align="center">
+          <td width="88" valign="top">8 bits </td>
+          <td width="122" valign="top">1 </td>
+        </tr>
+        <tr valign="top" align="center">
+          <td width="88" valign="top">12 bits </td>
+          <td width="122" valign="top">2 </td>
+        </tr>
+        <tr valign="top" align="center">
+          <td width="88" valign="top">16 bits </td>
+          <td width="122" valign="top">2 </td>
+        </tr>
+        <tr valign="top" align="center">
+          <td width="88" valign="top">24 bits </td>
+          <td width="122" valign="top">4 </td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="572" height="282">
+    <tr>
+      <td height="21" valign="top" width="564">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="564">Example 1) For the <a href="AdGetSamplingData.html">AdGetSamplingData</a> 
+        function</td>
+    </tr>
+    <tr>
+      <td height="1" valign="top" width="564">&nbsp;For 4 channels, 100 samples, 24-bit resolution:<br>
+      &nbsp;Required data area [byte] = 4 * 100 * 4 = 1600</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="564">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="564">Example 2) For the <font size="3"><a href="AdBmGetSamplingData.html">AdBmGetSamplingData</a></font>
+        function</td>
+    </tr>
+    <tr>
+      <td height="38" valign="top" width="564">&nbsp;For 3 channels, no sampling status, 100 samples, 12-bit resolution:<br>
+      &nbsp;Required data area [byte] = (3 + 1) * 100 * 2 = 800</td>
+    </tr>
+    <tr>
+      <td height="21" width="564" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="1" valign="top" width="564">Example 3) For the <font size="3"><a href="AdBmGetSamplingData.html"> AdBmGetSamplingData</a>
+        </font>function</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="564">&nbsp;For 4 channels, no sampling status, 100 samples, 12-bit resolution:<br>
+      &nbsp;Required data area [byte] =&nbsp; 4 * 100 * 2 = 800</td>
+    </tr>
+    <tr>
+      <td height="21" width="564" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="564">Example 4) For the <font size="3"><a href="AdBmGetSamplingData.html"> AdBmGetSamplingData</a>
+        </font>function</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="564">&nbsp;For 3 channels, with sampling status, 100 samples, 12-bit resolution:<br>
+      &nbsp;Required data area [byte] =&nbsp; (3 + 1) * 100 * 2 = 800</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="564">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="564">Example 5) For the <font size="3"><a href="AdBmGetSamplingData.html"> AdBmGetSamplingData</a>
+        </font>function</td>
+    </tr>
+    <tr>
+      <td height="21" valign="top" width="564">&nbsp;For 4 channels, with sampling status, 100 samples, 12-bit resolution:<br>
+      &nbsp;Required data area [byte] =&nbsp; (4 + 1 + 1) * 100 * 2 = 1200</td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="4"><a name="8.3 Digital Input Data">8.3 Digital Input Data</a></font></b></p>
+<blockquote>
+  <table border="0" width="572">
+    <tr>
+      <td valign="top" width="564">This data shows a status of general purpose
+        digital input pins on the board. The polarity and the number of pins depend on the board specifications.
+        Please refer to the user's manual.</td>
+    </tr>
+  </table>
+</blockquote>
+<ul>
+  <li><font size="3" face="Times New Roman"><b>Bit Arrangement of Digital Input
+    Data
+    </b></font>
+  <table border="0" width="550">
+    <tr>
+      <td width="106">Unsigned long<br>
+        (32 bits)</td>
+      <td width="430"><table border="1" width="100%">
+        <tr>
+          <td width="40%" align="center" valign="top">bit31 through bit16</td>
+          <td width="20%" align="center" valign="top">bit15</td>
+          <td width="20%" align="center" valign="top">. . .</td>
+          <td width="20%" align="center" valign="top">bit0</td>
+        </tr>
+        <tr>
+          <td width="40%" align="center" valign="top">Not used</td>
+          <td width="20%" align="center" valign="top">IN16</td>
+          <td width="20%" align="center" valign="top">. . .</td>
+          <td width="20%" align="center" valign="top">IN1</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+  </li>
+</ul>
+<p><b><font face="Arial" size="4"><a name="8.4 Digital Output  Data">8.4 Digital Output&nbsp; Data</a></font></b></p>
+<blockquote>
+  <table border="0" width="570">
+    <tr>
+      <td valign="top" width="562">This data controls general purpose digital output pins on the board.
+        The polarity and the number of pins depend on the specifications of the board.
+        Please refer to the user's manual.</td>
+    </tr>
+  </table>
+</blockquote>
+<ul>
+  <li><font face="Times New Roman" size="3"><b>Bit Arrangement for the Digital Output
+    Data
+    </b></font>
+  <table border="0" width="550">
+    <tr>
+      <td width="106">Unsigned long<br>
+        (32 bits)</td>
+      <td width="430"><table border="1" width="100%">
+        <tr>
+          <td width="40%" align="center" valign="top">bit31 through bit16</td>
+          <td width="20%" align="center" valign="top">bit15</td>
+          <td width="20%" align="center" valign="top">. . .</td>
+          <td width="20%" align="center" valign="top">bit0</td>
+        </tr>
+        <tr>
+          <td width="40%" align="center" valign="top">Not used</td>
+          <td width="20%" align="center" valign="top">OUT16</td>
+          <td width="20%" align="center" valign="top">. . .</td>
+          <td width="20%" align="center" valign="top">OUT1</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+  </li>
+</ul>
+<p><b><font face="Arial" size="4"><a name="8.5 Bus Master Sampling Status">8.5 Bus
+Master Sampling Status</a></font></b></p>
+<blockquote>
+  <table border="0" width="594">
+    <tr>
+      <td width="586">This data is handled by the <a href="AdBmSetSamplingConfig.html"> AdBmSetSamplingConfig</a> function.
+        Sampling status allows you to check the condition of each sampling.<font color="#000000">
+        The explanation of sampling status setting depends on
+        the boards or cards. Refer to the followings:</font></td>
+    </tr>
+    <tr>
+      <td width="586">
+        <p><font color="#000000">&lt;</font>PCI-3174, PCI-3175, PCI-3176, CTP/CPZ-3174,
+        CTP/CPZ-3175, CTP/CPZ-3182&gt;</p>
+      </td>
+    </tr>
+    <tr>
+      <td width="586">
+        <p>The Bus Master Sampling Status is configured by the <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>
+        function. In the sampling status, you can confirm the condition of each
+        sampling.&nbsp;</p>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<ul>
+  <li><b>Sampling Status
+    </b>
+    <table border="0" width="596">
+      <tr>
+        <td width="588">
+          <table border="1" width="583">
+            <tr>
+              <td align="center" width="433" valign="top">bit15 through bit10</td>
+              <td align="center" width="73" valign="top">bit9</td>
+              <td align="center" width="73" valign="top">bit8</td>
+            </tr>
+            <tr>
+              <td align="center" width="406" valign="top">
+                <p align="center">Not used</td>
+              <td align="center" width="73" valign="top">ORER</td>
+              <td align="center" width="73" valign="top">SCER</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="594">
+      <tr>
+        <td width="586">
+          <table border="1" width="583">
+            <tr>
+              <td align="center" width="72" valign="top">bit7</td>
+              <td align="center" width="72" valign="top">bit6</td>
+              <td align="center" width="72" valign="top">bit5</td>
+              <td align="center" width="72" valign="top">bit4</td>
+              <td align="center" width="72" valign="top">&nbsp;bit3</td>
+              <td align="center" width="73" valign="top">bit2</td>
+              <td align="center" width="73" valign="top">bit1</td>
+              <td align="center" width="73" valign="top">bit0</td>
+            </tr>
+            <tr>
+              <td align="center" width="72" valign="top">
+                <p align="center">Not used</td>
+              <td align="center" width="72" valign="top">EXINT</td>
+              <td align="center" width="72" valign="top">IN2</td>
+              <td align="center" width="72" valign="top">IN1</td>
+              <td align="center" width="72" valign="top">ATRGED</td>
+              <td align="center" width="73" valign="top">EXTRGED</td>
+              <td align="center" width="73" valign="top">ATRGST</td>
+              <td align="center" width="73" valign="top">EXTRGST</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="400">
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <table border="1" width="400" height="429">
+            <tr>
+              <td width="152" align="center" height="19" valign="top"><b>Code</b></td>
+              <td width="284" align="center" height="19" valign="top"><b>Value</b></td>
+              <td width="412" align="center" height="19" valign="top"><b>Description</b></td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXTRGST</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">External
+                trigger<br>
+                (sampling start)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ATRGST</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">Analog
+                trigger<br>
+                (sampling start)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXTRGED</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">External
+                trigger<br>
+                (sampling stop)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ATRGED</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">Analog
+                trigger<br>
+                (sampling stop)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">IN1</td>
+              <td width="284" height="26" valign="top">1: Low</td>
+              <td width="412" rowspan="2" valign="top" height="2">Input level of IN1</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: High</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">IN2</td>
+              <td width="284" height="26" valign="top">1: Low</td>
+              <td width="412" rowspan="2" valign="top" height="2">Input level of IN2</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: High</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXINT</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">External
+                interrupt</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="38" rowspan="2" valign="top">SCER</td>
+              <td width="284" height="1" valign="top">1: Detected</td>
+              <td width="412" valign="top" height="38" rowspan="2">Sampling
+                clock error</td>
+            </tr>
+            <tr>
+              <td width="284" height="1" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="38" rowspan="2" valign="top">ORER</td>
+              <td width="284" height="1" valign="top">1: Detected</td>
+              <td width="412" valign="top" height="38" rowspan="2">Overrun error</td>
+            </tr>
+            <tr>
+              <td width="284" height="1" valign="top">0: Not detected</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </li>
+</ul>
+<blockquote>
+    <table border="0" width="550">
+      <tr>
+      <td width="718"><font color="#000000">&lt;PCI-320112, CTP/CPZ-3183&gt;</font></td>
+      </tr>
+      <tr>
+      <td width="586">
+        <p>The Bus Master Sampling Status is configured by the <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>
+        function. In the sampling status, you can confirm the condition of each
+        sampling.&nbsp;</p>
+      </td>
+      </tr>
+    </table>
+</blockquote>
+<ul>
+  <li><b>Sampling Status
+    </b>
+  </li>
+</ul>
+<blockquote>
+    <table border="0" width="596">
+      <tr>
+        <td width="588">
+          <table border="1" width="583">
+            <tr>
+              <td align="center" width="73" valign="top">bit15</td>
+              <td align="center" width="72" valign="top">bit14</td>
+              <td align="center" width="72" valign="top">bit13</td>
+              <td align="center" width="72" valign="top">bit12</td>
+              <td align="center" width="72" valign="top">bit11</td>
+              <td align="center" width="72" valign="top">bit10</td>
+              <td align="center" width="73" valign="top">bit9</td>
+              <td align="center" width="73" valign="top">bit8</td>
+            </tr>
+            <tr>
+              <td align="center" width="68" valign="top">
+                <p align="center">Smpcnt7</td>
+              <td align="center" width="68" valign="top">
+                Smpcnt6</td>
+              <td align="center" width="68" valign="top">
+                Smpcnt5</td>
+              <td align="center" width="68" valign="top">
+                Smpcnt4</td>
+              <td align="center" width="67" valign="top">
+                Smpcnt3</td>
+              <td align="center" width="67" valign="top">
+                Smpcnt2</td>
+              <td align="center" width="73" valign="top">Smpcnt1</td>
+              <td align="center" width="73" valign="top">Smpcnt0</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="594">
+      <tr>
+        <td width="586">
+          <table border="1" width="583">
+            <tr>
+              <td align="center" width="72" valign="top">bit7</td>
+              <td align="center" width="72" valign="top">bit6</td>
+              <td align="center" width="72" valign="top">bit5</td>
+              <td align="center" width="72" valign="top">bit4</td>
+              <td align="center" width="72" valign="top">&nbsp;bit3</td>
+              <td align="center" width="73" valign="top">bit2</td>
+              <td align="center" width="73" valign="top">bit1</td>
+              <td align="center" width="73" valign="top">bit0</td>
+            </tr>
+            <tr>
+              <td align="center" width="72" valign="top">
+                <p align="center">OVPM</td>
+              <td align="center" width="72" valign="top">EXINT</td>
+              <td align="center" width="72" valign="top">ORER</td>
+              <td align="center" width="72" valign="top">SCER</td>
+              <td align="center" width="72" valign="top">ATRGED</td>
+              <td align="center" width="73" valign="top">EXTRGED</td>
+              <td align="center" width="73" valign="top">ATRGST</td>
+              <td align="center" width="73" valign="top">EXTRGST</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="400">
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <table border="1" width="400" height="379">
+            <tr>
+              <td width="152" align="center" height="19" valign="top"><b>Code</b></td>
+              <td width="284" align="center" height="19" valign="top"><b>Value</b></td>
+              <td width="412" align="center" height="19" valign="top"><b>Description</b></td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXTRGST</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">External
+                trigger<br>
+                (sampling start)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ATRGST</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">Analog
+                trigger<br>
+                (sampling start)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXTRGED</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">External
+                trigger<br>
+                (sampling stop)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ATRGED</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">Analog
+                trigger<br>
+                (sampling stop)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">SCER</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">Sampling clock
+                error</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ORER</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">Overrun error</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXINT</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">External
+                interrupt</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="26" rowspan="2" valign="top">OVPM</td>
+              <td width="284" height="1" valign="top">1:
+                Detected</td>
+              <td width="412" valign="top" height="26" rowspan="2"><font color="#000000">Automatic
+                range-switching capability at overvoltage input</font>
+              </td>
+            </tr>
+            <tr>
+              <td width="284" height="1" valign="top">0:
+                Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="1" valign="top">Smpcnt[7..0]</td>
+              <td width="284" height="1" valign="middle">
+                <p align="center">-</td>
+              <td width="412" valign="top" height="1">Retrieves
+                sampling clock counter.</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  <table border="1" cellspacing="1" width="268">
+    <tr>
+      <td width="90" valign="top" align="center"><b>Smpcnt[7..0]</b></td>
+      <td width="174" valign="top" align="center"><b>Sampling Clock Counter</b></td>
+    </tr>
+    <tr>
+      <td width="90" valign="top" align="center">0</td>
+      <td width="174" valign="top" align="center">0</td>
+    </tr>
+    <tr>
+      <td width="90" valign="top" align="center">1</td>
+      <td width="174" valign="top" align="center">1</td>
+    </tr>
+    <tr>
+      <td width="90" valign="top" align="center">2</td>
+      <td width="174" valign="top" align="center">2</td>
+    </tr>
+    <tr>
+      <td width="90" valign="top" align="center">3</td>
+      <td width="174" valign="top" align="center">3</td>
+    </tr>
+    <tr>
+      <td width="90" valign="top" align="center">.<br>
+        .<br>
+        .</td>
+      <td width="174" valign="top" align="center">
+        <p align="center">.<br>
+        .<br>
+        .</td>
+    </tr>
+    <tr>
+      <td width="90" valign="top" align="center">FF</td>
+      <td width="174" valign="top" align="center">256</td>
+    </tr>
+  </table>
+    <table border="0" width="400">
+      <tr>
+        <td>Notes:
+          <ul>
+            <li>When sampling starts, the counter is
+              cleared.</li>
+            <li>When the sampling clock is falling edge, it
+              is counted up.</li>
+            <li>It operates as a free run counter.<font color="#FF00FF"><br>
+              </font><font color="#000000">
+              Example)</font>
+              <table border="0" cellspacing="1" width="300">
+                <tr>
+                  <td width="12%"><font color="#000000">
+              00h</font></td>
+                  <td width="12%"><font color="#000000"> 01h&nbsp;</font></td>
+                  <td width="12%"><font color="#000000"> 02h</font></td>
+                  <td width="12%"><font color="#000000">. . .&nbsp;</font></td>
+                  <td width="13%"><font color="#000000"> FEh&nbsp;</font></td>
+                  <td width="13%"><font color="#000000"> FFh</font></td>
+                  <td width="13%"><font color="#000000">00h</font></td>
+                  <td width="13%"><font color="#000000">. . .&nbsp;</font></td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="550">
+      <tr>
+      <td width="718">&lt;PCI-320412,&#12288;PCI-320416, PCI-360116, PCI-360112,
+        PCI-360216<br>
+        CTP/CPZ-320412, CTP/CPZ-320416, CTP/CPZ-360116, CTP/CPZ-360112<br>
+        CSI/CBI-320412 , CBI-320412TR, CBI-320412TK, CBI-320412TL,&nbsp;<br>
+        CSI/CBI-320416 , CBI-320416TR, CBI-320416TK, CBI-320416TL,&nbsp;<br>
+        CSI/CBI-360112 , CBI-360112TR, CBI-360112TK, CBI-360112TL,&nbsp;<br>
+        CSI/CBI-360116 , CBI-360116TR, CBI-360116TK, CBI-360116TL&gt;</td>
+      </tr>
+      <tr>
+      <td width="586">
+        <p>The Bus Master Sampling Status is configured by the <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>
+        function. In the sampling status, you can confirm the condition of each
+        sampling.&nbsp;</p>
+      </td>
+      </tr>
+    </table>
+</blockquote>
+<ul>
+  <li><b>Sampling Status<br>
+    </b>
+
+    <table border="0" width="596">
+      <tr>
+        <td width="588">
+          <table border="1" width="583" height="33">
+            <tr>
+              <td align="center" width="72" valign="top" height="2">bit15</td>
+              <td align="center" width="72" valign="top" height="2">bit14</td>
+              <td align="center" width="72" valign="top" height="2">bit13</td>
+              <td align="center" width="72" valign="top" height="2">bit12</td>
+              <td align="center" width="72" valign="top" height="2">bit11</td>
+              <td align="center" width="73" valign="top" height="2">bit10</td>
+              <td align="center" width="73" valign="top" height="2">bit9</td>
+              <td align="center" width="73" valign="top" height="2">bit8</td>
+            </tr>
+            <tr>
+              <td align="center" width="72" valign="top" height="19">
+                IN8</td>
+              <td align="center" width="72" valign="top" height="19">
+                IN7</td>
+              <td align="center" width="72" valign="top" height="19">
+                IN6</td>
+              <td align="center" width="72" valign="top" height="19">
+                IN5</td>
+              <td align="center" width="72" valign="top" height="19">
+                IN4</td>
+              <td align="center" width="73" valign="top" height="19">
+                IN3</td>
+              <td align="center" width="73" valign="top" height="19">IN2</td>
+              <td align="center" width="73" valign="top" height="19">IN1</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="594">
+      <tr>
+        <td width="586">
+          <table border="1" width="583">
+            <tr>
+              <td align="center" width="72" valign="top">bit7</td>
+              <td align="center" width="72" valign="top">bit6</td>
+              <td align="center" width="72" valign="top">bit5</td>
+              <td align="center" width="72" valign="top">bit4</td>
+              <td align="center" width="72" valign="top">&nbsp;bit3</td>
+              <td align="center" width="73" valign="top">bit2</td>
+              <td align="center" width="73" valign="top">bit1</td>
+              <td align="center" width="73" valign="top">bit0</td>
+            </tr>
+            <tr>
+              <td align="center" width="72" valign="top">
+                <p align="center">Not used</td>
+              <td align="center" width="72" valign="top">EXINT</td>
+              <td align="center" width="72" valign="top">ORER</td>
+              <td align="center" width="72" valign="top">SCER</td>
+              <td align="center" width="72" valign="top">ATRGED</td>
+              <td align="center" width="73" valign="top">EXTRGED</td>
+              <td align="center" width="73" valign="top">ATRGST</td>
+              <td align="center" width="73" valign="top">EXTRGST</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="547">
+      <tr>
+        <td width="539">&nbsp;&nbsp;
+          <table border="1" width="400" height="379">
+            <tr>
+              <td width="152" align="center" height="19" valign="top"><b>Code</b></td>
+              <td width="284" align="center" height="19" valign="top"><b>Value</b></td>
+              <td width="412" align="center" height="19" valign="top"><b>Description</b></td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXTRGST</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">External
+                trigger<br>
+                (sampling start)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ATRGST</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">Analog
+                trigger<br>
+                (sampling start)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXTRGED</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">External
+                trigger<br>
+                (sampling stop)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ATRGED</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">Analog
+                trigger<br>
+                (sampling stop)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">SCER</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">sampling clock
+                error</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ORER</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">Overrun error</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXINT</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="412" rowspan="2" valign="top" height="2">External
+                interrupt</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="26" valign="top">IN[8..1]</td>
+              <td width="284" height="2" valign="top">
+                <p align="center">-</td>
+              <td width="412" valign="top" height="26">Status
+                of IN1 through IN8</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="547">
+      <tr>
+      <td width="539"></td>
+      </tr>
+    </table>
+    <table border="0" width="547">
+      <tr>
+        <td width="539">* The PCI -360116 requires 4 or later revision ID.&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td width="539">&nbsp; The following boards/cards require 3 or
+          later revision ID;<br>
+          &nbsp;&nbsp;&nbsp; PCI-320412,&#12288;PCI-320416, PCI-360116,
+          PCI-360112, PCI-360216<br>
+          &nbsp;&nbsp;&nbsp; LPC-321116, LPC-361116<br>
+          &nbsp;&nbsp;&nbsp; PEX-321116, PEX-361116<br>
+          &nbsp;&nbsp;&nbsp; CTP/CPZ-320412, CTP/CPZ-320416, CTP/CPZ-360116, CTP/CPZ-360112<br>
+          &nbsp;&nbsp;&nbsp; CSI/CBI-320412 , CBI-320412TR, CBI-320412TK,
+          CBI-320412TL,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+          &nbsp;&nbsp;&nbsp; CSI/CBI-320416 , CBI-320416TR, CBI-320416TK,
+          CBI-320416TL,&nbsp;&nbsp;<br>
+          &nbsp;&nbsp;&nbsp; CSI/CBI-360112 , CBI-360112TR, CBI-360112TK,
+          CBI-360112TL,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+          &nbsp;&nbsp;&nbsp; CSI/CBI-360116 , CBI-360116TR, CBI-360116TK,
+          CBI-360116TL
+        </td>
+      </tr>
+      <tr>
+        <td width="539">Refer to the AdCommonGetPciDeviceInfo function to
+          retrieve revision IDs.
+        </td>
+      </tr>
+      <tr>
+        <td width="539">
+        </td>
+      </tr>
+      <tr>
+        <td width="539">LPC-321116, LPC-361116, LPC-321216, LPC-361216<br>
+          PEX-321216, PEX-361216, PEX-321116, PEX-361116
+        </td>
+      </tr>
+      <tr>
+        <td width="539">The Bus Master Sampling Status is configured by the <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>
+          function. In the sampling status, you can confirm the condition of
+          each sampling.&nbsp;
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;
+   <li><b>Sampling Status</b>
+
+    <table border="0" width="596">
+      <tr>
+        <td width="588">
+          <table border="1" width="583" height="33">
+            <tr>
+              <td align="center" width="72" valign="top" height="2">bit15</td>
+              <td align="center" width="72" valign="top" height="2">bit14</td>
+              <td align="center" width="72" valign="top" height="2">bit13</td>
+              <td align="center" width="72" valign="top" height="2">bit12</td>
+              <td align="center" width="72" valign="top" height="2">bit11</td>
+              <td align="center" width="73" valign="top" height="2">bit10</td>
+              <td align="center" width="73" valign="top" height="2">bit9</td>
+              <td align="center" width="73" valign="top" height="2">bit8</td>
+            </tr>
+            <tr>
+              <td align="center" width="72" valign="top" height="19">
+                IN8</td>
+              <td align="center" width="72" valign="top" height="19">
+                IN7</td>
+              <td align="center" width="72" valign="top" height="19">
+                IN6</td>
+              <td align="center" width="72" valign="top" height="19">
+                IN5</td>
+              <td align="center" width="72" valign="top" height="19">
+                IN4</td>
+              <td align="center" width="73" valign="top" height="19">
+                IN3</td>
+              <td align="center" width="73" valign="top" height="19">IN2</td>
+              <td align="center" width="73" valign="top" height="19">IN1</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="594">
+      <tr>
+        <td width="586">
+          <table border="1" width="583">
+            <tr>
+              <td align="center" width="72" valign="top">bit7</td>
+              <td align="center" width="72" valign="top">bit6</td>
+              <td align="center" width="72" valign="top">bit5</td>
+              <td align="center" width="72" valign="top">bit4</td>
+              <td align="center" width="72" valign="top">&nbsp;bit3</td>
+              <td align="center" width="73" valign="top">bit2</td>
+              <td align="center" width="73" valign="top">bit1</td>
+              <td align="center" width="73" valign="top">bit0</td>
+            </tr>
+            <tr>
+              <td align="center" width="72" valign="top">
+                <p align="center">Not used</td>
+              <td align="center" width="72" valign="top">EXINT</td>
+              <td align="center" width="72" valign="top">ORER</td>
+              <td align="center" width="72" valign="top">SCER</td>
+              <td align="center" width="72" valign="top">ATRGED</td>
+              <td align="center" width="73" valign="top">EXTRGED</td>
+              <td align="center" width="73" valign="top">ATRGST</td>
+              <td align="center" width="73" valign="top">EXTRGST</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="547">
+      <tr>
+        <td width="539">&nbsp;&nbsp;
+          <table border="1" width="531" height="379">
+            <tr>
+              <td width="152" align="center" height="19" valign="top"><b>Code</b></td>
+              <td width="284" align="center" height="19" valign="top"><b>Value</b></td>
+              <td width="543" align="center" height="19" valign="top"><b>Description</b></td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXTRGST</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="2">External
+                trigger, Comparator trigger, Z-phase input clear trigger&nbsp;<br>
+                (sampling start)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ATRGST</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="2">Analog
+                trigger<br>
+                (sampling start)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXTRGED</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="2">External
+                trigger, Comparator trigger, Z-phase input clear trigger&nbsp;<br>
+                (sampling stop)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ATRGED</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="2">Analog
+                trigger<br>
+                (sampling stop)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">SCER</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="2">sampling clock
+                error</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">ORER</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="2">Overrun error</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="2" rowspan="2" valign="top">EXINT</td>
+              <td width="284" height="26" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="2">External
+                interrupt</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="26" valign="top">IN[8..1]</td>
+              <td width="284" height="2" valign="top">
+                <p align="center">-</td>
+              <td width="543" valign="top" height="26">Status
+                of IN1 through IN8</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+    <table border="0" width="547">
+      <tr>
+        <td width="539">PCI-321516
+        </td>
+      </tr>
+      <tr>
+        <td width="539">The Bus Master Sampling Status is configured by the <a href="AdBmSetSamplingConfig.html">AdBmSetSamplingConfig</a>
+          function. In the sampling status, you can confirm the condition of
+          each sampling.&nbsp;
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;
+   <li><b>Sampling Status</b>
+
+    <table border="0" width="596">
+      <tr>
+        <td width="588">
+          <table border="1" width="583" height="33">
+            <tr>
+              <td align="center" width="72" valign="top" height="2">bit15</td>
+              <td align="center" width="72" valign="top" height="2">bit14</td>
+              <td align="center" width="72" valign="top" height="2">bit13</td>
+              <td align="center" width="72" valign="top" height="2">bit12</td>
+              <td align="center" width="72" valign="top" height="2">bit11</td>
+              <td align="center" width="73" valign="top" height="2">bit10</td>
+              <td align="center" width="73" valign="top" height="2">bit9</td>
+              <td align="center" width="73" valign="top" height="2">bit8</td>
+            </tr>
+            <tr>
+              <td align="center" width="72" valign="top" height="19">
+                Not used</td>
+              <td align="center" width="72" valign="top" height="19">
+                Not used</td>
+              <td align="center" width="72" valign="top" height="19">
+                Not used</td>
+              <td align="center" width="72" valign="top" height="19">
+                Not used</td>
+              <td align="center" width="72" valign="top" height="19">
+                Not used</td>
+              <td align="center" width="73" valign="top" height="19">
+                Not used</td>
+              <td align="center" width="73" valign="top" height="19">Not used</td>
+              <td align="center" width="73" valign="top" height="19">Not used</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="594">
+      <tr>
+        <td width="586">
+          <table border="1" width="583">
+            <tr>
+              <td align="center" width="72" valign="top">bit7</td>
+              <td align="center" width="72" valign="top">bit6</td>
+              <td align="center" width="72" valign="top">bit5</td>
+              <td align="center" width="72" valign="top">bit4</td>
+              <td align="center" width="72" valign="top">&nbsp;bit3</td>
+              <td align="center" width="73" valign="top">bit2</td>
+              <td align="center" width="73" valign="top">bit1</td>
+              <td align="center" width="73" valign="top">bit0</td>
+            </tr>
+            <tr>
+              <td align="center" width="72" valign="top">
+                <p align="center">Not used</td>
+              <td align="center" width="72" valign="top">Not used</td>
+              <td align="center" width="72" valign="top">ORER</td>
+              <td align="center" width="72" valign="top">SCER</td>
+              <td align="center" width="72" valign="top">ATRGED</td>
+              <td align="center" width="73" valign="top">Not used</td>
+              <td align="center" width="73" valign="top">ATRGST</td>
+              <td align="center" width="73" valign="top">Not used</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="547">
+      <tr>
+        <td width="539">&nbsp;&nbsp;
+          <table border="1" width="531" height="195">
+            <tr>
+              <td width="152" align="center" height="19" valign="top"><b>Code</b></td>
+              <td width="284" align="center" height="19" valign="top"><b>Value</b></td>
+              <td width="543" align="center" height="19" valign="top"><b>Description</b></td>
+            </tr>
+            
+            <tr>
+              <td width="152" height="1" rowspan="2" valign="top">ATRGST</td>
+              <td width="284" height="4" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="1">Analog
+                trigger<br>
+                (sampling start)</td>
+            </tr>
+            <tr>
+              <td width="284" height="26" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="1" rowspan="2" valign="top">ATRGED</td>
+              <td width="284" height="18" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="1">Analog
+                trigger<br>
+                (sampling stop)</td>
+            </tr>
+            <tr>
+              <td width="284" height="15" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="1" rowspan="2" valign="top">SCER</td>
+              <td width="284" height="6" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="1">sampling clock
+                error</td>
+            </tr>
+            <tr>
+              <td width="284" height="1" valign="top">0: Not detected</td>
+            </tr>
+            <tr>
+              <td width="152" height="1" rowspan="2" valign="top">ORER</td>
+              <td width="284" height="3" valign="top">1: Detected</td>
+              <td width="543" rowspan="2" valign="top" height="1">Overrun error</td>
+            </tr>
+            <tr>
+              <td width="284" height="1" valign="top">0: Not detected</td>
+            </tr>
+            
+            </table>
+        </td>
+      </tr>
+    </table>
+  </li>
+</ul>
+  <hr>
+
+  <p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+  Corporation. All rights reserved.
+  </font></p>
+  <p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Triggering</title>
+</head>
+
+<body>
+
+<p><font face="Arial" size="5"><b>6. Triggering</b></font></p>
+
+<p><font face="Arial" size="4"><b><a name="6.1 Trigger Overviews">6.1 Trigger
+Overviews</a></b></font></p>
+
+<blockquote>
+  <table border="0" width="550" height="145">
+    <tr>
+      <td height="141" valign="top">
+  <p>Trigger signals decide when to start and/or
+  stop the sampling. Trigger has the three following types:
+  <table border="0" width="550" height="55">
+    <tr>
+      <td width="536" height="4" valign="top">
+        <ul>
+          <li><a href="#6.2 Analog Trigger">Analog trigger</a> </li>
+          <li><a href="#6.3 External Trigger">External trigger</a> </li>
+          <li><a href="#6.4 External Trigger with Mask Using a Digital Input Pin">External trigger with mask using
+            digital
+      input pins</a> </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="536" height="19" valign="top">
+  <p>Using the <a href="Trigger%20Delays.html">trigger delay</a> capability, the timing when the
+  sampling starts or stops changes depending on the number of the data that are sampled
+  before or after the trigger. When triggers are applied to both start-trigger and stop-trigger, the trigger delay capability is
+  applicable only to start-trigger. In this case, the sampling will be terminated if the number of the data
+  sampled reaches the specified counts
+  before a stop-trigger occurs. </p>
+      </td>
+    </tr>
+  </table>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font size="4" face="Arial"><a name="6.2 Analog Trigger">6.2
+Analog Trigger</a></font></b></p>
+<blockquote>
+  <table border="0" width="550">
+    <tr>
+      <td width="668">
+  <p>The analog trigger specifies thresholds when to start or stop the sampling.
+  The analog trigger has the following features.
+ </p>
+  <table border="0" width="548" height="704">
+    <tr>
+      <td width="534" colspan="2" height="21"><b>Level Sensitive (positive)</b></td>
+    </tr>
+    <tr>
+      <td width="59" height="40"></td>
+      <td width="475" height="40">A trigger is asserted when the signal changes across the
+        threshold level from low to high.</td>
+    </tr>
+    <tr>
+      <td width="59" height="1"></td>
+      <td width="475" height="1">
+      <img border="0" src="Trigge1.gif" width="141" height="83"></td>
+    </tr>
+    <tr>
+      <td width="534" colspan="2" height="21"><b>Level Sensitive (negative)</b></td>
+    </tr>
+    <tr>
+      <td width="59" height="40"></td>
+      <td width="475" height="40">A trigger is asserted when the signal changes across the threshold level from high to low.</td>
+    </tr>
+    <tr>
+      <td width="59" height="85"></td>
+      <td width="475" height="85"><img border="0" src="Trigge2.gif" width="141" height="83"></td>
+    </tr>
+    <tr>
+      <td width="534" colspan="2" height="21"><b>Level Sensitive (positive/negative)</b></td>
+    </tr>
+    <tr>
+      <td width="59" height="40"></td>
+      <td width="475" height="40">A trigger is asserted when the signal changes across the threshold level from low to high or
+      vice versa.</td>
+    </tr>
+    <tr>
+      <td width="59" height="85"></td>
+      <td width="475" height="85">
+      <img border="0" src="Trigge3.gif" width="141" height="83"></td>
+    </tr>
+    <tr>
+      <td width="534" colspan="2" height="21"><b>Out of Range</b></td>
+    </tr>
+    <tr>
+      <td width="59" height="21"></td>
+      <td width="475" height="21">A trigger is asserted when the signal changes out of the range.</td>
+    </tr>
+    <tr>
+      <td width="59" height="121"></td>
+      <td width="475" height="121">
+      <img border="0" src="Trigge4.gif" width="141" height="119"></td>
+    </tr>
+    <tr>
+      <td width="534" colspan="2" height="21"><b>Into Range</b></td>
+    </tr>
+    <tr>
+      <td width="59" height="21"></td>
+      <td width="475" height="21">A trigger is asserted when the signal changes into the range.</td>
+    </tr>
+    <tr>
+      <td width="59" height="121"></td>
+      <td width="475" height="121"><img border="0" src="Trigge5.gif" width="141" height="119"></td>
+    </tr>
+    <tr>
+      <td width="534" colspan="2" height="21"></td>
+    </tr>
+    <tr>
+      <td width="534" colspan="2" height="40">
+  <p>Using the <a href="Trigger%20Delays.html">trigger delay</a> capability, the timing when the
+  sampling starts or stops changes depending on the number of the data that are sampled
+  before or after the trigger. </p>
+      </td>
+    </tr>
+  </table>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font size="4" face="Arial"><a name="6.3 External Trigger">6.3 External
+Trigger</a></font></b></p>
+<blockquote>
+  <table border="0" width="550">
+    <tr>
+      <td>The external trigger capability determines that the sampling starts or
+        stops when an external signal is asserted.&nbsp;
+        <table border="0" width="545" height="224">
+          <tr>
+            <td colspan="2" width="537" height="21"><b>External Trigger Input Pin</b></td>
+          </tr>
+          <tr>
+            <td width="58" height="38"></td>
+            <td width="473" height="38" valign="top">It depends on the board/card specifications and the data transfer mode.
+              <table border="1" width="400" height="0">
+                <tr>
+                  <td width="50%" align="center"><b>Data Transfer Mode</b></td>
+                  <td width="50%" align="center"><b>External Trigger Input Pin</b></td>
+                </tr>
+                <tr>
+                  <td width="50%"><a href="Sampling%20Mode.html#5.1 Programmed I/O Mode">Programmed I/O</a></td>
+                  <td width="50%">EXINT IN</td>
+                </tr>
+                <tr>
+                  <td width="50%"><a href="Sampling%20Mode.html#5.2 FIFO Mode">FIFO</a></td>
+                  <td width="50%">EXTRG IN</td>
+                </tr>
+                <tr>
+                  <td width="50%"><a href="Sampling%20Mode.html##5.3 Memory Mode">Memory</a></td>
+                  <td width="50%">EXTRG IN</td>
+                </tr>
+                <tr>
+                  <td width="50%"><a href="Sampling%20Mode.html#5.4 Bus Master Transfer Mode">Bus
+                    master</a></td>
+                  <td width="50%">EXTRG IN</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td width="531" colspan="2" height="21"><b>External Trigger Input Configuration</b></td>
+          </tr>
+          <tr>
+            <td width="58" height="59"></td>
+            <td width="473" height="59">Rising or falling edge can be selected to assert a trigger.
+              This capability depends on the board/card specifications, please refer to
+              the user's manual of your board/card.</td>
+          </tr>
+          <tr>
+            <td width="531" colspan="2" height="21"></td>
+          </tr>
+          <tr>
+            <td width="531" colspan="2" height="40">
+  <p>Using the <a href="Trigger%20Delays.html">trigger delay</a> capability, the timing when the
+  sampling starts or stops changes depending on the number of the data that are sampled
+  before or after the trigger. </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<p align="left"><font size="4" face="Arial"><b><a name="6.4 External Trigger with Mask Using a Digital Input Pin">6</a></b></font><a name="6.4 External Trigger with Mask Using a Digital Input Pin"><b><font size="4" face="Arial">.4
+External Trigger with Mask Using a Digital Input Pin</font></b></a></p>
+<blockquote>
+  <table border="0" width="550">
+    <tr>
+      <td>This capability adds the mask conditions to analog trigger capability.
+        When the signal on the specified digital input pin (hereafter DI pin) is
+        low level, the assertion of the external trigger signal is recognized as valid assertion.
+        In other words, if the signal on the DI pin is high level, the assertion of the external
+  trigger signal is ignored or masked.
+        <p>Available DI pins depend on the board/card specifications and the data transfer
+        mode. Please refer to the user's manual of your board/card and README.HTM.</p>
+        <p>
+  Using the <a href="Trigger%20Delays.html">trigger delay</a> capability, the timing when the
+  sampling starts or stops changes depending on the number of the data that are sampled
+  before or after the trigger.</td>
+    </tr>
+  </table>
+</blockquote>
+  <hr>
+
+  <p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+  Corporation. All rights reserved.
+  </font></p>
+  <p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

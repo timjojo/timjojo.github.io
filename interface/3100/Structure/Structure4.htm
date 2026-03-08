@@ -1,0 +1,260 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>GPF-3100 ADSMPLCHREQ</title>
+</head>
+
+<body>
+
+  <p> <font size="4"> </font><font face="Arial"><a name="ADSMPLCHREQ"><font size="4"><b>ADSMPLCHREQ   
+  Structure</b></font></a></font></p>                               
+            
+<blockquote>            
+  <p><font face="Times New Roman"><a>The </a><a href="Structure4.htm">ADSMPLCHREQ</a> structure contains the channel-specific sampling     
+  conditions for each channel.&nbsp;<br>
+ This structure is used for the member of the <a href="Structure3.htm">ADSMPLREQ</a>   
+  structure, <a href="Structure2.htm">ADBMSMPLREQ</a> structure,&nbsp;<br>
+  and the <a href="../AdInputAD.html">AdInputAD</a>     
+  function.</font></p>                     
+  <p><font face="Times New Roman">- C</font><br>                                   
+  <font face="Courier New">                                   
+  typedef struct {<br>                                     
+  &nbsp;ULONG&nbsp;&nbsp;&nbsp; ulChNo;<br>                                    
+  &nbsp;ULONG&nbsp;&nbsp;&nbsp; ulRange;<br>                                    
+  } ADSMPLCHREQ, *PADSMPLCHREQ;<br>                                    
+  </font>                                  
+  <br>                 
+  <font face="Times New Roman">                 
+  - Visual Basic<br>                                    
+  </font> <font face="Courier New">                                   
+  Type ADSMPLCHREQ<br>                                    
+  &nbsp;ulChNo As Long<br>                                    
+  &nbsp;ulRange As Long<br>                                    
+  End Type</font> <font face="Times New Roman"><br>                                    
+  <br>                 
+  - Delphi<br>                                    
+  </font>                                  
+  <font face="Courier New">                                  
+  type<br>                 
+  ADSMPLCHREQ = record<br>                                    
+  &nbsp;ulChNo: Cardinal;<br>                                    
+  &nbsp;ulRange: Cardinal;<br>                                    
+  end;</font><br>                 
+  </p>                 
+  <table border="0" width="57%">                 
+    <tr>                 
+      <td width="15%" align="center"><b><u><font face="Times New Roman">Member</font></u></b><hr></td>                 
+      <td width="85%" align="center"><b><u><font face="Times New Roman">Description</font></u></b><hr></td>                 
+    </tr>                 
+    <tr>                 
+      <td width="15%" valign="top"><font face="Times New Roman">ulChNo</font> </td>                 
+      <td width="85%"><font face="Times New Roman">Specifies the channel number. It is in the range of 1  
+        through the maximum number of channels that the board provides.</font></td>                              
+    </tr>                
+    <tr>
+      <td width="15%" valign="top">  </td>                
+      <td width="85%">  
+      </td> 
+    </tr>
+    <tr>
+      <td width="15%" valign="top"><font face="Times New Roman">ulRange</font></td>                
+      <td width="85%"><font face="Times New Roman">Specifies the input range of the channel specified by     
+        ulChNo. The input range of each channel can be configured on the board     
+        if it equips an AD converter per channel. The input range must be the     
+        same for all channels on the board if it multiplexes analog input     
+        channels into a single AD converter.<font color="#ff00ff">&nbsp;</font><font color="#000000">For     
+        the </font>PCI-320112 and CTP/CPZ-3183, the rang<font color="#000000">e     
+        for each channel can be configured.</font>
+        </font>
+        <p><font face="Times New Roman">Please select one of the following codes.</font></p> 
+      <table border="1" width="484">                
+        <tr>                
+          <td width="105" height="16" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                
+          <td width="74" height="16" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td> 
+          <td width="283" height="16" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td> 
+        </tr> 
+        <tr>                
+          <td width="105" height="16"><font face="Times New Roman">AD_0_1V</font></td>                
+          <td width="74" height="16" align="center"><font face="Times New Roman">00000001h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 0 through 1 V</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="16"><font face="Times New Roman">AD_0_2P5V</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00000002h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 0 through 2.5 V</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="16"><font face="Times New Roman">AD_0_5V</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00000004h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 0 through 5 V</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="16"><font face="Times New Roman">AD_0_10V</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00000008h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 0 through 10 V</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="16"><font face="Times New Roman">AD_1_5V</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00000010h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 1 through 5 V</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="16"><font face="Times New Roman">AD_0_2V</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00000020h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 0 through 2 V</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="16"><font face="Times New Roman">AD_0_0P125V</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00000040h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 0 through&nbsp;<br>  
+ 0.125 V</font></td>    
+        </tr> 
+        <tr> 
+          <td width="105" height="16"><font face="Times New Roman">AD_0_1P25V</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00000080h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 0 through 1.25 V</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="16"><font face="Times New Roman">AD_0_0P625V</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00000100h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 0 through&nbsp;0.625 V</font></td>    
+        </tr> 
+        <tr>
+          <td width="105" height="13"><font face="Times New Roman">AD_0_0P156V</font></td> 
+          <td width="74" height="13" align="center"><font face="Times New Roman">00000200h</font></td> 
+          <td width="283" height="13"><font face="Times New Roman">Voltage range: unipolar 0 through&nbsp;0.156 V</font></td>    
+        </tr>
+        <tr> 
+          <td width="105" height="16"><font face="Times New Roman">AD_0_20mA</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00001000h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 0 through 20 mA</font></td>  
+        </tr> 
+        <tr>
+          <td width="105" height="16"><font face="Times New Roman">AD_4_20mA</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00002000h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range: unipolar 4 through 20 mA</font></td>  
+        </tr>
+        <tr> 
+          <td width="105" height="16"><font face="Times New Roman">AD_20mA</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">00004000h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Voltage range:
+            biipolar 4 through 20 mA</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="19"><font face="Times New Roman">AD_1V</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">00010000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-1 V</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="19"><font face="Times New Roman">AD_2P5V</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">00020000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-2.5 V</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="19"><font face="Times New Roman">AD_5V</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">00040000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-5 V</font></td>  
+        </tr> 
+        <tr>
+          <td width="105" height="19"><font face="Times New Roman">AD_10V</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">00080000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-10 V</font></td>  
+        </tr>
+        <tr>
+          <td width="105" height="19"><font face="Times New Roman">AD_20V</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">00100000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-20 V</font></td>  
+        </tr>
+        <tr>
+          <td width="105" height="19"><font face="Times New Roman">AD_50V</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">00200000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-50 V</font></td>  
+        </tr>
+        <tr> 
+          <td width="105" height="19"><font face="Times New Roman">AD_0P125V</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">00400000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-0.125 V</font></td>  
+        </tr> 
+        <tr> 
+          <td width="105" height="19"><font face="Times New Roman">AD_1P25V</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">00800000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-1.25 V</font></td>  
+        </tr> 
+        <tr>
+          <td width="105" height="19"><font face="Times New Roman">AD_0P625V</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">01000000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-0.625 V</font></td>  
+        </tr>
+        <tr>
+          <td width="105" height="19"><font face="Times New Roman">AD_0P156V</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">02000000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-0.156 V</font></td>  
+        </tr>
+        <tr>
+          <td width="105" height="19"><font face="Times New Roman">AD_1P25V_AC</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">04000000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-1.25 V&nbsp;<br>
+ (with AC  
+            coupling)</font></td> 
+        </tr>
+        <tr>
+          <td width="105" height="19"><font face="Times New Roman">AD_0P625V_AC</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">08000000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-0.625 V<br>
+            (with AC  
+            coupling)</font></td> 
+        </tr>
+        <tr>
+          <td width="105" height="19"><font face="Times New Roman">AD_0P156V_AC</font></td> 
+          <td width="74" height="19" align="center"><font face="Times New Roman">10000000h</font></td> 
+          <td width="283" height="19"><font face="Times New Roman">Voltage range: bipolar +/-0.156 V<br>
+            (with AC  
+            coupling)</font></td> 
+        </tr>
+        <tr>
+          <td width="105" height="16"><font face="Times New Roman">AD_GND</font></td> 
+          <td width="74" height="16" align="center"><font face="Times New Roman">80000000h</font></td> 
+          <td width="283" height="16"><font face="Times New Roman">Inside GND</font></td>  
+        </tr>
+      </table> 
+      </td> 
+    </tr>
+    <tr>                
+      <td width="15%" valign="top">  </td>                
+      <td width="85%"> 
+      <font face="Times New Roman"> 
+      To activate AC coupling in the LCP-320724 and PEX-320724, specify the   
+      following code with OR.</font>   
+      <table border="1">
+        <tr>
+          <td width="141" height="16" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Code</font></b></td>                
+          <td width="123" height="16" align="center" bgcolor="#C0C0C0"><b><font face="Times New Roman">Value</font></b></td> 
+          <td width="382" height="16" bgcolor="#C0C0C0" align="center"><b><font face="Times New Roman">Description</font></b></td> 
+        </tr>
+        <tr>
+          <td width="143"><font face="Times New Roman">AD_AC_COUPLING</font></td>
+          <td width="122">
+            <p align="center"><font face="Times New Roman">40000000h</font></td>
+          <td width="380"><font face="Times New Roman">AC coupling</font></td> 
+        </tr>
+      </table>
+      </td> 
+    </tr> 
+  </table> 
+ 
+  <p> </p> 
+ 
+</blockquote>    
+    
+<hr>    
+    
+<p ALIGN="center"><a href="../Help.htm"><font face="Times New Roman">[</font> <font face="Times New Roman">Top</font> <font face="Times New Roman">]</font></a></p>   
+   
+<p align="right"><font face="Times New Roman">&copy; 2000, 2013 Interface Corporation. All rights reserved.</font></p>                     
+
+</body>
+
+</html>

@@ -1,0 +1,476 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdGetSamplingData</title>
+</head>
+
+<body>
+
+<p><b><font size="5" face="Arial">AdCalibration</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="558" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="556" valign="top">
+  The AdCalibration function calibrates analog-to-digital input device.&nbsp;<br>
+  Some devices do not support electric volume. When a device which does not
+  electric volume is specified, the AdClalibration function returns
+  AD_Error_NOT_SUPPORTED.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><big><b>Syntax</b></big></p>
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font> 
+</b> 
+    </p>
+    <font size="3">
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="507" valign="top"><font face="Courier New">INT
+            AdCalibration(</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+          <td width="80" valign="top"><font face="Courier New">HANDLE&nbsp;</font></td>
+          <td width="395" valign="top"> <font face="Courier New">hDeviceHandle,</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="80" valign="top"><font face="Courier New">ULONG</font><font face="Courier New">
+            &nbsp;</font></td>
+          <td width="395" valign="top"><font face="Courier New">ulAdjustCh,</font></td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="80" valign="top"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="395" valign="top"><font face="Courier New"><i>ulRange,</i></font>
+          </td>
+        </tr>
+        <tr>
+          <td width="20" valign="top"></td>
+          <td width="80" valign="top"><font face="Courier New">ULONG&nbsp;</font></td>
+          <td width="395" valign="top"><font face="Courier New"><i>ulSingleDiff</i></font>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="507" valign="top">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    </blockquote>
+  </font>
+    <blockquote>
+<p><b>Visual Basic&nbsp;</b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="485" cellspacing="1">
+      <tr>
+        <td colspan="4" width="512" valign="top"><font face="Courier New">Declare Function AdCalibration Lib
+          &quot;FbiAd.DLL&quot;(</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="62" valign="top"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="134" valign="top"> <font face="Courier New"><i>hDeviceHandle&nbsp;</i></font></td>
+        <td width="284" valign="top"> <font face="Courier New" size="3">   As
+          Long, _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"><font face="Courier New">ByVal&nbsp;</font></td>
+        <td width="134" valign="top"><font face="Courier New"><i>ulAdjustCh</i></font></td>
+        <td width="284" valign="top"><font face="Courier New">As Long,</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"><font face="Courier New">ByVal</font></td>
+        <td width="134" valign="top"><font face="Courier New"><i>ulRange&nbsp;</i></font></td>
+        <td width="284" valign="top"><font face="Courier New" size="3">   As
+          Long _</font></td>
+      </tr>
+      <tr>
+        <td width="20" valign="top"></td>
+        <td width="62" valign="top"><font face="Courier New">ByVal</font></td>
+        <td width="134" valign="top"><font face="Courier New"><i>ulSingleDiff&nbsp;</i></font></td>
+        <td width="284" valign="top"><font face="Courier New" size="3">   As
+          Long _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="512" valign="top"><font face="Courier New">) As
+          Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <font size="3">
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New">function AdCalibration(</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="10" valign="top"></td>
+        <td width="138" valign="top"><i><font face="Courier New">hDeviceHandle</font></i></td>
+        <td width="337" valign="top"><font face="Courier New">: THandle;</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="10" valign="top"></td>
+        <td width="138" valign="top"><font face="Courier New"><i>ulAdjustCh</i></font></td>
+        <td width="337" valign="top">  <font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="10" valign="top"></td>
+        <td width="138" valign="top"><font face="Courier New"><i>ulRange&nbsp;</i></font></td>
+        <td width="337" valign="top">  <font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td width="10" valign="top"></td>
+        <td width="10" valign="top"></td>
+        <td width="138" valign="top">
+  <font face="Courier New"><i>ulSingleDiff</i></font>
+        </td>
+        <td width="337" valign="top">  <font face="Courier New">: Cardinal;</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="507" valign="top"><font face="Courier New">) : DWORD; stdcall; external 'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </font>
+  </blockquote>
+<p><b><big>Parameters</big></b>
+  </p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1" height="1">
+    <tbody>
+      <tr>
+        <td width="41" valign="top" height="21"><var><font face="Courier New">hDeviceHandle</font></var></td>
+        <td width="508" valign="top" height="21">Specifies the device handle obtained by the
+          <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"></td>
+        <td width="508" valign="top" height="21">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="40"><var><font face="Courier New">ulAdjustCh</font></var></td>
+        <td width="508" valign="top" height="40">Specifies a channel number to calibrate.
+          Always specifies 1 for multiplexer devices.</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="21"></td>
+        <td width="508" valign="top" height="21">
+        &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="838"><font face="Courier New"><var>ulRange</var>&nbsp;</font></td>
+        <td width="508" valign="top" height="838">
+        Specifies the range to calibrate.<br>
+        To specify a range, specify either one of the range identifiers below.<font SIZE="3">.</font>
+        <table border="1" cellspacing="1" width="424" height="696">
+        <tr>
+          <td width="83" height="19">
+            <p align="center"><b>Identifier</b></td>
+          <td width="98" height="19">
+            <p align="center"><b>Value</b></td>
+          <td width="422" height="19">
+            <p align="center"><b>Description</b></td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0_1V</td>
+          <td width="98" height="19" align="center">
+            00000001h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;0 to 1V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0_2P5V</td>
+          <td width="98" height="19" align="center">
+            00000002h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;0 V to 2.5 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0_5V</td>
+          <td width="98" height="19" align="center">
+ 00000004h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;0 V to 5 V</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0_10V</td>
+          <td width="98" height="19" align="center">
+ 00000008h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;0 V to 10 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_1_5V</td>
+          <td width="98" height="19" align="center">
+ 00000010h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;1 V to 5 V</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0_2V</td>
+          <td width="98" height="19" align="center">
+            00000020h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;0 V to 2 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0_0P125V</td>
+          <td width="98" height="19" align="center">
+            00000040h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;0 V to 0.125 V</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0_1P25V&nbsp;</td>
+          <td width="98" height="19" align="center">
+            00000080h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;0 V to 1.25 V</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0_0P625V</td>
+          <td width="98" height="19" align="center">
+ 00000100h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;0 V to 1.25 V</td>
+        </tr>
+        <tr>
+          <td width="83" height="14">AD_0_0P156V</td>
+          <td width="98" height="14" align="center">
+            00000200h&nbsp;</td>
+          <td width="241" height="14">Voltage unipolar&nbsp;0 V to 0.625 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0_20mA</td>
+          <td width="98" height="19" align="center">
+ 00001000h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;<br>
+            0 V to 0.156 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_4_20mA</td>
+          <td width="98" height="19" align="center">
+ 00002000h</td>
+          <td width="241" height="19">Voltage unipolar&nbsp;<br>
+            0 mA to 20 mA&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_20mA</td>
+          <td width="98" height="19" align="center">
+ 00004000h</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;4 mA to 20 mA&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="20">AD_1V</td>
+          <td width="98" height="20" align="center">
+ 00010000h</td>
+          <td width="241" height="20">Voltage bipolar&nbsp;+/- 1 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_2P5V</td>
+          <td width="98" height="19" align="center">
+ 00020000h</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 2.5 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_5V</td>
+          <td width="98" height="19" align="center">
+ 00040000h</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 5 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_10V</td>
+          <td width="98" height="19" align="center">
+ 00080000h</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 10 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_20V&nbsp;</td>
+          <td width="98" height="19" align="center">
+            00100000h&nbsp;</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 20 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_50V</td>
+          <td width="98" height="19" align="center">
+ 00200000h</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 50 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0P125V</td>
+          <td width="98" height="19" align="center">
+            00400000h</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 0.125 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_1P25V</td>
+          <td width="98" height="19" align="center">
+ 00800000h&nbsp;</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 1.25 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0P625V</td>
+          <td width="98" height="19" align="center">
+ 01000000h&nbsp;</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 0.625 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0P156V</td>
+          <td width="98" height="19" align="center">
+ 02000000h</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 0.156 V&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_1P25V_AC</td>
+          <td width="98" height="19" align="center">
+ 04000000h</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 1.25 V (with AC coupling function)&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0P625V_AC</td>
+          <td width="98" height="19" align="center">
+ 08000000h</td>
+          <td width="241" height="19">voltage bipolar&nbsp;+/- 0.625 V (with AC coupling function)&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_0P156V_AC</td>
+          <td width="98" height="19" align="center">
+ 10000000h</td>
+          <td width="241" height="19">Voltage bipolar&nbsp;+/- 0.156 V (with AC coupling function)&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_GND</td>
+          <td width="98" height="19" align="center">
+ 80000000h&nbsp;</td>
+          <td width="241" height="19">Internal GND connection</td>
+        </tr>
+      </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="22"></td>
+        <td width="508" valign="top" height="22">
+        </td>
+      </tr>
+      <tr>
+        <td width="41" valign="top" height="121"><font face="Courier New"><var>ulSingleDiff</var></font></td>
+        <td width="508" valign="top" height="121">
+        Specifies the input method.
+        <table border="1" cellspacing="1" width="424" height="81">
+        <tr>
+          <td width="83" height="19">
+            <p align="center"><b>Identifier</b></td>
+          <td width="98" height="19">
+            <p align="center"><b>Value</b></td>
+          <td width="422" height="19">
+            <p align="center"><b>Description</b></td>
+        </tr>
+        <tr>
+          <td width="83" height="19">AD_INPUT_SINGLE&nbsp;</td>
+          <td width="98" height="19" align="center">
+            1</td>
+          <td width="241" height="19">Single ended input&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="83" height="1">AD_INPUT_DIFF</td>
+          <td width="98" height="1" align="center">
+            2</td>
+          <td width="241" height="1">Differential input</td>
+        </tr>
+      </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  The AdCalibration function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="535" cellspacing="1">
+    <tr>
+      <td width="506" height="21" valign="top"><font face="Courier New" size="3">nRet = AdCalibration( hDeviceHandle, 1, AD_10V, AD_INPUT_SINGLE );</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="499" valign="top">
+      <font face="Courier New" size="3">nRet = AdCalibration( hDeviceHandle, 1, AD_10V, AD_INPUT_SINGLE )</font>
+        </td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="500" valign="top"><font face="Courier New" size="3">nRet := AdCalibration( hDeviceHandle, 1, AD_10V, AD_INPUT_SINGLE );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="545" valign="top">
+Performing an auto-calibration for channel 1 of&nbsp; the analog-to-digital
+input device, +/- 10V range, single ended input specified in&nbsp; hDevicehandle.&nbsp;&nbsp;
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

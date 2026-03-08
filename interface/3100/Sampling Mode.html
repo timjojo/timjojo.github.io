@@ -1,0 +1,590 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 Data Transfer Mode</title>
+</head>
+
+<body>
+
+<p><font face="Arial" size="5"><b>5. Data Transfer Modes</b></font></p>
+
+<blockquote>
+  <table border="0" width="518" height="145">
+    <tr>
+      <td height="141" width="602" valign="top">
+  Our analog input board/card provide the following data transfer modes depending on their
+  hardware specifications.
+  <table border="0" width="551" height="54">
+    <tr>
+      <td width="537" height="4" valign="top">
+        <ul>
+          <li><a href="##5.1 Programmed I/O Mode">Programmed I/O</a></li>
+          <li><a href="#5.2 FIFO Mode">FIFO</a></li>
+          <li><a href="#5.3 Memory Mode">Memory</a></li>
+          <li><a href="#5.4 Bus Master Transfer Mode">Bus master</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="537" height="19" valign="top">
+        <p align="left">You can select a data transfer mode by using the <a href="AdSetSamplingConfig.html"> AdSetSamplingConfig</a>
+        function. The <a href="AdBmSetSamplingConfig.html"> AdBmSetSamplingConfig</a>
+        and function is applicable to the bus master transfer mode.<br>
+        <a href="AdLvSetSamplingConfig.html">AdLvSetSamplingConfig</a> function
+        is applicable to the PCI-3179, CTP/CPZ-3179.<br>
+        <a href="AdMemSetSamplingConfig.html">AdMemSetSamplingConfig</a>
+        function is applicable to the LPC-320910, PEX-320910, CPZ-360810,
+        CSI/CBI-320110, CBI-320110TK, CBI-320110TL.&nbsp;<br>
+        <br>
+        To confirm your board/card specifications, please refer to the
+        <a href="AdGetDeviceInfo.html">AdGetDeviceInfo</a>
+        function.</td>
+    </tr>
+  </table>
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<p><font face="Arial" size="4"><b><a name="5.1 Programmed I/O Mode">5.</a></b></font><a name="5.1 Programmed I/O Mode"><b><font face="Arial" size="4">1
+</font></b> <font face="Arial" size="4"><b>Programmed
+I/O Mode</b></font></a></p>
+<blockquote>
+  <table border="0" width="556">
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3120</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3126</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3133</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3135</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3165</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3166</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3168C</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3170A</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3171A</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3172A</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3173A</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3177C</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3178</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3179</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3180</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3521</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3522A</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  PCI-3523A</font>
+      </td>
+      <td width="137" valign="top">
+      </td>
+      <td width="137" valign="top">
+      </td>
+    </tr>
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-3120A</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-3120B</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">
+  CTPCPZ-3120C</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3126</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3133</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3135</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3165</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3168</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3170</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3171</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3172</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3173</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3177</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3178</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3179</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3180A</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTPCPZ-3180B</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3180C</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3521</font>
+      </td>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTP/CPZ-3522</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="137" valign="top">
+  <font color="#FF0000">CTPCPZ-3523</font>
+      </td>
+      <td width="137" valign="top">
+      </td>
+      <td width="137" valign="top">
+      </td>
+      <td width="137" valign="top">
+      </td>
+    </tr>
+    <tr>
+      <td width="548" colspan="4" valign="top">
+  Analog input boards acquire a signal sample at a time in the programmed I/O
+  mode. In this mode, I/O transfers should be finished between the board registers and computer memories every sampling.
+  All trigger capabilities and trigger delay capabilities are available and there is
+  no restriction to the number of samples.
+      </td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="4"><a name="5.2 FIFO Mode">5.2 FIFO Mode</a>
+</font></b></p>
+<blockquote>
+  <table border="0" width="556" height="1">
+    <tr>
+      <td width="432" valign="top" height="1">
+  <table border="0" width="127%" height="1">
+    <tr>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">PCI-3153</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">PCI-3155</font></td>
+      <td width="25%" valign="top" height="1"></td>
+      <td width="25%" valign="top" height="1"></td>
+    </tr>
+    <tr>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">LPC-321316</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">&nbsp;LPC-321416</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">LPC-361316</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">LPC-361416</font></td>
+    </tr>
+    <tr>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">PEX-321316</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">PEX-321416</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">PEX-361316</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">PEX-361416</font></td>
+    </tr>
+    <tr>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CBI-3133A</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CBI-3133B</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CBI-3134A</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CBI-3134B</font></td>
+    </tr>
+    <tr>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CSI/CBI-320212</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CBI-320212TR</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CBI-320212TK</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CBI-320212TL</font></td>
+    </tr>
+    <tr>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CSI/CBI-320312</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CBI-320312TR</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CBI-320312TK</font></td>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CBI-320312TL</font></td>
+    </tr>
+    <tr>
+      <td width="25%" valign="top" height="1"><font color="#FF0000">CTP/CPZ-3167</font></td>
+      <td width="25%" valign="top" height="1"></td>
+      <td width="25%" valign="top" height="1"></td>
+      <td width="25%" valign="top" height="1"></td>
+    </tr>
+  </table>
+      </td>
+    </tr>
+  </table>
+  <table border="0" width="553" height="80">
+    <tr>
+      <td height="76" width="545">FIFO memory
+        equipped in analog input boards can continuously acquire samples and
+        store them into the FIFO memory. In this mode, the system overheads
+        are drastically reduced.<br>
+ The sampling rates will become faster than the programmed I/O mode.<p>
+  There may be limitations for triggering, trigger delay, event capabilities, and the
+  number of samples depending on the hardware specifications. Refer to &quot;<a href="Attention.html">Attentions</a>&quot; for
+  more details.</td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="4"><a name="5.3 Memory Mode">5.3 Memory
+Mode</a></font></b></p>
+<blockquote>
+  <table border="0" width="551" height="1">
+    <tr>
+      <td width="136" height="19">
+  <font color="#FF0000">
+  PCI-3161</font></td>
+      <td width="136" height="19">
+  <font color="#FF0000">
+  PCI-3163</font></td>
+      <td width="136" height="19">
+      </td>
+      <td width="135" height="19">
+      </td>
+    </tr>
+    <tr>
+      <td width="136" height="19">
+  <font color="#FF0000">
+  LPC-320910</font></td>
+      <td width="136" height="19">
+      </td>
+      <td width="136" height="19">
+      </td>
+      <td width="135" height="19">
+      </td>
+    </tr>
+    <tr>
+      <td width="136" height="19">
+  <font color="#FF0000">
+  PEX-320910</font></td>
+      <td width="136" height="19">
+      </td>
+      <td width="136" height="19">
+      </td>
+      <td width="135" height="19">
+      </td>
+    </tr>
+    <tr>
+      <td width="136" height="19">
+  <font color="#FF0000">
+  CSI/CBI-320110</font></td>
+      <td width="136" height="19">
+  <font color="#FF0000">
+  CBI-320110TK</font></td>
+      <td width="136" height="19">
+  <font color="#FF0000">
+  CBI-320110TL</font></td>
+      <td width="135" height="19">
+      </td>
+    </tr>
+    <tr>
+      <td width="136" height="19">
+  <font color="#FF0000">
+  CTP/CPZ-360810</font></td>
+      <td width="136" height="19">
+      </td>
+      <td width="136" height="19">
+      </td>
+      <td width="135" height="19">
+      </td>
+    </tr>
+    <tr>
+      <td width="543" height="76" colspan="4">
+  Buffer memory equipped in analog input boards/cards can continuously acquire samples and
+        store them into the buffer memory. In this mode, the system overheads
+        are drastically reduced. This flat buffer memory is mapped to the system
+  PCI memory space. This mode provides the fastest sampling rate.<p>
+  There may be limitations for triggering, trigger delay, event capabilities, and the
+  number of samples depending on the hardware specification.</td>
+    </tr>
+  </table>
+</blockquote>
+<p><b><font face="Arial" size="4"><a name="5.4 Bus Master Transfer Mode">5.4 Bus Master
+Transfer Mode</a></font></b></p>
+<blockquote>
+  <table border="0" width="551" height="1">
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PCI-3174</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PCI-3175</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PCI-3176</font></td>
+      <td width="135" height="1" valign="top">
+  <font color="#FF0000">
+  PCI-3525</font></td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PCI-320112</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PCI-320412</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PCI-320416</font></td>
+      <td width="135" height="1" valign="top">
+  <font color="#FF0000">
+  PCI-360116</font></td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PCI-360112</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PCI-360216</font></td>
+      <td width="136" height="1" valign="top">
+      <font color="#FF0000">PCI-321516</font>
+      </td>
+      <td width="135" height="1" valign="top">
+      <font color="#FF0000">PCI-361812</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  LPC-320724</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  LPC-321012</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  LPC-321116</font></td>
+      <td width="135" height="1" valign="top">
+  <font color="#FF0000">
+  LPC-321216</font></td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  LPC-361116</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  LPC-361216</font></td>
+      <td width="136" height="1" valign="top">
+      </td>
+      <td width="135" height="1" valign="top">
+      </td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PEX-320724</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PEX-321012</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PEX-321116</font></td>
+      <td width="135" height="1" valign="top">
+  <font color="#FF0000">
+  PEX-321216</font></td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PEX-361116</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  PEX-361216</font></td>
+      <td width="136" height="1" valign="top">
+      </td>
+      <td width="135" height="1" valign="top">
+      </td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-3174</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-3175</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-3182</font></td>
+      <td width="135" height="1" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-3183</font></td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-320412</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-320416</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-3525</font></td>
+      <td width="135" height="1" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-360116</font></td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CTP/CPZ-360112</font></td>
+      <td width="136" height="1" valign="top">
+      </td>
+      <td width="136" height="1" valign="top">
+      </td>
+      <td width="135" height="1" valign="top">
+      </td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CSI/CBI-320412</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-320412TR</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-320412TK</font></td>
+      <td width="135" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-320412TL</font></td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CSI/CBI-320416</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-320416TR</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-320416TK</font></td>
+      <td width="135" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-320416TL</font></td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CSI/CBI-360112</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-360112TR</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-360112TK</font></td>
+      <td width="135" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-360112TL</font></td>
+    </tr>
+    <tr>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CSI/CBI-360116</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-360116TR</font></td>
+      <td width="136" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-360116TK</font></td>
+      <td width="135" height="1" valign="top">
+  <font color="#FF0000">
+  CBI-360116TL</font></td>
+    </tr>
+    <tr>
+      <td width="543" height="76" colspan="4">
+  PCI Bus master DMA (direct memory access) allows analog input boards/cards to
+  acquire samples and
+        store them into the main memory of the computer without interventions of
+  CPU. In this mode, the system overheads
+        are drastically reduced. This mode allows you to use other applications
+  smoothly during data transfer.<p>
+  There may be limitations for triggering, trigger delay, event capabilities, and the
+  number of samples depending on the hardware specification. Refer to &quot;<a href="Attention.html">Attentions</a>&quot; for
+  more details.</td>
+    </tr>
+  </table>
+</blockquote>
+  <hr>
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface
+Corporation. All rights reserved.</font></p>
+  <p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>

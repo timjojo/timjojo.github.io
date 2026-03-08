@@ -1,0 +1,508 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GPF-3100 AdSetSamplingConfig</title>
+</head>
+
+<body>
+
+<p><b><font face="Arial" size="5">AdSetSamplingConfig</font></b></p>
+
+<blockquote>
+
+<p><b><big>Description</big></b></p>
+
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="557">
+  The AdSetSamplingConfig function configures sampling conditions of the board/card.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+
+<p><b><big>Syntax</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+      <table border="0" width="480" cellspacing="1">
+        <tr>
+          <td colspan="3" width="472"><font face="Courier New">INT
+            AdSetSamplingConfig(</font></td>
+        </tr>
+        <tr>
+          <td width="8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td width="112"><font face="Courier New">HANDLE&nbsp;</font></td>
+          <td width="340"> <font face="Courier New"> <i>hDeviceHandle</i>,</font></td>
+        </tr>
+    <font size="3">
+        <tr>
+          <td width="8"></td>
+  </font>
+          <td width="112">
+
+<font face="Courier New">
+    PADSMPLREQ&nbsp;</font>
+          </td>
+          <td width="340"><i><font face="Courier New">pAdSmplConfig</font></i>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" width="472">
+<font face="Courier New">
+);</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    </blockquote>
+    <blockquote>
+  <p><b><font face="Times New Roman">Visual Basic&nbsp;</font></b></p>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">Declare Function
+          AdSetSamplingConfig Lib&nbsp;_ &quot;FbiAd.DLL&quot; ( _</font></td>
+      </tr>
+      <tr>
+        <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+        <td width="60"><font face="Courier New">ByVal</font></td>
+        <td width="132"> <font face="Courier New"> <i>hDeviceHandle&nbsp;&nbsp;</i>  </font></td>
+        <td width="242"> <font face="Courier New">  As Long, _</font></td>
+      </tr>
+  <font size="3">
+      <tr>
+        <td width="20"><font face="Courier New">&nbsp;&nbsp;</font></td>
+  </font>
+        <td width="60"><font face="Courier New">ByRef&nbsp;</font></td>
+        <td width="132"><font face="Courier New"><i>pAdSmplConfig</i></font></td>
+        <td width="242"><font face="Courier New"><i></i>  As ADSMPLREQ _</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">) As Long&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+  <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">function
+          AdSetSamplingConfig(</font></td>
+      </tr>
+      <tr>
+        <td width="48" colspan="2"></td>
+        <td width="137"><i><font face="Courier New">hDeviceHandle</font></i></td>
+        <td width="275"><font face="Courier New">: THandle;</font></td>
+      </tr>
+  <font size="3">
+      <tr>
+        <td width="2">&nbsp;&nbsp;&nbsp;</td>
+  </font>
+        <td width="40"><font face="Courier New">var</font></td>
+        <td width="137"><font face="Courier New"><i>pAdSmplConfig</i></font>  </td>
+        <td width="275">  <font face="Courier New">  : ADSMPLREQ</font></td>
+      </tr>
+      <tr>
+        <td colspan="4" width="472"><font face="Courier New">) : DWORD; stdcall; external
+          'FbiAd.DLL';</font></td>
+      </tr>
+    </table>
+  </blockquote>
+  </blockquote>
+  <p><b><big>Parameters</big></b>
+<font size="3">
+<br>
+</font></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+    <tbody>
+      <tr>
+        <td width="132"><var><font face="Courier New">hDeviceHandle</font></var></td>
+        <td width="404">Specifies the device handle obtained by the <a href="AdOpen.html"> AdOpen</a> function.</td>
+      </tr>
+      <tr>
+        <td valign="top" width="132"></td>
+        <td width="404">
+        &nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top" width="132"><i><font face="Courier New">pAdSmplConfig</font></i></td>
+        <td width="404">
+        Points to the <a href="Structures.html#13.6.1 ADSMPLREQ Structure">ADSMPLREQ</a>
+        structure
+        containing sampling conditions.</td>
+      </tr>
+    </tbody>
+  </table>
+  </blockquote>
+<p><b><big>Return Value</big></b></p>
+<font face="Times New Roman" size="3">
+  </font>
+  <blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="548" valign="top">
+  <p align="left">
+  The AdSetSamplingConfig function returns AD_ERROR_SUCCESS if the process is successfully completed.
+  Otherwise, this function returns another code. Please refer to the <a href="Return%20Values.html"> error
+  codes</a>.</p>
+        </td>
+      </tr>
+  </table>
+  </blockquote>
+
+<p><b><big>Comments</big></b></p> 
+  <table border="0" width="550" cellspacing="1" height="126">
+    <tr>
+      <td width="544" height="40">
+  <ul>
+    <li>
+  The updated conditions will be valid when the next sampling starts.&nbsp;</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" height="59">
+  <ul>
+    <li>
+      <p>This function is not available while a sampling is running on the board/card
+      to
+  which the memory transfer mode is applied.</p>
+    </li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" height="15">
+  <ul>
+    <li>Set the default value to members of AD sampling structure whose setting
+      are not changed. The default setting is obtained by the <a href="AdGetSamplingConfig.html">AdGetSamplingConfig</a>
+      function.&nbsp;&nbsp;</li>
+  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="544" height="15">
+  <ul>
+    <li>
+      <p>Please refer to &quot;<a href="Corresponding%20Identifier%20for%20Each%20Model.html">Corresponding Identifier
+      for Each Model</a>,&quot;
+      for more details.</p>
+    </li>
+  </ul>
+      </td>
+    </tr>
+  </table>
+ 
+<p><b><big>Target Products</big></b></p>
+<blockquote>
+  <table width="550" cellspacing="1" height="25">
+    <tr>
+      <td width="550" valign="top" height="21">Refer to &quot;<a href="Structure/SetSampling.htm">Corresponding
+        Identifiers for Each Model</a>&quot;.&nbsp;</td>
+    </tr>
+  </table>
+</blockquote>
+ 
+<p><b><big>Examples</big></b></p>
+
+  <blockquote>
+<p><b><font face="Times New Roman">C&nbsp;</font></b> 
+    </p>
+    <blockquote>
+  <table border="0" width="480" cellspacing="1">
+    <tr>
+      <td width="452" height="21"><font face="Courier New">ADSMPLREQ
+        AdSmplConfig;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.ulChCount
+        = 4;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.SmplChReq[0].ulChNo
+        = 1;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.SmplChReq[0].ulRange
+        = AD_5V;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.SmplChReq[1].ulChNo
+        = 2;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.SmplChReq[1].ulRange
+        = AD_5V;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.SmplChReq[2].ulChNo
+        = 3;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.SmplChReq[2].ulRange
+        = AD_5V;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.SmplChReq[3].ulChNo
+        = 4;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.SmplChReq[3].ulRange
+        = AD_5V;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.ulSamplingMode
+        = AD_IO_SAMPLING;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.ulSingleDiff
+        = AD_INPUT_SINGLE;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.ulSmplNum
+        = 1024;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.ulSmplEventNum
+        = 0;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.fSmplFreq
+        = 1000.0;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.ulTrigPoint
+        = AD_TRIG_START;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">AdSmplConfig.ulTrigMode
+        = AD_FREERUN;</font></td>
+    </tr>
+    <tr>
+      <td width="452" height="21">&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="452" height="21"><font face="Courier New">nRet =
+        AdSetSamplingConfig( hDeviceHandle, &amp;AdSmplConfig );</font></td>
+    </tr>
+  </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Visual Basic</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="500"><font face="Courier New">Dim AdSmplConfig As ADSMPLREQ</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.ulChCount = 4</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq(0).ulChNo
+          = 1</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq(0).ulRange
+          = AD_5V</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq(1).ulChNo
+          = 2</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq(1).ulRange
+          = AD_5V</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq(2).ulChNo
+          = 3</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq(2).ulRange
+          = AD_5V</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq(3).ulChNo
+          = 4</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq(3).ulRange
+          = AD_5V</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.ulSamplingMode =
+          AD_IO_SAMPLING</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.ulSingleDiff =
+          AD_INPUT_SINGLE</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.ulSmplNum = 1024</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.ulSmplEventNum = 0</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.fSmplFreq = 1000.0</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.ulTrigPoint =
+          AD_TRIG_START</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.ulTrigMode =
+          AD_FREERUN</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">nRet = AdSetSamplingConfig(
+          hDeviceHandle, _ AdSmplConfig )</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  <p><b><font face="Times New Roman">Delphi</font></b></p>
+    <blockquote>
+    <table border="0" width="480" cellspacing="1">
+      <tr>
+        <td width="498"><font face="Courier New">var AdSmplConfig: ADSMPLREQ;</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="480"><font face="Courier New">AdSmplConfig.ulChCount := 4;</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq[0].ulChNo
+          := 1;</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq[0].ulRange
+          := AD_5V;</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq[1].ulChNo
+          := 2;</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq[1].ulRange
+          := AD_5V;</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq[2].ulChNo
+          := 3;</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq[2].ulRange
+          := AD_5V;</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq[3].ulChNo
+          := 4;</font></td>
+      </tr>
+      <tr>
+        <td width="500"><font face="Courier New">AdSmplConfig.SmplChReq[3].ulRange
+          := AD_5V;</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">AdSmplConfig.ulSamplingMode :=
+          AD_IO_SAMPLING;</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">AdSmplConfig.ulSingleDiff :=
+          AD_INPUT_SINGLE;</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">AdSmplConfig.ulSmplNum := 1024;</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">AdSmplConfig.ulSmplEventNum :=
+          0;</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">AdSmplConfig.fSmplFreq :=
+          1000.0;</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">AdSmplConfig.ulTrigPoint :=
+          AD_TRIG_START;</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">AdSmplConfig.ulTrigMode :=
+          AD_FREERUN;</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="498"><font face="Courier New">nRet := AdSetSamplingConfig(
+          hDeviceHandle, AdSmplConfig );</font></td>
+      </tr>
+    </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font face="Times New Roman" size="3">
+<blockquote>
+  </font>
+<blockquote>
+  <table width="550" cellspacing="1">
+      <tr>
+        <td width="542" valign="top">
+Configure sampling conditions of the board/card specified by hDeviceHandle.&nbsp;The
+condition is shown below.
+<table border="1" cellspacing="1" width="59%">
+  <tr>
+    <td width="55%"><b>Channel</b></td>
+    <td width="45%">3</td>
+  </tr>
+  <tr>
+    <td width="55%"><b>Range</b></td>
+    <td width="45%">+/-5 V</td>
+  </tr>
+  <tr>
+    <td width="55%"><b>Sampling frequency</b></td>
+    <td width="45%">1000 Hz</td>
+  </tr>
+  <tr>
+    <td width="55%"><b>The number of samplings</b></td>
+    <td width="45%">1024</td>
+  </tr>
+</table>
+        </td>
+      </tr>
+  </table>
+</blockquote>
+</blockquote>
+
+<hr>
+
+<p align="right"><font face="Times New Roman" size="2">&copy; 2000, 2013 Interface 
+Corporation. All rights reserved.</font></p>
+
+<p align="center"><font face="Times New Roman" size="3">[<a href="Help.htm">Top</a>]</font></p>
+
+</body>
+
+</html>
